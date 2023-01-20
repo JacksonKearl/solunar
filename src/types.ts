@@ -67,7 +67,3 @@ export const ConstituentNames = [
 export type ConstituentName = typeof ConstituentNames[number]
 
 export type Disposable = { dispose(): void }
-
-export type Entries<T> = {
-	[K in keyof T]: [K, T[K]]
-}[keyof T][]

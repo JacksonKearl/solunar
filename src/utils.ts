@@ -1,4 +1,4 @@
-import { Disposable, Entries } from './types'
+import { Disposable } from './types'
 
 export const dot = (a: (number | undefined)[], b: (number | undefined)[]) => {
 	const l = Math.min(a.length, b.length)

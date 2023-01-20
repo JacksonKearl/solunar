@@ -4,10 +4,8 @@ import { setupCanvas, drawZoneForElement } from './CanvasElement'
 import { Slider } from './Slider'
 import { Toggle } from './Toggle'
 import { TideOScope } from './TideOScope'
-import { DisposableStore, MappedView, Observable, View } from 'src/utils.js'
+import { DisposableStore, MappedView } from 'src/utils.js'
 import { Gauge } from './Gauge.js'
-
-declare const stations: any
 
 const disposables = new DisposableStore()
 

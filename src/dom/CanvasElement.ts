@@ -1,4 +1,4 @@
-import { bound2, DisposableStore, Observable, View } from '../utils.js'
+import { bound2, DisposableStore } from '../utils.js'
 import { Disposable } from '../types.js'
 import { addElementListener, findDPR } from './utils.js'
 
