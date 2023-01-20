@@ -1,5 +1,5 @@
-import { FactorFs, fFormula } from './factorF.js'
-import { ConstituentName } from './types.js'
+import { FactorFs, fFormula } from './factorF'
+import { ConstituentName } from './types'
 
 type CMap<T> = Record<ConstituentName, T>
 

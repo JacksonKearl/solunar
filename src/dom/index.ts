@@ -1,11 +1,11 @@
-import { Station } from '../types.js'
-import Stations from '../stationData.js'
+import { Station } from '$/types'
+import Stations from '$/stationData'
 import { setupCanvas, drawZoneForElement } from './CanvasElement'
 import { Slider } from './Slider'
 import { Toggle } from './Toggle'
 import { TideOScope } from './TideOScope'
-import { DisposableStore, MappedView } from 'src/utils.js'
-import { Gauge } from './Gauge.js'
+import { DisposableStore, MappedView } from '$/utils'
+import { Gauge } from './Gauge'
 
 const disposables = new DisposableStore()
 

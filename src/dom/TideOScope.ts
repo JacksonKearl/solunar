@@ -5,16 +5,16 @@ import {
 	DisposableStore,
 	bound2,
 	Observable,
-} from '../utils.js'
-import { sin, cos, wrap } from '../degreeMath.js'
-import { ConstituentName, Station, UnixTime } from '../types.js'
+} from '$/utils'
+import { sin, cos, wrap } from '$/degreeMath'
+import { ConstituentName, Station, UnixTime } from '$/types'
 import {
 	StationLevelAtTime,
 	ConstituentContribution,
 	MoonPhaseAngleAtTime,
 	LunarSpeed,
-} from '../tideForTime'
-import { Constituents } from '../constituents.js'
+} from '$/tideForTime'
+import { Constituents } from '$/constituents'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type TideOScopeDataPoint = {

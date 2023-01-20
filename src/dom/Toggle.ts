@@ -1,5 +1,5 @@
-import { Observable } from '../utils.js'
-import { CanvasElement, DrawZone, Location } from './CanvasElement.js'
+import { Observable } from '$/utils'
+import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type ToggleOptions = {
 	value: boolean

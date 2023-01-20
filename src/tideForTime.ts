@@ -1,7 +1,7 @@
-import { dot, Year } from './utils.js'
-import { sin, cos, tan, acos, atan, wrap, cot } from './degreeMath.js'
-import { Constituents, ConstituentData } from './constituents.js'
-import { OrbitState, LunarNodeState, Station, UnixTime } from './types.js'
+import { dot, Year } from './utils'
+import { sin, cos, tan, acos, atan, wrap, cot } from './degreeMath'
+import { Constituents, ConstituentData } from './constituents'
+import { OrbitState, LunarNodeState, Station, UnixTime } from './types'
 
 const OrbitStateToArray = (o: OrbitState) => [o.T, o.s, o.h, o.p, o.p1, 1]
 // Schureman, page 179

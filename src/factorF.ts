@@ -1,5 +1,5 @@
-import { sin, cos, tan } from './degreeMath.js'
-import { LunarNodeState } from './types.js'
+import { sin, cos, tan } from './degreeMath'
+import { LunarNodeState } from './types'
 
 export type fFormula = (l: LunarNodeState) => number
 

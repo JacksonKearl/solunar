@@ -1,5 +1,5 @@
-import { scale, bound2, Observable } from '../utils.js'
-import { CanvasElement, DrawZone, Location } from './CanvasElement.js'
+import { scale, bound2, Observable } from '$/utils'
+import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type SliderOptions = {
 	value: number

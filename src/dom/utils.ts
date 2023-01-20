@@ -1,4 +1,4 @@
-import { Disposable } from '../types.js'
+import { Disposable } from '$/types'
 
 export const addWindowListener = <K extends keyof WindowEventMap>(
 	type: K,

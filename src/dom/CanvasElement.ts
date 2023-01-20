@@ -1,6 +1,6 @@
-import { bound2, DisposableStore } from '../utils.js'
-import { Disposable } from '../types.js'
-import { addElementListener, findDPR } from './utils.js'
+import { bound2, DisposableStore } from '$/utils'
+import { Disposable } from '$/types'
+import { addElementListener, findDPR } from './utils'
 
 /** Always in page-pixel-space (`page-space * dpr`) */
 export type Location = { x: number; y: number }

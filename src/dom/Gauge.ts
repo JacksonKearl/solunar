@@ -1,4 +1,4 @@
-import { View } from 'src/utils'
+import { View } from '$/utils'
 import { CanvasElement, DrawZone } from './CanvasElement'
 
 type GaugeOptions = {
