@@ -1,0 +1,37 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Dev",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"runOptions": { "runOn": "folderOpen" },
+			"isBackground": true,
+			"dependsOn": ["Serve", "Bundle", "TypeCheck"]
+		},
+		{
+			"label": "Serve",
+			"type": "shell",
+			"isBackground": true,
+			"command": "bunx http-serve public -c-1"
+		},
+		{
+			"label": "Bundle",
+			"type": "shell",
+			"isBackground": true,
+			"command": "bunx rollup -cwm"
+		},
+		{
+			"label": "TypeCheck",
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"option": "watch",
+			"problemMatcher": ["$tsc-watch"],
+			"group": "build"
+		}
+	]
+}

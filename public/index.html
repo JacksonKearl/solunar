@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="rebeccapurple" />
+		<!-- <link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+			integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+			integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+			crossorigin=""
+		></script> -->
+		<script src="./stationData.js"></script>
+		<script type="module" src="./index.js"></script>
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.flex {
+				display: flex !important;
+			}
+
+			@media (orientation: landscape) {
+				.flex {
+					flex-direction: row;
+				}
+				.flex .flex {
+					flex-direction: column;
+				}
+				.flex .flex .flex {
+					flex-direction: row;
+				}
+			}
+			@media (orientation: portrait) {
+				.flex {
+					flex-direction: column;
+				}
+				.flex .flex {
+					flex-direction: row;
+				}
+				.flex .flex .flex {
+					flex-direction: column;
+				}
+			}
+
+			body {
+				height: 100vh;
+				height: 100svh;
+				width: 100vw;
+				width: 100svw;
+				display: flex;
+				overflow: hidden;
+			}
+
+			main {
+				flex-grow: 10;
+				flex-basis: 500px;
+				margin: 5px;
+			}
+			form {
+				margin: 5px;
+				flex-grow: 1;
+				flex-basis: 250px;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: space-evenly;
+			}
+			canvas {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.flex > div {
+				height: 100%;
+				width: 100%;
+				display: block;
+			}
+
+			iframe {
+				height: 100%;
+				width: 100%;
+			}
+
+			#map {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body class="flex">
+		<canvas id="canvas"> </canvas>
+		<main id="main"></main>
+		<form class="flex" id="config"></form>
+	</body>
+</html>
+<script>
+	// var map = L.map('map').setView([-37.87, 175.475], 12)
+	// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	// 	maxZoom: 19,
+	// 	detectRetina: true,
+	// 	attribution:
+	// 		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	// }).addTo(map)
+</script>

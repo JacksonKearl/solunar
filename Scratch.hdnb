@@ -1,0 +1,359 @@
+# Scratchpad
+
+A persistent REPL I use to help maintain my remaining sanity :)
+
+To properly engage with this document: https://marketplace.visualstudio.com/items?itemName=jakearl.handydandy-notebook
+
+### Utils
+
+```ts
+// important spacer :) 
+
+const entries = Object.entries as <K extends string, V>(
+  o: Record<K, V>
+) => [K, V][];
+const fromEntries = Object.fromEntries as <K extends string, V>(
+  e: [K, V][]
+) => Record<K, V>;
+const omap = <T, U, K extends string>(
+  source: Record<K, T>,
+  transform: (t: T, k: K) => U
+): Record<K, U> =>
+  fromEntries(entries(source).map(([k, v]) => [k, transform(v, k)]));
+const wrap = (degrees: number): number => ((degrees % 360) + 360) % 360;
+
+const radToDeg = (rad: number) => (rad * 180) / Math.PI;
+const degToRad = (deg: number) => (deg * Math.PI) / 180;
+
+const sin = (deg: number) => Math.sin(degToRad(deg));
+const cos = (deg: number) => Math.cos(degToRad(deg));
+const tan = (deg: number) => Math.tan(degToRad(deg));
+const cot = (deg: number) => 1 / tan(deg);
+
+const acos = (x: number) => radToDeg(Math.acos(x));
+const atan = (x: number) => radToDeg(Math.atan(x));
+
+
+
+```
+
+### Test the utils
+
+```ts
+
+// {{cell:utils}}
+console.log(wrap(180))
+console.log(wrap(0))
+console.log(wrap(361))
+console.log(wrap(721))
+console.log(wrap(-1))
+console.log(wrap(-361))
+console.log(wrap(-359))
+
+const data = omap({ hello: 1, world: 2 }, (n) => n + "!");
+console.log(data)
+```
+
+### Reference Tables from Schureman
+
+```ts
+// Table 1
+// h          p1         s          p          N
+// 0.04106864 0.00000196 0.54901653 0.00464183 -0.00220641
+
+// Table 2
+// C    V                       u           f
+// J1   T + s + h - p - 90      -v          76
+// K1   T     + h     - 90      -v'         227
+// Lam  2T - s     + p + 180    -2v + 2Xi   78
+
+// Table 4
+// Y      s       p       h       p1      N
+// 1970   197.96  302.64  280.24  282.42  345.28
+// 1971   327.35  343.31  280.00  282.44  325.95
+// 1972   96.73   23.97   279.76  282.46  306.63
+// 2000   211.74  83.29   279.97  282.94  125.07
+
+// Table 5
+// s       p       h       p1      N
+// 224.93  20.16   178.40  0.01    -9.58  <- July 1
+// 13.18   0.11    0.99    0.00    -0.05  <-      2
+
+// Table 6
+// N     v       Xi       v'       2v''     I
+// 336   -4.42   -3.98    -3.15    -6.68    28.23
+// 316   -7.79   -7.04    -5.52    -11.60   27.38
+// 297   -10.44  -9.48    -7.34    -15.24   26.17
+// 115   12.67   11.70    8.52     16.62    21.75
+
+// Table 11
+// N     J1       K1      Lam
+// 336   4.42     3.15    0.88
+// 316   7.79     5.52    1.50
+// 297   10.44    7.34    1.91
+// 115   -12.67   -8.52   -1.93
+
+// Table 15
+// Y      J1      K1     Lam
+// 1970   270.0   13.4   285.6
+// 1971   1.8     15.5   197.4
+// 1972   93.1    17.1   109.1
+// 2000   125.8   1.5    49.6
+```
+
+### Table 1 Data
+
+```ts
+// important spacer
+type OrbitState = {
+  T: number;
+  s: number;
+  h: number;
+  p: number;
+  p1: number;
+  N: number;
+};
+
+type LunarNodeState = {
+  v: number;
+  vPrime: number;
+  twoVPrime: number;
+  Xi: number;
+};
+
+const OrbitVelocities: OrbitState = {
+  h: 0.04106864,
+  N: -0.00220641,
+  p1: 0.00000196,
+  s: 0.54901653,
+  p: 0.00464183,
+  T: 15,
+};
+
+const EpochState: OrbitState = {
+  h: 280.24,
+  N: 345.28,
+  p1: 282.42,
+  s: 197.96,
+  p: 302.64,
+  T: 180,
+};
+```
+
+### Table 15 Validation
+Lunar Node values hardcoded (Tables 4,5,6)
+
+```ts
+// {{cell:utils}}
+// {{cell:Table 1 Data}}
+
+const OrbitAtTime = (time: Date) => {
+  const deltaHours = +time / 1000 / 60 / 60;
+  return omap(EpochState, (t, k) =>
+    wrap(t + OrbitVelocities[k] * deltaHours)
+  );
+};
+
+
+const LunarNodeStateForYear = (y: number): LunarNodeState => {
+  const db: Record<number, LunarNodeState> = {
+    1970: {v: -4.42,  Xi: -3.98, vPrime: -3.15, twoVPrime: -6.68  },
+    1971: {v: -7.79,  Xi: -7.04, vPrime: -5.52, twoVPrime: -11.60 },
+    1972: {v: -10.44, Xi: -9.48, vPrime: -7.34, twoVPrime: -15.24 },
+    2000: {v:  12.67, Xi: 11.70, vPrime:  8.52, twoVPrime:  16.62 },
+  }
+
+  const x = db[y]
+  if (!x) throw Error('bad year: ' + y)
+  return x
+}
+
+// console.log(1970, OrbitAtTime(new Date("1970")));
+// console.log(1971, OrbitAtTime(new Date("1971")));
+// console.log(1972, OrbitAtTime(new Date("1972")));
+// console.log(2000, OrbitAtTime(new Date("2000")));
+
+
+const J1  = (o: OrbitState, l: LunarNodeState) => 
+  {
+    const V = o.T + o.s + o.h - o.p - 90
+    const u = -l.v;
+    return wrap(V + u);
+  }
+const K1  = (o: OrbitState, l: LunarNodeState) => 
+  {
+    const V = o.T + o.h - 90
+    const u = -l.vPrime;
+    return wrap(V + u);
+  }
+const Lam = (o: OrbitState, l: LunarNodeState) => 
+  {
+    const V = 2 * o.T - o.s + o.p + 180
+    const u = -2*l.v + 2*l.Xi;
+    return wrap(V + u);
+  }
+
+const logStatsForYear = (y: number) => {
+  const d = new Date(''+y)
+  const o = OrbitAtTime(d)
+  const l = LunarNodeStateForYear(y)
+  console.log(y, {J1: J1(o, l), K1: K1(o, l), Lam: Lam(o, l)})
+}
+
+logStatsForYear(1970)
+logStatsForYear(1971)
+logStatsForYear(1972)
+logStatsForYear(2000)
+```
+
+### Table 6 Validation
+In which the angle of the lunar node is converted to `u` parameters
+
+```ts
+// {{cell:utils}}
+
+const NtoXiNu = (
+  N: number
+): { Xi: number; Nu: number; NuPrime: number; TwiceNuDoublePrime: number } => {
+  // tan 1/2 (N - Xi + Nu) = 1.01883 tan 1/2 N
+  // tan 1/2 (N - Xi - Nu) = 0.64412 tan 1/2 N
+  // Schureman, page 172
+
+  const i = atan(1.01883 * tan(N / 2));
+  const j = atan(0.64412 * tan(N / 2));
+
+  const Nu = i - j;
+  const Xi = N - i - j;
+
+  // cos(I) = 0.91370 - 0.03569 * cos(N)
+  // Schureman, page 172
+  const I = acos(0.9137 - 0.03569 * cos(N));
+
+  // Nu' = atan[ ( sin 2I sin Nu ) / ( sin 2I cos Nu + 0.3347 ) ]
+  // Schureman, page 51
+  const NuPrime = atan(
+    (sin(2 * I) * sin(Nu)) / (sin(2 * I) * cos(Nu) + 0.3347)
+  );
+
+  // 2Nu'' = atan[ ( sin^2 I * sin 2Nu ) / ( sin^2 I cos 2Nu + 0.0727 ) ]
+  // Schureman, page 52
+  const TwiceNuDoublePrime = atan(
+    (sin(I) ** 2 * sin(2 * Nu)) / (sin(I) ** 2 * cos(2 * Nu) + 0.0727)
+  );
+  return { Xi, Nu, NuPrime, TwiceNuDoublePrime };
+};
+
+console.log(NtoXiNu(336));
+console.log(NtoXiNu(316));
+console.log(NtoXiNu(297));
+console.log(NtoXiNu(115));
+
+```
+
+```ts
+// {{cell:utils}}
+
+console.log(wrap(-3.98))
+console.log(wrap(-7.04))
+console.log(wrap(-9.48))
+```
+
+```ts
+
+for (let y = 2000; y <= 2020; y++) {
+  console.log(new Date((+new Date(''+y) + +new Date(''+(y+1)))/2))
+}
+```
+
+```ts
+// {{cell:utils}}
+
+const Ps = Array.from({ length: 361 }).map((_, i) => i);
+const Is = [23.5];
+
+for (const P of Ps) {
+  for (const I of Is) {
+    const R = atan(sin(2 * P) / (cot(I / 2) ** 2 / 6 - cos(2 * P)));
+    const Q =
+      atan(((5 * cos(I) - 1) / (7 * cos(I) + 1)) * tan(P)) +
+      (P > 90 ? 180 : 0) +
+      (P > 270 ? 180 : 0);
+
+    console.log(P, Q);
+  }
+}
+
+```
+
+```ts
+// {{cell:utils}}
+
+const I = 23.5
+console.log(((5 * cos(I - 1)) / (7 * cos(I + 1))))
+console.log(((5 * cos(I) - 1) / (7 * cos(I) + 1)))
+```
+
+```ts
+const mid = new Date(1673380582728)
+
+console.log(mid.toString())
+const offset = -8
+
+const stationDate = new Date(+mid + (offset ?? 0) * 60*60*1000)
+const stationTime = {
+  hours: stationDate.getUTCHours(),
+  minutes: stationDate.getUTCMinutes(),
+  day: stationDate.getUTCDate(),
+  month: stationDate.getUTCMonth(),
+  year: stationDate.getUTCFullYear(),
+}
+console.table(stationTime)
+```
+
+```ts
+const thing = daysPerRev => {
+  const hoursPerRev = daysPerRev * 24
+  // const revsPerHour = 1 / hoursPerRev
+  // const distance = Math.log(1 / revsPerHour ** 2 * 16/36)
+  
+  const revsPerHour =  1 / hoursPerRev
+  const logArg = (1 / revsPerHour ** 2) * (16 / 36)
+  const distance = logArg > 1 ? Math.log(logArg) : 0
+
+  console.log(daysPerRev, revsPerHour,logArg , distance)
+}
+
+thing(1/24)
+thing(1/16)
+thing(1/8)
+thing(1/4)
+thing(1)
+thing(4)
+thing(16)
+thing(64)
+thing(256)
+
+const boop = 2.772588722239781
+console.log(Array.from({length: 6}).map((_,i) => (i+1) * boop))
+
+```
+
+```ts
+// {{cell:utils}}
+// {{cell:Table 1 Data}}
+
+// An Epoch for New Moons. Astronomical Algorithms, Jean Meeus
+const FirstLunation = new Date('2000-01-06T18:14')
+const LunarSpeed = OrbitVelocities.s - OrbitVelocities.h
+export const MoonPhaseAtTime = (time: Date) => {
+	const deltaHours = (+time - +FirstLunation) / (1000 * 60 * 60)
+	const deltaDegrees = deltaHours * LunarSpeed
+	return wrap(deltaDegrees)
+}
+const day = 24 * 60 * 60 * 1000
+const lunarCycle = 29.5 * day
+for (const cycles of [-0.25, 0, 0.25, 0.5, 1, 10, 15.5]) {
+	console.log(cycles, MoonPhaseAtTime(new Date(+FirstLunation + cycles * lunarCycle)))
+}
+
+```

@@ -1,0 +1,27 @@
+Visuals:
+  ☐ Datums
+  ☐ Date
+  ✔ Constituent Frequency @done(23-01-20 10:39)
+
+Numerics:
+  ☐ Cursor Height
+  ☐ Cursor Time
+
+Controls:
+  ✔ Time Window Size @done(23-01-20 10:15)
+  ✔ Auto Forward Rate @done(23-01-20 10:13)
+  ☐ Tide Scale
+  ☐ Reference Datum
+  ✔ Low Pass Filter @done(23-01-20 10:13)
+  ✘ Orbit Radius Scale @cancelled(23-01-20 10:42)
+  ☐ Reset
+
+Engineering:
+  ☐ Dynamically load JSON
+  ☐ Offline Mode
+  ☐ Shareable URL
+  ✔ Get rid of `new Date` (push out to where explicitly needed) @done(23-01-20 10:38)
+
+# Fast, Responsive, Beautiful, Accessible: Pick 4
+
+# Watch Lunar New Year Live

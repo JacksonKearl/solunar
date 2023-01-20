@@ -1,0 +1,169 @@
+```bash
+# Obtain manifest of all stations
+curl -s https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations.json?type=harcon > stations_raw.json
+```
+
+```js
+// Filter out irrelevant fields
+const fs = require('fs')
+
+const rawStations = JSON.parse(fs.readFileSync('./stations_raw.json','utf-8'))
+const stations = rawStations.stations
+const clean = []
+for (const station of stations) {
+  clean.push({
+    id: station.id,
+    name: station.name,
+    lat: station.lat,
+    lng: station.lng,
+    harconUrl: station.harmonicConstituents.self,
+    state: station.state,
+    timezone: station.timezone,
+    timezoneOffset: station.timezonecorr,
+  })
+}
+
+fs.writeFileSync('./stations.json', JSON.stringify(clean, null, 2))
+
+```
+
+```js
+// Populate harmonic constituent data via harconUrl
+const fs = require('fs')
+
+const stations = JSON.parse(fs.readFileSync('./stations.json','utf-8'))
+
+try {
+  for (const station of stations) {
+    if (!station.harcon) {
+      console.log('Fetching data for', station.name)
+      const resp = await fetch(station.harconUrl)
+      const contents = await resp.json()
+      station.harcon = contents['HarmonicConstituents']
+      fs.writeFileSync('./stations.json', JSON.stringify(stations, null, 2))
+      // await new Promise(c => setTimeout(c, 1000))
+    }
+  }
+} finally {
+  fs.writeFileSync('./stations.json', JSON.stringify(stations, null, 2))
+}
+
+```
+
+```js
+// Translate from Constituent names as provided in API to names as used by Schureman and rest of code
+
+const fs = require("fs");
+
+const ConstituentApiNameToSchuremanName = {
+  T2: "T2",
+  SSA: "Ssa",
+  SA: "Sa",
+  S6: "S6",
+  S4: "S4",
+  S2: "S2",
+  S1: "S1",
+  RHO: "Rho1",
+  R2: "R2",
+  Q1: "Q1",
+  P1: "P1",
+  OO1: "OO",
+  O1: "O1",
+  NU2: "Nu2",
+  N2: "N2",
+  MU2: "Mu2",
+  MSF: "MSf",
+  MN4: "MN",
+  MM: "Mm",
+  MK3: "MK",
+  MF: "Mf",
+  M8: "M8",
+  M6: "M6",
+  M4: "M4",
+  M2: "M2",
+  M1: "M1",
+  LAM2: "Lambda2",
+  K2: "K2",
+  K1: "K1",
+  J1: "J1",
+  "2Q1": "2Q",
+  "2N2": "2N",
+  "2MK3": "2MK",
+  MS4: "MS",
+  M3: "M3",
+  L2: "L2",
+  "2SM2": "2SM",
+};
+
+const stations = JSON.parse(fs.readFileSync("./stations.json", "utf-8"));
+const missing = new Set()
+for (const station of stations) {
+  delete station.harconUrl
+  station.harcon = station.harcon
+    .map((x) => {
+      const name = ConstituentApiNameToSchuremanName[x.name]
+      if (!name && !missing.has(x.name)) {
+        // TODO: Incorporate all the missing constituents.
+        console.log('Error: missing translation for Constituent', x.name)
+        missing.add(x.name)
+      }
+      return ({
+        name,
+        amplitude: x.amplitude,
+        phaseLag: x.phase_GMT,
+      });
+    })
+      .filter((x) => x.name && x.amplitude);
+}
+
+fs.writeFileSync("./stations_clean.json", JSON.stringify(stations, null, 2));
+
+fs.writeFileSync("../src/stationData.ts", 'export default ' + JSON.stringify(stations, null, 2));
+
+```
+
+```js
+// Various data analyses
+const fs = require("fs");
+const stations = JSON.parse(fs.readFileSync("./stations_clean.json", "utf-8"));
+
+const s = {};
+const c = {};
+for (const station of stations) {
+  const stationID = `${station.id}: ${station.name}, ${station.state}`
+  s[stationID] = station.harcon.length;
+  for (const hc of station.harcon) {
+    c[hc.name] ??= 0;
+    c[hc.name] += hc.amplitude / stations.length;
+    // if (!hc.name) {
+    //   console.log(station.name)
+    // }
+  }
+}
+// console.table(
+//   Object.fromEntries(Object.entries(s).sort(([, a], [, b]) => b - a))
+// );
+console.log(
+  Object.fromEntries(
+    Object.entries(c)
+      .sort(([, a], [, b]) => b - a)
+      .map(([name, value]) => [name, { avg: value, d: 1 / Math.sqrt(value) }])
+  )
+);
+
+```
+
+```js
+const stations = JSON.parse(fs.readFileSync('./stations.json','utf-8'))
+
+const record = {}
+for (const station of stations) {
+  for (const harcon of station.harcon) {
+    if (harcon.description) {
+      record[harcon.name] = harcon.description
+    }
+  }
+}
+
+console.log(record)
+```
