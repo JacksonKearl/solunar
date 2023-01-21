@@ -1,6 +1,10 @@
 # solunar
 
+![screenshot of operations](screenshot.png)
+
 ## Works Cited
+
+### Tide Logic
 
 The core logic of this is a TypeScript implementation of the timeless _Manual of Harmonic Analysis and Prediction of Tides_, authored by Paul Schureman for the U.S. Department of Commerce as part of their Coast and Geodetic Survey, first published in 1924 and last modified in 1958. The full work is included here for reference (`Schureman1958.pdf`), or can be obtained [directly from NOAA](https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html). All equations and other material derived from this manual are cited with the source page number as measured from the PDF for ease of reference (note: _not_ the internal page numberings).
 
@@ -10,18 +14,8 @@ Data for the Harmonic Constituents of all 1232 capable stations was obtained fro
 
 In short: Thanks NOAA!
 
-## Dev
+### UI Styling
 
-To install dependencies:
+The UI is based (with varying degrees of roughness) on the F-15 Eagle's cockpit. Reference photos are kept in the `mood/` directory, and were consulted during development.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v0.4.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Thanks McDonnell Douglas!
