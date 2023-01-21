@@ -6,13 +6,16 @@ Visuals:
   ✔ Constituent Frequency @done(23-01-20 10:39)
 
 Controls:
-  ☐ Tide Scale
-  ☐ Reference Datum
-  ☐ Time Zone Selection
-  ☐ Reset
-  ✔ Time Window Size @done(23-01-20 10:15)
-  ✔ Auto Forward Rate @done(23-01-20 10:13)
-  ✔ Low Pass Filter @done(23-01-20 10:13)
+  Rotary Switch:
+    ☐ Tide Scale
+    ☐ Reference Datum
+    ☐ Time Zone Selection
+  Button:
+    ☐ Reset
+  Slider (Legacy?):
+    ✔ Time Window Size @done(23-01-20 10:15)
+    ✔ Auto Forward Rate @done(23-01-20 10:13)
+    ✔ Low Pass Filter @done(23-01-20 10:13)
  
 Engineering:
   ☐ Offline Mode

@@ -130,7 +130,7 @@ export class TideOScope extends CanvasElement {
 			}
 		}
 		this.options.center += amtToMove * timePerPixel
-		this.fetchCentralData()
+		this.outputCentralData()
 		this.render()
 	}
 
@@ -197,10 +197,10 @@ export class TideOScope extends CanvasElement {
 			const cursorTime = sploot(percWidth, start, end)
 			levels.push(this.stationLevelAtTime(cursorTime))
 		}
+		this.data = levels
+		this.outputCentralData()
 
-		this.fetchCentralData()
-
-		return (this.data = levels)
+		return this.data
 	}
 
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
@@ -249,7 +249,7 @@ export class TideOScope extends CanvasElement {
 	}
 
 	// reads: center, periodHiPass, periodLoPass
-	private fetchCentralData() {
+	private outputCentralData() {
 		this.centralDataObservable.set(this.stationLevelAtTime(this.options.center))
 	}
 

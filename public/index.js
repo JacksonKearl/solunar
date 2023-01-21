@@ -1104,7 +1104,7 @@ class TideOScope extends CanvasElement {
             }
         }
         this.options.center += amtToMove * timePerPixel;
-        this.fetchCentralData();
+        this.outputCentralData();
         this.render();
     }
     // reads timeRate
@@ -1160,8 +1160,9 @@ class TideOScope extends CanvasElement {
             const cursorTime = sploot(percWidth, start, end);
             levels.push(this.stationLevelAtTime(cursorTime));
         }
-        this.fetchCentralData();
-        return (this.data = levels);
+        this.data = levels;
+        this.outputCentralData();
+        return this.data;
     }
     // reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
     render() {
@@ -1197,7 +1198,7 @@ class TideOScope extends CanvasElement {
         this.context.fill();
     }
     // reads: center, periodHiPass, periodLoPass
-    fetchCentralData() {
+    outputCentralData() {
         this.centralDataObservable.set(this.stationLevelAtTime(this.options.center));
     }
     // reads: center, periodHiPass, periodLoPass
