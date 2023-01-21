@@ -6,7 +6,6 @@ type ClockOptions = {
 	time: number
 	offset: number
 	timeRate: number
-	refreshTimeout: number
 	renderSecondHand: boolean
 	render60Count: boolean
 	render12Count: boolean
@@ -29,7 +28,7 @@ export class Clock extends CanvasElement {
 		this.disposables.add(this.autoAdvanceDisposables)
 	}
 
-	public attachObservable<N extends keyof ClockOptions>(
+	public viewInput<N extends keyof ClockOptions>(
 		inputName: N,
 		view: View<ClockOptions[N]>,
 	) {
@@ -39,7 +38,7 @@ export class Clock extends CanvasElement {
 			timeRate: () => {
 				this.resetAutoAdvanceTimer()
 			},
-			refreshTimeout: () => {
+			renderSecondHand: () => {
 				this.resetAutoAdvanceTimer()
 			},
 			time: () => {
@@ -63,9 +62,12 @@ export class Clock extends CanvasElement {
 	// reads: timeRate, refreshTimeout
 	private resetAutoAdvanceTimer() {
 		this.autoAdvanceDisposables.clear()
-		const timeout = this.options.refreshTimeout
+		const timeout =
+			(this.options.renderSecondHand
+				? 1 / 60
+				: 1 / 10 / this.options.timeRate) * 1000
 
-		if (timeout < 10) {
+		if (timeout < 20) {
 			const handle = window.requestAnimationFrame(() => {
 				if (!this.active) {
 					this.render()
@@ -107,7 +109,7 @@ export class Clock extends CanvasElement {
 
 			this.context.beginPath()
 			this.setLineWidth(0.1)
-			this.context.fillStyle = '#222'
+			this.context.fillStyle = '#181818'
 			this.traceCircle(1)
 			this.context.stroke()
 			this.context.fill()
@@ -118,7 +120,7 @@ export class Clock extends CanvasElement {
 			this.context.fill()
 
 			this.context.beginPath()
-			this.context.fillStyle = '#333'
+			this.context.fillStyle = '#222'
 			this.traceCircle(0.83)
 			this.context.fill()
 		}
@@ -128,7 +130,7 @@ export class Clock extends CanvasElement {
 				const r = 0.68
 				const deg = scale(h, 0, 12, 90, -270)
 				const { x, y } = this.getRect(r, deg)
-				this.context.font = this.scaleFactor * 0.23 + 'px system-ui'
+				this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
 				this.fillText(x, y, String(h))
 			})
 		}

@@ -361,6 +361,14 @@ class Observable {
         }
     }
 }
+class Event extends Observable {
+    constructor() {
+        super();
+    }
+    fire() {
+        this.watchers.forEach((w) => w());
+    }
+}
 const MappedView = (view, mapper) => (watcher) => {
     const disposable = view((v) => watcher(mapper(v)));
     return { dispose: () => disposable.dispose() };
@@ -882,7 +890,7 @@ const Constituents = {
 const OrbitStateToArray = (o) => [o.T, o.s, o.h, o.p, o.p1, 1];
 // Schureman, page 179
 const OrbitVelocities = {
-    T: 15,
+    T: 15.0,
     s: 0.54901653,
     h: 0.041068639,
     p: 0.00464183,
@@ -890,15 +898,24 @@ const OrbitVelocities = {
     N: -0.00220641,
 };
 const EpochTime = new Date('1900');
+// Schureman, page 179
+const EpochState = {
+    T: 180.0,
+    s: 277.026,
+    h: 280.19,
+    p: 334.384,
+    p1: 281.221,
+    N: 259.156,
+};
 const OrbitAtTime = (time) => {
     const deltaHours = (+time - +EpochTime) / 1000 / 60 / 60;
     return {
-        T: +OrbitVelocities.T * deltaHours + 180,
-        s: +OrbitVelocities.s * deltaHours + 277.026,
-        h: +OrbitVelocities.h * deltaHours + 280.19,
-        p: +OrbitVelocities.p * deltaHours + 334.384,
-        p1: +OrbitVelocities.p1 * deltaHours + 281.221,
-        N: +OrbitVelocities.N * deltaHours + 259.156,
+        T: OrbitVelocities.T * deltaHours + EpochState.T,
+        s: OrbitVelocities.s * deltaHours + EpochState.s,
+        h: OrbitVelocities.h * deltaHours + EpochState.h,
+        p: OrbitVelocities.p * deltaHours + EpochState.p,
+        p1: OrbitVelocities.p1 * deltaHours + EpochState.p1,
+        N: OrbitVelocities.N * deltaHours + EpochState.N,
     };
 };
 const LunarNodeStateToArray = (s) => [
@@ -952,6 +969,7 @@ const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
     const vT = UniversalStateAtTime(time);
     const vTNext = UniversalStateAtTime(+time + 1000);
     const constituents = {};
+    let totalFlow = 0;
     let totalOffset = 0;
     for (const harmonic of station.harcon) {
         const cData = Constituents[harmonic.name];
@@ -973,8 +991,10 @@ const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
         }
         constituents[harmonic.name] = constituentContribution;
         totalOffset += offset;
+        const offsetNext = f * amplitude * cos(VuNext - phaseLag);
+        totalFlow += (offsetNext - offset) * 60 * 60;
     }
-    return { total: totalOffset, constituents, time };
+    return { total: totalOffset, flow: totalFlow, constituents, time };
 };
 // An Epoch for New Moons. Astronomical Algorithms, Jean Meeus
 const FirstLunation = new Date('2000-01-06T18:14');
@@ -1011,6 +1031,8 @@ class TideOScope extends CanvasElement {
     autoAdvanceDisposables = new DisposableStore();
     centralDataObservable = new Observable();
     centralDataView = this.centralDataObservable.view;
+    onDidRenderEvent = new Event();
+    onDidRender = this.onDidRenderEvent.view;
     constructor(context, drawZone, station, options) {
         super(context, drawZone);
         this.station = station;
@@ -1021,7 +1043,7 @@ class TideOScope extends CanvasElement {
         this.resetAutoAdvanceTimer();
         this.disposables.add(this.autoAdvanceDisposables);
     }
-    attachObservable(inputName, view) {
+    viewInput(inputName, view) {
         const toRunOnChange = {
             center: () => {
                 this.fetchAllData();
@@ -1052,9 +1074,7 @@ class TideOScope extends CanvasElement {
     // reads: renderScale, timeRange, timeRate, data
     // writes: center, data
     onDrag(l) {
-        if (this.locationInRadius(l, 1)) {
-            this.panLevels((l.dx * -1) / this.options.renderScale);
-        }
+        this.panLevels((l.dx * -1) / this.options.renderScale);
     }
     // reads: timeRange, timeRate, data, periodHiPass, periodLoPass
     // writes: center, data
@@ -1161,7 +1181,7 @@ class TideOScope extends CanvasElement {
         }
         this.renderCrosshairs();
         this.context.restore();
-        // this.resetAutoAdvanceTimer()
+        this.onDidRenderEvent.fire();
     }
     // reads: data, yRange
     renderTidePlot() {
@@ -1345,7 +1365,7 @@ class Gauge extends CanvasElement {
         this.options = options;
         this.scaleFactor = this.dimensions.minDim * (3 / 7);
     }
-    attachObservable(inputName, view) {
+    viewInput(inputName, view) {
         this.disposables.add(view((v) => {
             if (this.options[inputName] !== v) {
                 this.options[inputName] = v;
@@ -1356,23 +1376,92 @@ class Gauge extends CanvasElement {
         }));
     }
     render() {
+        const renderCasing = () => {
+            this.context.strokeStyle = '#000';
+            this.context.beginPath();
+            this.setLineWidth(0.1);
+            this.context.fillStyle = '#222';
+            this.traceCircle(1);
+            this.context.stroke();
+            this.context.fill();
+        };
+        const renderHand = () => {
+            const valPercent = scale(this.options.value, this.options.min, this.options.max, 0, 1);
+            const bounded = bound2(valPercent, 0, 1);
+            const valAngle = sploot(bounded, this.options.minAngle, this.options.maxAngle);
+            const rGauge = 0.8;
+            this.withRotation(valAngle, 0, 0, () => {
+                this.context.fillStyle = '#444';
+                this.context.strokeStyle = '#000';
+                this.setLineWidth(0.015);
+                this.context.beginPath();
+                this.moveTo(0, 0);
+                this.traceCircle(1 / 20);
+                this.context.stroke();
+                this.context.fill();
+                this.context.beginPath();
+                this.moveTo(0, 0);
+                this.traceLine(rGauge * (0 / 3), rGauge * (1 / 20));
+                this.traceLine(rGauge * (2 / 3), rGauge * (1 / 20));
+                this.traceLine(rGauge * (3 / 3), rGauge * (0 / 20));
+                this.traceLine(rGauge * (2 / 3), rGauge * (-1 / 20));
+                this.traceLine(rGauge * (0 / 3), rGauge * (-1 / 20));
+                this.traceLine(0, 0);
+                this.context.stroke();
+                this.context.fill();
+                this.context.fillStyle = '#fff';
+                this.context.beginPath();
+                this.traceLine(rGauge * (1 / 4), rGauge * (1 / 20));
+                this.traceLine(rGauge * (2 / 3), rGauge * (1 / 20));
+                this.traceLine(rGauge * (3 / 3), rGauge * (0 / 20));
+                this.traceLine(rGauge * (2 / 3), rGauge * (-1 / 20));
+                this.traceLine(rGauge * (1 / 4), rGauge * (-1 / 20));
+                this.context.fill();
+                this.context.fillStyle = '#444';
+                this.context.beginPath();
+                this.moveTo(0, 0);
+                this.traceCircle(1 / 20);
+                this.context.fill();
+            });
+        };
+        const renderTics = () => {
+            this.context.strokeStyle = '#fff';
+            this.context.fillStyle = '#fff';
+            Array.from({ length: this.options.numMajorTics }, (_, iMaj) => {
+                const majorDeg = scale(iMaj, 0, this.options.numMajorTics - 1, this.options.minAngle, this.options.maxAngle);
+                const val = scale(iMaj, 0, this.options.numMajorTics - 1, this.options.min, this.options.max);
+                const { x, y } = this.getRect(0.65, majorDeg);
+                this.context.font = this.scaleFactor * 0.2 + 'px system-ui';
+                this.fillText(x, y, String(val), 'center');
+                this.context.beginPath();
+                this.setLineWidth(0.02);
+                this.traceRay(0.95, majorDeg, 0, 0, 0.8);
+                this.context.stroke();
+                if (iMaj < this.options.numMajorTics - 1) {
+                    Array.from({ length: this.options.numMinorTics }, (_, iMin) => {
+                        const nextMajDeg = scale(iMaj + 1, 0, this.options.numMajorTics - 1, this.options.minAngle, this.options.maxAngle);
+                        const minorDeg = scale(iMin + 1, 0, this.options.numMinorTics + 1, majorDeg, nextMajDeg);
+                        this.context.beginPath();
+                        this.setLineWidth(0.02);
+                        const offset = iMin + 1 === (this.options.numMinorTics + 1) / 2 ? 0.85 : 0.9;
+                        this.traceRay(0.95, minorDeg, 0, 0, offset);
+                        this.context.stroke();
+                    });
+                }
+            });
+        };
+        const renderTitle = () => {
+            this.context.fillStyle = '#fff';
+            this.context.font = this.scaleFactor * 0.2 + 'px system-ui';
+            this.fillText(0, -0.6, this.options.title.toLocaleUpperCase(), 'center');
+            this.context.font = this.scaleFactor * 0.1 + 'px system-ui';
+            this.fillText(0, -0.4, this.options.subtitle.toLocaleUpperCase(), 'center');
+        };
         this.context.save();
-        this.context.fillStyle = '#ffffff';
-        this.context.beginPath();
-        this.context.lineWidth = 20;
-        this.context.strokeStyle = '#000000';
-        this.traceCircle(1);
-        this.context.stroke();
-        this.context.fill();
-        this.context.beginPath();
-        this.context.lineWidth = 3;
-        const valPercent = scale(this.options.value, this.options.min, this.options.max, 0, 1);
-        const bounded = bound2(valPercent, 0, 1);
-        const valAngle = sploot(bounded, this.options.minAngle, this.options.maxAngle);
-        this.moveTo(0, 0);
-        const r = 0.7;
-        this.traceLine(r * cos(valAngle), -r * sin(valAngle));
-        this.context.stroke();
+        renderCasing();
+        renderHand();
+        renderTics();
+        renderTitle();
         this.context.restore();
     }
 }
@@ -1389,12 +1478,12 @@ class Clock extends CanvasElement {
         this.resetAutoAdvanceTimer();
         this.disposables.add(this.autoAdvanceDisposables);
     }
-    attachObservable(inputName, view) {
+    viewInput(inputName, view) {
         const toRunOnChange = {
             timeRate: () => {
                 this.resetAutoAdvanceTimer();
             },
-            refreshTimeout: () => {
+            renderSecondHand: () => {
                 this.resetAutoAdvanceTimer();
             },
             time: () => {
@@ -1414,8 +1503,10 @@ class Clock extends CanvasElement {
     // reads: timeRate, refreshTimeout
     resetAutoAdvanceTimer() {
         this.autoAdvanceDisposables.clear();
-        const timeout = this.options.refreshTimeout;
-        if (timeout < 10) {
+        const timeout = (this.options.renderSecondHand
+            ? 1 / 60
+            : 1 / 10 / this.options.timeRate) * 1000;
+        if (timeout < 20) {
             const handle = window.requestAnimationFrame(() => {
                 if (!this.active) {
                     this.render();
@@ -1452,7 +1543,7 @@ class Clock extends CanvasElement {
             this.context.strokeStyle = '#000';
             this.context.beginPath();
             this.setLineWidth(0.1);
-            this.context.fillStyle = '#222';
+            this.context.fillStyle = '#181818';
             this.traceCircle(1);
             this.context.stroke();
             this.context.fill();
@@ -1461,7 +1552,7 @@ class Clock extends CanvasElement {
             this.traceCircle(0.85);
             this.context.fill();
             this.context.beginPath();
-            this.context.fillStyle = '#333';
+            this.context.fillStyle = '#222';
             this.traceCircle(0.83);
             this.context.fill();
         };
@@ -1471,7 +1562,7 @@ class Clock extends CanvasElement {
                 const r = 0.68;
                 const deg = scale(h, 0, 12, 90, -270);
                 const { x, y } = this.getRect(r, deg);
-                this.context.font = this.scaleFactor * 0.23 + 'px system-ui';
+                this.context.font = this.scaleFactor * 0.2 + 'px system-ui';
                 this.fillText(x, y, String(h));
             });
         };
@@ -1767,16 +1858,6 @@ const go = () => {
         periodLoPass: 10,
         periodHiPass: -4,
     };
-    // {
-    // 	const timeGauge = new Clock(ctx, mainDrawZone, {
-    // 		time: Date.now(),
-    // 		offset: 480,
-    // 		refreshTimeout: (1 / 60) * 1000,
-    // 		timeRate: 1,
-    // 	})
-    // 	disposables.add(timeGauge)
-    // }
-    // return
     const tideOScope = new TideOScope(ctx, drawZoneForElement(main), active, defaultOptions);
     const constituentToggle = new Toggle(ctx, drawZoneForElement(tideOScopeToggles[2]), {
         label: 'Harmonics',
@@ -1848,39 +1929,66 @@ const go = () => {
     }, {
         time: defaultOptions.center,
         offset: StationOffset,
-        refreshTimeout: (1 / 60) * 1000,
         timeRate: defaultOptions.timeRate,
         render60Count: false,
         renderSecondHand: false,
         render12Count: true,
         renderTimer: false,
     });
-    const heightGauge = new Gauge(ctx, {
+    const tideHeightGauge = new Gauge(ctx, {
         height: mainDrawZone.height / 4,
         width: mainDrawZone.width / 4,
         left: mainDrawZone.left,
         top: mainDrawZone.top,
     }, {
-        label: 'Height',
-        min: -8,
-        max: 8,
+        title: 'Tide',
+        subtitle: 'Feet',
+        min: -defaultOptions.yRange,
+        max: defaultOptions.yRange,
         value: 0,
-        minAngle: 250,
-        maxAngle: -70,
+        minAngle: 30,
+        maxAngle: -210,
+        numMajorTics: 9,
+        numMinorTics: 3,
     });
-    tideOScope.attachObservable('renderHarmonics', constituentToggle.valueView);
-    tideOScope.attachObservable('periodLoPass', lowpassCutoff.valueView);
-    tideOScope.attachObservable('periodHiPass', highpassCutoff.valueView);
-    tideOScope.attachObservable('renderMoon', moonToggle.valueView);
-    tideOScope.attachObservable('renderSun', sunToggle.valueView);
-    tideOScope.attachObservable('timeRange', windowRangeSlider.valueView);
-    tideOScope.attachObservable('timeRate', scrollSpeedSlider.valueView);
-    heightGauge.attachObservable('value', MappedView(tideOScope.centralDataView, (v) => v.total));
-    timeGauge.attachObservable('time', MappedView(tideOScope.centralDataView, (v) => v.time));
-    timeGauge.attachObservable('timeRate', scrollSpeedSlider.valueView);
-    timeGauge.attachObservable('render60Count', numbers60Toggle.valueView);
-    timeGauge.attachObservable('render12Count', numbers12Toggle.valueView);
-    timeGauge.attachObservable('renderSecondHand', secondToggle.valueView);
+    const tideFlowGauge = new Gauge(ctx, {
+        height: mainDrawZone.height / 4,
+        width: mainDrawZone.width / 4,
+        left: mainDrawZone.left,
+        top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
+    }, {
+        title: 'Flow',
+        subtitle: 'feet per hr',
+        min: -defaultOptions.yRange / 2,
+        max: defaultOptions.yRange / 2,
+        value: 0,
+        minAngle: 30,
+        maxAngle: -210,
+        numMajorTics: 9,
+        numMinorTics: 3,
+    });
+    tideOScope.viewInput('renderHarmonics', constituentToggle.valueView);
+    tideOScope.viewInput('periodLoPass', lowpassCutoff.valueView);
+    tideOScope.viewInput('periodHiPass', highpassCutoff.valueView);
+    tideOScope.viewInput('renderMoon', moonToggle.valueView);
+    tideOScope.viewInput('renderSun', sunToggle.valueView);
+    tideOScope.viewInput('timeRange', windowRangeSlider.valueView);
+    tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView);
+    tideFlowGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.flow));
+    tideHeightGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.total));
+    timeGauge.viewInput('time', MappedView(tideOScope.centralDataView, (v) => v.time));
+    timeGauge.viewInput('timeRate', scrollSpeedSlider.valueView);
+    timeGauge.viewInput('render60Count', numbers60Toggle.valueView);
+    timeGauge.viewInput('render12Count', numbers12Toggle.valueView);
+    timeGauge.viewInput('renderSecondHand', secondToggle.valueView);
+    // hack to prevent these being drawn underneath the main scope...
+    // ideally they'd be on a different layer of canvas or something?
+    // TODO: Different canvas layers.
+    disposables.add(tideOScope.onDidRender(() => {
+        tideFlowGauge.render();
+        tideHeightGauge.render();
+        timeGauge.render();
+    }));
     const allComponents = [
         windowRangeSlider,
         scrollSpeedSlider,
@@ -1890,11 +1998,12 @@ const go = () => {
         sunToggle,
         constituentToggle,
         tideOScope,
-        heightGauge,
+        tideHeightGauge,
         timeGauge,
         numbers12Toggle,
         numbers60Toggle,
         secondToggle,
+        tideFlowGauge,
     ];
     disposables.add(...allComponents);
     allComponents.map((c) => c.render());

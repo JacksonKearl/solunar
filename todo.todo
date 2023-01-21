@@ -1,23 +1,23 @@
 Visuals:
   ☐ Datums
   ☐ Date
-  ☐ Gauge
+  ✔ Gauge @done(23-01-21 13:44)
   ✔ Clock @done(23-01-21 11:46)
   ✔ Constituent Frequency @done(23-01-20 10:39)
 
 Controls:
-  ✔ Time Window Size @done(23-01-20 10:15)
-  ✔ Auto Forward Rate @done(23-01-20 10:13)
   ☐ Tide Scale
   ☐ Reference Datum
-  ✔ Low Pass Filter @done(23-01-20 10:13)
-  ✘ Orbit Radius Scale @cancelled(23-01-20 10:42)
+  ☐ Time Zone Selection
   ☐ Reset
+  ✔ Time Window Size @done(23-01-20 10:15)
+  ✔ Auto Forward Rate @done(23-01-20 10:13)
+  ✔ Low Pass Filter @done(23-01-20 10:13)
  
 Engineering:
-  ✔ Dynamically load JSON @done(23-01-21 11:46)
   ☐ Offline Mode
   ☐ Shareable URL
+  ✔ Dynamically load JSON @done(23-01-21 11:46)
   ✔ Get rid of `new Date` (push out to where explicitly needed) @done(23-01-20 10:38)
 
 # Fast, Responsive, Beautiful, Accessible: Pick 4

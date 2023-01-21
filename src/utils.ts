@@ -38,7 +38,7 @@ export type View<T> = { (viewer: (value: T) => void): Disposable }
 export class Observable<T> {
 	view: View<T>
 	value: T | undefined
-	private watchers = new Set<(v: T) => void>()
+	protected watchers = new Set<(v: T) => void>()
 	constructor() {
 		this.view = (w) => {
 			this.watchers.add(w)
@@ -53,6 +53,14 @@ export class Observable<T> {
 			this.value = v
 			this.watchers.forEach((w) => w(v))
 		}
+	}
+}
+export class Event extends Observable<void> {
+	constructor() {
+		super()
+	}
+	fire() {
+		this.watchers.forEach((w) => w())
 	}
 }
 

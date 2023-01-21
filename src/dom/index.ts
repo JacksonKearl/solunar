@@ -79,18 +79,6 @@ const go = () => {
 		periodHiPass: -4,
 	}
 
-	// {
-	// 	const timeGauge = new Clock(ctx, mainDrawZone, {
-	// 		time: Date.now(),
-	// 		offset: 480,
-	// 		refreshTimeout: (1 / 60) * 1000,
-	// 		timeRate: 1,
-	// 	})
-	// 	disposables.add(timeGauge)
-	// }
-
-	// return
-
 	const tideOScope = new TideOScope(
 		ctx,
 		drawZoneForElement(main),
@@ -178,7 +166,6 @@ const go = () => {
 		{
 			time: defaultOptions.center,
 			offset: StationOffset,
-			refreshTimeout: (1 / 60) * 1000,
 			timeRate: defaultOptions.timeRate,
 			render60Count: false,
 			renderSecondHand: false,
@@ -186,7 +173,7 @@ const go = () => {
 			renderTimer: false,
 		},
 	)
-	const heightGauge = new Gauge(
+	const tideHeightGauge = new Gauge(
 		ctx,
 		{
 			height: mainDrawZone.height / 4,
@@ -195,35 +182,74 @@ const go = () => {
 			top: mainDrawZone.top,
 		},
 		{
-			label: 'Height',
-			min: -8,
-			max: 8,
+			title: 'Tide',
+			subtitle: 'Feet',
+			min: -defaultOptions.yRange,
+			max: defaultOptions.yRange,
 			value: 0,
-			minAngle: 250,
-			maxAngle: -70,
+			minAngle: 30,
+			maxAngle: -210,
+			numMajorTics: 9,
+			numMinorTics: 3,
 		},
 	)
 
-	tideOScope.attachObservable('renderHarmonics', constituentToggle.valueView)
-	tideOScope.attachObservable('periodLoPass', lowpassCutoff.valueView)
-	tideOScope.attachObservable('periodHiPass', highpassCutoff.valueView)
-	tideOScope.attachObservable('renderMoon', moonToggle.valueView)
-	tideOScope.attachObservable('renderSun', sunToggle.valueView)
-	tideOScope.attachObservable('timeRange', windowRangeSlider.valueView)
-	tideOScope.attachObservable('timeRate', scrollSpeedSlider.valueView)
+	const tideFlowGauge = new Gauge(
+		ctx,
+		{
+			height: mainDrawZone.height / 4,
+			width: mainDrawZone.width / 4,
+			left: mainDrawZone.left,
+			top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
+		},
+		{
+			title: 'Flow',
+			subtitle: 'feet per hr',
+			min: -defaultOptions.yRange / 2,
+			max: defaultOptions.yRange / 2,
+			value: 0,
+			minAngle: 30,
+			maxAngle: -210,
+			numMajorTics: 9,
+			numMinorTics: 3,
+		},
+	)
 
-	heightGauge.attachObservable(
+	tideOScope.viewInput('renderHarmonics', constituentToggle.valueView)
+	tideOScope.viewInput('periodLoPass', lowpassCutoff.valueView)
+	tideOScope.viewInput('periodHiPass', highpassCutoff.valueView)
+	tideOScope.viewInput('renderMoon', moonToggle.valueView)
+	tideOScope.viewInput('renderSun', sunToggle.valueView)
+	tideOScope.viewInput('timeRange', windowRangeSlider.valueView)
+	tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView)
+
+	tideFlowGauge.viewInput(
+		'value',
+		MappedView(tideOScope.centralDataView, (v) => v.flow),
+	)
+	tideHeightGauge.viewInput(
 		'value',
 		MappedView(tideOScope.centralDataView, (v) => v.total),
 	)
-	timeGauge.attachObservable(
+	timeGauge.viewInput(
 		'time',
 		MappedView(tideOScope.centralDataView, (v) => v.time),
 	)
-	timeGauge.attachObservable('timeRate', scrollSpeedSlider.valueView)
-	timeGauge.attachObservable('render60Count', numbers60Toggle.valueView)
-	timeGauge.attachObservable('render12Count', numbers12Toggle.valueView)
-	timeGauge.attachObservable('renderSecondHand', secondToggle.valueView)
+	timeGauge.viewInput('timeRate', scrollSpeedSlider.valueView)
+	timeGauge.viewInput('render60Count', numbers60Toggle.valueView)
+	timeGauge.viewInput('render12Count', numbers12Toggle.valueView)
+	timeGauge.viewInput('renderSecondHand', secondToggle.valueView)
+
+	// hack to prevent these being drawn underneath the main scope...
+	// ideally they'd be on a different layer of canvas or something?
+	// TODO: Different canvas layers.
+	disposables.add(
+		tideOScope.onDidRender(() => {
+			tideFlowGauge.render()
+			tideHeightGauge.render()
+			timeGauge.render()
+		}),
+	)
 
 	const allComponents = [
 		windowRangeSlider,
@@ -234,11 +260,12 @@ const go = () => {
 		sunToggle,
 		constituentToggle,
 		tideOScope,
-		heightGauge,
+		tideHeightGauge,
 		timeGauge,
 		numbers12Toggle,
 		numbers60Toggle,
 		secondToggle,
+		tideFlowGauge,
 	]
 
 	disposables.add(...allComponents)

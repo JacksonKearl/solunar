@@ -5,25 +5,21 @@ import {
 	DisposableStore,
 	bound2,
 	Observable,
+	Event,
 } from '$/utils'
 import { sin, cos, wrap } from '$/degreeMath'
 import { ConstituentName, Station, UnixTime } from '$/types'
 import {
 	StationLevelAtTime,
-	ConstituentContribution,
 	MoonSynodicalAngleAtTime,
 	SolarAngleAtTime,
 	MoonTropicalAngleAtTime,
 	LunarTropicalSpeed,
+	TideOScopeDataPoint,
 } from '$/tideForTime'
 import { Constituents } from '$/constituents'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
-type TideOScopeDataPoint = {
-	total: number
-	time: UnixTime
-	constituents: Record<string, ConstituentContribution>
-}
 type TideOScopeOptions = {
 	renderScale: number
 	center: number
@@ -46,6 +42,9 @@ export class TideOScope extends CanvasElement {
 	private centralDataObservable = new Observable<TideOScopeDataPoint>()
 	public centralDataView = this.centralDataObservable.view
 
+	private onDidRenderEvent = new Event()
+	public onDidRender = this.onDidRenderEvent.view
+
 	public constructor(
 		context: CanvasRenderingContext2D,
 		drawZone: DrawZone,
@@ -60,7 +59,7 @@ export class TideOScope extends CanvasElement {
 		this.disposables.add(this.autoAdvanceDisposables)
 	}
 
-	public attachObservable<N extends keyof TideOScopeOptions>(
+	public viewInput<N extends keyof TideOScopeOptions>(
 		inputName: N,
 		view: View<TideOScopeOptions[N]>,
 	) {
@@ -100,9 +99,7 @@ export class TideOScope extends CanvasElement {
 	// reads: renderScale, timeRange, timeRate, data
 	// writes: center, data
 	protected override onDrag(l: Location & { dx: number; dy: number }): void {
-		if (this.locationInRadius(l, 1)) {
-			this.panLevels((l.dx * -1) / this.options.renderScale)
-		}
+		this.panLevels((l.dx * -1) / this.options.renderScale)
 	}
 
 	// reads: timeRange, timeRate, data, periodHiPass, periodLoPass
@@ -225,7 +222,7 @@ export class TideOScope extends CanvasElement {
 		this.renderCrosshairs()
 		this.context.restore()
 
-		// this.resetAutoAdvanceTimer()
+		this.onDidRenderEvent.fire()
 	}
 
 	// reads: data, yRange

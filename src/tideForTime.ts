@@ -6,7 +6,7 @@ import { OrbitState, LunarNodeState, Station, UnixTime } from './types'
 const OrbitStateToArray = (o: OrbitState) => [o.T, o.s, o.h, o.p, o.p1, 1]
 // Schureman, page 179
 const OrbitVelocities: OrbitState = {
-	T: 15,
+	T: 15.0,
 	s: 0.54901653,
 	h: 0.041068639,
 	p: 0.00464183,
@@ -17,7 +17,7 @@ const OrbitVelocities: OrbitState = {
 const EpochTime = new Date('1900')
 // Schureman, page 179
 const EpochState: OrbitState = {
-	T: 180,
+	T: 180.0,
 	s: 277.026,
 	h: 280.19,
 	p: 334.384,
@@ -28,12 +28,12 @@ const EpochState: OrbitState = {
 const OrbitAtTime = (time: UnixTime): Record<keyof OrbitState, number> => {
 	const deltaHours = (+time - +EpochTime) / 1000 / 60 / 60
 	return {
-		T: +OrbitVelocities.T * deltaHours + 180,
-		s: +OrbitVelocities.s * deltaHours + 277.026,
-		h: +OrbitVelocities.h * deltaHours + 280.19,
-		p: +OrbitVelocities.p * deltaHours + 334.384,
-		p1: +OrbitVelocities.p1 * deltaHours + 281.221,
-		N: +OrbitVelocities.N * deltaHours + 259.156,
+		T: OrbitVelocities.T * deltaHours + EpochState.T,
+		s: OrbitVelocities.s * deltaHours + EpochState.s,
+		h: OrbitVelocities.h * deltaHours + EpochState.h,
+		p: OrbitVelocities.p * deltaHours + EpochState.p,
+		p1: OrbitVelocities.p1 * deltaHours + EpochState.p1,
+		N: OrbitVelocities.N * deltaHours + EpochState.N,
 	}
 }
 
@@ -147,19 +147,23 @@ export type ConstituentContribution = {
 	degreesPerSecond: number
 }
 
+export type TideOScopeDataPoint = {
+	flow: number
+	total: number
+	time: UnixTime
+	constituents: Record<string, ConstituentContribution>
+}
+
 export const StationLevelAtTime = (
 	station: Station,
 	time: UnixTime,
 	includeConstituent: (c: ConstituentContribution) => boolean = () => true,
-): {
-	total: number
-	constituents: Record<string, ConstituentContribution>
-	time: UnixTime
-} => {
+): TideOScopeDataPoint => {
 	const vT = UniversalStateAtTime(time)
 	const vTNext = UniversalStateAtTime(+time + 1000)
 
 	const constituents: Record<string, ConstituentContribution> = {}
+	let totalFlow = 0
 	let totalOffset = 0
 	for (const harmonic of station.harcon) {
 		const cData = Constituents[harmonic.name]
@@ -185,9 +189,12 @@ export const StationLevelAtTime = (
 		}
 		constituents[harmonic.name] = constituentContribution
 		totalOffset += offset
+
+		const offsetNext = f * amplitude * cos(VuNext - phaseLag)
+		totalFlow += (offsetNext - offset) * 60 * 60
 	}
 
-	return { total: totalOffset, constituents, time }
+	return { total: totalOffset, flow: totalFlow, constituents, time }
 }
 
 // An Epoch for New Moons. Astronomical Algorithms, Jean Meeus
