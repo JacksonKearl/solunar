@@ -1,4 +1,4 @@
-import { dot, Year } from './utils'
+import { dot, scale, Year } from './utils'
 import { sin, cos, tan, acos, atan, wrap, cot } from './degreeMath'
 import { Constituents, ConstituentData } from './constituents'
 import { OrbitState, LunarNodeState, Station, UnixTime } from './types'
@@ -193,9 +193,29 @@ export const StationLevelAtTime = (
 // An Epoch for New Moons. Astronomical Algorithms, Jean Meeus
 const FirstLunation = new Date('2000-01-06T18:14')
 // Synodical Month, Schureman, page 179
-export const LunarSpeed = OrbitVelocities.s - OrbitVelocities.h
-export const MoonPhaseAngleAtTime = (time: UnixTime) => {
+export const LunarSynodicalSpeed = OrbitVelocities.s - OrbitVelocities.h
+export const MoonSynodicalAngleAtTime = (time: UnixTime) => {
 	const deltaHours = (time - +FirstLunation) / (1000 * 60 * 60)
-	const deltaDegrees = deltaHours * LunarSpeed
+	const deltaDegrees = deltaHours * LunarSynodicalSpeed
 	return wrap(deltaDegrees)
+}
+
+// Tropical Month, Schureman, page 179
+export const LunarTropicalSpeed = OrbitVelocities.s
+export const MoonTropicalAngleAtTime = (time: UnixTime) => {
+	const phaseOffset = SolarAngleAtTime(+FirstLunation)
+	const deltaHours = (time - +FirstLunation) / (1000 * 60 * 60)
+	const deltaDegrees = deltaHours * LunarTropicalSpeed + phaseOffset
+	return wrap(deltaDegrees)
+}
+
+export const SolarAngleAtTime = (time: UnixTime) => {
+	const yearStart = new Date(time)
+	yearStart.setUTCMonth(0, 1)
+	yearStart.setUTCHours(0, 0, 0, 0)
+
+	const yearEnd = new Date(yearStart)
+	yearEnd.setUTCFullYear(yearStart.getUTCFullYear() + 1)
+
+	return scale(time, +yearStart, +yearEnd, 0, 360)
 }

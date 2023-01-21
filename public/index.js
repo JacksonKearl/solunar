@@ -979,11 +979,27 @@ const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
 // An Epoch for New Moons. Astronomical Algorithms, Jean Meeus
 const FirstLunation = new Date('2000-01-06T18:14');
 // Synodical Month, Schureman, page 179
-const LunarSpeed = OrbitVelocities.s - OrbitVelocities.h;
-const MoonPhaseAngleAtTime = (time) => {
+const LunarSynodicalSpeed = OrbitVelocities.s - OrbitVelocities.h;
+const MoonSynodicalAngleAtTime = (time) => {
     const deltaHours = (time - +FirstLunation) / (1000 * 60 * 60);
-    const deltaDegrees = deltaHours * LunarSpeed;
+    const deltaDegrees = deltaHours * LunarSynodicalSpeed;
     return wrap(deltaDegrees);
+};
+// Tropical Month, Schureman, page 179
+const LunarTropicalSpeed = OrbitVelocities.s;
+const MoonTropicalAngleAtTime = (time) => {
+    const phaseOffset = SolarAngleAtTime(+FirstLunation);
+    const deltaHours = (time - +FirstLunation) / (1000 * 60 * 60);
+    const deltaDegrees = deltaHours * LunarTropicalSpeed + phaseOffset;
+    return wrap(deltaDegrees);
+};
+const SolarAngleAtTime = (time) => {
+    const yearStart = new Date(time);
+    yearStart.setUTCMonth(0, 1);
+    yearStart.setUTCHours(0, 0, 0, 0);
+    const yearEnd = new Date(yearStart);
+    yearEnd.setUTCFullYear(yearStart.getUTCFullYear() + 1);
+    return scale(time, +yearStart, +yearEnd, 0, 360);
 };
 
 class TideOScope extends CanvasElement {
@@ -1170,12 +1186,13 @@ class TideOScope extends CanvasElement {
     }
     // reads: center
     renderMoon() {
-        const moonPhaseAngle = MoonPhaseAngleAtTime(this.centralData.time);
-        const { x, y } = this.getCoordForData(moonPhaseAngle + 180, {
-            revsPerHour: LunarSpeed / 360,
+        const moonSynodicalAngle = MoonSynodicalAngleAtTime(this.centralData.time);
+        const moonTropicalAngle = MoonTropicalAngleAtTime(this.centralData.time);
+        const { x, y } = this.getCoordForData(moonTropicalAngle, {
+            revsPerHour: LunarTropicalSpeed / 360,
         });
         this.context.fillStyle = '#eeeeee';
-        const percentCycle = wrap(moonPhaseAngle) / 360;
+        const percentCycle = wrap(moonSynodicalAngle) / 360;
         const outsidePath = [];
         const insidePath = [];
         const radius = this.activeRadius / 15;
@@ -1199,13 +1216,7 @@ class TideOScope extends CanvasElement {
     }
     // reads: center
     renderSun() {
-        const cursorTime = this.centralData.time;
-        const yearStart = new Date(this.centralData.time);
-        yearStart.setUTCMonth(0, 1);
-        yearStart.setUTCHours(0, 0, 0, 0);
-        const yearEnd = new Date(yearStart);
-        yearEnd.setUTCFullYear(yearStart.getUTCFullYear() + 1);
-        const sunPhaseAngle = scale(cursorTime, +yearStart, +yearEnd, 0, 360);
+        const sunPhaseAngle = SolarAngleAtTime(this.centralData.time);
         const { x, y } = this.getCoordForData(sunPhaseAngle, {
             daysPerRev: 365.25,
         });

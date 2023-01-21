@@ -11,8 +11,10 @@ import { ConstituentName, Station, UnixTime } from '$/types'
 import {
 	StationLevelAtTime,
 	ConstituentContribution,
-	MoonPhaseAngleAtTime,
-	LunarSpeed,
+	MoonSynodicalAngleAtTime,
+	SolarAngleAtTime,
+	MoonTropicalAngleAtTime,
+	LunarTropicalSpeed,
 } from '$/tideForTime'
 import { Constituents } from '$/constituents'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
@@ -261,12 +263,14 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center
 	private renderMoon() {
-		const moonPhaseAngle = MoonPhaseAngleAtTime(this.centralData.time)
-		const { x, y } = this.getCoordForData(moonPhaseAngle + 180, {
-			revsPerHour: LunarSpeed / 360,
+		const moonSynodicalAngle = MoonSynodicalAngleAtTime(this.centralData.time)
+		const moonTropicalAngle = MoonTropicalAngleAtTime(this.centralData.time)
+
+		const { x, y } = this.getCoordForData(moonTropicalAngle, {
+			revsPerHour: LunarTropicalSpeed / 360,
 		})
 		this.context.fillStyle = '#eeeeee'
-		const percentCycle = wrap(moonPhaseAngle) / 360
+		const percentCycle = wrap(moonSynodicalAngle) / 360
 		const outsidePath = []
 		const insidePath = []
 		const radius = this.activeRadius / 15
@@ -291,16 +295,7 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center
 	private renderSun() {
-		const cursorTime = this.centralData.time
-
-		const yearStart = new Date(this.centralData.time)
-		yearStart.setUTCMonth(0, 1)
-		yearStart.setUTCHours(0, 0, 0, 0)
-
-		const yearEnd = new Date(yearStart)
-		yearEnd.setUTCFullYear(yearStart.getUTCFullYear() + 1)
-
-		const sunPhaseAngle = scale(cursorTime, +yearStart, +yearEnd, 0, 360)
+		const sunPhaseAngle = SolarAngleAtTime(this.centralData.time)
 		const { x, y } = this.getCoordForData(sunPhaseAngle, {
 			daysPerRev: 365.25,
 		})
