@@ -1,5 +1,5 @@
-const radToDeg = (rad: number) => (rad * 180) / Math.PI
-const degToRad = (deg: number) => (deg * Math.PI) / 180
+export const radToDeg = (rad: number) => (rad * 180) / Math.PI
+export const degToRad = (deg: number) => (deg * Math.PI) / 180
 
 export const sin = (deg: number) => Math.sin(degToRad(deg))
 export const asin = (val: number) => radToDeg(Math.asin(val))

@@ -50,13 +50,13 @@ export class Toggle extends CanvasElement {
 
 		this.context.fillStyle = '#eeeeee'
 		const mainLabelSize = this.scaleFactor * 0.8 + 'px'
-		this.context.font = mainLabelSize + ' monospace'
-		this.fillText(0, -2.7, this.options.label)
+		this.context.font = mainLabelSize + ' system-ui'
+		this.fillText(0, -2.7, this.options.label.toLocaleUpperCase())
 
 		const optionLabelSize = this.scaleFactor * 0.6 + 'px'
-		this.context.font = optionLabelSize + ' monospace'
-		this.fillText(1, -1.5, this.options.onLabel, 'left')
-		this.fillText(1, +1.5, this.options.offLabel, 'left')
+		this.context.font = optionLabelSize + ' system-ui'
+		this.fillText(1, -1.5, this.options.onLabel.toLocaleUpperCase(), 'left')
+		this.fillText(1, +1.5, this.options.offLabel.toLocaleUpperCase(), 'left')
 
 		this.context.beginPath()
 		this.traceCircle(0.5)

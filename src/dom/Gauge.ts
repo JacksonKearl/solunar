@@ -1,9 +1,12 @@
-import { View } from '$/utils'
+import { cos, sin } from '$/degreeMath'
+import { bound2, scale, sploot, View } from '$/utils'
 import { CanvasElement, DrawZone } from './CanvasElement'
 
 type GaugeOptions = {
 	label: string
 	value: number
+	minAngle: number
+	maxAngle: number
 	min: number
 	max: number
 }
@@ -15,7 +18,6 @@ export class Gauge extends CanvasElement {
 		private options: GaugeOptions,
 	) {
 		super(context, drawZone)
-		console.log(this.dimensions)
 	}
 
 	public attachObservable<N extends keyof GaugeOptions>(
@@ -43,6 +45,28 @@ export class Gauge extends CanvasElement {
 		this.traceCircle(0.9)
 		this.context.stroke()
 		this.context.fill()
+
+		this.context.beginPath()
+		this.context.lineWidth = 3
+		const valPercent = scale(
+			this.options.value,
+			this.options.min,
+			this.options.max,
+			0,
+			1,
+		)
+		const bounded = bound2(valPercent, 0, 1)
+		const valAngle = sploot(
+			bounded,
+			this.options.minAngle,
+			this.options.maxAngle,
+		)
+
+		this.moveTo(0, 0)
+		const r = 0.7
+		this.traceLine(r * cos(valAngle), -r * sin(valAngle))
+		this.context.stroke()
+
 		this.context.restore()
 	}
 }

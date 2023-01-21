@@ -412,6 +412,16 @@ const addElementListener = (element, type, listener, options) => {
 };
 const findDPR = () => window.devicePixelRatio || 1;
 
+const radToDeg = (rad) => (rad * 180) / Math.PI;
+const degToRad = (deg) => (deg * Math.PI) / 180;
+const sin = (deg) => Math.sin(degToRad(deg));
+const cos = (deg) => Math.cos(degToRad(deg));
+const acos = (val) => radToDeg(Math.acos(val));
+const tan = (deg) => Math.tan(degToRad(deg));
+const atan = (val) => radToDeg(Math.atan(val));
+const cot = (deg) => 1 / tan(deg);
+const wrap = (deg, limit = 360) => ((deg % limit) + limit) % limit;
+
 const drawZoneForElement = (el) => {
     const dpr = findDPR();
     return {
@@ -465,12 +475,7 @@ class CanvasElement {
         const touchTracker = new Map();
         this.scaleFactor = this.dimensions.minDim / 2;
         this.store.add({ dispose: () => (this.disposed = true) });
-        this.store.add(addElementListener(this.context.canvas, 'click', (e) => {
-            const l = this.locationOfEvent(e);
-            if (l && this.locationInDrawZone(l)) {
-                this.onClick(l);
-            }
-        }), addElementListener(this.context.canvas, 'touchstart', (e) => {
+        this.store.add(addElementListener(this.context.canvas, 'touchstart', (e) => {
             const l = this.locationOfEvent(e);
             if (l && this.locationInDrawZone(l)) {
                 touchTracker.set(e.touches[0].identifier, l);
@@ -482,9 +487,17 @@ class CanvasElement {
                 this.active = true;
             }
         }), addElementListener(this.context.canvas, 'touchend', (e) => {
+            const l = this.locationOfEvent(e);
+            if (l && this.locationInDrawZone(l) && this.active) {
+                this.onClick(l);
+            }
             this.active = false;
             touchTracker.delete(e.touches[0].identifier);
         }), addElementListener(this.context.canvas, 'mouseup', (e) => {
+            const l = this.locationOfEvent(e);
+            if (l && this.locationInDrawZone(l) && this.active) {
+                this.onClick(l);
+            }
             this.active = false;
         }), addElementListener(this.context.canvas, 'touchcancel', (e) => {
             this.active = false;
@@ -545,11 +558,44 @@ class CanvasElement {
         return (bound2(l.x, this.dimensions.left, this.dimensions.right) === l.x &&
             bound2(l.y, this.dimensions.top, this.dimensions.bottom) === l.y);
     }
+    setLineWidth(l) {
+        this.context.lineWidth = this.scaleFactor * l;
+    }
     traceCircle(r, x = 0, y = 0) {
-        this.context.arc(this.dimensions.centerX + this.scaleFactor * x, this.dimensions.centerY + this.scaleFactor * y, this.scaleFactor * r, 0, 2 * Math.PI);
+        const { canvasX, canvasY } = this.xyToCanvasCoords(x, y);
+        this.context.arc(canvasX, canvasY, this.scaleFactor * r, 0, 2 * Math.PI);
     }
     traceLine(x, y) {
-        this.context.lineTo(this.dimensions.centerX + this.scaleFactor * x, this.dimensions.centerY + this.scaleFactor * y);
+        const { canvasX, canvasY } = this.xyToCanvasCoords(x, y);
+        this.context.lineTo(canvasX, canvasY);
+    }
+    xyToCanvasCoords(x, y) {
+        return {
+            canvasX: this.dimensions.centerX + this.scaleFactor * x,
+            canvasY: this.dimensions.centerY + this.scaleFactor * y,
+        };
+    }
+    getRect(r, deg) {
+        return {
+            x: r * cos(deg),
+            y: r * -sin(deg),
+        };
+    }
+    withRotation(deg, centerX, centerY, cb) {
+        const { canvasX, canvasY } = this.xyToCanvasCoords(centerX, centerY);
+        this.context.translate(canvasX, canvasY);
+        this.context.rotate(-degToRad(deg));
+        this.context.translate(-canvasX, -canvasY);
+        cb();
+        this.context.translate(canvasX, canvasY);
+        this.context.rotate(degToRad(deg));
+        this.context.translate(-canvasX, -canvasY);
+    }
+    traceRay(r, deg, startX = 0, startY = 0, offset = 0) {
+        if (offset) {
+            this.moveTo(startX + offset * cos(deg), startY - offset * sin(deg));
+        }
+        this.traceLine(startX + r * cos(deg), startY - r * sin(deg));
     }
     moveTo(x, y) {
         this.context.moveTo(this.dimensions.centerX + this.scaleFactor * x, this.dimensions.centerY + this.scaleFactor * y);
@@ -561,8 +607,8 @@ class CanvasElement {
             left: 0,
             right: textProps.width,
         }[justify];
-        const yJustifyAdjust = textProps.fontBoundingBoxAscent / 2;
-        this.context.fillText(text.toLocaleUpperCase(), this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust, this.dimensions.centerY + this.scaleFactor * y + yJustifyAdjust);
+        const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2;
+        this.context.fillText(text, this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust, this.dimensions.centerY + this.scaleFactor * y + yJustifyAdjust);
     }
     dispose() {
         this.store.clear();
@@ -655,12 +701,12 @@ class Toggle extends CanvasElement {
         this.context.stroke();
         this.context.fillStyle = '#eeeeee';
         const mainLabelSize = this.scaleFactor * 0.8 + 'px';
-        this.context.font = mainLabelSize + ' monospace';
-        this.fillText(0, -2.7, this.options.label);
+        this.context.font = mainLabelSize + ' system-ui';
+        this.fillText(0, -2.7, this.options.label.toLocaleUpperCase());
         const optionLabelSize = this.scaleFactor * 0.6 + 'px';
-        this.context.font = optionLabelSize + ' monospace';
-        this.fillText(1, -1.5, this.options.onLabel, 'left');
-        this.fillText(1, +1.5, this.options.offLabel, 'left');
+        this.context.font = optionLabelSize + ' system-ui';
+        this.fillText(1, -1.5, this.options.onLabel.toLocaleUpperCase(), 'left');
+        this.fillText(1, +1.5, this.options.offLabel.toLocaleUpperCase(), 'left');
         this.context.beginPath();
         this.traceCircle(0.5);
         this.context.fillStyle = '#888';
@@ -686,16 +732,6 @@ class Toggle extends CanvasElement {
         this.context.restore();
     }
 }
-
-const radToDeg = (rad) => (rad * 180) / Math.PI;
-const degToRad = (deg) => (deg * Math.PI) / 180;
-const sin = (deg) => Math.sin(degToRad(deg));
-const cos = (deg) => Math.cos(degToRad(deg));
-const acos = (val) => radToDeg(Math.acos(val));
-const tan = (deg) => Math.tan(degToRad(deg));
-const atan = (val) => radToDeg(Math.atan(val));
-const cot = (deg) => 1 / tan(deg);
-const wrap = (deg, limit = 360) => ((deg % limit) + limit) % limit;
 
 // 1/Qa = [ 1/4 + (3/2 cos I / cos^2 1/2 I) * cos 2P + 9/4 cos^2 I / cos^4 1/2 I ]^(1/2)
 // Schureman, page 47
@@ -984,69 +1020,35 @@ class TideOScope extends CanvasElement {
         this.scaleFactor = this.activeRadius;
         this.data = this.fetchAllData();
         this.resetAutoAdvanceTimer();
-        this.store.add();
+        this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() });
     }
     attachObservable(inputName, view) {
         const toRunOnChange = {
-            renderScale: () => {
-                this.render();
-            },
             center: () => {
                 this.fetchAllData();
-                this.render();
             },
             timeRange: () => {
                 this.resetAutoAdvanceTimer();
                 this.fetchAllData();
-                this.render();
             },
             timeRate: () => {
                 this.resetAutoAdvanceTimer();
                 this.moveCenterWithTime();
-                // this.render()
-            },
-            yRange: () => {
-                this.render();
-            },
-            labelConstituents: () => {
-                this.render();
-            },
-            renderMoon: () => {
-                this.render();
-            },
-            renderSun: () => {
-                this.render();
-            },
-            renderHarmonics: () => {
-                this.render();
             },
             periodLoPass: () => {
                 this.fetchAllData();
-                this.render();
             },
             periodHiPass: () => {
                 this.fetchAllData();
-                this.render();
-            },
-            render12Hour: () => {
-                this.render();
-            },
-            render24Hour: () => {
-                this.render();
             },
         };
         this.store.add(view((v) => {
             if (this.options[inputName] !== v) {
                 this.options[inputName] = v;
-                requestAnimationFrame(() => {
-                    toRunOnChange[inputName]();
-                });
+                requestAnimationFrame(() => this.render());
+                toRunOnChange[inputName]?.();
             }
         }));
-    }
-    dispose() {
-        this.autoAdvanceDisposables.clear();
-        this.store.clear();
     }
     // reads: renderScale, timeRange, timeRate, data
     // writes: center, data
@@ -1081,6 +1083,7 @@ class TideOScope extends CanvasElement {
             }
         }
         this.options.center += amtToMove * timePerPixel;
+        this.fetchCentralData();
         this.render();
     }
     // reads timeRate
@@ -1098,7 +1101,6 @@ class TideOScope extends CanvasElement {
                 : t - this.lastFetchWallTime;
             this.options.center += delta * this.options.timeRate;
             this.fetchAllData();
-            this.render();
         }
     }
     // reads: timeRange, timeRate
@@ -1106,24 +1108,21 @@ class TideOScope extends CanvasElement {
     resetAutoAdvanceTimer() {
         this.autoAdvanceDisposables.clear();
         const timeout = bound2((60 / this.options.timeRate) * 1000, 0, 5000);
+        const doFrameUpdate = () => {
+            if (!this.active) {
+                this.moveCenterWithTime();
+                this.render();
+            }
+            this.resetAutoAdvanceTimer();
+        };
         if (timeout < 10) {
-            const handle = window.requestAnimationFrame(() => {
-                if (!this.active) {
-                    this.moveCenterWithTime();
-                }
-                this.resetAutoAdvanceTimer();
-            });
+            const handle = window.requestAnimationFrame(doFrameUpdate);
             this.autoAdvanceDisposables.add({
                 dispose: () => window.cancelAnimationFrame(handle),
             });
         }
         else {
-            const handle = window.setTimeout(() => {
-                if (!this.active) {
-                    this.moveCenterWithTime();
-                }
-                this.resetAutoAdvanceTimer();
-            }, timeout);
+            const handle = window.setTimeout(doFrameUpdate, timeout);
             this.autoAdvanceDisposables.add({
                 dispose: () => window.clearTimeout(handle),
             });
@@ -1260,12 +1259,15 @@ class TideOScope extends CanvasElement {
                 this.context.beginPath();
                 this.context.arc(x, y, radius, 0, 2 * Math.PI);
                 this.context.fill();
-                if (this.options.labelConstituents) {
-                    this.context.fillStyle = 'black';
-                    this.context.font = 'monospace';
-                    const textProps = this.context.measureText(name);
-                    this.context.fillText(name, x - textProps.width / 2, y + textProps.actualBoundingBoxAscent / 2);
-                }
+                // if (this.options.labelConstituents) {
+                // 	this.context.fillStyle = 'black'
+                // 	const textProps = this.context.measureText(name)
+                // 	this.context.fillText(
+                // 		name,
+                // 		x - textProps.width / 2,
+                // 		y + textProps.actualBoundingBoxAscent / 2,
+                // 	)
+                // }
             }
         }
     }
@@ -1346,7 +1348,6 @@ class Gauge extends CanvasElement {
     constructor(context, drawZone, options) {
         super(context, drawZone);
         this.options = options;
-        console.log(this.dimensions);
     }
     attachObservable(inputName, view) {
         this.store.add(view((v) => {
@@ -1367,7 +1368,293 @@ class Gauge extends CanvasElement {
         this.traceCircle(0.9);
         this.context.stroke();
         this.context.fill();
+        this.context.beginPath();
+        this.context.lineWidth = 3;
+        const valPercent = scale(this.options.value, this.options.min, this.options.max, 0, 1);
+        const bounded = bound2(valPercent, 0, 1);
+        const valAngle = sploot(bounded, this.options.minAngle, this.options.maxAngle);
+        this.moveTo(0, 0);
+        const r = 0.7;
+        this.traceLine(r * cos(valAngle), -r * sin(valAngle));
+        this.context.stroke();
         this.context.restore();
+    }
+}
+
+class Clock extends CanvasElement {
+    options;
+    lastTimeUpdateTime;
+    constructor(context, drawZone, options) {
+        super(context, drawZone);
+        this.options = options;
+        this.lastTimeUpdateTime = Date.now();
+        this.scaleFactor = this.dimensions.minDim * (3 / 7);
+        this.resetAutoAdvanceTimer();
+        this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() });
+    }
+    attachObservable(inputName, view) {
+        const toRunOnChange = {
+            timeRate: () => {
+                this.resetAutoAdvanceTimer();
+            },
+            refreshTimeout: () => {
+                this.resetAutoAdvanceTimer();
+            },
+            time: () => {
+                this.lastTimeUpdateTime = Date.now();
+            },
+        };
+        this.store.add(view((v) => {
+            if (this.options[inputName] !== v) {
+                this.options[inputName] = v;
+                requestAnimationFrame(() => {
+                    this.render();
+                });
+                toRunOnChange[inputName]?.();
+            }
+        }));
+    }
+    // reads: timeRate, refreshTimeout
+    autoAdvanceDisposables = new DisposableStore();
+    resetAutoAdvanceTimer() {
+        this.autoAdvanceDisposables.clear();
+        const timeout = this.options.refreshTimeout;
+        if (timeout < 10) {
+            const handle = window.requestAnimationFrame(() => {
+                if (!this.active) {
+                    this.render();
+                }
+                this.resetAutoAdvanceTimer();
+            });
+            this.autoAdvanceDisposables.add({
+                dispose: () => window.cancelAnimationFrame(handle),
+            });
+        }
+        else {
+            const handle = window.setTimeout(() => {
+                if (!this.active) {
+                    this.render();
+                }
+                this.resetAutoAdvanceTimer();
+            }, timeout);
+            this.autoAdvanceDisposables.add({
+                dispose: () => window.clearTimeout(handle),
+            });
+        }
+    }
+    render() {
+        this.context.save();
+        this.context.strokeStyle = '#000';
+        this.context.beginPath();
+        this.setLineWidth(0.1);
+        this.context.fillStyle = '#222';
+        this.traceCircle(1);
+        this.context.stroke();
+        this.context.fill();
+        this.context.beginPath();
+        this.context.fillStyle = '#000';
+        this.traceCircle(0.85);
+        this.context.fill();
+        this.context.beginPath();
+        this.context.fillStyle = '#333';
+        this.traceCircle(0.83);
+        this.context.fill();
+        const { hours, minutes, seconds } = this.getShowTime();
+        this.context.strokeStyle = '#fff';
+        this.context.fillStyle = '#fff';
+        // this.context.beginPath()
+        // this.traceCircle(0.03)
+        // this.context.fill()
+        // hourNumbers
+        Array.from({ length: 12 }, (_, i) => i + 1).forEach((h) => {
+            const r = 0.68;
+            const deg = scale(h, 0, 12, 90, -270);
+            const { x, y } = this.getRect(r, deg);
+            this.context.font = this.scaleFactor * 0.23 + 'px system-ui';
+            this.fillText(x, y, String(h));
+        });
+        // secondNumbers
+        if (this.options.render60Count) {
+            Array.from({ length: 12 }, (_, i) => i + 1).forEach((s) => {
+                const r = 0.95;
+                const deg = scale(s, 0, 12, 90, -270);
+                const { x, y } = this.getRect(r, deg);
+                this.context.font = this.scaleFactor * 0.07 + 'px system-ui';
+                const displayNumber = s * 5;
+                const rotation = {
+                    5: -30,
+                    10: -60,
+                    20: 60,
+                    25: 30,
+                };
+                this.withRotation(rotation[displayNumber % 30] ?? 0, x, y, () => {
+                    this.fillText(x, y, String(displayNumber));
+                });
+            });
+        }
+        // secondIcons
+        Array.from({ length: 60 }, (_, i) => i + 1).forEach((s) => {
+            const deg = scale(s, 0, 60, 90, -270);
+            if (s % 60 === 0) {
+                this.context.beginPath();
+                this.moveTo(0, -0.85);
+                this.traceLine(0.04, -0.92);
+                this.traceLine(-0.04, -0.92);
+                this.traceLine(-0, -0.85);
+                this.context.fill();
+            }
+            else if (s % 15 === 0) {
+                this.context.beginPath();
+                this.setLineWidth(0.05);
+                this.traceRay(0.9, deg, 0, 0, 0.85);
+                this.context.stroke();
+            }
+            else if (s % 5 === 0) {
+                const { x, y } = this.getRect(0.875, deg);
+                this.context.beginPath();
+                this.traceCircle(0.025, x, y);
+                this.context.fill();
+            }
+            else {
+                this.context.beginPath();
+                this.setLineWidth(0.02);
+                this.traceRay(0.9, deg, 0, 0, 0.85);
+                this.context.stroke();
+            }
+        });
+        // hours
+        const hourAngle = scale(wrap(hours, 12), 0, 12, 90, -270);
+        const rHour = 0.55;
+        this.withRotation(hourAngle, 0, 0, () => {
+            this.context.fillStyle = '#444';
+            this.context.strokeStyle = '#000';
+            this.setLineWidth(0.015);
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceCircle(0.1);
+            this.context.stroke();
+            this.context.fill();
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceLine(rHour * (0 / 3), rHour * (1 / 30));
+            this.traceLine(rHour * (2 / 3), rHour * (5 / 30));
+            this.traceLine(rHour * (3 / 3), rHour * (0 / 30));
+            this.traceLine(rHour * (2 / 3), rHour * (-5 / 30));
+            this.traceLine(rHour * (0 / 3), rHour * (-1 / 30));
+            this.traceLine(0, 0);
+            this.context.stroke();
+            this.context.fill();
+            this.context.fillStyle = '#fff';
+            this.context.beginPath();
+            this.traceLine(rHour * (1 / 3), rHour * (3 / 30));
+            this.traceLine(rHour * (2 / 3), rHour * (5 / 30));
+            this.traceLine(rHour * (3 / 3), rHour * (0 / 30));
+            this.traceLine(rHour * (2 / 3), rHour * (-5 / 30));
+            this.traceLine(rHour * (1 / 3), rHour * (-3 / 30));
+            this.context.fill();
+            this.context.fillStyle = '#444';
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceCircle(0.1);
+            this.context.fill();
+        });
+        // minutes
+        const minuteAngle = scale(wrap(minutes, 60), 0, 60, 90, -270);
+        const rMinute = 0.79;
+        this.withRotation(minuteAngle, 0, 0, () => {
+            this.context.fillStyle = '#444';
+            this.context.strokeStyle = '#000';
+            this.setLineWidth(0.015);
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceCircle(0.08);
+            this.context.stroke();
+            this.context.fill();
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceLine(rMinute * (0 / 3), rMinute * (1 / 40));
+            this.traceLine(rMinute * (2 / 3), rMinute * (3 / 40));
+            this.traceLine(rMinute * (3 / 3), rMinute * (0 / 40));
+            this.traceLine(rMinute * (2 / 3), rMinute * (-3 / 40));
+            this.traceLine(rMinute * (0 / 3), rMinute * (-1 / 40));
+            this.traceLine(0, 0);
+            this.context.stroke();
+            this.context.fill();
+            this.context.fillStyle = '#fff';
+            this.context.beginPath();
+            this.traceLine(rMinute * (1 / 4), rMinute * (5 / 3 / 40));
+            this.traceLine(rMinute * (2 / 3), rMinute * (3 / 40));
+            this.traceLine(rMinute * (3 / 3), rMinute * (0 / 40));
+            this.traceLine(rMinute * (2 / 3), rMinute * (-3 / 40));
+            this.traceLine(rMinute * (1 / 4), rMinute * (-(5 / 3) / 40));
+            this.context.fill();
+            this.context.fillStyle = '#444';
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.traceCircle(0.08);
+            this.context.fill();
+        });
+        // seconds
+        if (this.options.renderSecondHand) {
+            this.context.beginPath();
+            this.moveTo(0, 0);
+            this.setLineWidth(0.015);
+            const secondAngle = scale(wrap(seconds, 60), 0, 60, 90, -270);
+            const rSecond = 0.92;
+            this.withRotation(secondAngle, 0, 0, () => {
+                this.context.fillStyle = '#333';
+                this.context.strokeStyle = '#000';
+                const centerCircleDiameter = 0.06;
+                this.context.beginPath();
+                this.traceCircle(centerCircleDiameter + 0.02, -0.4, 0);
+                this.context.stroke();
+                this.context.fill();
+                this.context.beginPath();
+                this.traceCircle(centerCircleDiameter, 0, 0);
+                this.context.stroke();
+                this.context.fill();
+                this.context.beginPath();
+                this.moveTo(rSecond * -(2 / 5), rSecond * (1 / 30));
+                this.traceLine(rSecond * (5 / 5), rSecond * (1 / 120));
+                this.traceLine(rSecond * (5 / 5), rSecond * -(1 / 120));
+                this.traceLine(rSecond * -(2 / 5), rSecond * -(1 / 30));
+                this.context.stroke();
+                this.context.fill();
+                this.context.beginPath();
+                this.traceCircle(centerCircleDiameter + 0.02, -(2 / 5), 0);
+                this.context.fill();
+                this.context.beginPath();
+                this.traceCircle(centerCircleDiameter, 0, 0);
+                this.context.fill();
+                this.context.fillStyle = '#fff';
+                this.context.beginPath();
+                this.moveTo(rSecond * (1 / 6), rSecond * (2 / 90));
+                this.traceLine(rSecond * (6 / 6), rSecond * (1 / 120));
+                this.traceLine(rSecond * (6 / 6), rSecond * -(1 / 120));
+                this.traceLine(rSecond * (1 / 6), rSecond * -(2 / 90));
+                this.context.fill();
+            });
+        }
+        this.context.restore();
+    }
+    // reads: time, lastUpdateTime, timeRate, offset
+    getShowTime() {
+        const extrapolatedTime = this.extrapolateTime();
+        const timezoneOffset = this.options.offset * 60 * 1000;
+        const timeToShow = extrapolatedTime - timezoneOffset;
+        const startOfDayInTimezone = new Date(timeToShow);
+        startOfDayInTimezone.setUTCHours(0, 0, 0, 0);
+        const offset = timeToShow - +startOfDayInTimezone;
+        const seconds = offset / 1000;
+        const minutes = seconds / 60;
+        const hours = minutes / 60;
+        return { hours, minutes, seconds };
+    }
+    // reads: time, lastUpdateTime, timeRate
+    extrapolateTime() {
+        const clockTimeSinceUpdate = Date.now() - this.lastTimeUpdateTime;
+        const scaledTimeSinceUpdate = clockTimeSinceUpdate * this.options.timeRate;
+        return this.options.time + scaledTimeSinceUpdate;
     }
 }
 
@@ -1408,6 +1695,7 @@ const go = () => {
         throw Error('not found');
     }
     const { ctx, dim } = setupCanvas(canvas);
+    const mainDrawZone = drawZoneForElement(main);
     // Background
     ctx.fillStyle = '#333';
     ctx.fillRect(dim.left, dim.top, dim.width, dim.height);
@@ -1426,6 +1714,16 @@ const go = () => {
         periodLoPass: 10,
         periodHiPass: -4,
     };
+    // {
+    // 	const timeGauge = new Clock(ctx, mainDrawZone, {
+    // 		time: Date.now(),
+    // 		offset: 480,
+    // 		refreshTimeout: (1 / 60) * 1000,
+    // 		timeRate: 1,
+    // 	})
+    // 	disposables.add(timeGauge)
+    // }
+    // return
     const tideOScope = new TideOScope(ctx, drawZoneForElement(main), active, defaultOptions);
     const constituentToggle = new Toggle(ctx, drawZoneForElement(toggles[2]), {
         label: 'Harmonics',
@@ -1459,7 +1757,7 @@ const go = () => {
     });
     const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[1]), {
         label: 'Scroll Speed',
-        max: 10000,
+        max: 100,
         min: 1,
         value: defaultOptions.timeRate,
     });
@@ -1481,17 +1779,20 @@ const go = () => {
         max: 10,
         value: defaultOptions.periodLoPass,
     });
-    const mainDrawZone = drawZoneForElement(main);
-    const timeGauge = new Gauge(ctx, {
+    new Date().getTimezoneOffset();
+    const StationOffset = -(active.timezoneOffset ?? 0) * 60;
+    const timeGauge = new Clock(ctx, {
         height: mainDrawZone.height / 4,
         width: mainDrawZone.width / 4,
         left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
         top: mainDrawZone.top,
     }, {
-        label: 'Lo Pass',
-        min: -10,
-        max: 10,
-        value: 0,
+        time: defaultOptions.center,
+        offset: StationOffset,
+        refreshTimeout: (1 / 60) * 1000,
+        timeRate: defaultOptions.timeRate,
+        render60Count: false,
+        renderSecondHand: false,
     });
     const heightGauge = new Gauge(ctx, {
         height: mainDrawZone.height / 4,
@@ -1499,10 +1800,12 @@ const go = () => {
         left: mainDrawZone.left,
         top: mainDrawZone.top,
     }, {
-        label: 'Lo Pass',
-        min: -10,
-        max: 10,
+        label: 'Height',
+        min: -8,
+        max: 8,
         value: 0,
+        minAngle: 250,
+        maxAngle: -70,
     });
     tideOScope.attachObservable('renderHarmonics', constituentToggle.valueView);
     tideOScope.attachObservable('periodLoPass', lowpassCutoff.valueView);
@@ -1512,6 +1815,8 @@ const go = () => {
     tideOScope.attachObservable('timeRange', windowRangeSlider.valueView);
     tideOScope.attachObservable('timeRate', scrollSpeedSlider.valueView);
     heightGauge.attachObservable('value', MappedView(tideOScope.centralDataView, (v) => v.total));
+    timeGauge.attachObservable('time', MappedView(tideOScope.centralDataView, (v) => v.time));
+    timeGauge.attachObservable('timeRate', scrollSpeedSlider.valueView);
     const allComponents = [
         windowRangeSlider,
         scrollSpeedSlider,

@@ -56,7 +56,7 @@ export class TideOScope extends CanvasElement {
 		this.scaleFactor = this.activeRadius
 		this.data = this.fetchAllData()
 		this.resetAutoAdvanceTimer()
-		this.store.add()
+		this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() })
 	}
 
 	public attachObservable<N extends keyof TideOScopeOptions>(
@@ -64,53 +64,24 @@ export class TideOScope extends CanvasElement {
 		view: View<TideOScopeOptions[N]>,
 	) {
 		const toRunOnChange: {
-			[K in keyof TideOScopeOptions]: () => void
+			[K in keyof TideOScopeOptions]?: () => void
 		} = {
-			renderScale: () => {
-				this.render()
-			},
 			center: () => {
 				this.fetchAllData()
-				this.render()
 			},
 			timeRange: () => {
 				this.resetAutoAdvanceTimer()
 				this.fetchAllData()
-				this.render()
 			},
 			timeRate: () => {
 				this.resetAutoAdvanceTimer()
 				this.moveCenterWithTime()
-				// this.render()
-			},
-			yRange: () => {
-				this.render()
-			},
-			labelConstituents: () => {
-				this.render()
-			},
-			renderMoon: () => {
-				this.render()
-			},
-			renderSun: () => {
-				this.render()
-			},
-			renderHarmonics: () => {
-				this.render()
 			},
 			periodLoPass: () => {
 				this.fetchAllData()
-				this.render()
 			},
 			periodHiPass: () => {
 				this.fetchAllData()
-				this.render()
-			},
-			render12Hour: () => {
-				this.render()
-			},
-			render24Hour: () => {
-				this.render()
 			},
 		}
 
@@ -118,17 +89,11 @@ export class TideOScope extends CanvasElement {
 			view((v) => {
 				if (this.options[inputName] !== v) {
 					this.options[inputName] = v
-					requestAnimationFrame(() => {
-						toRunOnChange[inputName]()
-					})
+					requestAnimationFrame(() => this.render())
+					toRunOnChange[inputName]?.()
 				}
 			}),
 		)
-	}
-
-	public dispose(): void {
-		this.autoAdvanceDisposables.clear()
-		this.store.clear()
 	}
 
 	// reads: renderScale, timeRange, timeRate, data
@@ -165,6 +130,7 @@ export class TideOScope extends CanvasElement {
 			}
 		}
 		this.options.center += amtToMove * timePerPixel
+		this.fetchCentralData()
 		this.render()
 	}
 
@@ -183,7 +149,6 @@ export class TideOScope extends CanvasElement {
 			this.options.center += delta * this.options.timeRate
 
 			this.fetchAllData()
-			this.render()
 		}
 	}
 
@@ -194,25 +159,21 @@ export class TideOScope extends CanvasElement {
 
 		const timeout = bound2((60 / this.options.timeRate) * 1000, 0, 5000)
 
-		if (timeout < 10) {
-			const handle = window.requestAnimationFrame(() => {
-				if (!this.active) {
-					this.moveCenterWithTime()
-				}
-				this.resetAutoAdvanceTimer()
-			})
+		const doFrameUpdate = () => {
+			if (!this.active) {
+				this.moveCenterWithTime()
+				this.render()
+			}
+			this.resetAutoAdvanceTimer()
+		}
 
+		if (timeout < 10) {
+			const handle = window.requestAnimationFrame(doFrameUpdate)
 			this.autoAdvanceDisposables.add({
 				dispose: () => window.cancelAnimationFrame(handle),
 			})
 		} else {
-			const handle = window.setTimeout(() => {
-				if (!this.active) {
-					this.moveCenterWithTime()
-				}
-				this.resetAutoAdvanceTimer()
-			}, timeout)
-
+			const handle = window.setTimeout(doFrameUpdate, timeout)
 			this.autoAdvanceDisposables.add({
 				dispose: () => window.clearTimeout(handle),
 			})
@@ -387,16 +348,15 @@ export class TideOScope extends CanvasElement {
 				this.context.arc(x, y, radius, 0, 2 * Math.PI)
 				this.context.fill()
 
-				if (this.options.labelConstituents) {
-					this.context.fillStyle = 'black'
-					this.context.font = 'monospace'
-					const textProps = this.context.measureText(name)
-					this.context.fillText(
-						name,
-						x - textProps.width / 2,
-						y + textProps.actualBoundingBoxAscent / 2,
-					)
-				}
+				// if (this.options.labelConstituents) {
+				// 	this.context.fillStyle = 'black'
+				// 	const textProps = this.context.measureText(name)
+				// 	this.context.fillText(
+				// 		name,
+				// 		x - textProps.width / 2,
+				// 		y + textProps.actualBoundingBoxAscent / 2,
+				// 	)
+				// }
 			}
 		}
 	}

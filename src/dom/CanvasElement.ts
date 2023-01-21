@@ -1,6 +1,7 @@
 import { bound2, DisposableStore } from '$/utils'
 import { Disposable } from '$/types'
 import { addElementListener, findDPR } from './utils'
+import { cos, degToRad, sin } from '$/degreeMath'
 
 /** Always in page-pixel-space (`page-space * dpr`) */
 export type Location = { x: number; y: number }
@@ -86,12 +87,6 @@ export abstract class CanvasElement implements Disposable {
 		this.scaleFactor = this.dimensions.minDim / 2
 		this.store.add({ dispose: () => (this.disposed = true) })
 		this.store.add(
-			addElementListener(this.context.canvas, 'click', (e) => {
-				const l = this.locationOfEvent(e)
-				if (l && this.locationInDrawZone(l)) {
-					this.onClick(l)
-				}
-			}),
 			addElementListener(this.context.canvas, 'touchstart', (e) => {
 				const l = this.locationOfEvent(e)
 				if (l && this.locationInDrawZone(l)) {
@@ -106,10 +101,18 @@ export abstract class CanvasElement implements Disposable {
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchend', (e) => {
+				const l = this.locationOfEvent(e)
+				if (l && this.locationInDrawZone(l) && this.active) {
+					this.onClick(l)
+				}
 				this.active = false
 				touchTracker.delete(e.touches[0].identifier)
 			}),
 			addElementListener(this.context.canvas, 'mouseup', (e) => {
+				const l = this.locationOfEvent(e)
+				if (l && this.locationInDrawZone(l) && this.active) {
+					this.onClick(l)
+				}
 				this.active = false
 			}),
 			addElementListener(this.context.canvas, 'touchcancel', (e) => {
@@ -182,21 +185,61 @@ export abstract class CanvasElement implements Disposable {
 		)
 	}
 
+	protected setLineWidth(l: number) {
+		this.context.lineWidth = this.scaleFactor * l
+	}
+
 	protected traceCircle(r: number, x: number = 0, y: number = 0) {
-		this.context.arc(
-			this.dimensions.centerX + this.scaleFactor * x,
-			this.dimensions.centerY + this.scaleFactor * y,
-			this.scaleFactor * r,
-			0,
-			2 * Math.PI,
-		)
+		const { canvasX, canvasY } = this.xyToCanvasCoords(x, y)
+		this.context.arc(canvasX, canvasY, this.scaleFactor * r, 0, 2 * Math.PI)
 	}
 
 	protected traceLine(x: number, y: number) {
-		this.context.lineTo(
-			this.dimensions.centerX + this.scaleFactor * x,
-			this.dimensions.centerY + this.scaleFactor * y,
-		)
+		const { canvasX, canvasY } = this.xyToCanvasCoords(x, y)
+		this.context.lineTo(canvasX, canvasY)
+	}
+
+	protected xyToCanvasCoords(x: number, y: number) {
+		return {
+			canvasX: this.dimensions.centerX + this.scaleFactor * x,
+			canvasY: this.dimensions.centerY + this.scaleFactor * y,
+		}
+	}
+
+	protected getRect(r: number, deg: number) {
+		return {
+			x: r * cos(deg),
+			y: r * -sin(deg),
+		}
+	}
+
+	protected withRotation(
+		deg: number,
+		centerX: number,
+		centerY: number,
+		cb: () => void,
+	) {
+		const { canvasX, canvasY } = this.xyToCanvasCoords(centerX, centerY)
+		this.context.translate(canvasX, canvasY)
+		this.context.rotate(-degToRad(deg))
+		this.context.translate(-canvasX, -canvasY)
+		cb()
+		this.context.translate(canvasX, canvasY)
+		this.context.rotate(degToRad(deg))
+		this.context.translate(-canvasX, -canvasY)
+	}
+
+	protected traceRay(
+		r: number,
+		deg: number,
+		startX: number = 0,
+		startY: number = 0,
+		offset: number = 0,
+	) {
+		if (offset) {
+			this.moveTo(startX + offset * cos(deg), startY - offset * sin(deg))
+		}
+		this.traceLine(startX + r * cos(deg), startY - r * sin(deg))
 	}
 
 	protected moveTo(x: number, y: number) {
@@ -218,10 +261,10 @@ export abstract class CanvasElement implements Disposable {
 			left: 0,
 			right: textProps.width,
 		}[justify]
-		const yJustifyAdjust = textProps.fontBoundingBoxAscent / 2
+		const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2
 
 		this.context.fillText(
-			text.toLocaleUpperCase(),
+			text,
 			this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust,
 			this.dimensions.centerY + this.scaleFactor * y + yJustifyAdjust,
 		)

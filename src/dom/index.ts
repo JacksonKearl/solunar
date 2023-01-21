@@ -6,6 +6,7 @@ import { Toggle } from './Toggle'
 import { TideOScope } from './TideOScope'
 import { DisposableStore, MappedView } from '$/utils'
 import { Gauge } from './Gauge'
+import { Clock } from './Clock'
 
 const disposables = new DisposableStore()
 
@@ -53,6 +54,8 @@ const go = () => {
 
 	const { ctx, dim } = setupCanvas(canvas)
 
+	const mainDrawZone = drawZoneForElement(main)
+
 	// Background
 	ctx.fillStyle = '#333'
 	ctx.fillRect(dim.left, dim.top, dim.width, dim.height)
@@ -72,6 +75,18 @@ const go = () => {
 		periodLoPass: 10,
 		periodHiPass: -4,
 	}
+
+	// {
+	// 	const timeGauge = new Clock(ctx, mainDrawZone, {
+	// 		time: Date.now(),
+	// 		offset: 480,
+	// 		refreshTimeout: (1 / 60) * 1000,
+	// 		timeRate: 1,
+	// 	})
+	// 	disposables.add(timeGauge)
+	// }
+
+	// return
 
 	const tideOScope = new TideOScope(
 		ctx,
@@ -112,7 +127,7 @@ const go = () => {
 	})
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[1]), {
 		label: 'Scroll Speed',
-		max: 10000,
+		max: 100,
 		min: 1,
 		value: defaultOptions.timeRate,
 	})
@@ -135,9 +150,11 @@ const go = () => {
 		value: defaultOptions.periodLoPass,
 	})
 
-	const mainDrawZone = drawZoneForElement(main)
+	const UTCOffset = 0
+	const LocalOffset = new Date().getTimezoneOffset()
+	const StationOffset = -(active.timezoneOffset ?? 0) * 60
 
-	const timeGauge = new Gauge(
+	const timeGauge = new Clock(
 		ctx,
 		{
 			height: mainDrawZone.height / 4,
@@ -146,10 +163,12 @@ const go = () => {
 			top: mainDrawZone.top,
 		},
 		{
-			label: 'Lo Pass',
-			min: -10,
-			max: 10,
-			value: 0,
+			time: defaultOptions.center,
+			offset: StationOffset,
+			refreshTimeout: (1 / 60) * 1000,
+			timeRate: defaultOptions.timeRate,
+			render60Count: false,
+			renderSecondHand: false,
 		},
 	)
 	const heightGauge = new Gauge(
@@ -161,10 +180,12 @@ const go = () => {
 			top: mainDrawZone.top,
 		},
 		{
-			label: 'Lo Pass',
-			min: -10,
-			max: 10,
+			label: 'Height',
+			min: -8,
+			max: 8,
 			value: 0,
+			minAngle: 250,
+			maxAngle: -70,
 		},
 	)
 
@@ -180,6 +201,11 @@ const go = () => {
 		'value',
 		MappedView(tideOScope.centralDataView, (v) => v.total),
 	)
+	timeGauge.attachObservable(
+		'time',
+		MappedView(tideOScope.centralDataView, (v) => v.time),
+	)
+	timeGauge.attachObservable('timeRate', scrollSpeedSlider.valueView)
 
 	const allComponents = [
 		windowRangeSlider,
