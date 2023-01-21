@@ -18,13 +18,14 @@ export class Gauge extends CanvasElement {
 		private options: GaugeOptions,
 	) {
 		super(context, drawZone)
+		this.scaleFactor = this.dimensions.minDim * (3 / 7)
 	}
 
 	public attachObservable<N extends keyof GaugeOptions>(
 		inputName: N,
 		view: View<GaugeOptions[N]>,
 	) {
-		this.store.add(
+		this.disposables.add(
 			view((v) => {
 				if (this.options[inputName] !== v) {
 					this.options[inputName] = v
@@ -42,7 +43,7 @@ export class Gauge extends CanvasElement {
 		this.context.beginPath()
 		this.context.lineWidth = 20
 		this.context.strokeStyle = '#000000'
-		this.traceCircle(0.9)
+		this.traceCircle(1)
 		this.context.stroke()
 		this.context.fill()
 

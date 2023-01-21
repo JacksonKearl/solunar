@@ -374,7 +374,7 @@ class DisposableStore {
     }
     add(...ds) {
         if (this.isDisposed) {
-            console.trace('Alert! Attempting to add to a disposed store! These objects will be immediately disposed.', ds);
+            console.trace('Alert! Attempting to add to a disposed store. This is probably a bug. These objects will be immediately disposed:', ds);
             ds.forEach((d) => d.dispose());
         }
         else {
@@ -434,7 +434,7 @@ const setupCanvas = (canvas) => {
 };
 class CanvasElement {
     context;
-    store = new DisposableStore();
+    disposables = new DisposableStore();
     dimensions;
     disposed = false;
     scaleFactor;
@@ -456,8 +456,8 @@ class CanvasElement {
         };
         const touchTracker = new Map();
         this.scaleFactor = this.dimensions.minDim / 2;
-        this.store.add({ dispose: () => (this.disposed = true) });
-        this.store.add(addElementListener(this.context.canvas, 'touchstart', (e) => {
+        this.disposables.add({ dispose: () => (this.disposed = true) });
+        this.disposables.add(addElementListener(this.context.canvas, 'touchstart', (e) => {
             const l = this.locationOfEvent(e);
             if (l && this.locationInDrawZone(l)) {
                 touchTracker.set(e.touches[0].identifier, l);
@@ -593,7 +593,7 @@ class CanvasElement {
         this.context.fillText(text, this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust, this.dimensions.centerY + this.scaleFactor * y + yJustifyAdjust);
     }
     dispose() {
-        this.store.clear();
+        this.disposables.clear();
     }
 }
 
@@ -1008,6 +1008,7 @@ class TideOScope extends CanvasElement {
     activeRadius;
     data;
     lastFetchWallTime;
+    autoAdvanceDisposables = new DisposableStore();
     centralDataObservable = new Observable();
     centralDataView = this.centralDataObservable.view;
     constructor(context, drawZone, station, options) {
@@ -1018,7 +1019,7 @@ class TideOScope extends CanvasElement {
         this.scaleFactor = this.activeRadius;
         this.data = this.fetchAllData();
         this.resetAutoAdvanceTimer();
-        this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() });
+        this.disposables.add(this.autoAdvanceDisposables);
     }
     attachObservable(inputName, view) {
         const toRunOnChange = {
@@ -1040,7 +1041,7 @@ class TideOScope extends CanvasElement {
                 this.fetchAllData();
             },
         };
-        this.store.add(view((v) => {
+        this.disposables.add(view((v) => {
             if (this.options[inputName] !== v) {
                 this.options[inputName] = v;
                 requestAnimationFrame(() => this.render());
@@ -1104,7 +1105,6 @@ class TideOScope extends CanvasElement {
         }
     }
     // reads: timeRange, timeRate
-    autoAdvanceDisposables = new DisposableStore();
     resetAutoAdvanceTimer() {
         this.autoAdvanceDisposables.clear();
         const timeout = bound2((60 / this.options.timeRate) * 1000, 0, 5000);
@@ -1343,9 +1343,10 @@ class Gauge extends CanvasElement {
     constructor(context, drawZone, options) {
         super(context, drawZone);
         this.options = options;
+        this.scaleFactor = this.dimensions.minDim * (3 / 7);
     }
     attachObservable(inputName, view) {
-        this.store.add(view((v) => {
+        this.disposables.add(view((v) => {
             if (this.options[inputName] !== v) {
                 this.options[inputName] = v;
                 requestAnimationFrame(() => {
@@ -1360,7 +1361,7 @@ class Gauge extends CanvasElement {
         this.context.beginPath();
         this.context.lineWidth = 20;
         this.context.strokeStyle = '#000000';
-        this.traceCircle(0.9);
+        this.traceCircle(1);
         this.context.stroke();
         this.context.fill();
         this.context.beginPath();
@@ -1379,13 +1380,14 @@ class Gauge extends CanvasElement {
 class Clock extends CanvasElement {
     options;
     lastTimeUpdateTime;
+    autoAdvanceDisposables = new DisposableStore();
     constructor(context, drawZone, options) {
         super(context, drawZone);
         this.options = options;
         this.lastTimeUpdateTime = Date.now();
         this.scaleFactor = this.dimensions.minDim * (3 / 7);
         this.resetAutoAdvanceTimer();
-        this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() });
+        this.disposables.add(this.autoAdvanceDisposables);
     }
     attachObservable(inputName, view) {
         const toRunOnChange = {
@@ -1399,7 +1401,7 @@ class Clock extends CanvasElement {
                 this.lastTimeUpdateTime = Date.now();
             },
         };
-        this.store.add(view((v) => {
+        this.disposables.add(view((v) => {
             if (this.options[inputName] !== v) {
                 this.options[inputName] = v;
                 requestAnimationFrame(() => {
@@ -1410,7 +1412,6 @@ class Clock extends CanvasElement {
         }));
     }
     // reads: timeRate, refreshTimeout
-    autoAdvanceDisposables = new DisposableStore();
     resetAutoAdvanceTimer() {
         this.autoAdvanceDisposables.clear();
         const timeout = this.options.refreshTimeout;
@@ -1438,18 +1439,15 @@ class Clock extends CanvasElement {
         }
     }
     render() {
-        const getShowTime = () => {
-            const extrapolatedTime = this.extrapolateTime();
-            const timezoneOffset = this.options.offset * 60 * 1000;
-            const timeToShow = extrapolatedTime - timezoneOffset;
-            const startOfDayInTimezone = new Date(timeToShow);
-            startOfDayInTimezone.setUTCHours(0, 0, 0, 0);
-            const offset = timeToShow - +startOfDayInTimezone;
-            const seconds = offset / 1000;
-            const minutes = seconds / 60;
-            const hours = minutes / 60;
-            return { hours, minutes, seconds };
-        };
+        const extrapolatedTime = this.extrapolateTime();
+        const timezoneOffset = this.options.offset * 60 * 1000;
+        const timeToShow = extrapolatedTime - timezoneOffset;
+        const startOfDayInTimezone = new Date(timeToShow);
+        startOfDayInTimezone.setUTCHours(0, 0, 0, 0);
+        const offset = timeToShow - +startOfDayInTimezone;
+        const seconds = offset / 1000;
+        const minutes = seconds / 60;
+        const hours = minutes / 60;
         const renderCasing = () => {
             this.context.strokeStyle = '#000';
             this.context.beginPath();
@@ -1683,7 +1681,6 @@ class Clock extends CanvasElement {
                 this.context.fill();
             });
         };
-        const { hours, minutes, seconds } = getShowTime();
         this.context.save();
         renderCasing();
         render60Icons();

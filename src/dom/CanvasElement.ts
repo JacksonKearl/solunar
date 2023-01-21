@@ -58,7 +58,7 @@ export const setupCanvas = (
 }
 
 export abstract class CanvasElement implements Disposable {
-	protected store = new DisposableStore()
+	protected disposables = new DisposableStore()
 	protected dimensions: CanvasDimensions
 	protected disposed = false
 
@@ -85,8 +85,8 @@ export abstract class CanvasElement implements Disposable {
 
 		const touchTracker = new Map<number, Location>()
 		this.scaleFactor = this.dimensions.minDim / 2
-		this.store.add({ dispose: () => (this.disposed = true) })
-		this.store.add(
+		this.disposables.add({ dispose: () => (this.disposed = true) })
+		this.disposables.add(
 			addElementListener(this.context.canvas, 'touchstart', (e) => {
 				const l = this.locationOfEvent(e)
 				if (l && this.locationInDrawZone(l)) {
@@ -271,6 +271,6 @@ export abstract class CanvasElement implements Disposable {
 	}
 
 	dispose(): void {
-		this.store.clear()
+		this.disposables.clear()
 	}
 }

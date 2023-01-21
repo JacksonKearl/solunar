@@ -15,6 +15,7 @@ type ClockOptions = {
 
 export class Clock extends CanvasElement {
 	private lastTimeUpdateTime: number
+	private autoAdvanceDisposables = new DisposableStore()
 
 	constructor(
 		context: CanvasRenderingContext2D,
@@ -25,7 +26,7 @@ export class Clock extends CanvasElement {
 		this.lastTimeUpdateTime = Date.now()
 		this.scaleFactor = this.dimensions.minDim * (3 / 7)
 		this.resetAutoAdvanceTimer()
-		this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() })
+		this.disposables.add(this.autoAdvanceDisposables)
 	}
 
 	public attachObservable<N extends keyof ClockOptions>(
@@ -46,7 +47,7 @@ export class Clock extends CanvasElement {
 			},
 		}
 
-		this.store.add(
+		this.disposables.add(
 			view((v) => {
 				if (this.options[inputName] !== v) {
 					this.options[inputName] = v
@@ -60,7 +61,6 @@ export class Clock extends CanvasElement {
 	}
 
 	// reads: timeRate, refreshTimeout
-	private autoAdvanceDisposables = new DisposableStore()
 	private resetAutoAdvanceTimer() {
 		this.autoAdvanceDisposables.clear()
 		const timeout = this.options.refreshTimeout
@@ -91,19 +91,17 @@ export class Clock extends CanvasElement {
 	}
 
 	render(): void {
-		const getShowTime = () => {
-			const extrapolatedTime = this.extrapolateTime()
-			const timezoneOffset = this.options.offset * 60 * 1000
-			const timeToShow = extrapolatedTime - timezoneOffset
-			const startOfDayInTimezone = new Date(timeToShow)
+		const extrapolatedTime = this.extrapolateTime()
+		const timezoneOffset = this.options.offset * 60 * 1000
+		const timeToShow = extrapolatedTime - timezoneOffset
+		const startOfDayInTimezone = new Date(timeToShow)
 
-			startOfDayInTimezone.setUTCHours(0, 0, 0, 0)
-			const offset = timeToShow - +startOfDayInTimezone
-			const seconds = offset / 1000
-			const minutes = seconds / 60
-			const hours = minutes / 60
-			return { hours, minutes, seconds }
-		}
+		startOfDayInTimezone.setUTCHours(0, 0, 0, 0)
+		const offset = timeToShow - +startOfDayInTimezone
+		const seconds = offset / 1000
+		const minutes = seconds / 60
+		const hours = minutes / 60
+
 		const renderCasing = () => {
 			this.context.strokeStyle = '#000'
 
@@ -356,27 +354,20 @@ export class Clock extends CanvasElement {
 			})
 		}
 
-		const { hours, minutes, seconds } = getShowTime()
-
 		this.context.save()
 		renderCasing()
 		render60Icons()
-
 		if (this.options.render12Count) {
 			render12Count()
 		}
-
 		if (this.options.render60Count) {
 			render60Count()
 		}
-
 		renderHourHand()
 		renderMinuteHand()
-
 		if (this.options.renderTimer) {
 			renderTimer()
 		}
-
 		if (this.options.renderSecondHand) {
 			renderSecondHand()
 		}

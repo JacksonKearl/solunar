@@ -158,12 +158,13 @@ const stations = JSON.parse(fs.readFileSync('./stations.json','utf-8'))
 
 const record = {}
 for (const station of stations) {
-  for (const harcon of station.harcon) {
-    if (harcon.description) {
-      record[harcon.name] = harcon.description
-    }
-  }
+  record[station.id] = true
+  // for (const harcon of station.harcon) {
+  //   if (harcon.description) {
+  //     record[harcon.name] = harcon.description
+  //   }
+  // }
 }
 
-console.log(record)
+console.log(Object.entries( record).length) 
 ```

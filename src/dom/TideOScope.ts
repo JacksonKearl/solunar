@@ -41,6 +41,7 @@ export class TideOScope extends CanvasElement {
 	private activeRadius: number
 	private data: TideOScopeDataPoint[]
 	private lastFetchWallTime: number | undefined
+	private autoAdvanceDisposables = new DisposableStore()
 
 	private centralDataObservable = new Observable<TideOScopeDataPoint>()
 	public centralDataView = this.centralDataObservable.view
@@ -56,7 +57,7 @@ export class TideOScope extends CanvasElement {
 		this.scaleFactor = this.activeRadius
 		this.data = this.fetchAllData()
 		this.resetAutoAdvanceTimer()
-		this.store.add({ dispose: () => this.autoAdvanceDisposables.clear() })
+		this.disposables.add(this.autoAdvanceDisposables)
 	}
 
 	public attachObservable<N extends keyof TideOScopeOptions>(
@@ -85,7 +86,7 @@ export class TideOScope extends CanvasElement {
 			},
 		}
 
-		this.store.add(
+		this.disposables.add(
 			view((v) => {
 				if (this.options[inputName] !== v) {
 					this.options[inputName] = v
@@ -155,7 +156,6 @@ export class TideOScope extends CanvasElement {
 	}
 
 	// reads: timeRange, timeRate
-	private autoAdvanceDisposables = new DisposableStore()
 	private resetAutoAdvanceTimer() {
 		this.autoAdvanceDisposables.clear()
 

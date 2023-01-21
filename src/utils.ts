@@ -73,7 +73,7 @@ export class DisposableStore implements Disposable {
 	add<Ds extends Disposable[]>(...ds: Ds): Ds {
 		if (this.isDisposed) {
 			console.trace(
-				'Alert! Attempting to add to a disposed store! These objects will be immediately disposed.',
+				'Alert! Attempting to add to a disposed store. This is probably a bug. These objects will be immediately disposed:',
 				ds,
 			)
 			ds.forEach((d) => d.dispose())
