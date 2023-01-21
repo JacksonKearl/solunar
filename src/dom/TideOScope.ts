@@ -32,8 +32,6 @@ type TideOScopeOptions = {
 	renderMoon: boolean
 	renderSun: boolean
 	renderHarmonics: boolean
-	render12Hour: boolean
-	render24Hour: boolean
 	periodLoPass: number
 	periodHiPass: number
 }
@@ -99,7 +97,9 @@ export class TideOScope extends CanvasElement {
 	// reads: renderScale, timeRange, timeRate, data
 	// writes: center, data
 	protected override onDrag(l: Location & { dx: number; dy: number }): void {
-		this.panLevels((l.dx * -1) / this.options.renderScale)
+		if (this.locationInRadius(l, 1)) {
+			this.panLevels((l.dx * -1) / this.options.renderScale)
+		}
 	}
 
 	// reads: timeRange, timeRate, data, periodHiPass, periodLoPass

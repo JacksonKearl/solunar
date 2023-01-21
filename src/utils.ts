@@ -63,48 +63,28 @@ export const MappedView =
 		return { dispose: () => disposable.dispose() }
 	}
 
-// export const ThrottledView = <T>(
-// 	view: View<T>,
-// 	minTimeBetweenUpdates: number,
-// ): View<T> => {
-// 	return (watcher) => {
-// 		let handle: number | undefined
-// 		let lastForwarded: T
-
-// 		const disposable = view((latest) => {
-// 			if (lastForwarded === latest) return
-
-// 			if (!handle) {
-// 				watcher(latest)
-// 				lastForwarded = latest
-// 				handle = setTimeout(() => {
-// 					handle = undefined
-// 					if (latest !== lastForwarded) {
-// 						watcher(latest)
-// 						lastForwarded = latest
-// 					}
-// 				}, minTimeBetweenUpdates)
-// 			}
-// 		})
-
-// 		return {
-// 			dispose: () => {
-// 				clearTimeout(handle)
-// 				disposable.dispose()
-// 			},
-// 		}
-// 	}
-// }
-
-export class DisposableStore {
+export class DisposableStore implements Disposable {
 	private store = new Set<Disposable>()
+	private isDisposed = false
 	clear(): void {
-		this.store.forEach((v) => v.dispose())
+		this.store.forEach((d) => d.dispose())
 		this.store.clear()
 	}
 	add<Ds extends Disposable[]>(...ds: Ds): Ds {
-		ds.forEach((d) => this.store.add(d))
+		if (this.isDisposed) {
+			console.trace(
+				'Alert! Attempting to add to a disposed store! These objects will be immediately disposed.',
+				ds,
+			)
+			ds.forEach((d) => d.dispose())
+		} else {
+			ds.forEach((d) => this.store.add(d))
+		}
 		return ds
+	}
+	dispose(): void {
+		this.clear()
+		this.isDisposed = true
 	}
 }
 

@@ -29,19 +29,24 @@ const makeConfigArea = (className: string, parent: HTMLElement = config) => {
 
 const configs = [
 	makeConfigArea('toggles'),
+	makeConfigArea('toggles'),
 	makeConfigArea('slider'),
 	makeConfigArea('slider'),
 	makeConfigArea('slider'),
 	makeConfigArea('slider'),
 ]
-const toggles = [
+const tideOScopeToggles = [
 	makeConfigArea('toggle', configs[0]),
 	makeConfigArea('toggle', configs[0]),
 	makeConfigArea('toggle', configs[0]),
-	makeConfigArea('toggle', configs[0]),
-	makeConfigArea('toggle', configs[0]),
+]
+const clockToggles = [
+	makeConfigArea('toggle', configs[1]),
+	makeConfigArea('toggle', configs[1]),
+	makeConfigArea('toggle', configs[1]),
 ]
 configs[0].classList.add('flex')
+configs[1].classList.add('flex')
 
 const go = () => {
 	disposables.clear()
@@ -70,8 +75,6 @@ const go = () => {
 		renderMoon: true,
 		renderSun: true,
 		renderHarmonics: false,
-		render12Hour: false,
-		render24Hour: false,
 		periodLoPass: 10,
 		periodHiPass: -4,
 	}
@@ -95,55 +98,65 @@ const go = () => {
 		defaultOptions,
 	)
 
-	const constituentToggle = new Toggle(ctx, drawZoneForElement(toggles[2]), {
-		label: 'Harmonics',
-		onLabel: 'On',
-		offLabel: 'Off',
-		value: defaultOptions.renderHarmonics,
-	})
-	const moonToggle = new Toggle(ctx, drawZoneForElement(toggles[0]), {
+	const constituentToggle = new Toggle(
+		ctx,
+		drawZoneForElement(tideOScopeToggles[2]),
+		{
+			label: 'Harmonics',
+			onLabel: 'Show',
+			offLabel: 'Hide',
+			value: defaultOptions.renderHarmonics,
+		},
+	)
+	const moonToggle = new Toggle(ctx, drawZoneForElement(tideOScopeToggles[0]), {
 		label: 'Moon',
-		onLabel: 'On',
-		offLabel: 'Off',
+		onLabel: 'Show',
+		offLabel: 'Hide',
 		value: defaultOptions.renderMoon,
 	})
-	const sunToggle = new Toggle(ctx, drawZoneForElement(toggles[1]), {
+	const sunToggle = new Toggle(ctx, drawZoneForElement(tideOScopeToggles[1]), {
 		label: 'Sun',
-		onLabel: 'On',
-		offLabel: 'Off',
+		onLabel: 'Show',
+		offLabel: 'Hide',
 		value: defaultOptions.renderSun,
 	})
-	const hour12Toggle = new Toggle(ctx, drawZoneForElement(toggles[3]), {
-		label: 'Hour (12)',
-		onLabel: 'On',
-		offLabel: 'Off',
-		value: defaultOptions.render12Hour,
+	const secondToggle = new Toggle(ctx, drawZoneForElement(clockToggles[0]), {
+		label: 'Seconds',
+		onLabel: 'Show',
+		offLabel: 'Hide',
+		value: false,
 	})
-	const hour24Toggle = new Toggle(ctx, drawZoneForElement(toggles[4]), {
-		label: 'Hour (24)',
-		onLabel: 'On',
-		offLabel: 'Off',
-		value: defaultOptions.render24Hour,
+	const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
+		label: '60-Count',
+		onLabel: 'Show',
+		offLabel: 'Hide',
+		value: false,
 	})
-	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[1]), {
+	const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
+		label: '12-Count',
+		onLabel: 'Show',
+		offLabel: 'Hide',
+		value: true,
+	})
+	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
 		label: 'Scroll Speed',
 		max: 100,
 		min: 1,
 		value: defaultOptions.timeRate,
 	})
-	const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
+	const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
 		label: 'Window Range',
 		min: -3,
 		max: 15,
 		value: defaultOptions.timeRange,
 	})
-	const highpassCutoff = new Slider(ctx, drawZoneForElement(configs[3]), {
+	const highpassCutoff = new Slider(ctx, drawZoneForElement(configs[4]), {
 		label: 'Hi Pass',
 		min: -4,
 		max: 10,
 		value: defaultOptions.periodHiPass,
 	})
-	const lowpassCutoff = new Slider(ctx, drawZoneForElement(configs[4]), {
+	const lowpassCutoff = new Slider(ctx, drawZoneForElement(configs[5]), {
 		label: 'Lo Pass',
 		min: -4,
 		max: 10,
@@ -169,6 +182,8 @@ const go = () => {
 			timeRate: defaultOptions.timeRate,
 			render60Count: false,
 			renderSecondHand: false,
+			render12Count: true,
+			renderTimer: false,
 		},
 	)
 	const heightGauge = new Gauge(
@@ -206,6 +221,9 @@ const go = () => {
 		MappedView(tideOScope.centralDataView, (v) => v.time),
 	)
 	timeGauge.attachObservable('timeRate', scrollSpeedSlider.valueView)
+	timeGauge.attachObservable('render60Count', numbers60Toggle.valueView)
+	timeGauge.attachObservable('render12Count', numbers12Toggle.valueView)
+	timeGauge.attachObservable('renderSecondHand', secondToggle.valueView)
 
 	const allComponents = [
 		windowRangeSlider,
@@ -216,10 +234,11 @@ const go = () => {
 		sunToggle,
 		constituentToggle,
 		tideOScope,
-		hour12Toggle,
-		hour24Toggle,
 		heightGauge,
 		timeGauge,
+		numbers12Toggle,
+		numbers60Toggle,
+		secondToggle,
 	]
 
 	disposables.add(...allComponents)
