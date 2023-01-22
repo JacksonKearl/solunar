@@ -43,6 +43,14 @@ export type Station = {
 	timezone: string | null
 	timezoneOffset: number | null
 	harcon: StationHarmonic[]
+	datums: {
+		MHHW: number
+		MHW: number
+		MSL: number
+		MLW: number
+		MLLW: number
+	}
+	missingData?: true
 }
 
 export type StationHarmonic = {
@@ -64,6 +72,6 @@ export const ConstituentNames = [
 	'Sa', 'Ssa',
 ] as const;
 
-export type ConstituentName = typeof ConstituentNames[number]
+export type ConstituentName = (typeof ConstituentNames)[number]
 
 export type Disposable = { dispose(): void }

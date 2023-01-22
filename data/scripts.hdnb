@@ -8,15 +8,27 @@ curl -s https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations.json?ty
 const fs = require('fs')
 
 const rawStations = JSON.parse(fs.readFileSync('./stations_raw.json','utf-8'))
+
+const existing = new Map()
+try {
+  const data = JSON.parse(fs.readFileSync('./stations.json'))
+  for (const entry of data) {
+    existing.set(entry.id, entry)
+  }
+} catch (e) {}
+ 
 const stations = rawStations.stations
 const clean = []
 for (const station of stations) {
+  const e = existing.get(station.id)
   clean.push({
+    ...e,
     id: station.id,
     name: station.name,
     lat: station.lat,
     lng: station.lng,
     harconUrl: station.harmonicConstituents.self,
+    datumUrl: station.datums.self,
     state: station.state,
     timezone: station.timezone,
     timezoneOffset: station.timezonecorr,
@@ -48,6 +60,46 @@ try {
   fs.writeFileSync('./stations.json', JSON.stringify(stations, null, 2))
 }
 
+```
+
+```js
+// Populate datum data via datumUrl
+const fs = require('fs')
+
+const stations = JSON.parse(fs.readFileSync('./stations.json','utf-8'))
+
+try {
+  for (const station of stations) {
+    if (!station.datums) {
+      console.log('Fetching data for', station.name)
+      const resp = await fetch(station.datumUrl)
+      const contents = await resp.json()
+      station.datums = contents['datums']
+      fs.writeFileSync('./stations.json', JSON.stringify(stations, null, 2))
+      // await new Promise(c => setTimeout(c, 1000))
+    }
+  }
+} finally {
+  fs.writeFileSync('./stations.json', JSON.stringify(stations, null, 2))
+}
+
+```
+
+```js
+const NormCase = (str) =>
+  str
+    .toLocaleLowerCase()
+    .replace(/\s+/g, " ")
+    .split(" ")
+    .map((word) => 
+      /\d/.test(word)
+        ? word.toLocaleUpperCase()
+        : word[0].toLocaleUpperCase() + word.slice(1)
+    )
+    .join(' ')
+    ;
+
+console.log(NormCase('ILUB fsdIUB IUB'))
 ```
 
 ```js
@@ -95,30 +147,56 @@ const ConstituentApiNameToSchuremanName = {
   "2SM2": "2SM",
 };
 
+const NormCase = (str) =>
+  str
+    .toLocaleLowerCase()
+    .replace(/\s+/g, " ")
+    .split(" ")
+    .map((word) =>
+      /\d/.test(word) && word === word.toLocaleUpperCase()
+        ? word.toLocaleUpperCase()
+        : word[0].toLocaleUpperCase() + word.slice(1)
+    )
+    .join(" ");
+
 const stations = JSON.parse(fs.readFileSync("./stations.json", "utf-8"));
-const missing = new Set()
+
 for (const station of stations) {
-  delete station.harconUrl
+  delete station.harconUrl;
+  delete station.datumUrl;
+
+  station.name = NormCase(station.name);
+
+  const keepDatums = ["MHHW", "MHW", "MSL", "MLW", "MLLW"];
+  station.datums = Object.fromEntries(
+    station.datums
+      ?.filter((d) => keepDatums.includes(d.name))
+      .map((d) => [d.name, d.value]) ?? []
+  );
+
   station.harcon = station.harcon
     .map((x) => {
-      const name = ConstituentApiNameToSchuremanName[x.name]
-      if (!name && !missing.has(x.name)) {
-        // TODO: Incorporate all the missing constituents.
-        console.log('Error: missing translation for Constituent', x.name)
-        missing.add(x.name)
+      const name = ConstituentApiNameToSchuremanName[x.name];
+      if (!name) {
+        station.missingData = true;
+        console.log("Error: missing translation for Constituent", x.name)
       }
-      return ({
-        name,
+      return {
+        name: name ?? x.name,
         amplitude: x.amplitude,
         phaseLag: x.phase_GMT,
-      });
+      };
     })
-      .filter((x) => x.name && x.amplitude);
+    .filter((x) => x.name && x.amplitude);
 }
 
-fs.writeFileSync("./stations_clean.json", JSON.stringify(stations, null, 2));
+const stationObj = Object.fromEntries(stations.map((s) => [s.id, s]));
 
-fs.writeFileSync("../src/stationData.ts", 'export default ' + JSON.stringify(stations, null, 2));
+fs.writeFileSync("./stations_clean.json", JSON.stringify(stationObj, null, 2));
+fs.writeFileSync(
+  "../public/stationData.js",
+  "const stations = " + JSON.stringify(stationObj, null, 2)
+);
 
 ```
 

@@ -96,6 +96,10 @@ export class TideOScope extends CanvasElement {
 		)
 	}
 
+	protected override locationInBounds(l: Location | undefined): boolean {
+		return this.locationInRadius(l, 1)
+	}
+
 	// reads: renderScale, timeRange, timeRate, data
 	// writes: center, data
 	protected override onDrag(l: Location & { dx: number; dy: number }): void {
@@ -205,7 +209,6 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
 	override render() {
-		// logTime('tideOScope Render')
 		this.context.save()
 		this.renderClippingPath()
 		this.renderBackground()
@@ -340,29 +343,50 @@ export class TideOScope extends CanvasElement {
 				this.context.arc(x, y, radius, 0, 2 * Math.PI)
 				this.context.fill()
 
-				// if (this.options.labelConstituents) {
-				// 	this.context.fillStyle = 'black'
-				// 	const textProps = this.context.measureText(name)
-				// 	this.context.fillText(
-				// 		name,
-				// 		x - textProps.width / 2,
-				// 		y + textProps.actualBoundingBoxAscent / 2,
-				// 	)
-				// }
+				if (this.options.labelConstituents) {
+					this.context.fillStyle = 'black'
+					const textProps = this.context.measureText(name)
+					this.context.fillText(
+						name,
+						x - textProps.width / 2,
+						y + textProps.actualBoundingBoxAscent / 2,
+					)
+				}
 			}
 		}
 	}
 
 	// reads: periodHiPass, periodLoPass
 	private stationLevelAtTime(time: number) {
-		return StationLevelAtTime(this.station, time, (c) => {
-			const revolutionsPerDay = (c.degreesPerSecond * (24 * 60 * 60)) / 360
+		return StationLevelAtTime(this.station, time, (degreesPerSecond) => {
+			const revolutionsPerDay = (degreesPerSecond * (24 * 60 * 60)) / 360
 			const daysPerRev = 1 / revolutionsPerDay
 			const logDaysPerRev = Math.log2(daysPerRev)
-			return (
-				logDaysPerRev > this.options.periodHiPass &&
-				logDaysPerRev < this.options.periodLoPass
+
+			const loScale = bound2(
+				scale(
+					logDaysPerRev,
+					this.options.periodLoPass + 0.5,
+					this.options.periodLoPass - 0.5,
+					0,
+					1,
+				),
+				0,
+				1,
 			)
+			const hiScale = bound2(
+				scale(
+					logDaysPerRev,
+					this.options.periodHiPass - 0.5,
+					this.options.periodHiPass + 0.5,
+					0,
+					1,
+				),
+				0,
+				1,
+			)
+
+			return loScale * hiScale
 		})
 	}
 

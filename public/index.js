@@ -1,333 +1,3 @@
-var Stations = [
-    {
-        "id": "8518091",
-        "name": "RYE BEACH, AMUSEMENT PARK",
-        "lat": 40.9617,
-        "lng": -73.6717,
-        "state": "NY",
-        "timezone": "EST",
-        "timezoneOffset": -5,
-        "harcon": [
-            {
-                "name": "M2",
-                "amplitude": 3.73,
-                "phaseLag": 113.9
-            },
-            {
-                "name": "S2",
-                "amplitude": 0.62,
-                "phaseLag": 140.8
-            },
-            {
-                "name": "N2",
-                "amplitude": 0.72,
-                "phaseLag": 91.1
-            },
-            {
-                "name": "K1",
-                "amplitude": 0.32,
-                "phaseLag": 192.6
-            },
-            {
-                "name": "M4",
-                "amplitude": 0.1,
-                "phaseLag": 134.5
-            },
-            {
-                "name": "O1",
-                "amplitude": 0.22,
-                "phaseLag": 217.6
-            },
-            {
-                "name": "M6",
-                "amplitude": 0.16,
-                "phaseLag": 164.1
-            },
-            {
-                "name": "MK",
-                "amplitude": 0.04,
-                "phaseLag": 205.6
-            },
-            {
-                "name": "S4",
-                "amplitude": 0.01,
-                "phaseLag": 137.9
-            },
-            {
-                "name": "MN",
-                "amplitude": 0.05,
-                "phaseLag": 115.3
-            },
-            {
-                "name": "Nu2",
-                "amplitude": 0.16,
-                "phaseLag": 92
-            },
-            {
-                "name": "Mu2",
-                "amplitude": 0.02,
-                "phaseLag": 263.7
-            },
-            {
-                "name": "2N",
-                "amplitude": 0.05,
-                "phaseLag": 83.1
-            },
-            {
-                "name": "OO",
-                "amplitude": 0.02,
-                "phaseLag": 231.6
-            },
-            {
-                "name": "Lambda2",
-                "amplitude": 0.08,
-                "phaseLag": 144.1
-            },
-            {
-                "name": "S1",
-                "amplitude": 0.03,
-                "phaseLag": 144.1
-            },
-            {
-                "name": "M1",
-                "amplitude": 0.01,
-                "phaseLag": 221.7
-            },
-            {
-                "name": "J1",
-                "amplitude": 0.02,
-                "phaseLag": 205.2
-            },
-            {
-                "name": "Mm",
-                "amplitude": 0.16,
-                "phaseLag": 313
-            },
-            {
-                "name": "Ssa",
-                "amplitude": 0.12,
-                "phaseLag": 64.6
-            },
-            {
-                "name": "Sa",
-                "amplitude": 0.23,
-                "phaseLag": 112.3
-            },
-            {
-                "name": "MSf",
-                "amplitude": 0.07,
-                "phaseLag": 278.5
-            },
-            {
-                "name": "Mf",
-                "amplitude": 0.04,
-                "phaseLag": 257.4
-            },
-            {
-                "name": "Rho1",
-                "amplitude": 0.02,
-                "phaseLag": 157.7
-            },
-            {
-                "name": "Q1",
-                "amplitude": 0.06,
-                "phaseLag": 220.5
-            },
-            {
-                "name": "T2",
-                "amplitude": 0.06,
-                "phaseLag": 101.2
-            },
-            {
-                "name": "R2",
-                "amplitude": 0.01,
-                "phaseLag": 334.4
-            },
-            {
-                "name": "2Q",
-                "amplitude": 0.01,
-                "phaseLag": 113.8
-            },
-            {
-                "name": "P1",
-                "amplitude": 0.08,
-                "phaseLag": 205.4
-            },
-            {
-                "name": "2SM",
-                "amplitude": 0.02,
-                "phaseLag": 95
-            },
-            {
-                "name": "M3",
-                "amplitude": 0.02,
-                "phaseLag": 237
-            },
-            {
-                "name": "L2",
-                "amplitude": 0.23,
-                "phaseLag": 162.1
-            },
-            {
-                "name": "2MK",
-                "amplitude": 0.03,
-                "phaseLag": 215.7
-            },
-            {
-                "name": "K2",
-                "amplitude": 0.17,
-                "phaseLag": 141
-            },
-            {
-                "name": "M8",
-                "amplitude": 0.01,
-                "phaseLag": 216
-            },
-            {
-                "name": "MS",
-                "amplitude": 0.02,
-                "phaseLag": 142.8
-            }
-        ]
-    },
-    {
-        id: '9410580',
-        name: 'NEWPORT BEACH, NEWPORT BAY ENTRANCE',
-        lat: 33.6033,
-        lng: -117.883,
-        state: 'CA',
-        timezone: 'PST',
-        timezoneOffset: -8,
-        harcon: [
-            {
-                name: 'M2',
-                amplitude: 1.66,
-                phaseLag: 144.4,
-            },
-            {
-                name: 'S2',
-                amplitude: 0.67,
-                phaseLag: 140.2,
-            },
-            {
-                name: 'N2',
-                amplitude: 0.39,
-                phaseLag: 124.1,
-            },
-            {
-                name: 'K1',
-                amplitude: 1.1,
-                phaseLag: 208,
-            },
-            {
-                name: 'M4',
-                amplitude: 0.01,
-                phaseLag: 282.4,
-            },
-            {
-                name: 'O1',
-                amplitude: 0.71,
-                phaseLag: 192.7,
-            },
-            {
-                name: 'Nu2',
-                amplitude: 0.07,
-                phaseLag: 126.2,
-            },
-            {
-                name: 'Mu2',
-                amplitude: 0.05,
-                phaseLag: 84.2,
-            },
-            {
-                name: '2N',
-                amplitude: 0.05,
-                phaseLag: 97.3,
-            },
-            {
-                name: 'OO',
-                amplitude: 0.04,
-                phaseLag: 239.5,
-            },
-            {
-                name: 'Lambda2',
-                amplitude: 0.01,
-                phaseLag: 142.4,
-            },
-            {
-                name: 'S1',
-                amplitude: 0.02,
-                phaseLag: 312.8,
-            },
-            {
-                name: 'M1',
-                amplitude: 0.04,
-                phaseLag: 218,
-            },
-            {
-                name: 'J1',
-                amplitude: 0.07,
-                phaseLag: 218.4,
-            },
-            {
-                name: 'Ssa',
-                amplitude: 0.05,
-                phaseLag: 280.2,
-            },
-            {
-                name: 'Sa',
-                amplitude: 0.21,
-                phaseLag: 183.4,
-            },
-            {
-                name: 'Rho1',
-                amplitude: 0.03,
-                phaseLag: 186.2,
-            },
-            {
-                name: 'Q1',
-                amplitude: 0.13,
-                phaseLag: 184.4,
-            },
-            {
-                name: 'T2',
-                amplitude: 0.04,
-                phaseLag: 128.8,
-            },
-            {
-                name: 'R2',
-                amplitude: 0.01,
-                phaseLag: 140.1,
-            },
-            {
-                name: '2Q',
-                amplitude: 0.02,
-                phaseLag: 177.5,
-            },
-            {
-                name: 'P1',
-                amplitude: 0.35,
-                phaseLag: 203.3,
-            },
-            {
-                name: 'M3',
-                amplitude: 0.01,
-                phaseLag: 354.2,
-            },
-            {
-                name: 'L2',
-                amplitude: 0.05,
-                phaseLag: 148,
-            },
-            {
-                name: 'K2',
-                amplitude: 0.2,
-                phaseLag: 133.1,
-            },
-        ],
-    },
-];
-
 const dot = (a, b) => {
     const l = Math.min(a.length, b.length);
     let result = 0;
@@ -373,6 +43,28 @@ const MappedView = (view, mapper) => (watcher) => {
     const disposable = view((v) => watcher(mapper(v)));
     return { dispose: () => disposable.dispose() };
 };
+class LocalStorageState {
+    id;
+    serializer;
+    value;
+    constructor(id, defaultValue, serializer = JSON.stringify, deserializer = JSON.parse) {
+        this.id = id;
+        this.serializer = serializer;
+        this.value = defaultValue;
+        const prior = localStorage.getItem(id);
+        if (prior) {
+            try {
+                this.value = deserializer(prior);
+            }
+            catch (e) {
+                console.error('Error deserializing key', id, 'from local storage data ', prior, e);
+            }
+        }
+    }
+    dispose() {
+        localStorage.setItem(this.id, this.serializer(this.value));
+    }
+}
 class DisposableStore {
     store = new Set();
     isDisposed = false;
@@ -464,28 +156,42 @@ class CanvasElement {
         };
         const touchTracker = new Map();
         this.scaleFactor = this.dimensions.minDim / 2;
+        this.disposables.add({
+            dispose: () => this.context.clearRect(this.dimensions.left, this.dimensions.top, this.dimensions.width, this.dimensions.height),
+        });
         this.disposables.add({ dispose: () => (this.disposed = true) });
-        this.disposables.add(addElementListener(this.context.canvas, 'touchstart', (e) => {
+        this.disposables.add(addElementListener(this.context.canvas, 'wheel', (e) => {
             const l = this.locationOfEvent(e);
-            if (l && this.locationInDrawZone(l)) {
+            if (this.locationInBounds(l)) {
+                const dpr = findDPR();
+                this.onDrag({
+                    dx: -e.deltaX * dpr,
+                    dy: -e.deltaY * dpr,
+                    x: e.pageX * dpr,
+                    y: e.pageY * dpr,
+                });
+            }
+        }), addElementListener(this.context.canvas, 'touchstart', (e) => {
+            const l = this.locationOfEvent(e);
+            if (l && this.locationInBounds(l)) {
                 touchTracker.set(e.touches[0].identifier, l);
                 this.active = true;
             }
         }), addElementListener(this.context.canvas, 'mousedown', (e) => {
             const l = this.locationOfEvent(e);
-            if (this.locationInDrawZone(l)) {
+            if (this.locationInBounds(l)) {
                 this.active = true;
             }
         }), addElementListener(this.context.canvas, 'touchend', (e) => {
             const l = this.locationOfEvent(e);
-            if (l && this.locationInDrawZone(l) && this.active) {
+            if (l && this.locationInBounds(l) && this.active) {
                 this.onClick(l);
             }
             this.active = false;
             touchTracker.delete(e.touches[0].identifier);
         }), addElementListener(this.context.canvas, 'mouseup', (e) => {
             const l = this.locationOfEvent(e);
-            if (l && this.locationInDrawZone(l) && this.active) {
+            if (l && this.locationInBounds(l) && this.active) {
                 this.onClick(l);
             }
             this.active = false;
@@ -521,6 +227,9 @@ class CanvasElement {
                 touchTracker.set(touch.identifier, location);
             }
         }));
+    }
+    locationInBounds(l) {
+        return this.locationInDrawZone(l);
     }
     locationOfEvent(m) {
         let e;
@@ -613,12 +322,29 @@ class Slider extends CanvasElement {
     constructor(context, drawZone, options) {
         super(context, drawZone);
         this.options = options;
+        const valueStore = new LocalStorageState(options.id ?? options.label, options.value);
+        this.options.value = valueStore.value;
         this.vertical = this.dimensions.height > this.dimensions.width;
-        this.value.set(options.value);
+        this.value.set(this.options.value);
         this.scaleFactor = (this.vertical ? drawZone.height : drawZone.width) / 2;
+        this.disposables.add(valueStore, this.valueView((v) => (valueStore.value = v)));
     }
     onDrag(l) {
-        this.handleTouch(l);
+        const { dx, dy } = l;
+        let newVal;
+        if (this.vertical) {
+            const valLoc = scale(this.options.value, this.options.min, this.options.max, this.dimensions.bottom - this.scaleFactor * 0.1, this.dimensions.top + this.scaleFactor * 0.1);
+            const newValLoc = bound2(valLoc + dy, this.dimensions.top + this.scaleFactor * 0.1, this.dimensions.bottom - this.scaleFactor * 0.1);
+            newVal = scale(newValLoc, this.dimensions.bottom - this.scaleFactor * 0.1, this.dimensions.top + this.scaleFactor * 0.1, this.options.min, this.options.max);
+        }
+        else {
+            const valLoc = scale(this.options.value, this.options.min, this.options.max, this.dimensions.left + this.scaleFactor * 0.1, this.dimensions.right - this.scaleFactor * 0.1);
+            const newValLoc = bound2(valLoc + dx, this.dimensions.left + this.scaleFactor * 0.1, this.dimensions.right - this.scaleFactor * 0.1);
+            newVal = scale(newValLoc, this.dimensions.left + this.scaleFactor * 0.1, this.dimensions.right - this.scaleFactor * 0.1, this.options.min, this.options.max);
+        }
+        this.options.value = newVal;
+        this.value.set(newVal);
+        this.render();
     }
     onClick(l) {
         this.handleTouch(l);
@@ -668,8 +394,11 @@ class Toggle extends CanvasElement {
     constructor(context, drawZone, options) {
         super(context, drawZone);
         this.options = options;
+        const valueStore = new LocalStorageState(options.id ?? options.label, options.value);
+        this.options.value = valueStore.value;
         this.value.set(options.value);
         this.scaleFactor = this.dimensions.minDim * 0.15;
+        this.disposables.add(valueStore, this.valueView((v) => (valueStore.value = v)));
     }
     onClick(l) {
         if (this.locationInRadius(l, 2)) {
@@ -965,7 +694,7 @@ const UniversalStateAtTime = (time) => {
     const lunarVector = LunarNodeStateToArray(lunarNode);
     return { orbitVector, lunarVector, lunarNode };
 };
-const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
+const StationLevelAtTime = (station, time, constituentScale = (degPerSec) => 1) => {
     const vT = UniversalStateAtTime(time);
     const vTNext = UniversalStateAtTime(+time + 1000);
     const constituents = {};
@@ -976,7 +705,8 @@ const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
         const Vu = dot(cData.V, vT.orbitVector) + dot(cData.u, vT.lunarVector);
         const VuNext = dot(cData.V, vTNext.orbitVector) + dot(cData.u, vTNext.lunarVector);
         const degreesPerSecond = VuNext - Vu;
-        const f = cData.f(vT.lunarNode);
+        const scale = constituentScale(degreesPerSecond);
+        const f = cData.f(vT.lunarNode) * scale;
         const phaseLag = harmonic.phaseLag;
         const amplitude = f * harmonic.amplitude;
         const argument = wrap(Vu - phaseLag);
@@ -986,9 +716,6 @@ const StationLevelAtTime = (station, time, includeConstituent = () => true) => {
             argument,
             degreesPerSecond,
         };
-        if (!includeConstituent(constituentContribution)) {
-            continue;
-        }
         constituents[harmonic.name] = constituentContribution;
         totalOffset += offset;
         const offsetNext = f * amplitude * cos(VuNext - phaseLag);
@@ -1070,6 +797,9 @@ class TideOScope extends CanvasElement {
                 toRunOnChange[inputName]?.();
             }
         }));
+    }
+    locationInBounds(l) {
+        return this.locationInRadius(l, 1);
     }
     // reads: renderScale, timeRange, timeRate, data
     // writes: center, data
@@ -1166,7 +896,6 @@ class TideOScope extends CanvasElement {
     }
     // reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
     render() {
-        // logTime('tideOScope Render')
         this.context.save();
         this.renderClippingPath();
         this.renderBackground();
@@ -1275,26 +1004,23 @@ class TideOScope extends CanvasElement {
                 this.context.beginPath();
                 this.context.arc(x, y, radius, 0, 2 * Math.PI);
                 this.context.fill();
-                // if (this.options.labelConstituents) {
-                // 	this.context.fillStyle = 'black'
-                // 	const textProps = this.context.measureText(name)
-                // 	this.context.fillText(
-                // 		name,
-                // 		x - textProps.width / 2,
-                // 		y + textProps.actualBoundingBoxAscent / 2,
-                // 	)
-                // }
+                if (this.options.labelConstituents) {
+                    this.context.fillStyle = 'black';
+                    const textProps = this.context.measureText(name);
+                    this.context.fillText(name, x - textProps.width / 2, y + textProps.actualBoundingBoxAscent / 2);
+                }
             }
         }
     }
     // reads: periodHiPass, periodLoPass
     stationLevelAtTime(time) {
-        return StationLevelAtTime(this.station, time, (c) => {
-            const revolutionsPerDay = (c.degreesPerSecond * (24 * 60 * 60)) / 360;
+        return StationLevelAtTime(this.station, time, (degreesPerSecond) => {
+            const revolutionsPerDay = (degreesPerSecond * (24 * 60 * 60)) / 360;
             const daysPerRev = 1 / revolutionsPerDay;
             const logDaysPerRev = Math.log2(daysPerRev);
-            return (logDaysPerRev > this.options.periodHiPass &&
-                logDaysPerRev < this.options.periodLoPass);
+            const loScale = bound2(scale(logDaysPerRev, this.options.periodLoPass + 0.5, this.options.periodLoPass - 0.5, 0, 1), 0, 1);
+            const hiScale = bound2(scale(logDaysPerRev, this.options.periodHiPass - 0.5, this.options.periodHiPass + 0.5, 0, 1), 0, 1);
+            return loScale * hiScale;
         });
     }
     renderCrosshairs() {
@@ -1803,6 +1529,7 @@ class Clock extends CanvasElement {
 const disposables = new DisposableStore();
 const HOUR = 1000 * 60 * 60;
 const DAY = HOUR * 24;
+const YEAR = DAY * 365;
 const canvas = document.querySelector('canvas');
 const main = document.querySelector('main');
 const config = document.querySelector('form');
@@ -1837,7 +1564,8 @@ configs[1].classList.add('flex');
 const go = () => {
     disposables.clear();
     const ref = document.location.hash.slice(1);
-    const active = Stations.find((s) => s.id === ref);
+    // const active = Stations.find((s) => s.id === ref) as Station
+    const active = stations[ref];
     if (!active) {
         throw Error('not found');
     }
@@ -1856,8 +1584,8 @@ const go = () => {
         renderMoon: true,
         renderSun: true,
         renderHarmonics: false,
-        periodLoPass: 10,
-        periodHiPass: -4,
+        periodLoPass: 12,
+        periodHiPass: -6,
     };
     const tideOScope = new TideOScope(ctx, drawZoneForElement(main), active, defaultOptions);
     const constituentToggle = new Toggle(ctx, drawZoneForElement(tideOScopeToggles[2]), {
@@ -1884,13 +1612,13 @@ const go = () => {
         offLabel: 'Hide',
         value: false,
     });
-    const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
+    const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
         label: '60-Count',
         onLabel: 'Show',
         offLabel: 'Hide',
         value: false,
     });
-    const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
+    const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
         label: '12-Count',
         onLabel: 'Show',
         offLabel: 'Hide',
@@ -1898,26 +1626,26 @@ const go = () => {
     });
     const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
         label: 'Scroll Speed',
-        max: 100,
+        max: 100000,
         min: 1,
         value: defaultOptions.timeRate,
     });
     const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
         label: 'Window Range',
-        min: -3,
-        max: 15,
-        value: defaultOptions.timeRange,
+        min: Math.log(8 * HOUR),
+        max: Math.log(2 * YEAR),
+        value: Math.log(defaultOptions.timeRange),
     });
     const highpassCutoff = new Slider(ctx, drawZoneForElement(configs[4]), {
         label: 'Hi Pass',
-        min: -4,
-        max: 10,
+        min: -6,
+        max: 12,
         value: defaultOptions.periodHiPass,
     });
     const lowpassCutoff = new Slider(ctx, drawZoneForElement(configs[5]), {
         label: 'Lo Pass',
-        min: -4,
-        max: 10,
+        min: -6,
+        max: 12,
         value: defaultOptions.periodLoPass,
     });
     new Date().getTimezoneOffset();
@@ -1973,7 +1701,7 @@ const go = () => {
     tideOScope.viewInput('periodHiPass', highpassCutoff.valueView);
     tideOScope.viewInput('renderMoon', moonToggle.valueView);
     tideOScope.viewInput('renderSun', sunToggle.valueView);
-    tideOScope.viewInput('timeRange', windowRangeSlider.valueView);
+    tideOScope.viewInput('timeRange', MappedView(windowRangeSlider.valueView, (v) => Math.E ** v));
     tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView);
     tideFlowGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.flow));
     tideHeightGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.total));

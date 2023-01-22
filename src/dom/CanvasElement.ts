@@ -85,24 +85,45 @@ export abstract class CanvasElement implements Disposable {
 
 		const touchTracker = new Map<number, Location>()
 		this.scaleFactor = this.dimensions.minDim / 2
+		this.disposables.add({
+			dispose: () =>
+				this.context.clearRect(
+					this.dimensions.left,
+					this.dimensions.top,
+					this.dimensions.width,
+					this.dimensions.height,
+				),
+		})
 		this.disposables.add({ dispose: () => (this.disposed = true) })
 		this.disposables.add(
+			addElementListener(this.context.canvas, 'wheel', (e) => {
+				const l = this.locationOfEvent(e)
+				if (this.locationInBounds(l)) {
+					const dpr = findDPR()
+					this.onDrag({
+						dx: -e.deltaX * dpr,
+						dy: -e.deltaY * dpr,
+						x: e.pageX * dpr,
+						y: e.pageY * dpr,
+					})
+				}
+			}),
 			addElementListener(this.context.canvas, 'touchstart', (e) => {
 				const l = this.locationOfEvent(e)
-				if (l && this.locationInDrawZone(l)) {
+				if (l && this.locationInBounds(l)) {
 					touchTracker.set(e.touches[0].identifier, l)
 					this.active = true
 				}
 			}),
 			addElementListener(this.context.canvas, 'mousedown', (e) => {
 				const l = this.locationOfEvent(e)
-				if (this.locationInDrawZone(l)) {
+				if (this.locationInBounds(l)) {
 					this.active = true
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchend', (e) => {
 				const l = this.locationOfEvent(e)
-				if (l && this.locationInDrawZone(l) && this.active) {
+				if (l && this.locationInBounds(l) && this.active) {
 					this.onClick(l)
 				}
 				this.active = false
@@ -110,7 +131,7 @@ export abstract class CanvasElement implements Disposable {
 			}),
 			addElementListener(this.context.canvas, 'mouseup', (e) => {
 				const l = this.locationOfEvent(e)
-				if (l && this.locationInDrawZone(l) && this.active) {
+				if (l && this.locationInBounds(l) && this.active) {
 					this.onClick(l)
 				}
 				this.active = false
@@ -151,6 +172,10 @@ export abstract class CanvasElement implements Disposable {
 				}
 			}),
 		)
+	}
+
+	protected locationInBounds(l: Location | undefined): boolean {
+		return this.locationInDrawZone(l)
 	}
 
 	protected locationOfEvent(m: CursorEvent): Location | undefined {

@@ -1,5 +1,4 @@
 import { Station } from '$/types'
-import Stations from '$/stationData'
 import { setupCanvas, drawZoneForElement } from './CanvasElement'
 import { Slider } from './Slider'
 import { Toggle } from './Toggle'
@@ -8,10 +7,13 @@ import { DisposableStore, MappedView } from '$/utils'
 import { Gauge } from './Gauge'
 import { Clock } from './Clock'
 
+declare const stations: Record<string, Station>
+
 const disposables = new DisposableStore()
 
 const HOUR = 1000 * 60 * 60
 const DAY = HOUR * 24
+const YEAR = DAY * 365
 
 const canvas = document.querySelector('canvas')
 const main = document.querySelector('main')
@@ -52,7 +54,8 @@ const go = () => {
 	disposables.clear()
 
 	const ref = document.location.hash.slice(1)
-	const active = Stations.find((s) => s.id === ref) as Station
+	// const active = Stations.find((s) => s.id === ref) as Station
+	const active = stations[ref]
 	if (!active) {
 		throw Error('not found')
 	}
@@ -75,8 +78,8 @@ const go = () => {
 		renderMoon: true,
 		renderSun: true,
 		renderHarmonics: false,
-		periodLoPass: 10,
-		periodHiPass: -4,
+		periodLoPass: 12,
+		periodHiPass: -6,
 	}
 
 	const tideOScope = new TideOScope(
@@ -114,13 +117,13 @@ const go = () => {
 		offLabel: 'Hide',
 		value: false,
 	})
-	const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
+	const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
 		label: '60-Count',
 		onLabel: 'Show',
 		offLabel: 'Hide',
 		value: false,
 	})
-	const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
+	const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
 		label: '12-Count',
 		onLabel: 'Show',
 		offLabel: 'Hide',
@@ -128,26 +131,26 @@ const go = () => {
 	})
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
 		label: 'Scroll Speed',
-		max: 100,
+		max: 100000,
 		min: 1,
 		value: defaultOptions.timeRate,
 	})
 	const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
 		label: 'Window Range',
-		min: -3,
-		max: 15,
-		value: defaultOptions.timeRange,
+		min: Math.log(8 * HOUR),
+		max: Math.log(2 * YEAR),
+		value: Math.log(defaultOptions.timeRange),
 	})
 	const highpassCutoff = new Slider(ctx, drawZoneForElement(configs[4]), {
 		label: 'Hi Pass',
-		min: -4,
-		max: 10,
+		min: -6,
+		max: 12,
 		value: defaultOptions.periodHiPass,
 	})
 	const lowpassCutoff = new Slider(ctx, drawZoneForElement(configs[5]), {
 		label: 'Lo Pass',
-		min: -4,
-		max: 10,
+		min: -6,
+		max: 12,
 		value: defaultOptions.periodLoPass,
 	})
 
@@ -220,7 +223,10 @@ const go = () => {
 	tideOScope.viewInput('periodHiPass', highpassCutoff.valueView)
 	tideOScope.viewInput('renderMoon', moonToggle.valueView)
 	tideOScope.viewInput('renderSun', sunToggle.valueView)
-	tideOScope.viewInput('timeRange', windowRangeSlider.valueView)
+	tideOScope.viewInput(
+		'timeRange',
+		MappedView(windowRangeSlider.valueView, (v) => Math.E ** v),
+	)
 	tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView)
 
 	tideFlowGauge.viewInput(

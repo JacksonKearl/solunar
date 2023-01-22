@@ -10,12 +10,12 @@ The core logic of this is a TypeScript implementation of the timeless _Manual of
 
 The work _Computer Applications to Tides in the National Ocean Survey_ provides helpful extensions of core tables from Schureman into the modern era, which were consulted for verification of the code. This work can also be obtained from NOAA at the link above, or in this repository (`Zetler1982.pdf`).
 
-Data for the Harmonic Constituents of all 1232 capable stations was obtained from the [NOAA Tides and Currents CO-OPS Metadata API](https://api.tidesandcurrents.noaa.gov/mdapi/prod/), and is included in the `./data` directory for reference, along with the `./data/scripts.hdnb` [Handy Dandy Notebook](https://marketplace.visualstudio.com/items?itemName=jakearl.handydandy-notebook) used for processing the data.
+Data for the Harmonic Constituents of all 1232 capable stations was obtained from the [NOAA Tides and Currents CO-OPS Metadata API](https://api.tidesandcurrents.noaa.gov/mdapi/prod/), and is included in the `data` directory for reference, along with the `data/scripts.hdnb` [Handy Dandy Notebook](https://marketplace.visualstudio.com/items?itemName=jakearl.handydandy-notebook) used for processing the data.
 
 In short: Thanks NOAA!
 
 ### UI Styling
 
-The UI is based (with varying degrees of roughness) on the F-15 Eagle's cockpit. Reference photos are kept in the `mood/` directory, and were consulted during development.
+The UI is based (with varying degrees of roughness) on the F-15 Eagle's cockpit. Reference photos are kept in the `mood` directory, and were consulted during development.
 
 Thanks McDonnell Douglas!

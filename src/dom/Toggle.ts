@@ -1,4 +1,4 @@
-import { Observable } from '$/utils'
+import { LocalStorageState, Observable } from '$/utils'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type ToggleOptions = {
@@ -6,6 +6,7 @@ type ToggleOptions = {
 	label: string
 	onLabel: string
 	offLabel: string
+	id?: string
 }
 export class Toggle extends CanvasElement {
 	private value = new Observable<boolean>()
@@ -17,8 +18,20 @@ export class Toggle extends CanvasElement {
 		private options: ToggleOptions,
 	) {
 		super(context, drawZone)
+
+		const valueStore = new LocalStorageState(
+			options.id ?? options.label,
+			options.value,
+		)
+		this.options.value = valueStore.value
+
 		this.value.set(options.value)
 		this.scaleFactor = this.dimensions.minDim * 0.15
+
+		this.disposables.add(
+			valueStore,
+			this.valueView((v) => (valueStore.value = v)),
+		)
 	}
 
 	protected override onClick(l: Location): void {

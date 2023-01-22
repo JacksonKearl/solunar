@@ -1,4 +1,4 @@
-import { scale, bound2, Observable } from '$/utils'
+import { scale, bound2, Observable, LocalStorageState } from '$/utils'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type SliderOptions = {
@@ -6,6 +6,7 @@ type SliderOptions = {
 	min: number
 	max: number
 	label: string
+	id?: string
 }
 export class Slider extends CanvasElement {
 	private vertical
@@ -19,13 +20,72 @@ export class Slider extends CanvasElement {
 		private options: SliderOptions,
 	) {
 		super(context, drawZone)
+
+		const valueStore = new LocalStorageState(
+			options.id ?? options.label,
+			options.value,
+		)
+		this.options.value = valueStore.value
+
 		this.vertical = this.dimensions.height > this.dimensions.width
-		this.value.set(options.value)
+		this.value.set(this.options.value)
 		this.scaleFactor = (this.vertical ? drawZone.height : drawZone.width) / 2
+
+		this.disposables.add(
+			valueStore,
+			this.valueView((v) => (valueStore.value = v)),
+		)
 	}
 
-	protected override onDrag(l: Location) {
-		this.handleTouch(l)
+	protected override onDrag(l: Location & { dx: number; dy: number }) {
+		const { dx, dy } = l
+
+		let newVal
+		if (this.vertical) {
+			const valLoc = scale(
+				this.options.value,
+				this.options.min,
+				this.options.max,
+				this.dimensions.bottom - this.scaleFactor * 0.1,
+				this.dimensions.top + this.scaleFactor * 0.1,
+			)
+			const newValLoc = bound2(
+				valLoc + dy,
+				this.dimensions.top + this.scaleFactor * 0.1,
+				this.dimensions.bottom - this.scaleFactor * 0.1,
+			)
+			newVal = scale(
+				newValLoc,
+				this.dimensions.bottom - this.scaleFactor * 0.1,
+				this.dimensions.top + this.scaleFactor * 0.1,
+				this.options.min,
+				this.options.max,
+			)
+		} else {
+			const valLoc = scale(
+				this.options.value,
+				this.options.min,
+				this.options.max,
+				this.dimensions.left + this.scaleFactor * 0.1,
+				this.dimensions.right - this.scaleFactor * 0.1,
+			)
+			const newValLoc = bound2(
+				valLoc + dx,
+				this.dimensions.left + this.scaleFactor * 0.1,
+				this.dimensions.right - this.scaleFactor * 0.1,
+			)
+			newVal = scale(
+				newValLoc,
+				this.dimensions.left + this.scaleFactor * 0.1,
+				this.dimensions.right - this.scaleFactor * 0.1,
+				this.options.min,
+				this.options.max,
+			)
+		}
+
+		this.options.value = newVal
+		this.value.set(newVal)
+		this.render()
 	}
 
 	protected override onClick(l: Location) {

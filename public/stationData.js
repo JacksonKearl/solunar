@@ -1,7 +1,7 @@
-const stations = [
-  {
+const stations = {
+  "1611347": {
     "id": "1611347",
-    "name": "PORT ALLEN, HANAPEPE BAY, KAUAI ISLAND",
+    "name": "Port Allen, Hanapepe Bay, Kauai Island",
     "lat": 21.9033,
     "lng": -159.592,
     "state": "HI",
@@ -103,9 +103,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 34
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.16,
+      "MHW": 4.76,
+      "MSL": 4.15,
+      "MLW": 3.51,
+      "MLLW": 3.32
+    }
   },
-  {
+  "1611400": {
     "id": "1611400",
     "name": "Nawiliwili",
     "lat": 21.9544,
@@ -229,9 +236,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 206.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.12,
+      "MHW": 3.71,
+      "MSL": 3.11,
+      "MLW": 2.49,
+      "MLLW": 2.29
+    }
   },
-  {
+  "1612340": {
     "id": "1612340",
     "name": "Honolulu",
     "lat": 21.303333,
@@ -345,11 +359,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 45.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.71,
+      "MHW": 5.25,
+      "MSL": 4.63,
+      "MLW": 3.97,
+      "MLLW": 3.81
+    }
   },
-  {
+  "1612366": {
     "id": "1612366",
-    "name": "FORT KAMEHAMEHA, BISHOP POINT, PEARL HBR",
+    "name": "Fort Kamehameha, Bishop Point, Pearl Hbr",
     "lat": 21.33,
     "lng": -157.967,
     "state": "HI",
@@ -461,11 +482,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 57
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.99,
+      "MHW": 3.53,
+      "MSL": 2.91,
+      "MLW": 2.23,
+      "MLLW": 2.09
+    }
   },
-  {
+  "1612404": {
     "id": "1612404",
-    "name": "FORD ISLAND, FERRY DOCK, PEARL HARBOR",
+    "name": "Ford Island, Ferry Dock, Pearl Harbor",
     "lat": 21.3683,
     "lng": -157.94,
     "state": "HI",
@@ -572,9 +600,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 57.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.3,
+      "MHW": 3.85,
+      "MSL": 3.21,
+      "MLW": 2.5,
+      "MLLW": 2.36
+    }
   },
-  {
+  "1612480": {
     "id": "1612480",
     "name": "Mokuoloe",
     "lat": 21.433056,
@@ -708,9 +743,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 11.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.04,
+      "MHW": 4.72,
+      "MSL": 3.97,
+      "MLW": 3.23,
+      "MLLW": 2.92
+    }
   },
-  {
+  "1613198": {
     "id": "1613198",
     "name": "Kaunakakai Harbor",
     "lat": 21.085,
@@ -839,9 +881,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 56.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.07,
+      "MHW": 6.55,
+      "MSL": 5.87,
+      "MLW": 5.13,
+      "MLLW": 4.93
+    }
   },
-  {
+  "1615680": {
     "id": "1615680",
     "name": "Kahului, Kahului Harbor",
     "lat": 20.894944,
@@ -970,9 +1019,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 9.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.66,
+      "MHW": 4.31,
+      "MSL": 3.53,
+      "MLW": 2.74,
+      "MLLW": 2.41
+    }
   },
-  {
+  "1617433": {
     "id": "1617433",
     "name": "Kawaihae",
     "lat": 20.0366,
@@ -1081,9 +1137,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 53.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.74,
+      "MHW": 4.24,
+      "MSL": 3.54,
+      "MLW": 2.81,
+      "MLLW": 2.63
+    }
   },
-  {
+  "1617760": {
     "id": "1617760",
     "name": "Hilo, Hilo Bay, Kuhio Bay",
     "lat": 19.73028,
@@ -1207,9 +1270,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 26.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.32,
+      "MHW": 5.89,
+      "MSL": 5.07,
+      "MLW": 4.22,
+      "MLLW": 3.92
+    }
   },
-  {
+  "1619000": {
     "id": "1619000",
     "name": "Johnston Atoll",
     "lat": 16.7383,
@@ -1323,9 +1393,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 13.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.03,
+      "MHW": 3.78,
+      "MSL": 2.86,
+      "MLW": 1.93,
+      "MLLW": 1.81
+    }
   },
-  {
+  "1619910": {
     "id": "1619910",
     "name": "Sand Island, Midway Islands",
     "lat": 28.211667,
@@ -1449,9 +1526,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 173.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.96,
+      "MHW": 3.78,
+      "MSL": 3.35,
+      "MLW": 2.92,
+      "MLLW": 2.7
+    }
   },
-  {
+  "1630000": {
     "id": "1630000",
     "name": "Apra Harbor, Guam",
     "lat": 13.44339,
@@ -1590,9 +1674,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 212.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.68,
+      "MHW": 3.56,
+      "MSL": 2.71,
+      "MLW": 1.94,
+      "MLLW": 1.34
+    }
   },
-  {
+  "1631428": {
     "id": "1631428",
     "name": "Pago Bay, Guam",
     "lat": 13.428333,
@@ -1726,9 +1817,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 178.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.09,
+      "MHW": 25.97,
+      "MSL": 25.37,
+      "MLW": 24.86,
+      "MLLW": 24.36
+    }
   },
-  {
+  "1633227": {
     "id": "1633227",
     "name": "Saipan",
     "lat": 15.2267,
@@ -1857,9 +1955,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 261.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.6,
+      "MHW": 4.47,
+      "MSL": 3.69,
+      "MLW": 3.01,
+      "MLLW": 2.4
+    }
   },
-  {
+  "1732417": {
     "id": "1732417",
     "name": "Fare Ute Point",
     "lat": -17.535,
@@ -1973,9 +2078,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 318.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 42.48,
+      "MHW": 42.43,
+      "MSL": 42.12,
+      "MLW": 41.8,
+      "MLLW": 41.76
+    }
   },
-  {
+  "1770000": {
     "id": "1770000",
     "name": "Pago Pago, American Samoa",
     "lat": -14.276667,
@@ -2079,11 +2191,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 158.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.11,
+      "MHW": 5.97,
+      "MSL": 4.68,
+      "MLW": 3.38,
+      "MLLW": 3.32
+    }
   },
-  {
+  "1778000": {
     "id": "1778000",
-    "name": "APIA, W. SAMOA",
+    "name": "Apia, W. Samoa",
     "lat": -13.808306,
     "lng": -171.767,
     "state": "",
@@ -2170,9 +2289,10 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 140.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "1820000": {
     "id": "1820000",
     "name": "Kwajalein, Marshall Islands",
     "lat": 8.7317,
@@ -2306,11 +2426,18 @@ const stations = [
         "amplitude": 0.24,
         "phaseLag": 144.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.84,
+      "MHW": 6.49,
+      "MSL": 4.78,
+      "MLW": 3.05,
+      "MLLW": 2.92
+    }
   },
-  {
+  "1840000": {
     "id": "1840000",
-    "name": "CHUUK, MOEN ISLAND, E. CAROLINE ISLANDS",
+    "name": "Chuuk, Moen Island, E. Caroline Islands",
     "lat": 7.44667,
     "lng": 151.847,
     "state": "Micronesia, Federated Sta",
@@ -2432,9 +2559,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 143.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.67,
+      "MHW": 4.37,
+      "MSL": 3.63,
+      "MLW": 2.91,
+      "MLLW": 2.78
+    }
   },
-  {
+  "1890000": {
     "id": "1890000",
     "name": "Wake Island, Pacific Ocean",
     "lat": 19.290556,
@@ -2558,11 +2692,18 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 146.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.49,
+      "MHW": 6.28,
+      "MSL": 5.28,
+      "MLW": 4.26,
+      "MLLW": 4.14
+    }
   },
-  {
+  "1910000": {
     "id": "1910000",
-    "name": "SUVA, SUVA HARBOR",
+    "name": "Suva, Suva Harbor",
     "lat": -18.1333,
     "lng": 178.425,
     "state": "Fiji",
@@ -2679,9 +2820,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 205.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 40.23,
+      "MHW": 40.01,
+      "MSL": 38.11,
+      "MLW": 36.2,
+      "MLLW": 35.96
+    }
   },
-  {
+  "2431000": {
     "id": "2431000",
     "name": "Diego Garcia",
     "lat": -7.29,
@@ -2835,9 +2983,16 @@ const stations = [
         "amplitude": 0.26,
         "phaseLag": 288
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.91,
+      "MHW": 36.81,
+      "MSL": 34.99,
+      "MLW": 33.17,
+      "MLLW": 33.01
+    }
   },
-  {
+  "2695535": {
     "id": "2695535",
     "name": "Bermuda Biological Station",
     "lat": 32.369999,
@@ -2951,9 +3106,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 24.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.33,
+      "MHW": 6.09,
+      "MSL": 4.88,
+      "MLW": 3.64,
+      "MLLW": 3.58
+    }
   },
-  {
+  "2695540": {
     "id": "2695540",
     "name": "Bermuda, St. Georges Island",
     "lat": 32.373306,
@@ -3072,9 +3234,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 26.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.24,
+      "MHW": 5.99,
+      "MSL": 4.74,
+      "MLW": 3.49,
+      "MLLW": 3.41
+    }
   },
-  {
+  "8410140": {
     "id": "8410140",
     "name": "Eastport",
     "lat": 44.904598,
@@ -3243,11 +3412,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 129.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.07,
+      "MHW": 23.59,
+      "MSL": 14.5,
+      "MLW": 5.24,
+      "MLLW": 4.8
+    }
   },
-  {
+  "8410714": {
     "id": "8410714",
-    "name": "COFFIN POINT, COFFIN NECK",
+    "name": "Coffin Point, Coffin Neck",
     "lat": 44.87,
     "lng": -67.1083,
     "state": "ME",
@@ -3384,11 +3560,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 329.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.89,
+      "MHW": 21.34,
+      "MSL": 12.77,
+      "MLW": 4.08,
+      "MLLW": 3.73
+    }
   },
-  {
+  "8410715": {
     "id": "8410715",
-    "name": "GARNET POINT, HERSEY NECK",
+    "name": "Garnet Point, Hersey Neck",
     "lat": 44.9233,
     "lng": -67.13,
     "state": "ME",
@@ -3525,9 +3708,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 306.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.01,
+      "MHW": 21.48,
+      "MSL": 12.01,
+      "MLW": 2.31,
+      "MLLW": 1.86
+    }
   },
-  {
+  "8410834": {
     "id": "8410834",
     "name": "Pettegrove Point, Dochet Island",
     "lat": 45.1284,
@@ -3666,9 +3856,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 162
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.41,
+      "MHW": 27.92,
+      "MSL": 18.16,
+      "MLW": 8.35,
+      "MLLW": 7.89
+    }
   },
-  {
+  "8410864": {
     "id": "8410864",
     "name": "Gravelly Point, Whiting Bay",
     "lat": 44.823,
@@ -3837,9 +4034,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 232
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.34,
+      "MHW": 26.86,
+      "MSL": 17.91,
+      "MLW": 8.96,
+      "MLLW": 8.64
+    }
   },
-  {
+  "8411060": {
     "id": "8411060",
     "name": "Cutler Farris Wharf",
     "lat": 44.657028,
@@ -3988,9 +4192,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 215.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.03,
+      "MHW": 19.58,
+      "MSL": 12.66,
+      "MLW": 5.87,
+      "MLLW": 5.47
+    }
   },
-  {
+  "8411250": {
     "id": "8411250",
     "name": "Cutler Naval Base",
     "lat": 44.6417,
@@ -4129,9 +4340,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 186.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.1,
+      "MHW": 35.68,
+      "MSL": 29.29,
+      "MLW": 22.92,
+      "MLLW": 22.54
+    }
   },
-  {
+  "8412581": {
     "id": "8412581",
     "name": "Milbridge",
     "lat": 44.54,
@@ -4260,9 +4478,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 162.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.4,
+      "MHW": 23.97,
+      "MSL": 18.36,
+      "MLW": 12.66,
+      "MLLW": 12.28
+    }
   },
-  {
+  "8413320": {
     "id": "8413320",
     "name": "Bar Harbor",
     "lat": 44.392194,
@@ -4421,9 +4646,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 167
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.84,
+      "MHW": 14.42,
+      "MSL": 9.14,
+      "MLW": 3.85,
+      "MLLW": 3.47
+    }
   },
-  {
+  "8413801": {
     "id": "8413801",
     "name": "Ellsworth",
     "lat": 44.535,
@@ -4552,11 +4784,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 105.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.56,
+      "MHW": 16.14,
+      "MSL": 10.87,
+      "MLW": 5.54,
+      "MLLW": 5.17
+    }
   },
-  {
+  "8413825": {
     "id": "8413825",
-    "name": "MACKEREL COVE, SWANS ISLAND",
+    "name": "Mackerel Cove, Swans Island",
     "lat": 44.17,
     "lng": -68.435,
     "state": "ME",
@@ -4688,9 +4927,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 70.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.83,
+      "MHW": 11.42,
+      "MSL": 6.37,
+      "MLW": 1.27,
+      "MLLW": 0.91
+    }
   },
-  {
+  "8414249": {
     "id": "8414249",
     "name": "Oceanville, Deer Isle",
     "lat": 44.192306,
@@ -4844,9 +5090,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 180.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.06,
+      "MHW": 29.64,
+      "MSL": 24.72,
+      "MLW": 19.78,
+      "MLLW": 19.43
+    }
   },
-  {
+  "8414612": {
     "id": "8414612",
     "name": "Bangor",
     "lat": 44.785,
@@ -4980,9 +5233,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 303.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.6,
+      "MHW": 6.07,
+      "MSL": -0.62,
+      "MLW": -7.33,
+      "MLLW": -7.66
+    }
   },
-  {
+  "8414721": {
     "id": "8414721",
     "name": "Fort Point",
     "lat": 44.4717,
@@ -5121,11 +5381,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 163.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.26,
+      "MHW": 29.86,
+      "MSL": 24.72,
+      "MLW": 19.47,
+      "MLLW": 19.11
+    }
   },
-  {
+  "8414888": {
     "id": "8414888",
-    "name": "PULPIT HARBOR, PENOBSCOT BAY",
+    "name": "Pulpit Harbor, Penobscot Bay",
     "lat": 44.1567,
     "lng": -68.8867,
     "state": "ME",
@@ -5252,9 +5519,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 164.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.06,
+      "MHW": 12.63,
+      "MSL": 7.78,
+      "MLW": 2.79,
+      "MLLW": 2.42
+    }
   },
-  {
+  "8415490": {
     "id": "8415490",
     "name": "Rockland",
     "lat": 44.105,
@@ -5363,9 +5637,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 186.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.19,
+      "MHW": 13.79,
+      "MSL": 8.95,
+      "MLW": 4.01,
+      "MLLW": 3.62
+    }
   },
-  {
+  "8415709": {
     "id": "8415709",
     "name": "Thomaston",
     "lat": 44.0717,
@@ -5499,11 +5780,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 99.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.97,
+      "MHW": 28.56,
+      "MSL": 24.07,
+      "MLW": 19.52,
+      "MLLW": 19.12
+    }
   },
-  {
+  "8416731": {
     "id": "8416731",
-    "name": "WALPOLE, DAMARISCOTTA RIVER",
+    "name": "Walpole, Damariscotta River",
     "lat": 43.9333,
     "lng": -69.58,
     "state": "ME",
@@ -5665,9 +5953,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 136.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.5,
+      "MHW": 13.06,
+      "MSL": 8.4,
+      "MLW": 3.71,
+      "MLLW": 3.35
+    }
   },
-  {
+  "8416921": {
     "id": "8416921",
     "name": "Wiscasset",
     "lat": 44,
@@ -5801,9 +6096,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 118
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.41,
+      "MHW": 29.99,
+      "MSL": 25.24,
+      "MLW": 20.5,
+      "MLLW": 20.18
+    }
   },
-  {
+  "8417087": {
     "id": "8417087",
     "name": "Phipps Pt.",
     "lat": 43.8983,
@@ -5942,9 +6244,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 259.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.5,
+      "MHW": 25.08,
+      "MSL": 20.61,
+      "MLW": 15.99,
+      "MLLW": 15.66
+    }
   },
-  {
+  "8417134": {
     "id": "8417134",
     "name": "Gardiner",
     "lat": 44.2333,
@@ -6073,11 +6382,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 52.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.24,
+      "MHW": 27.89,
+      "MSL": 25.08,
+      "MLW": 21.93,
+      "MLLW": 21.72
+    }
   },
-  {
+  "8417144": {
     "id": "8417144",
-    "name": "Augusta, MCRR Bridge, Kennebec River",
+    "name": "Augusta, Mcrr Bridge, Kennebec River",
     "lat": 44.32,
     "lng": -69.77028,
     "state": "ME",
@@ -6194,9 +6510,13 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 120
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 33.86,
+      "MHW": 33.53
+    }
   },
-  {
+  "8417177": {
     "id": "8417177",
     "name": "Hunniwell Point",
     "lat": 43.755,
@@ -6320,9 +6640,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 134.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.21,
+      "MHW": 26.79,
+      "MSL": 22.56,
+      "MLW": 18.31,
+      "MLLW": 17.97
+    }
   },
-  {
+  "8417208": {
     "id": "8417208",
     "name": "Richmond",
     "lat": 44.0883,
@@ -6446,9 +6773,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 273.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.92,
+      "MHW": 30.6,
+      "MSL": 28.1,
+      "MLW": 25.32,
+      "MLLW": 25.13
+    }
   },
-  {
+  "8417227": {
     "id": "8417227",
     "name": "Bath",
     "lat": 43.925,
@@ -6572,9 +6906,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 121.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.7,
+      "MHW": 22.36,
+      "MSL": 19,
+      "MLW": 15.52,
+      "MLLW": 15.28
+    }
   },
-  {
+  "8418150": {
     "id": "8418150",
     "name": "Portland",
     "lat": 43.65806,
@@ -6738,9 +7079,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 52.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.46,
+      "MHW": 18.02,
+      "MSL": 13.49,
+      "MLW": 8.9,
+      "MLLW": 8.55
+    }
   },
-  {
+  "8418445": {
     "id": "8418445",
     "name": "Pine Point",
     "lat": 43.545,
@@ -6864,11 +7212,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 255.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.94,
+      "MHW": 27.52,
+      "MSL": 23.18,
+      "MLW": 18.75,
+      "MLLW": 18.42
+    }
   },
-  {
+  "8418606": {
     "id": "8418606",
-    "name": "CAMP ELLIS, SACO RIVER",
+    "name": "Camp Ellis, Saco River",
     "lat": 43.4617,
     "lng": -70.3817,
     "state": "ME",
@@ -6995,11 +7350,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 249.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.74,
+      "MHW": 13.31,
+      "MSL": 8.88,
+      "MLW": 4.39,
+      "MLLW": 4.06
+    }
   },
-  {
+  "8418828": {
     "id": "8418828",
-    "name": "BIDDEFORD, SACO RIVER",
+    "name": "Biddeford, Saco River",
     "lat": 43.4917,
     "lng": -70.4467,
     "state": "ME",
@@ -7171,11 +7533,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 153
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.76,
+      "MHW": 9.32,
+      "MSL": 4.91,
+      "MLW": 0.26,
+      "MLLW": -0.07
+    }
   },
-  {
+  "8418911": {
     "id": "8418911",
-    "name": "KENNEBUNKPORT, KENNEBUNK RIVER",
+    "name": "Kennebunkport, Kennebunk River",
     "lat": 43.3583,
     "lng": -70.4767,
     "state": "ME",
@@ -7342,9 +7711,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 43.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.72,
+      "MHW": 11.3,
+      "MSL": 6.93,
+      "MLW": 2.46,
+      "MLLW": 2.12
+    }
   },
-  {
+  "8419317": {
     "id": "8419317",
     "name": "Wells",
     "lat": 43.32,
@@ -7498,9 +7874,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 7.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.33,
+      "MHW": 23.9,
+      "MSL": 19.54,
+      "MLW": 15.11,
+      "MLLW": 14.77
+    }
   },
-  {
+  "8419870": {
     "id": "8419870",
     "name": "Seavey Island",
     "lat": 43.07972,
@@ -7654,11 +8037,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 54.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.16,
+      "MHW": 10.74,
+      "MSL": 6.73,
+      "MLW": 2.59,
+      "MLLW": 2.27
+    }
   },
-  {
+  "8420411": {
     "id": "8420411",
-    "name": "DOVER, COCHECO RIVER",
+    "name": "Dover, Cocheco River",
     "lat": 43.1983,
     "lng": -70.8683,
     "state": "NH",
@@ -7775,11 +8165,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 32.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.94,
+      "MHW": 13.58,
+      "MSL": 10.19,
+      "MLW": 6.54,
+      "MLLW": 6.28
+    }
   },
-  {
+  "8423005": {
     "id": "8423005",
-    "name": "ATLANTIC TERMINALS  T14A",
+    "name": "Atlantic Terminals T14a",
     "lat": 43.1167,
     "lng": -70.8117,
     "state": "NH",
@@ -7906,9 +8303,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 343.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 19.85,
+      "MHW": 19.48,
+      "MSL": 16.18,
+      "MLW": 12.74,
+      "MLLW": 12.48
+    }
   },
-  {
+  "8423898": {
     "id": "8423898",
     "name": "Fort Point",
     "lat": 43.071388,
@@ -8072,11 +8476,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 23.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.1,
+      "MHW": 11.68,
+      "MSL": 7.4,
+      "MLW": 3.05,
+      "MLLW": 2.71
+    }
   },
-  {
+  "8440273": {
     "id": "8440273",
-    "name": "SALISBURY POINT, MERRIMACK RIVER",
+    "name": "Salisbury Point, Merrimack River",
     "lat": 42.8383,
     "lng": -70.9083,
     "state": "MA",
@@ -8238,11 +8649,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 217.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.89,
+      "MHW": 11.44,
+      "MSL": 7.63,
+      "MLW": 3.8,
+      "MLLW": 3.61
+    }
   },
-  {
+  "8440369": {
     "id": "8440369",
-    "name": "MERRIMACPORT, MERRIMACK RIVER",
+    "name": "Merrimacport, Merrimack River",
     "lat": 42.825,
     "lng": -70.9883,
     "state": "MA",
@@ -8374,11 +8792,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 145.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.13,
+      "MHW": 7.69,
+      "MSL": 4.21,
+      "MLW": 0.64,
+      "MLLW": 0.47
+    }
   },
-  {
+  "8440452": {
     "id": "8440452",
-    "name": "PLUM ISLAND, MERRIMACK  RIVER ENTRANCE",
+    "name": "Plum Island, Merrimack River Entrance",
     "lat": 42.8167,
     "lng": -70.82,
     "state": "MA",
@@ -8505,11 +8930,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 177.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.17,
+      "MHW": 12.76,
+      "MSL": 8.76,
+      "MLW": 4.76,
+      "MLLW": 4.47
+    }
   },
-  {
+  "8440466": {
     "id": "8440466",
-    "name": "NEWBURYPORT, MERRIMACK RIVER",
+    "name": "Newburyport, Merrimack River",
     "lat": 42.815,
     "lng": -70.8733,
     "state": "MA",
@@ -8641,11 +9073,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 356.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.61,
+      "MHW": 13.17,
+      "MSL": 9.12,
+      "MLW": 5.08,
+      "MLLW": 4.85
+    }
   },
-  {
+  "8440889": {
     "id": "8440889",
-    "name": "RIVERSIDE, MERRIMACK RIVER",
+    "name": "Riverside, Merrimack River",
     "lat": 42.7633,
     "lng": -71.0767,
     "state": "MA",
@@ -8777,9 +9216,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 270.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.8,
+      "MHW": 9.34,
+      "MSL": 6.28,
+      "MLW": 3.62,
+      "MLLW": 3.5
+    }
   },
-  {
+  "8441241": {
     "id": "8441241",
     "name": "Plum Island South",
     "lat": 42.710139,
@@ -8908,11 +9354,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 329.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.25,
+      "MHW": 10.85,
+      "MSL": 6.45,
+      "MLW": 2.07,
+      "MLLW": 1.76
+    }
   },
-  {
+  "8441551": {
     "id": "8441551",
-    "name": "ROCKPORT HARBOR",
+    "name": "Rockport Harbor",
     "lat": 42.6583,
     "lng": -70.615,
     "state": "MA",
@@ -9039,11 +9492,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 234.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.77,
+      "MHW": 12.34,
+      "MSL": 8.02,
+      "MLW": 3.63,
+      "MLLW": 3.31
+    }
   },
-  {
+  "8441771": {
     "id": "8441771",
-    "name": "ESSEX, ESSEX RIVER",
+    "name": "Essex, Essex River",
     "lat": 42.6317,
     "lng": -70.7767,
     "state": "MA",
@@ -9200,11 +9660,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 186.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.55,
+      "MHW": 13.13,
+      "MSL": 8.71,
+      "MLW": 3.94,
+      "MLLW": 3.63
+    }
   },
-  {
+  "8442645": {
     "id": "8442645",
-    "name": "SALEM, SALEM HARBOR",
+    "name": "Salem, Salem Harbor",
     "lat": 42.5233,
     "lng": -70.8767,
     "state": "MA",
@@ -9326,11 +9793,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 178.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.19,
+      "MHW": 10.75,
+      "MSL": 6.34,
+      "MLW": 1.82,
+      "MLLW": 1.49
+    }
   },
-  {
+  "8443187": {
     "id": "8443187",
-    "name": "LYNN, LYNN HARBOR",
+    "name": "Lynn, Lynn Harbor",
     "lat": 42.4583,
     "lng": -70.9433,
     "state": "MA",
@@ -9497,11 +9971,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 70.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.25,
+      "MHW": 12.81,
+      "MSL": 8.31,
+      "MLW": 3.65,
+      "MLLW": 3.31
+    }
   },
-  {
+  "8443662": {
     "id": "8443662",
-    "name": "AMELIA EARHART DAM, MYSTIC RIVER",
+    "name": "Amelia Earhart Dam, Mystic River",
     "lat": 42.395,
     "lng": -71.0767,
     "state": "MA",
@@ -9638,9 +10119,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 249.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.36,
+      "MHW": 13.92,
+      "MSL": 9.27,
+      "MLW": 4.36,
+      "MLLW": 4.03
+    }
   },
-  {
+  "8443725": {
     "id": "8443725",
     "name": "Chelsea",
     "lat": 42.3867,
@@ -9784,9 +10272,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 236.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.07,
+      "MHW": 23.62,
+      "MSL": 18.96,
+      "MLW": 14.06,
+      "MLLW": 13.72
+    }
   },
-  {
+  "8443970": {
     "id": "8443970",
     "name": "Boston",
     "lat": 42.3539,
@@ -9965,9 +10460,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 74
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.8,
+      "MHW": 13.36,
+      "MSL": 8.73,
+      "MLW": 3.87,
+      "MLLW": 3.52
+    }
   },
-  {
+  "8444162": {
     "id": "8444162",
     "name": "Boston Light",
     "lat": 42.3283,
@@ -10136,9 +10638,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 50.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.2,
+      "MHW": 16.76,
+      "MSL": 12.3,
+      "MLW": 7.71,
+      "MLLW": 7.39
+    }
   },
-  {
+  "8444525": {
     "id": "8444525",
     "name": "Nut Island",
     "lat": 42.28,
@@ -10312,9 +10821,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 85.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.15,
+      "MHW": 24.7,
+      "MSL": 20.1,
+      "MLW": 15.27,
+      "MLLW": 14.93
+    }
   },
-  {
+  "8444788": {
     "id": "8444788",
     "name": "Weymouth Fore River",
     "lat": 42.2483,
@@ -10448,11 +10964,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 238.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.26,
+      "MHW": 28.81,
+      "MSL": 24.17,
+      "MLW": 19.25,
+      "MLLW": 18.92
+    }
   },
-  {
+  "8445138": {
     "id": "8445138",
-    "name": "SCITUATE, SCITUATE HARBOR",
+    "name": "Scituate, Scituate Harbor",
     "lat": 42.2017,
     "lng": -70.7267,
     "state": "MA",
@@ -10574,11 +11097,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 275.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.71,
+      "MHW": 12.26,
+      "MSL": 7.85,
+      "MLW": 3.32,
+      "MLLW": 2.96
+    }
   },
-  {
+  "8446009": {
     "id": "8446009",
-    "name": "BRANT ROCK, GREEN HARBOR RIVER",
+    "name": "Brant Rock, Green Harbor River",
     "lat": 42.0833,
     "lng": -70.6467,
     "state": "MA",
@@ -10705,9 +11235,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 153.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.23,
+      "MHW": 10.79,
+      "MSL": 6.31,
+      "MLW": 1.71,
+      "MLLW": 1.36
+    }
   },
-  {
+  "8446121": {
     "id": "8446121",
     "name": "Provincetown",
     "lat": 42.049592,
@@ -10866,11 +11403,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 55.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.1,
+      "MHW": 13.64,
+      "MSL": 9.05,
+      "MLW": 4.35,
+      "MLLW": 4.02
+    }
   },
-  {
+  "8446166": {
     "id": "8446166",
-    "name": "DUXBURY, DUXBURY HARBOR",
+    "name": "Duxbury, Duxbury Harbor",
     "lat": 42.0383,
     "lng": -70.67,
     "state": "MA",
@@ -11007,11 +11551,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 340.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.56,
+      "MHW": 13.12,
+      "MSL": 8.37,
+      "MLW": 3.22,
+      "MLLW": 2.88
+    }
   },
-  {
+  "8446493": {
     "id": "8446493",
-    "name": "PLYMOUTH, PLYMOUTH HARBOR",
+    "name": "Plymouth, Plymouth Harbor",
     "lat": 41.96,
     "lng": -70.6617,
     "state": "MA",
@@ -11148,11 +11699,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 300.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.58,
+      "MHW": 13.14,
+      "MSL": 8.43,
+      "MLW": 3.39,
+      "MLLW": 3.05
+    }
   },
-  {
+  "8447173": {
     "id": "8447173",
-    "name": "Sagamore, Cape Cod Canal (Sta. 115)",
+    "name": "Sagamore, Cape Cod Canal (sta. 115)",
     "lat": 41.775,
     "lng": -70.535,
     "state": "MA",
@@ -11274,9 +11832,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 223.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.21,
+      "MHW": 8.82,
+      "MSL": 5.03,
+      "MLW": 0.92,
+      "MLLW": 0.62
+    }
   },
-  {
+  "8447180": {
     "id": "8447180",
     "name": "Sandwich",
     "lat": 41.7717,
@@ -11390,11 +11955,18 @@ const stations = [
         "amplitude": 0.16,
         "phaseLag": 149.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10,
+      "MHW": 9.51,
+      "MSL": 5.25,
+      "MLW": 0.77,
+      "MLLW": 0.55
+    }
   },
-  {
+  "8447191": {
     "id": "8447191",
-    "name": "Bournedale, Cape Cod Canal (Sta. 200)",
+    "name": "Bournedale, Cape Cod Canal (sta. 200)",
     "lat": 41.77,
     "lng": -70.5617,
     "state": "MA",
@@ -11521,11 +12093,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 221.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.86,
+      "MHW": 8.5,
+      "MSL": 5.55,
+      "MLW": 2.32,
+      "MLLW": 2.04
+    }
   },
-  {
+  "8447241": {
     "id": "8447241",
-    "name": "SESUIT HARBOR, EAST DENNIS",
+    "name": "Sesuit Harbor, East Dennis",
     "lat": 41.7517,
     "lng": -70.155,
     "state": "MA",
@@ -11657,11 +12236,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 21.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.82,
+      "MHW": 12.36,
+      "MSL": 7.58,
+      "MLW": 2.63,
+      "MLLW": 2.36
+    }
   },
-  {
+  "8447259": {
     "id": "8447259",
-    "name": "Bourne Bridge, Cape Cod Canal (Sta. 320)",
+    "name": "Bourne Bridge, Cape Cod Canal (sta. 320)",
     "lat": 41.745,
     "lng": -70.5933,
     "state": "MA",
@@ -11788,9 +12374,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 231.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.46,
+      "MHW": 8.07,
+      "MSL": 6,
+      "MLW": 3.78,
+      "MLLW": 3.51
+    }
   },
-  {
+  "8447270": {
     "id": "8447270",
     "name": "Buzzards Bay",
     "lat": 41.7417,
@@ -11949,9 +12542,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 143.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.66,
+      "MHW": 4.31,
+      "MSL": 2.46,
+      "MLW": 0.89,
+      "MLLW": 0.67
+    }
   },
-  {
+  "8447295": {
     "id": "8447295",
     "name": "Gray Gables",
     "lat": 41.735,
@@ -12075,9 +12675,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 193.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.56,
+      "MHW": 13.24,
+      "MSL": 11.22,
+      "MLW": 9.63,
+      "MLLW": 9.45
+    }
   },
-  {
+  "8447368": {
     "id": "8447368",
     "name": "Great Hill",
     "lat": 41.7117,
@@ -12206,9 +12813,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 236.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.46,
+      "MHW": 8.2,
+      "MSL": 5.99,
+      "MLW": 4.23,
+      "MLLW": 4.05
+    }
   },
-  {
+  "8447386": {
     "id": "8447386",
     "name": "Fall River",
     "lat": 41.7043,
@@ -12377,9 +12991,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 146.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.64,
+      "MHW": 25.4,
+      "MSL": 23.07,
+      "MLW": 21.04,
+      "MLLW": 20.87
+    }
   },
-  {
+  "8447416": {
     "id": "8447416",
     "name": "Piney Point",
     "lat": 41.695,
@@ -12513,9 +13134,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 154.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.03,
+      "MHW": 7.75,
+      "MSL": 5.57,
+      "MLW": 3.84,
+      "MLLW": 3.67
+    }
   },
-  {
+  "8447435": {
     "id": "8447435",
     "name": "Chatham",
     "lat": 41.688499,
@@ -12688,12 +13316,305 @@ const stations = [
         "name": "MS",
         "amplitude": 0.05,
         "phaseLag": 228
+      },
+      {
+        "name": "SIGMA1",
+        "amplitude": 0.02,
+        "phaseLag": 212.5
+      },
+      {
+        "name": "MP1",
+        "amplitude": 0.02,
+        "phaseLag": 296.2
+      },
+      {
+        "name": "2PO1",
+        "amplitude": 0.01,
+        "phaseLag": 114.7
+      },
+      {
+        "name": "SO1",
+        "amplitude": 0.01,
+        "phaseLag": 19.2
+      },
+      {
+        "name": "MSN2",
+        "amplitude": 0.02,
+        "phaseLag": 22.6
+      },
+      {
+        "name": "MNS2",
+        "amplitude": 0.02,
+        "phaseLag": 189.7
+      },
+      {
+        "name": "OP2",
+        "amplitude": 0.01,
+        "phaseLag": 302.7
+      },
+      {
+        "name": "2NS2",
+        "amplitude": 0.01,
+        "phaseLag": 252.6
+      },
+      {
+        "name": "MLN2S2",
+        "amplitude": 0.01,
+        "phaseLag": 202.1
+      },
+      {
+        "name": "2MS2K2",
+        "amplitude": 0.01,
+        "phaseLag": 344.7
+      },
+      {
+        "name": "M2KS2",
+        "amplitude": 0.02,
+        "phaseLag": 164.3
+      },
+      {
+        "name": "2SNMK2",
+        "amplitude": 0.01,
+        "phaseLag": 313.9
+      },
+      {
+        "name": "SO3",
+        "amplitude": 0.02,
+        "phaseLag": 248.2
+      },
+      {
+        "name": "SK3",
+        "amplitude": 0.01,
+        "phaseLag": 306.1
+      },
+      {
+        "name": "NO3",
+        "amplitude": 0.02,
+        "phaseLag": 201.1
+      },
+      {
+        "name": "MK4",
+        "amplitude": 0.01,
+        "phaseLag": 215.4
+      },
+      {
+        "name": "SN4",
+        "amplitude": 0.02,
+        "phaseLag": 221.3
+      },
+      {
+        "name": "2MLS4",
+        "amplitude": 0.01,
+        "phaseLag": 303.1
+      },
+      {
+        "name": "3MS4",
+        "amplitude": 0.02,
+        "phaseLag": 163.5
+      },
+      {
+        "name": "ML4",
+        "amplitude": 0.02,
+        "phaseLag": 94.5
+      },
+      {
+        "name": "N4",
+        "amplitude": 0.01,
+        "phaseLag": 130.3
+      },
+      {
+        "name": "SL4",
+        "amplitude": 0.01,
+        "phaseLag": 140.6
+      },
+      {
+        "name": "MNO5",
+        "amplitude": 0.02,
+        "phaseLag": 158.6
+      },
+      {
+        "name": "2MO5",
+        "amplitude": 0.03,
+        "phaseLag": 172.1
+      },
+      {
+        "name": "2MK5",
+        "amplitude": 0.03,
+        "phaseLag": 194.9
+      },
+      {
+        "name": "MSK5",
+        "amplitude": 0.01,
+        "phaseLag": 255.5
+      },
+      {
+        "name": "2MP5",
+        "amplitude": 0.01,
+        "phaseLag": 221.6
+      },
+      {
+        "name": "MNK5",
+        "amplitude": 0.01,
+        "phaseLag": 182.7
+      },
+      {
+        "name": "2MN6",
+        "amplitude": 0.04,
+        "phaseLag": 90.6
+      },
+      {
+        "name": "MSN6",
+        "amplitude": 0.01,
+        "phaseLag": 172.6
+      },
+      {
+        "name": "2MS6",
+        "amplitude": 0.02,
+        "phaseLag": 163.1
+      },
+      {
+        "name": "2NM6",
+        "amplitude": 0.01,
+        "phaseLag": 78.4
+      },
+      {
+        "name": "2ML6",
+        "amplitude": 0.01,
+        "phaseLag": 105.4
+      },
+      {
+        "name": "3MLS6",
+        "amplitude": 0.01,
+        "phaseLag": 273.8
+      },
+      {
+        "name": "2MK6",
+        "amplitude": 0.01,
+        "phaseLag": 152.8
+      },
+      {
+        "name": "2MNO7",
+        "amplitude": 0.01,
+        "phaseLag": 127.3
+      },
+      {
+        "name": "2NMK7",
+        "amplitude": 0.01,
+        "phaseLag": 156.7
+      },
+      {
+        "name": "2MSO7",
+        "amplitude": 0.01,
+        "phaseLag": 191.4
+      },
+      {
+        "name": "MSKO7",
+        "amplitude": 0.01,
+        "phaseLag": 33.7
+      },
+      {
+        "name": "2MSN8",
+        "amplitude": 0.01,
+        "phaseLag": 125.9
+      },
+      {
+        "name": "3MS8",
+        "amplitude": 0.01,
+        "phaseLag": 125.9
+      },
+      {
+        "name": "2MN8",
+        "amplitude": 0.01,
+        "phaseLag": 28.9
+      },
+      {
+        "name": "3MN8",
+        "amplitude": 0.02,
+        "phaseLag": 53.5
+      },
+      {
+        "name": "3ML8",
+        "amplitude": 0.01,
+        "phaseLag": 53.5
+      },
+      {
+        "name": "2M2NK9",
+        "amplitude": 0.01,
+        "phaseLag": 155.6
+      },
+      {
+        "name": "3MNK9",
+        "amplitude": 0.01,
+        "phaseLag": 140.8
+      },
+      {
+        "name": "4MK9",
+        "amplitude": 0.01,
+        "phaseLag": 166.1
+      },
+      {
+        "name": "4MN10",
+        "amplitude": 0.01,
+        "phaseLag": 69
+      },
+      {
+        "name": "M10",
+        "amplitude": 0.01,
+        "phaseLag": 104.3
+      },
+      {
+        "name": "3MNS10",
+        "amplitude": 0.01,
+        "phaseLag": 114.8
+      },
+      {
+        "name": "4MS10",
+        "amplitude": 0.01,
+        "phaseLag": 149.2
+      },
+      {
+        "name": "5MS12",
+        "amplitude": 0.01,
+        "phaseLag": 119.2
+      },
+      {
+        "name": "RP1",
+        "amplitude": 0.01,
+        "phaseLag": 102.6
+      },
+      {
+        "name": "KP1",
+        "amplitude": 0.01,
+        "phaseLag": 289.5
+      },
+      {
+        "name": "THETA1",
+        "amplitude": 0.01,
+        "phaseLag": 13.2
+      },
+      {
+        "name": "KJ2",
+        "amplitude": 0.01,
+        "phaseLag": 103.6
+      },
+      {
+        "name": "OO2",
+        "amplitude": 0.02,
+        "phaseLag": 54
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.36,
+      "MHW": 8.99,
+      "MSL": 6.74,
+      "MLW": 4.35,
+      "MLLW": 4.19
+    },
+    "missingData": true
   },
-  {
+  "8447495": {
     "id": "8447495",
-    "name": "SAQUATUCKET HARBOR",
+    "name": "Saquatucket Harbor",
     "lat": 41.6683,
     "lng": -70.0567,
     "state": "MA",
@@ -12815,11 +13736,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 166.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.39,
+      "MHW": 9.05,
+      "MSL": 7.28,
+      "MLW": 5.32,
+      "MLLW": 5.05
+    }
   },
-  {
+  "8447505": {
     "id": "8447505",
-    "name": "CHATHAM, STAGE HARBOR",
+    "name": "Chatham, Stage Harbor",
     "lat": 41.6667,
     "lng": -69.9667,
     "state": "MA",
@@ -12946,11 +13874,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 309.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.69,
+      "MHW": 7.32,
+      "MSL": 5.45,
+      "MLW": 3.37,
+      "MLLW": 3.11
+    }
   },
-  {
+  "8447605": {
     "id": "8447605",
-    "name": "HYANNISPORT",
+    "name": "Hyannisport",
     "lat": 41.6317,
     "lng": -70.3,
     "state": "MA",
@@ -13077,9 +14012,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 149.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.18,
+      "MHW": 15.83,
+      "MSL": 14.3,
+      "MLW": 12.63,
+      "MLLW": 12.38
+    }
   },
-  {
+  "8447685": {
     "id": "8447685",
     "name": "Chappaquoit Point",
     "lat": 41.605,
@@ -13203,11 +14145,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 30.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.11,
+      "MHW": 7.85,
+      "MSL": 5.71,
+      "MLW": 4.02,
+      "MLLW": 3.86
+    }
   },
-  {
+  "8447712": {
     "id": "8447712",
-    "name": "NEW BEDFORD, CLARKS POINT",
+    "name": "New Bedford, Clarks Point",
     "lat": 41.5933,
     "lng": -70.9,
     "state": "MA",
@@ -13339,11 +14288,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 142.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.45,
+      "MHW": 6.2,
+      "MSL": 4.17,
+      "MLW": 2.64,
+      "MLLW": 2.49
+    }
   },
-  {
+  "8447842": {
     "id": "8447842",
-    "name": "ROUND HILL POINT",
+    "name": "Round Hill Point",
     "lat": 41.5383,
     "lng": -70.9283,
     "state": "MA",
@@ -13505,9 +14461,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 117.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.85,
+      "MHW": 5.58,
+      "MSL": 3.68,
+      "MLW": 2.15,
+      "MLLW": 2.01
+    }
   },
-  {
+  "8447930": {
     "id": "8447930",
     "name": "Woods Hole",
     "lat": 41.523613,
@@ -13666,11 +14629,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 56.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.82,
+      "MHW": 4.54,
+      "MSL": 3.6,
+      "MLW": 2.75,
+      "MLLW": 2.62
+    }
   },
-  {
+  "8448157": {
     "id": "8448157",
-    "name": "VINEYARD HAVEN, VINEYARD HVN HBR",
+    "name": "Vineyard Haven, Vineyard Hvn Hbr",
     "lat": 41.4583,
     "lng": -70.6,
     "state": "MA",
@@ -13797,11 +14767,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 185.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.56,
+      "MHW": 6.19,
+      "MSL": 5.49,
+      "MLW": 4.59,
+      "MLLW": 4.44
+    }
   },
-  {
+  "8448248": {
     "id": "8448248",
-    "name": "PENIKESE ISLAND",
+    "name": "Penikese Island",
     "lat": 41.45,
     "lng": -70.9217,
     "state": "MA",
@@ -13963,9 +14940,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 102.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.67,
+      "MHW": 6.42,
+      "MSL": 4.56,
+      "MLW": 3.01,
+      "MLLW": 2.87
+    }
   },
-  {
+  "8448558": {
     "id": "8448558",
     "name": "Edgartown",
     "lat": 41.3883,
@@ -14089,11 +15073,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 197.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.39,
+      "MHW": 7.07,
+      "MSL": 6.14,
+      "MLW": 4.93,
+      "MLLW": 4.71
+    }
   },
-  {
+  "8448725": {
     "id": "8448725",
-    "name": "Menemsha Harbor, MA",
+    "name": "Menemsha Harbor, Ma",
     "lat": 41.354,
     "lng": -70.76783,
     "state": "MA",
@@ -14255,11 +15246,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 92.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.38,
+      "MHW": 28.12,
+      "MSL": 26.61,
+      "MLW": 25.37,
+      "MLLW": 25.24
+    }
   },
-  {
+  "8448875": {
     "id": "8448875",
-    "name": "Martha's Vineyard GPS Buoy",
+    "name": "Martha's Vineyard Gps Buoy",
     "lat": 41.3262,
     "lng": -70.5903,
     "state": "MA",
@@ -14386,9 +15384,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 69.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -93.88,
+      "MHW": -94.1,
+      "MSL": -95.56,
+      "MLW": -96.88,
+      "MLLW": -97
+    }
   },
-  {
+  "8449130": {
     "id": "8449130",
     "name": "Nantucket Island",
     "lat": 41.285278,
@@ -14517,11 +15522,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 73.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.57,
+      "MHW": 6.23,
+      "MSL": 4.77,
+      "MLW": 3.2,
+      "MLLW": 3
+    }
   },
-  {
+  "8450768": {
     "id": "8450768",
-    "name": "SAKONNET",
+    "name": "Sakonnet",
     "lat": 41.465,
     "lng": -71.1933,
     "state": "RI",
@@ -14698,11 +15710,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 71.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.92,
+      "MHW": 11.66,
+      "MSL": 9.98,
+      "MLW": 8.49,
+      "MLLW": 8.37
+    }
   },
-  {
+  "8451552": {
     "id": "8451552",
-    "name": "BRISTOL FERRY",
+    "name": "Bristol Ferry",
     "lat": 41.6367,
     "lng": -71.255,
     "state": "RI",
@@ -14829,9 +15848,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 31.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.71,
+      "MHW": 8.46,
+      "MSL": 6.25,
+      "MLW": 4.39,
+      "MLLW": 4.23
+    }
   },
-  {
+  "8452154": {
     "id": "8452154",
     "name": "Bristol Highlands",
     "lat": 41.6967,
@@ -15000,9 +16026,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 137.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.91,
+      "MHW": 9.67,
+      "MSL": 7.46,
+      "MLW": 5.55,
+      "MLLW": 5.38
+    }
   },
-  {
+  "8452660": {
     "id": "8452660",
     "name": "Newport",
     "lat": 41.504333,
@@ -15171,9 +16204,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 106.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.74,
+      "MHW": 5.5,
+      "MSL": 3.63,
+      "MLW": 2.03,
+      "MLLW": 1.89
+    }
   },
-  {
+  "8452944": {
     "id": "8452944",
     "name": "Conimicut Light",
     "lat": 41.717111,
@@ -15342,11 +16382,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 137.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.12,
+      "MHW": 22.87,
+      "MSL": 20.64,
+      "MLW": 18.71,
+      "MLLW": 18.54
+    }
   },
-  {
+  "8453742": {
     "id": "8453742",
-    "name": "WEST JAMESTOWN",
+    "name": "West Jamestown",
     "lat": 41.4967,
     "lng": -71.3867,
     "state": "RI",
@@ -15468,9 +16515,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 19.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.51,
+      "MHW": 12.27,
+      "MSL": 10.41,
+      "MLW": 8.82,
+      "MLLW": 8.67
+    }
   },
-  {
+  "8454000": {
     "id": "8454000",
     "name": "Providence",
     "lat": 41.807167,
@@ -15644,9 +16698,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 144.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.33,
+      "MHW": 8.08,
+      "MSL": 5.74,
+      "MLW": 3.67,
+      "MLLW": 3.49
+    }
   },
-  {
+  "8454049": {
     "id": "8454049",
     "name": "Quonset Point",
     "lat": 41.58694,
@@ -15810,11 +16871,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 126.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.12,
+      "MHW": 26.87,
+      "MSL": 24.88,
+      "MLW": 23.17,
+      "MLLW": 23.01
+    }
   },
-  {
+  "8454538": {
     "id": "8454538",
-    "name": "WICKFORD, NARRAGANSETT BAY",
+    "name": "Wickford, Narragansett Bay",
     "lat": 41.5717,
     "lng": -71.445,
     "state": "RI",
@@ -15936,9 +17004,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 31.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.95,
+      "MHW": 13.69,
+      "MSL": 11.68,
+      "MLW": 9.98,
+      "MLLW": 9.83
+    }
   },
-  {
+  "8454578": {
     "id": "8454578",
     "name": "East Greenwich",
     "lat": 41.665,
@@ -16102,11 +17177,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 136.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.02,
+      "MHW": 8.78,
+      "MSL": 6.61,
+      "MLW": 4.72,
+      "MLLW": 4.55
+    }
   },
-  {
+  "8455083": {
     "id": "8455083",
-    "name": "POINT JUDITH, HARBOR OF REFUGE",
+    "name": "Point Judith, Harbor Of Refuge",
     "lat": 41.3633,
     "lng": -71.49,
     "state": "RI",
@@ -16278,9 +17360,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 115.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.61,
+      "MHW": 3.36,
+      "MSL": 1.77,
+      "MLW": 0.36,
+      "MLLW": 0.23
+    }
   },
-  {
+  "8455137": {
     "id": "8455137",
     "name": "Kickamuit River",
     "lat": 41.708,
@@ -16404,9 +17493,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 101
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.83,
+      "MHW": 30.59,
+      "MSL": 28.3,
+      "MLW": 26.29,
+      "MLLW": 26.11
+    }
   },
-  {
+  "8455189": {
     "id": "8455189",
     "name": "Westerly Pawcatuck",
     "lat": 41.3817,
@@ -16530,11 +17626,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 198.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.46,
+      "MHW": 22.17,
+      "MSL": 20.82,
+      "MLW": 19.47,
+      "MLLW": 19.27
+    }
   },
-  {
+  "8458022": {
     "id": "8458022",
-    "name": "WEEKAPAUG POINT, BLOCK ISLAND SOUND",
+    "name": "Weekapaug Point, Block Island Sound",
     "lat": 41.3283,
     "lng": -71.7617,
     "state": "RI",
@@ -16651,9 +17754,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 299.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.52,
+      "MHW": 3.31,
+      "MSL": 2.02,
+      "MLW": 0.78,
+      "MLLW": 0.65
+    }
   },
-  {
+  "8459338": {
     "id": "8459338",
     "name": "Block Island",
     "lat": 41.1733,
@@ -16817,11 +17927,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 81
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.24,
+      "MHW": 3.99,
+      "MSL": 2.48,
+      "MLW": 1.13,
+      "MLLW": 1.02
+    }
   },
-  {
+  "8459449": {
     "id": "8459449",
-    "name": "VAILS BEACH, BLOCK IS. SOUND",
+    "name": "Vails Beach, Block Is. Sound",
     "lat": 41.1483,
     "lng": -71.575,
     "state": "RI",
@@ -16938,11 +18055,12 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 25.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8459479": {
     "id": "8459479",
-    "name": "SANDY POINT, BLOCK IS, SOUND",
+    "name": "Sandy Point, Block Is, Sound",
     "lat": 41.2283,
     "lng": -71.58,
     "state": "RI",
@@ -17099,9 +18217,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 90.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8459681": {
     "id": "8459681",
     "name": "Block Island",
     "lat": 41.1633,
@@ -17255,9 +18374,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 85.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.15,
+      "MHW": 10.9,
+      "MSL": 9.57,
+      "MLW": 8.31,
+      "MLLW": 8.19
+    }
   },
-  {
+  "8460751": {
     "id": "8460751",
     "name": "West Mystic River",
     "lat": 41.3433,
@@ -17421,9 +18547,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 28.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.59,
+      "MHW": 31.3,
+      "MSL": 30.09,
+      "MLW": 28.8,
+      "MLLW": 28.61
+    }
   },
-  {
+  "8461490": {
     "id": "8461490",
     "name": "New London",
     "lat": 41.3717,
@@ -17587,9 +18720,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 8.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.57,
+      "MHW": 6.28,
+      "MSL": 5.06,
+      "MLW": 3.71,
+      "MLLW": 3.52
+    }
   },
-  {
+  "8463701": {
     "id": "8463701",
     "name": "Clinton Harbor",
     "lat": 41.2683,
@@ -17718,9 +18858,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 157.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.34,
+      "MHW": 30.04,
+      "MSL": 27.72,
+      "MLW": 25.49,
+      "MLLW": 25.25
+    }
   },
-  {
+  "8465705": {
     "id": "8465705",
     "name": "New Haven",
     "lat": 41.283333,
@@ -17874,9 +19021,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 133.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.14,
+      "MHW": 24.82,
+      "MSL": 21.75,
+      "MLW": 18.66,
+      "MLLW": 18.42
+    }
   },
-  {
+  "8467150": {
     "id": "8467150",
     "name": "Bridgeport",
     "lat": 41.175819,
@@ -18040,9 +19194,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 331.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.3,
+      "MHW": 8.97,
+      "MSL": 5.6,
+      "MLW": 2.22,
+      "MLLW": 1.98
+    }
   },
-  {
+  "8467373": {
     "id": "8467373",
     "name": "Black Rock Harbor",
     "lat": 41.1567,
@@ -18176,9 +19337,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 310.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.52,
+      "MHW": 14.18,
+      "MSL": 10.81,
+      "MLW": 7.43,
+      "MLLW": 7.18
+    }
   },
-  {
+  "8467726": {
     "id": "8467726",
     "name": "Southport, Southport Harbor",
     "lat": 41.1333,
@@ -18312,9 +19480,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 342.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.9,
+      "MHW": 28.56,
+      "MSL": 25.15,
+      "MLW": 21.73,
+      "MLLW": 21.48
+    }
   },
-  {
+  "8468191": {
     "id": "8468191",
     "name": "Saugatuck River",
     "lat": 41.12,
@@ -18488,9 +19663,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 149.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.53,
+      "MHW": 23.18,
+      "MSL": 19.71,
+      "MLW": 16.19,
+      "MLLW": 15.95
+    }
   },
-  {
+  "8468448": {
     "id": "8468448",
     "name": "South Norwalk",
     "lat": 41.0967,
@@ -18624,11 +19806,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 311.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.15,
+      "MHW": 27.81,
+      "MSL": 24.29,
+      "MLW": 20.74,
+      "MLLW": 20.48
+    }
   },
-  {
+  "8468799": {
     "id": "8468799",
-    "name": "LONG NECK POINT, LONG ISLAND SOUND",
+    "name": "Long Neck Point, Long Island Sound",
     "lat": 41.0383,
     "lng": -73.48,
     "state": "CT",
@@ -18750,9 +19939,16 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 143.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.43,
+      "MHW": 10.08,
+      "MSL": 6.5,
+      "MLW": 2.92,
+      "MLLW": 2.68
+    }
   },
-  {
+  "8469057": {
     "id": "8469057",
     "name": "Mianus",
     "lat": 41.039194,
@@ -18926,9 +20122,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 154.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.43,
+      "MHW": 24.07,
+      "MSL": 20.49,
+      "MLW": 16.87,
+      "MLLW": 16.63
+    }
   },
-  {
+  "8469198": {
     "id": "8469198",
     "name": "Stamford Harbor",
     "lat": 41.0383,
@@ -19062,11 +20265,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 280.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.34,
+      "MHW": 13.99,
+      "MSL": 10.42,
+      "MLW": 6.81,
+      "MLLW": 6.57
+    }
   },
-  {
+  "8510321": {
     "id": "8510321",
-    "name": "MONTAUK POINT LIGHT",
+    "name": "Montauk Point Light",
     "lat": 41.0717,
     "lng": -71.8567,
     "state": "NY",
@@ -19208,9 +20418,10 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 148.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8510448": {
     "id": "8510448",
     "name": "Lake Montauk",
     "lat": 41.0733,
@@ -19324,9 +20535,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 250.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.28,
+      "MHW": 3,
+      "MSL": 2,
+      "MLW": 0.99,
+      "MLLW": 0.82
+    }
   },
-  {
+  "8510560": {
     "id": "8510560",
     "name": "Montauk",
     "lat": 41.048333,
@@ -19490,9 +20708,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 15.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.39,
+      "MHW": 6.1,
+      "MSL": 5.1,
+      "MLW": 4.03,
+      "MLLW": 3.86
+    }
   },
-  {
+  "8510719": {
     "id": "8510719",
     "name": "Silver Eel Pond",
     "lat": 41.2567,
@@ -19661,11 +20886,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 11.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.45,
+      "MHW": 10.16,
+      "MSL": 9.05,
+      "MLW": 7.82,
+      "MLLW": 7.63
+    }
   },
-  {
+  "8511171": {
     "id": "8511171",
-    "name": "THREEMILE HARBOR ENTRANCE",
+    "name": "Threemile Harbor Entrance",
     "lat": 41.035,
     "lng": -72.19,
     "state": "NY",
@@ -19832,11 +21064,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 232.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8511236": {
     "id": "8511236",
-    "name": "PLUM ISLAND  PLUM GUT HARBOR",
+    "name": "Plum Island Plum Gut Harbor",
     "lat": 41.1717,
     "lng": -72.205,
     "state": "NY",
@@ -19973,9 +21206,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 80.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.01,
+      "MHW": 6.71,
+      "MSL": 5.44,
+      "MLW": 4.11,
+      "MLLW": 3.92
+    }
   },
-  {
+  "8511629": {
     "id": "8511629",
     "name": "Sag Harbor",
     "lat": 41.0033,
@@ -20099,9 +21339,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 212.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.17,
+      "MHW": 26.88,
+      "MSL": 25.73,
+      "MLW": 24.47,
+      "MLLW": 24.3
+    }
   },
-  {
+  "8511671": {
     "id": "8511671",
     "name": "Orient Harbor",
     "lat": 41.1367,
@@ -20235,9 +21482,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 223.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.81,
+      "MHW": 27.49,
+      "MSL": 26.29,
+      "MLW": 24.97,
+      "MLLW": 24.77
+    }
   },
-  {
+  "8511907": {
     "id": "8511907",
     "name": "Greenport",
     "lat": 41.101,
@@ -20361,11 +21615,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 233.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.25,
+      "MHW": 27.97,
+      "MSL": 26.8,
+      "MLW": 25.53,
+      "MLLW": 25.35
+    }
   },
-  {
+  "8512354": {
     "id": "8512354",
-    "name": "SHINNECOCK INLET OPEN COAST",
+    "name": "Shinnecock Inlet Open Coast",
     "lat": 40.8367,
     "lng": -72.48,
     "state": "NY",
@@ -20482,11 +21743,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 353.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.61,
+      "MHW": 21.35,
+      "MSL": 19.76,
+      "MLW": 18.28,
+      "MLLW": 18.15
+    }
   },
-  {
+  "8512451": {
     "id": "8512451",
-    "name": "PONQUOGUE POINT",
+    "name": "Ponquogue Point",
     "lat": 40.85,
     "lng": -72.5033,
     "state": "NY",
@@ -20608,9 +21876,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 40.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.86,
+      "MHW": 7.61,
+      "MSL": 6.2,
+      "MLW": 4.81,
+      "MLLW": 4.68
+    }
   },
-  {
+  "8512668": {
     "id": "8512668",
     "name": "Mattituck Inlet, Long Island",
     "lat": 41.015,
@@ -20729,9 +22004,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 139.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.37,
+      "MHW": 25.08,
+      "MSL": 22.51,
+      "MLW": 20,
+      "MLLW": 19.8
+    }
   },
-  {
+  "8512735": {
     "id": "8512735",
     "name": "South Jamesport",
     "lat": 40.935,
@@ -20850,11 +22132,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 72.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.69,
+      "MHW": 4.39,
+      "MSL": 3.02,
+      "MLW": 1.56,
+      "MLLW": 1.38
+    }
   },
-  {
+  "8512769": {
     "id": "8512769",
-    "name": "SHINNECOCK YACHT CLUB, PENNIMAN CREEK",
+    "name": "Shinnecock Yacht Club, Penniman Creek",
     "lat": 40.8186,
     "lng": -72.58661,
     "state": "NY",
@@ -21026,9 +22315,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 74.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.36,
+      "MHW": 8.1,
+      "MSL": 6.78,
+      "MLW": 5.56,
+      "MLLW": 5.46
+    }
   },
-  {
+  "8512987": {
     "id": "8512987",
     "name": "Northville",
     "lat": 40.9817,
@@ -21182,11 +22478,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 97.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.68,
+      "MHW": 6.37,
+      "MSL": 3.68,
+      "MLW": 1.01,
+      "MLLW": 0.8
+    }
   },
-  {
+  "8513388": {
     "id": "8513388",
-    "name": "Moriches CGS, Moriches Bay",
+    "name": "Moriches Cgs, Moriches Bay",
     "lat": 40.7867,
     "lng": -72.75,
     "state": "NY",
@@ -21303,9 +22606,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 72.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.24,
+      "MHW": 4.01,
+      "MSL": 2.93,
+      "MLW": 1.86,
+      "MLLW": 1.74
+    }
   },
-  {
+  "8513398": {
     "id": "8513398",
     "name": "Moriches Inlet",
     "lat": 40.764417,
@@ -21424,11 +22734,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 161.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.06,
+      "MHW": 20.84,
+      "MSL": 19.48,
+      "MLW": 18.01,
+      "MLLW": 17.86
+    }
   },
-  {
+  "8513825": {
     "id": "8513825",
-    "name": "SMITH POINT BRIDGE, NARROW BAY",
+    "name": "Smith Point Bridge, Narrow Bay",
     "lat": 40.7383,
     "lng": -72.8683,
     "state": "NY",
@@ -21580,11 +22897,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 84
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.13,
+      "MHW": 3.97,
+      "MSL": 3.4,
+      "MLW": 2.79,
+      "MLLW": 2.67
+    }
   },
-  {
+  "8514322": {
     "id": "8514322",
-    "name": "PATCHOGUE, PATCHOGUE RIVER",
+    "name": "Patchogue, Patchogue River",
     "lat": 40.75,
     "lng": -73,
     "state": "NY",
@@ -21711,11 +23035,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 175.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.28,
+      "MHW": 5.12,
+      "MSL": 4.56,
+      "MLW": 4.01,
+      "MLLW": 3.9
+    }
   },
-  {
+  "8514422": {
     "id": "8514422",
-    "name": "CEDAR BEACH",
+    "name": "Cedar Beach",
     "lat": 40.965,
     "lng": -73.0433,
     "state": "NY",
@@ -21872,11 +23203,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 354.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.81,
+      "MHW": 9.49,
+      "MSL": 6.25,
+      "MLW": 3.05,
+      "MLLW": 2.82
+    }
   },
-  {
+  "8514560": {
     "id": "8514560",
-    "name": "PORT JEFFERSON",
+    "name": "Port Jefferson",
     "lat": 40.95,
     "lng": -73.0767,
     "state": "NY",
@@ -22033,9 +23371,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 357.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.96,
+      "MHW": 10.64,
+      "MSL": 7.33,
+      "MLW": 4.03,
+      "MLLW": 3.81
+    }
   },
-  {
+  "8514779": {
     "id": "8514779",
     "name": "Seaview Ferry Dock",
     "lat": 40.64925,
@@ -22134,9 +23479,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 108.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.67,
+      "MHW": 30.53,
+      "MSL": 29.93,
+      "MLW": 29.36,
+      "MLLW": 29.23
+    }
   },
-  {
+  "8515186": {
     "id": "8515186",
     "name": "Fire Island",
     "lat": 40.6267,
@@ -22255,11 +23607,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 32.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.88,
+      "MHW": 8.69,
+      "MSL": 7.77,
+      "MLW": 6.81,
+      "MLLW": 6.67
+    }
   },
-  {
+  "8515586": {
     "id": "8515586",
-    "name": "NORTHPORT, NORTHPORT BAY",
+    "name": "Northport, Northport Bay",
     "lat": 40.9,
     "lng": -73.3533,
     "state": "NY",
@@ -22391,9 +23750,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 302.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.53,
+      "MHW": 10.18,
+      "MSL": 6.56,
+      "MLW": 2.91,
+      "MLLW": 2.69
+    }
   },
-  {
+  "8515786": {
     "id": "8515786",
     "name": "Eatons Neck",
     "lat": 40.9533,
@@ -22567,11 +23933,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 187.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.98,
+      "MHW": 28.63,
+      "MSL": 25.06,
+      "MLW": 21.48,
+      "MLLW": 21.24
+    }
   },
-  {
+  "8515921": {
     "id": "8515921",
-    "name": "LLOYD HARBOR LIGHTHOUSE",
+    "name": "Lloyd Harbor Lighthouse",
     "lat": 40.91,
     "lng": -73.4317,
     "state": "NY",
@@ -22703,11 +24076,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 303
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.56,
+      "MHW": 11.21,
+      "MSL": 7.71,
+      "MLW": 4.17,
+      "MLLW": 3.96
+    }
   },
-  {
+  "8516061": {
     "id": "8516061",
-    "name": "COLD SPRING HARBOR",
+    "name": "Cold Spring Harbor",
     "lat": 40.8733,
     "lng": -73.47,
     "state": "NY",
@@ -22839,11 +24219,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 279.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.62,
+      "MHW": 13.26,
+      "MSL": 9.62,
+      "MLW": 5.97,
+      "MLLW": 5.74
+    }
   },
-  {
+  "8516155": {
     "id": "8516155",
-    "name": "GREEN ISLAND",
+    "name": "Green Island",
     "lat": 40.6233,
     "lng": -73.5017,
     "state": "NY",
@@ -22970,11 +24357,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 59
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 62.62,
+      "MHW": 62.38,
+      "MSL": 60.86,
+      "MLW": 59.27,
+      "MLLW": 59.1
+    }
   },
-  {
+  "8516299": {
     "id": "8516299",
-    "name": "BAYVILLE BRIDGE, OYSTER BAY",
+    "name": "Bayville Bridge, Oyster Bay",
     "lat": 40.9033,
     "lng": -73.55,
     "state": "NY",
@@ -23111,9 +24505,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 258.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.07,
+      "MHW": 11.71,
+      "MSL": 8,
+      "MLW": 4.32,
+      "MLLW": 4.06
+    }
   },
-  {
+  "8516402": {
     "id": "8516402",
     "name": "Point Lookout",
     "lat": 40.5939,
@@ -23237,9 +24638,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 33.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.49,
+      "MHW": 28.16,
+      "MSL": 26.07,
+      "MLW": 24.02,
+      "MLLW": 23.83
+    }
   },
-  {
+  "8516501": {
     "id": "8516501",
     "name": "Parsonnage Cove",
     "lat": 40.6333,
@@ -23373,9 +24781,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 320.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.65,
+      "MHW": 23.32,
+      "MSL": 21.2,
+      "MLW": 18.96,
+      "MLLW": 18.78
+    }
   },
-  {
+  "8516607": {
     "id": "8516607",
     "name": "Harry Tappen Marina",
     "lat": 40.83461,
@@ -23514,11 +24929,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 187.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.06,
+      "MHW": 26.7,
+      "MSL": 23.07,
+      "MLW": 19.41,
+      "MLLW": 19.18
+    }
   },
-  {
+  "8516614": {
     "id": "8516614",
-    "name": "GLEN COVE YACHT CLUB, LONG ISLAND",
+    "name": "Glen Cove Yacht Club, Long Island",
     "lat": 40.8633,
     "lng": -73.655,
     "state": "NY",
@@ -23655,11 +25077,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 208.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.04,
+      "MHW": 9.68,
+      "MSL": 6.05,
+      "MLW": 2.41,
+      "MLLW": 2.17
+    }
   },
-  {
+  "8516661": {
     "id": "8516661",
-    "name": "Bay Park, NY",
+    "name": "Bay Park, Ny",
     "lat": 40.63,
     "lng": -73.67,
     "state": "NY",
@@ -23786,11 +25215,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 265.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.03,
+      "MHW": 30.7,
+      "MSL": 28.44,
+      "MLW": 26.07,
+      "MLLW": 25.88
+    }
   },
-  {
+  "8516663": {
     "id": "8516663",
-    "name": "LONG BEACH, NEW YORK",
+    "name": "Long Beach, New York",
     "lat": 40.5963,
     "lng": -73.655083,
     "state": "NY",
@@ -23922,11 +25358,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 276
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.76,
+      "MHW": 31.46,
+      "MSL": 29.3,
+      "MLW": 27.03,
+      "MLLW": 26.86
+    }
   },
-  {
+  "8516761": {
     "id": "8516761",
-    "name": "PORT WASHINGTON, MANHASSSET BAY",
+    "name": "Port Washington, Manhassset Bay",
     "lat": 40.8317,
     "lng": -73.7033,
     "state": "NY",
@@ -24063,9 +25506,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 191.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.41,
+      "MHW": 12.05,
+      "MSL": 8.43,
+      "MLW": 4.75,
+      "MLLW": 4.49
+    }
   },
-  {
+  "8516881": {
     "id": "8516881",
     "name": "Atlantic Beach",
     "lat": 40.595,
@@ -24189,11 +25639,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 30.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.21,
+      "MHW": 23.87,
+      "MSL": 21.68,
+      "MLW": 19.5,
+      "MLLW": 19.31
+    }
   },
-  {
+  "8516891": {
     "id": "8516891",
-    "name": "NORTON POINT, HOOK CREEK, NEW YORK",
+    "name": "Norton Point, Hook Creek, New York",
     "lat": 40.635,
     "lng": -73.7467,
     "state": "NY",
@@ -24325,9 +25782,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 324.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27,
+      "MHW": 26.66,
+      "MSL": 23.86,
+      "MLW": 21.02,
+      "MLLW": 20.81
+    }
   },
-  {
+  "8516945": {
     "id": "8516945",
     "name": "Kings Point",
     "lat": 40.811342,
@@ -24496,9 +25960,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 160.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.68,
+      "MHW": 20.33,
+      "MSL": 16.77,
+      "MLW": 13.16,
+      "MLLW": 12.88
+    }
   },
-  {
+  "8516990": {
     "id": "8516990",
     "name": "Willets Point",
     "lat": 40.7933,
@@ -24667,9 +26138,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 160.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.94,
+      "MHW": 12.57,
+      "MSL": 9.03,
+      "MLW": 5.43,
+      "MLLW": 5.15
+    }
   },
-  {
+  "8517137": {
     "id": "8517137",
     "name": "Beach Channel",
     "lat": 40.5883,
@@ -24833,9 +26311,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 269.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.72,
+      "MHW": 23.36,
+      "MSL": 20.64,
+      "MLW": 17.93,
+      "MLLW": 17.71
+    }
   },
-  {
+  "8517201": {
     "id": "8517201",
     "name": "North Channel",
     "lat": 40.645,
@@ -25009,9 +26494,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 277.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.44,
+      "MHW": 24.08,
+      "MSL": 21.33,
+      "MLW": 18.52,
+      "MLLW": 18.3
+    }
   },
-  {
+  "8517251": {
     "id": "8517251",
     "name": "Worlds Fair Marina",
     "lat": 40.761,
@@ -25150,11 +26642,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 142.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.44,
+      "MHW": 25.08,
+      "MSL": 21.73,
+      "MLW": 18.33,
+      "MLLW": 18.05
+    }
   },
-  {
+  "8517276": {
     "id": "8517276",
-    "name": "COLLEGE PT, FT. OF 110TH ST, LI",
+    "name": "College Pt, Ft. Of 110th St, Li",
     "lat": 40.7833,
     "lng": -73.8567,
     "state": "NY",
@@ -25286,11 +26785,12 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 149
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8517756": {
     "id": "8517756",
-    "name": "Kingsborough CC",
+    "name": "Kingsborough Cc",
     "lat": 40.5812,
     "lng": -73.9338,
     "state": "",
@@ -25462,9 +26962,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 204.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.97,
+      "MHW": 25.61,
+      "MSL": 23.13,
+      "MLW": 20.69,
+      "MLLW": 20.48
+    }
   },
-  {
+  "8517847": {
     "id": "8517847",
     "name": "Brooklyn Bridge",
     "lat": 40.7033,
@@ -25603,11 +27110,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 284.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.17,
+      "MHW": 1.79,
+      "MSL": -0.35,
+      "MLW": -2.71,
+      "MLLW": -2.91
+    }
   },
-  {
+  "8518091": {
     "id": "8518091",
-    "name": "RYE BEACH, AMUSEMENT PARK",
+    "name": "Rye Beach, Amusement Park",
     "lat": 40.9617,
     "lng": -73.6717,
     "state": "NY",
@@ -25794,9 +27308,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 142.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.46,
+      "MHW": 11.1,
+      "MSL": 7.47,
+      "MLW": 3.81,
+      "MLLW": 3.57
+    }
   },
-  {
+  "8518526": {
     "id": "8518526",
     "name": "Throgs Neck",
     "lat": 40.805,
@@ -25935,9 +27456,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 147.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.28,
+      "MHW": 8.92,
+      "MSL": 5.42,
+      "MLW": 1.79,
+      "MLLW": 1.52
+    }
   },
-  {
+  "8518639": {
     "id": "8518639",
     "name": "Port Morris",
     "lat": 40.8017,
@@ -26116,9 +27644,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 198.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.47,
+      "MHW": 8.12,
+      "MSL": 5,
+      "MLW": 1.88,
+      "MLLW": 1.62
+    }
   },
-  {
+  "8518643": {
     "id": "8518643",
     "name": "Randalls Island",
     "lat": 40.8,
@@ -26252,9 +27787,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 215.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.93,
+      "MHW": 8.62,
+      "MSL": 6.38,
+      "MLW": 4.07,
+      "MLLW": 3.88
+    }
   },
-  {
+  "8518668": {
     "id": "8518668",
     "name": "Horns Hook",
     "lat": 40.7767,
@@ -26443,9 +27985,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 261.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.88,
+      "MHW": 9.56,
+      "MSL": 7.22,
+      "MLW": 4.88,
+      "MLLW": 4.69
+    }
   },
-  {
+  "8518687": {
     "id": "8518687",
     "name": "Queensboro Bridge",
     "lat": 40.7583,
@@ -26579,9 +28128,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 264.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.26,
+      "MHW": 1.93,
+      "MSL": -0.21,
+      "MLW": -2.4,
+      "MLLW": -2.61
+    }
   },
-  {
+  "8518699": {
     "id": "8518699",
     "name": "Williamsburg Bridge",
     "lat": 40.7117,
@@ -26710,9 +28266,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 295.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.14,
+      "MHW": 1.81,
+      "MSL": -0.22,
+      "MLW": -2.41,
+      "MLLW": -2.61
+    }
   },
-  {
+  "8518750": {
     "id": "8518750",
     "name": "The Battery",
     "lat": 40.700556,
@@ -26871,9 +28434,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 247.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.34,
+      "MHW": 8.02,
+      "MSL": 5.86,
+      "MLW": 3.49,
+      "MLLW": 3.29
+    }
   },
-  {
+  "8518902": {
     "id": "8518902",
     "name": "Dyckman Street",
     "lat": 40.8683,
@@ -26997,11 +28567,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 80.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.99,
+      "MHW": 8.73,
+      "MSL": 6.88,
+      "MLW": 4.75,
+      "MLLW": 4.58
+    }
   },
-  {
+  "8518903": {
     "id": "8518903",
-    "name": "SPUYTEN DUYVIL CK, ENT., HUDSON R,",
+    "name": "Spuyten Duyvil Ck, Ent., Hudson R,",
     "lat": 40.8783,
     "lng": -73.925,
     "state": "NY",
@@ -27113,11 +28690,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 62.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8518905": {
     "id": "8518905",
-    "name": "RIVERDALE, HUDSON RIVER",
+    "name": "Riverdale, Hudson River",
     "lat": 40.9033,
     "lng": -73.9167,
     "state": "NY",
@@ -27239,11 +28817,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 78.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8518924": {
     "id": "8518924",
-    "name": "HAVERSTRAW BAY",
+    "name": "Haverstraw Bay",
     "lat": 41.2183,
     "lng": -73.9633,
     "state": "NY",
@@ -27420,9 +28999,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 96.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10,
+      "MHW": 9.72,
+      "MSL": 8.13,
+      "MLW": 6.49,
+      "MLLW": 6.32
+    }
   },
-  {
+  "8518934": {
     "id": "8518934",
     "name": "Beacon, Hudson River",
     "lat": 41.5,
@@ -27536,9 +29122,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 150.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.33,
+      "MHW": 21.98,
+      "MSL": 20.48,
+      "MLW": 18.85,
+      "MLLW": 18.66
+    }
   },
-  {
+  "8518951": {
     "id": "8518951",
     "name": "Hyde Park",
     "lat": 41.7833,
@@ -27662,11 +29255,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 163
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.36,
+      "MHW": 30.97,
+      "MSL": 29.27,
+      "MLW": 27.46,
+      "MLLW": 27.26
+    }
   },
-  {
+  "8518962": {
     "id": "8518962",
-    "name": "Turkey Point Hudson River NERRS",
+    "name": "Turkey Point Hudson River Nerrs",
     "lat": 42.014167,
     "lng": -73.939167,
     "state": "NY",
@@ -27833,11 +29433,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 283.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.41,
+      "MHW": 29.08,
+      "MSL": 27.3,
+      "MLW": 25.33,
+      "MLLW": 25.13
+    }
   },
-  {
+  "8518995": {
     "id": "8518995",
-    "name": "ALBANY, HUDSON RIVER",
+    "name": "Albany, Hudson River",
     "lat": 42.65,
     "lng": -73.7467,
     "state": "NY",
@@ -28004,11 +29611,18 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 111.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.5,
+      "MHW": 14.12,
+      "MSL": 11.77,
+      "MLW": 9.13,
+      "MLLW": 8.91
+    }
   },
-  {
+  "8519050": {
     "id": "8519050",
-    "name": "USCG Station NY",
+    "name": "Uscg Station Ny",
     "lat": 40.612,
     "lng": -74.059861,
     "state": "NY",
@@ -28130,9 +29744,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 35.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.18,
+      "MHW": 28.86,
+      "MSL": 26.71,
+      "MLW": 24.39,
+      "MLLW": 24.19
+    }
   },
-  {
+  "8519436": {
     "id": "8519436",
     "name": "Great Kills Harbor",
     "lat": 40.5433,
@@ -28266,9 +29887,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 43
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.97,
+      "MHW": 25.64,
+      "MSL": 23.24,
+      "MLW": 20.73,
+      "MLLW": 20.51
+    }
   },
-  {
+  "8519483": {
     "id": "8519483",
     "name": "Bergen Point West Reach",
     "lat": 40.6391,
@@ -28427,9 +30055,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 268.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.75,
+      "MHW": 9.43,
+      "MSL": 7.01,
+      "MLW": 4.45,
+      "MLLW": 4.24
+    }
   },
-  {
+  "8531142": {
     "id": "8531142",
     "name": "Port Reading",
     "lat": 40.555,
@@ -28618,11 +30253,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 255.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.27,
+      "MHW": 9.92,
+      "MSL": 7.35,
+      "MLW": 4.63,
+      "MLLW": 4.38
+    }
   },
-  {
+  "8531223": {
     "id": "8531223",
-    "name": "CHEESEQUAKE CREEK",
+    "name": "Cheesequake Creek",
     "lat": 40.4533,
     "lng": -74.2733,
     "state": "NJ",
@@ -28749,11 +30391,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 47.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.84,
+      "MHW": 7.53,
+      "MSL": 5.07,
+      "MLW": 2.41,
+      "MLLW": 2.2
+    }
   },
-  {
+  "8531232": {
     "id": "8531232",
-    "name": "SOUTH AMBOY  RARITAN RIVER",
+    "name": "South Amboy Raritan River",
     "lat": 40.4917,
     "lng": -74.2817,
     "state": "NJ",
@@ -28880,11 +30529,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 43
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8531262": {
     "id": "8531262",
-    "name": "KEASBEY, RARITAN RIVER",
+    "name": "Keasbey, Raritan River",
     "lat": 40.5083,
     "lng": -74.3117,
     "state": "NJ",
@@ -29051,11 +30701,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 258.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.14,
+      "MHW": 6.8,
+      "MSL": 4.26,
+      "MLW": 1.59,
+      "MLLW": 1.4
+    }
   },
-  {
+  "8531369": {
     "id": "8531369",
-    "name": "NORTH OLD BRIDGE, SOUTH RIVER",
+    "name": "North Old Bridge, South River",
     "lat": 40.4167,
     "lng": -74.3633,
     "state": "NJ",
@@ -29232,11 +30889,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 280.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.83,
+      "MHW": 6.5,
+      "MSL": 3.82,
+      "MLW": 0.93,
+      "MLLW": 0.71
+    }
   },
-  {
+  "8531390": {
     "id": "8531390",
-    "name": "SAYREVILLE, RARITAN RIVER",
+    "name": "Sayreville, Raritan River",
     "lat": 40.4783,
     "lng": -74.3567,
     "state": "NJ",
@@ -29413,11 +31077,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 268.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.2,
+      "MHW": 7.87,
+      "MSL": 5.26,
+      "MLW": 2.44,
+      "MLLW": 2.21
+    }
   },
-  {
+  "8531463": {
     "id": "8531463",
-    "name": "NEW BRUNSWICK  RARITAN RIVER",
+    "name": "New Brunswick Raritan River",
     "lat": 40.4883,
     "lng": -74.435,
     "state": "NJ",
@@ -29594,9 +31265,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 289.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.91,
+      "MHW": 6.59,
+      "MSL": 3.84,
+      "MLW": 0.88,
+      "MLLW": 0.65
+    }
   },
-  {
+  "8531680": {
     "id": "8531680",
     "name": "Sandy Hook",
     "lat": 40.466833,
@@ -29755,9 +31433,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 224.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.74,
+      "MHW": 7.41,
+      "MSL": 5.09,
+      "MLW": 2.71,
+      "MLLW": 2.51
+    }
   },
-  {
+  "8531804": {
     "id": "8531804",
     "name": "Sea Bright",
     "lat": 40.365,
@@ -29911,9 +31596,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 237.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.43,
+      "MHW": 6.15,
+      "MSL": 4.4,
+      "MLW": 2.64,
+      "MLLW": 2.51
+    }
   },
-  {
+  "8533051": {
     "id": "8533051",
     "name": "Toms River",
     "lat": 39.95,
@@ -30017,9 +31709,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 13
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -1.79,
+      "MHW": -1.96,
+      "MSL": -2.34,
+      "MLW": -2.74,
+      "MLLW": -2.83
+    }
   },
-  {
+  "8533365": {
     "id": "8533365",
     "name": "Stouts Creek",
     "lat": 39.845,
@@ -30138,11 +31837,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 134.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.73,
+      "MHW": 1.61,
+      "MSL": 1.29,
+      "MLW": 0.94,
+      "MLLW": 0.85
+    }
   },
-  {
+  "8533615": {
     "id": "8533615",
-    "name": "BARNEGAT INLET (INSIDE)",
+    "name": "Barnegat Inlet (inside)",
     "lat": 39.7617,
     "lng": -74.1117,
     "state": "NJ",
@@ -30299,11 +32005,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 326.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.01,
+      "MHW": 5.77,
+      "MSL": 4.66,
+      "MLW": 3.62,
+      "MLLW": 3.5
+    }
   },
-  {
+  "8534319": {
     "id": "8534319",
-    "name": "GREAT BAY, SHOOTING THOROFARE",
+    "name": "Great Bay, Shooting Thorofare",
     "lat": 39.508301,
     "lng": -74.324997,
     "state": "NJ",
@@ -30455,11 +32168,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 130
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.5,
+      "MHW": 1.17,
+      "MSL": -0.28,
+      "MLW": -1.69,
+      "MLLW": -1.83
+    }
   },
-  {
+  "8534468": {
     "id": "8534468",
-    "name": "MAYS LANDING, GREAT EGG HARBOR RIVER",
+    "name": "Mays Landing, Great Egg Harbor River",
     "lat": 39.4483,
     "lng": -74.7283,
     "state": "NJ",
@@ -30621,9 +32341,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 44.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.65,
+      "MHW": 6.38,
+      "MSL": 4.62,
+      "MLW": 2.32,
+      "MLLW": 2.13
+    }
   },
-  {
+  "8534720": {
     "id": "8534720",
     "name": "Atlantic City",
     "lat": 39.356667,
@@ -30767,11 +32494,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 18.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.56,
+      "MHW": 9.14,
+      "MSL": 7.17,
+      "MLW": 5.13,
+      "MLLW": 4.96
+    }
   },
-  {
+  "8534770": {
     "id": "8534770",
-    "name": "VENTNOR CITY, FISHING PIER",
+    "name": "Ventnor City, Fishing Pier",
     "lat": 39.335,
     "lng": -74.4767,
     "state": "NJ",
@@ -30938,11 +32672,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 163.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.57,
+      "MHW": 9.15,
+      "MSL": 7.17,
+      "MLW": 5.12,
+      "MLLW": 4.94
+    }
   },
-  {
+  "8534836": {
     "id": "8534836",
-    "name": "LONGPORT, RISELY CHANNEL",
+    "name": "Longport, Risely Channel",
     "lat": 39.3083,
     "lng": -74.5333,
     "state": "NJ",
@@ -31074,11 +32815,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 84.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.38,
+      "MHW": 5.98,
+      "MSL": 4.08,
+      "MLW": 2.2,
+      "MLLW": 2.05
+    }
   },
-  {
+  "8534883": {
     "id": "8534883",
-    "name": "TUCKAHOE,TUCKAHOE RIVER",
+    "name": "Tuckahoe,tuckahoe River",
     "lat": 39.295,
     "lng": -74.7483,
     "state": "NJ",
@@ -31190,9 +32938,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 106
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.46,
+      "MHW": 6.2,
+      "MSL": 4.78,
+      "MLW": 2.81,
+      "MLLW": 2.6
+    }
   },
-  {
+  "8535055": {
     "id": "8535055",
     "name": "Bivalve, Maurice River",
     "lat": 39.232498,
@@ -31366,9 +33121,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 48.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.82,
+      "MHW": 2.39,
+      "MSL": -0.32,
+      "MLW": -3.26,
+      "MLLW": -3.45
+    }
   },
-  {
+  "8535375": {
     "id": "8535375",
     "name": "Townsend Inlet",
     "lat": 39.1217,
@@ -31517,9 +33279,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 177
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.88,
+      "MHW": 5.49,
+      "MSL": 3.55,
+      "MLW": 1.53,
+      "MLLW": 1.35
+    }
   },
-  {
+  "8535419": {
     "id": "8535419",
     "name": "Ingram Thorofare",
     "lat": 39.11,
@@ -31678,11 +33447,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 162.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.79,
+      "MHW": 8.39,
+      "MSL": 6.4,
+      "MLW": 4.35,
+      "MLLW": 4.18
+    }
   },
-  {
+  "8535581": {
     "id": "8535581",
-    "name": "STONE HARBOR, GREAT CHANNEL",
+    "name": "Stone Harbor, Great Channel",
     "lat": 39.056702,
     "lng": -74.764999,
     "state": "NJ",
@@ -31854,11 +33630,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 261.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.08,
+      "MHW": 1.69,
+      "MSL": -0.32,
+      "MLW": -2.5,
+      "MLLW": -2.66
+    }
   },
-  {
+  "8535835": {
     "id": "8535835",
-    "name": "WILDWOOD CREST",
+    "name": "Wildwood Crest",
     "lat": 38.975,
     "lng": -74.8233,
     "state": "NJ",
@@ -31985,9 +33768,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 24.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.28,
+      "MHW": 8.84,
+      "MSL": 6.71,
+      "MLW": 4.53,
+      "MLLW": 4.35
+    }
   },
-  {
+  "8536110": {
     "id": "8536110",
     "name": "Cape May",
     "lat": 38.9683,
@@ -32156,11 +33946,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 140.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.87,
+      "MHW": 7.43,
+      "MSL": 4.99,
+      "MLW": 2.58,
+      "MLLW": 2.42
+    }
   },
-  {
+  "8536581": {
     "id": "8536581",
-    "name": "BIDWELL CREEK ENTRANCE, DELAWARE BAY",
+    "name": "Bidwell Creek Entrance, Delaware Bay",
     "lat": 39.1283,
     "lng": -74.8917,
     "state": "NJ",
@@ -32292,11 +34089,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 55.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.4,
+      "MHW": 8.97,
+      "MSL": 6.27,
+      "MLW": 3.3,
+      "MLLW": 3.11
+    }
   },
-  {
+  "8536931": {
     "id": "8536931",
-    "name": "FORTESCUE CREEK",
+    "name": "Fortescue Creek",
     "lat": 39.2383,
     "lng": -75.175,
     "state": "NJ",
@@ -32423,9 +34227,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 131.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.28,
+      "MHW": 9.88,
+      "MSL": 7.05,
+      "MLW": 4.03,
+      "MLLW": 3.86
+    }
   },
-  {
+  "8537121": {
     "id": "8537121",
     "name": "Ship John Shoal",
     "lat": 39.305389,
@@ -32594,11 +34405,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 90.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.44,
+      "MHW": 24,
+      "MSL": 21.28,
+      "MLW": 18.43,
+      "MLLW": 18.24
+    }
   },
-  {
+  "8538512": {
     "id": "8538512",
-    "name": "PAULSBORO, MANTUA CREEK",
+    "name": "Paulsboro, Mantua Creek",
     "lat": 39.835,
     "lng": -75.2383,
     "state": "NJ",
@@ -32735,11 +34553,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 285
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.54,
+      "MHW": 8.18,
+      "MSL": 5.62,
+      "MLW": 2.54,
+      "MLLW": 2.36
+    }
   },
-  {
+  "8538886": {
     "id": "8538886",
-    "name": "Tacony-Palmyra Bridge",
+    "name": "Tacony-palmyra Bridge",
     "lat": 40.01194,
     "lng": -75.043,
     "state": "NJ",
@@ -32916,9 +34741,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 344.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.52,
+      "MHW": 24.15,
+      "MSL": 21.01,
+      "MLW": 17.56,
+      "MLLW": 17.37
+    }
   },
-  {
+  "8539094": {
     "id": "8539094",
     "name": "Burlington, Delaware River",
     "lat": 40.081699,
@@ -33092,11 +34924,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 27.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.69,
+      "MHW": 24.33,
+      "MSL": 20.83,
+      "MLW": 17.03,
+      "MLLW": 16.84
+    }
   },
-  {
+  "8539487": {
     "id": "8539487",
-    "name": "FIELDSBORO, DELAWARE RIVER",
+    "name": "Fieldsboro, Delaware River",
     "lat": 40.1367,
     "lng": -74.7367,
     "state": "NJ",
@@ -33233,11 +35072,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 173.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.51,
+      "MHW": 8.14,
+      "MSL": 4.28,
+      "MLW": 0.24,
+      "MLLW": 0.04
+    }
   },
-  {
+  "8539993": {
     "id": "8539993",
-    "name": "TRENTON MARINE TERMINAL",
+    "name": "Trenton Marine Terminal",
     "lat": 40.1883,
     "lng": -74.755,
     "state": "NJ",
@@ -33404,9 +35250,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 47.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.46,
+      "MHW": 10.1,
+      "MSL": 6.19,
+      "MLW": 1.92,
+      "MLLW": 1.72
+    }
   },
-  {
+  "8540433": {
     "id": "8540433",
     "name": "Marcus Hook",
     "lat": 39.811806,
@@ -33580,9 +35433,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 240.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.82,
+      "MHW": 27.44,
+      "MSL": 24.79,
+      "MLW": 21.83,
+      "MLLW": 21.65
+    }
   },
-  {
+  "8545240": {
     "id": "8545240",
     "name": "Philadelphia",
     "lat": 39.933056,
@@ -33756,11 +35616,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 300.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.51,
+      "MHW": 10.11,
+      "MSL": 7.31,
+      "MLW": 4.01,
+      "MLLW": 3.82
+    }
   },
-  {
+  "8545530": {
     "id": "8545530",
-    "name": "PHILADELPHIA (PIER 11 NORTH), DEL. RIVER",
+    "name": "Philadelphia (pier 11 North), Del. River",
     "lat": 39.9533,
     "lng": -75.1383,
     "state": "PA",
@@ -33922,9 +35789,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 339
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.54,
+      "MHW": 10.15,
+      "MSL": 7.22,
+      "MLW": 3.91,
+      "MLLW": 3.72
+    }
   },
-  {
+  "8546252": {
     "id": "8546252",
     "name": "Bridesburg",
     "lat": 39.979683,
@@ -34098,9 +35972,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 323.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.5,
+      "MHW": 26.11,
+      "MSL": 23.12,
+      "MLW": 19.72,
+      "MLLW": 19.53
+    }
   },
-  {
+  "8548989": {
     "id": "8548989",
     "name": "Newbold",
     "lat": 40.137333,
@@ -34269,9 +36150,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 39.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.71,
+      "MHW": 22.35,
+      "MSL": 18.64,
+      "MLW": 14.51,
+      "MLLW": 14.32
+    }
   },
-  {
+  "8551762": {
     "id": "8551762",
     "name": "Delaware City",
     "lat": 39.582194,
@@ -34455,9 +36343,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 184.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.4,
+      "MHW": 28.02,
+      "MSL": 25.35,
+      "MLW": 22.58,
+      "MLLW": 22.4
+    }
   },
-  {
+  "8551910": {
     "id": "8551910",
     "name": "Reedy Point",
     "lat": 39.558333,
@@ -34621,9 +36516,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 174.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.19,
+      "MHW": 6.87,
+      "MSL": 4.27,
+      "MLW": 1.53,
+      "MLLW": 1.35
+    }
   },
-  {
+  "8554399": {
     "id": "8554399",
     "name": "Mahon River Entrance",
     "lat": 39.185,
@@ -34792,9 +36694,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 75.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.11,
+      "MHW": 13.67,
+      "MSL": 11.06,
+      "MLW": 8.35,
+      "MLLW": 8.17
+    }
   },
-  {
+  "8555889": {
     "id": "8555889",
     "name": "Brandywine Shoal Light",
     "lat": 38.987,
@@ -34963,9 +36872,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 171
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.49,
+      "MHW": 24.05,
+      "MSL": 21.6,
+      "MLW": 19.15,
+      "MLLW": 18.99
+    }
   },
-  {
+  "8557380": {
     "id": "8557380",
     "name": "Lewes",
     "lat": 38.782833,
@@ -35139,11 +37055,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 209.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.43,
+      "MHW": 7.01,
+      "MSL": 5.01,
+      "MLW": 2.94,
+      "MLLW": 2.78
+    }
   },
-  {
+  "8558690": {
     "id": "8558690",
-    "name": "INDIAN RIVER INLET",
+    "name": "Indian River Inlet",
     "lat": 38.61,
     "lng": -75.07,
     "state": "DE",
@@ -35300,9 +37223,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 203.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.9,
+      "MHW": 5.63,
+      "MSL": 4.44,
+      "MLW": 3.11,
+      "MLLW": 2.96
+    }
   },
-  {
+  "8558814": {
     "id": "8558814",
     "name": "Rosedale Beach, Indian River",
     "lat": 38.591499,
@@ -35456,11 +37386,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 67.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.87,
+      "MHW": 1.56,
+      "MSL": 0.18,
+      "MLW": -1.28,
+      "MLLW": -1.46
+    }
   },
-  {
+  "8570280": {
     "id": "8570280",
-    "name": "OCEAN CITY, FISHING PIER",
+    "name": "Ocean City, Fishing Pier",
     "lat": 38.3267,
     "lng": -75.0833,
     "state": "MD",
@@ -35602,9 +37539,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 23.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.11,
+      "MHW": 7.74,
+      "MSL": 6.08,
+      "MLW": 4.38,
+      "MLLW": 4.22
+    }
   },
-  {
+  "8570283": {
     "id": "8570283",
     "name": "Ocean City Inlet",
     "lat": 38.328267,
@@ -35768,11 +37712,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 187.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.52,
+      "MHW": 10.31,
+      "MSL": 9.33,
+      "MLW": 8.21,
+      "MLLW": 8.06
+    }
   },
-  {
+  "8570536": {
     "id": "8570536",
-    "name": "SOUTH POINT, SINEPUXENT NECK, CHINC. BAY",
+    "name": "South Point, Sinepuxent Neck, Chinc. Bay",
     "lat": 38.215,
     "lng": -75.1917,
     "state": "MD",
@@ -35854,11 +37805,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 166.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4,
+      "MHW": 3.92,
+      "MSL": 3.69,
+      "MLW": 3.45,
+      "MLLW": 3.35
+    }
   },
-  {
+  "8570649": {
     "id": "8570649",
-    "name": "PUBLIC LANDING, CHINCOTEAGUE BAY",
+    "name": "Public Landing, Chincoteague Bay",
     "lat": 38.1483,
     "lng": -75.285,
     "state": "MD",
@@ -35950,9 +37908,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 174.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.52,
+      "MHW": 2.44,
+      "MSL": 2.18,
+      "MLW": 1.91,
+      "MLLW": 1.81
+    }
   },
-  {
+  "8570691": {
     "id": "8570691",
     "name": "Buntings Bridge",
     "lat": 38.13894,
@@ -36076,11 +38041,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 225.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.86,
+      "MHW": 29.76,
+      "MSL": 29.45,
+      "MLW": 29.15,
+      "MLLW": 29.04
+    }
   },
-  {
+  "8571091": {
     "id": "8571091",
-    "name": "CRISFIELD",
+    "name": "Crisfield",
     "lat": 37.9767,
     "lng": -75.8633,
     "state": "MD",
@@ -36187,9 +38159,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 183.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.15,
+      "MHW": 6.98,
+      "MSL": 6,
+      "MLW": 5.12,
+      "MLLW": 5
+    }
   },
-  {
+  "8571117": {
     "id": "8571117",
     "name": "Ewell, Smith Island",
     "lat": 37.995,
@@ -36298,9 +38277,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 194
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.22,
+      "MHW": 2.04,
+      "MSL": 1.31,
+      "MLW": 0.52,
+      "MLLW": 0.37
+    }
   },
-  {
+  "8571359": {
     "id": "8571359",
     "name": "Snow Hill",
     "lat": 38.17833,
@@ -36394,9 +38380,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 78.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.3,
+      "MHW": 14.19,
+      "MSL": 13.46,
+      "MLW": 12.56,
+      "MLLW": 12.39
+    }
   },
-  {
+  "8571421": {
     "id": "8571421",
     "name": "Bishops Head",
     "lat": 38.22,
@@ -36545,11 +38538,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 330.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.01,
+      "MHW": 30.85,
+      "MSL": 29.97,
+      "MLW": 29.09,
+      "MLLW": 28.95
+    }
   },
-  {
+  "8571559": {
     "id": "8571559",
-    "name": "McCready's Creek",
+    "name": "Mccready's Creek",
     "lat": 38.3,
     "lng": -76.005,
     "state": "MD",
@@ -36691,9 +38691,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 354.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.12,
+      "MHW": 8.95,
+      "MSL": 7.9,
+      "MLW": 6.86,
+      "MLLW": 6.73
+    }
   },
-  {
+  "8571579": {
     "id": "8571579",
     "name": "Barren Island",
     "lat": 38.3417,
@@ -36832,11 +38839,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 238.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.53,
+      "MHW": 30.36,
+      "MSL": 29.77,
+      "MLW": 29.14,
+      "MLLW": 28.98
+    }
   },
-  {
+  "8571616": {
     "id": "8571616",
-    "name": "SALISBURY, WICOMICO RIVER",
+    "name": "Salisbury, Wicomico River",
     "lat": 38.365,
     "lng": -75.6067,
     "state": "MD",
@@ -36958,9 +38972,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 19.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.32,
+      "MHW": 8.17,
+      "MSL": 6.7,
+      "MLW": 5.03,
+      "MLLW": 4.86
+    }
   },
-  {
+  "8571702": {
     "id": "8571702",
     "name": "Beaverdam Creek",
     "lat": 38.42833,
@@ -37114,9 +39135,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 31.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.12,
+      "MHW": 30.96,
+      "MSL": 30.37,
+      "MLW": 29.69,
+      "MLLW": 29.52
+    }
   },
-  {
+  "8571773": {
     "id": "8571773",
     "name": "Vienna",
     "lat": 38.48333,
@@ -37220,11 +39248,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 179.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.87,
+      "MHW": 23.72,
+      "MSL": 22.75,
+      "MLW": 21.59,
+      "MLLW": 21.41
+    }
   },
-  {
+  "8571858": {
     "id": "8571858",
-    "name": "SHARPSTOWN, NANTICOKE RIVER",
+    "name": "Sharpstown, Nanticoke River",
     "lat": 38.545,
     "lng": -75.723297,
     "state": "MD",
@@ -37391,9 +39426,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 76
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.16,
+      "MHW": 1.01,
+      "MSL": 0,
+      "MLW": -1.28,
+      "MLLW": -1.5
+    }
   },
-  {
+  "8571892": {
     "id": "8571892",
     "name": "Cambridge",
     "lat": 38.5725,
@@ -37542,9 +39584,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 126.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.5,
+      "MHW": 4.29,
+      "MSL": 3.48,
+      "MLW": 2.67,
+      "MLLW": 2.46
+    }
   },
-  {
+  "8572271": {
     "id": "8572271",
     "name": "Poplar Island",
     "lat": 38.7583,
@@ -37703,11 +39752,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 288.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.8,
+      "MHW": 1.58,
+      "MSL": 1.04,
+      "MLW": 0.48,
+      "MLLW": 0.26
+    }
   },
-  {
+  "8572342": {
     "id": "8572342",
-    "name": "ST. MICHAELS, MILES RIVER",
+    "name": "St. Michaels, Miles River",
     "lat": 38.7867,
     "lng": -76.2217,
     "state": "MD",
@@ -37819,9 +39875,10 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 304.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8572467": {
     "id": "8572467",
     "name": "Kent Point",
     "lat": 38.8367,
@@ -37950,9 +40007,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 292.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.94,
+      "MHW": 9.71,
+      "MSL": 9.16,
+      "MLW": 8.6,
+      "MLLW": 8.39
+    }
   },
-  {
+  "8572669": {
     "id": "8572669",
     "name": "Hillsboro",
     "lat": 38.9167,
@@ -38061,9 +40125,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 117.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.95,
+      "MHW": 27.78,
+      "MSL": 26.77,
+      "MLW": 25.49,
+      "MLLW": 25.31
+    }
   },
-  {
+  "8572770": {
     "id": "8572770",
     "name": "Matapeake",
     "lat": 38.9567,
@@ -38162,9 +40233,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 318.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.57,
+      "MHW": 5.32,
+      "MSL": 4.83,
+      "MLW": 4.3,
+      "MLLW": 4.09
+    }
   },
-  {
+  "8572955": {
     "id": "8572955",
     "name": "Love Point Pier",
     "lat": 39.0317,
@@ -38278,9 +40356,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 353.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.15,
+      "MHW": 5.86,
+      "MSL": 5.28,
+      "MLW": 4.68,
+      "MLLW": 4.46
+    }
   },
-  {
+  "8573349": {
     "id": "8573349",
     "name": "Crumpton",
     "lat": 39.245,
@@ -38424,9 +40509,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 45.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.62,
+      "MHW": 13.32,
+      "MSL": 12.24,
+      "MLW": 11.11,
+      "MLLW": 10.86
+    }
   },
-  {
+  "8573364": {
     "id": "8573364",
     "name": "Tolchester Beach",
     "lat": 39.213444,
@@ -38555,9 +40647,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 9.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.15,
+      "MHW": 4.84,
+      "MSL": 4.25,
+      "MLW": 3.62,
+      "MLLW": 3.41
+    }
   },
-  {
+  "8573704": {
     "id": "8573704",
     "name": "Betterton",
     "lat": 39.3717,
@@ -38686,11 +40785,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 108.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.88,
+      "MHW": 5.54,
+      "MSL": 4.75,
+      "MLW": 3.94,
+      "MLLW": 3.72
+    }
   },
-  {
+  "8573903": {
     "id": "8573903",
-    "name": "TOWN POINT WHARF",
+    "name": "Town Point Wharf",
     "lat": 39.5033,
     "lng": -75.9167,
     "state": "MD",
@@ -38857,9 +40963,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 154.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.58,
+      "MHW": 5.27,
+      "MSL": 4.16,
+      "MLW": 3.09,
+      "MLLW": 2.9
+    }
   },
-  {
+  "8573927": {
     "id": "8573927",
     "name": "Chesapeake City",
     "lat": 39.526667,
@@ -39023,9 +41136,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 179.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.38,
+      "MHW": 6.17,
+      "MSL": 4.71,
+      "MLW": 3.37,
+      "MLLW": 3.15
+    }
   },
-  {
+  "8574070": {
     "id": "8574070",
     "name": "Havre De Grace",
     "lat": 39.5367,
@@ -39174,11 +41294,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 72.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.76,
+      "MHW": 8.42,
+      "MSL": 7.5,
+      "MLW": 6.53,
+      "MLLW": 6.32
+    }
   },
-  {
+  "8574459": {
     "id": "8574459",
-    "name": "POND POINT (ABERDEEN P.G.), BUSH RIVER",
+    "name": "Pond Point (aberdeen P.g.), Bush River",
     "lat": 39.3883,
     "lng": -76.255,
     "state": "MD",
@@ -39275,9 +41402,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 62.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.37,
+      "MHW": 10.02,
+      "MSL": 9.46,
+      "MLW": 8.77,
+      "MLLW": 8.58
+    }
   },
-  {
+  "8574680": {
     "id": "8574680",
     "name": "Baltimore",
     "lat": 39.266944,
@@ -39426,11 +41560,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 277
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.76,
+      "MHW": 5.47,
+      "MSL": 4.91,
+      "MLW": 4.32,
+      "MLLW": 4.1
+    }
   },
-  {
+  "8574683": {
     "id": "8574683",
-    "name": "Fort McHenry Marsh",
+    "name": "Fort Mchenry Marsh",
     "lat": 39.2617,
     "lng": -76.585,
     "state": "MD",
@@ -39582,9 +41723,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 275.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.78,
+      "MHW": 5.48,
+      "MSL": 4.92,
+      "MLW": 4.34,
+      "MLLW": 4.12
+    }
   },
-  {
+  "8575512": {
     "id": "8575512",
     "name": "Annapolis",
     "lat": 38.98328,
@@ -39698,9 +41846,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 317.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.95,
+      "MHW": 5.71,
+      "MSL": 5.24,
+      "MLW": 4.74,
+      "MLLW": 4.52
+    }
   },
-  {
+  "8577004": {
     "id": "8577004",
     "name": "Long Beach",
     "lat": 38.465,
@@ -39824,11 +41979,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 257.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.58,
+      "MHW": 11.42,
+      "MSL": 10.92,
+      "MLW": 10.41,
+      "MLLW": 10.24
+    }
   },
-  {
+  "8577188": {
     "id": "8577188",
-    "name": "COVE POINT",
+    "name": "Cove Point",
     "lat": 38.3917,
     "lng": -76.3983,
     "state": "MD",
@@ -39915,9 +42077,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 233.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.88,
+      "MHW": 3.63,
+      "MSL": 3.13,
+      "MLW": 2.59,
+      "MLLW": 2.5
+    }
   },
-  {
+  "8577330": {
     "id": "8577330",
     "name": "Solomons Island",
     "lat": 38.317222,
@@ -40036,9 +42205,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 223.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.2,
+      "MHW": 5.05,
+      "MSL": 4.48,
+      "MLW": 3.88,
+      "MLLW": 3.72
+    }
   },
-  {
+  "8579542": {
     "id": "8579542",
     "name": "Lower Marlboro",
     "lat": 38.655,
@@ -40137,11 +42313,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 292
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.52,
+      "MHW": 10.38,
+      "MSL": 9.5,
+      "MLW": 8.56,
+      "MLLW": 8.39
+    }
   },
-  {
+  "8579997": {
     "id": "8579997",
-    "name": "BLADENSBURG, ANACOSTIA RIVER",
+    "name": "Bladensburg, Anacostia River",
     "lat": 38.9333,
     "lng": -76.9383,
     "state": "MD",
@@ -40258,9 +42441,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 164.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.74,
+      "MHW": 2.51,
+      "MSL": 1.02,
+      "MLW": -0.44,
+      "MLLW": -0.61
+    }
   },
-  {
+  "8594900": {
     "id": "8594900",
     "name": "Washington",
     "lat": 38.873,
@@ -40414,11 +42604,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 4.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.72,
+      "MHW": 7.49,
+      "MSL": 6.1,
+      "MLW": 4.7,
+      "MLLW": 4.55
+    }
   },
-  {
+  "8630111": {
     "id": "8630111",
-    "name": "JESTERS ISLAND, CHINCOTEAGUE BAY",
+    "name": "Jesters Island, Chincoteague Bay",
     "lat": 37.9817,
     "lng": -75.3017,
     "state": "VA",
@@ -40530,11 +42727,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 278.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.95,
+      "MHW": 2.87,
+      "MSL": 2.49,
+      "MLW": 2.11,
+      "MLLW": 2.01
+    }
   },
-  {
+  "8630249": {
     "id": "8630249",
-    "name": "CHINCOTEAGUE, USCG STATION",
+    "name": "Chincoteague, Uscg Station",
     "lat": 37.9317,
     "lng": -75.3833,
     "state": "VA",
@@ -40681,11 +42885,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 40.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.51,
+      "MHW": 5.35,
+      "MSL": 4.56,
+      "MLW": 3.77,
+      "MLLW": 3.67
+    }
   },
-  {
+  "8630308": {
     "id": "8630308",
-    "name": "CHINCOTEAGUE CHANNEL, SOUTH END",
+    "name": "Chincoteague Channel, South End",
     "lat": 37.9067,
     "lng": -75.405,
     "state": "VA",
@@ -40787,9 +42998,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 42.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.8,
+      "MHW": 5.58,
+      "MSL": 4.49,
+      "MLW": 3.42,
+      "MLLW": 3.32
+    }
   },
-  {
+  "8630315": {
     "id": "8630315",
     "name": "Southern Chincoteague Island",
     "lat": 37.9024,
@@ -40963,9 +43181,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 132.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.92,
+      "MHW": 0.7,
+      "MSL": -0.66,
+      "MLW": -2.15,
+      "MLLW": -2.29
+    }
   },
-  {
+  "8631044": {
     "id": "8631044",
     "name": "Wachapreague",
     "lat": 37.607778,
@@ -41139,9 +43364,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 214
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.8,
+      "MHW": 6.47,
+      "MSL": 4.58,
+      "MLW": 2.49,
+      "MLLW": 2.32
+    }
   },
-  {
+  "8632200": {
     "id": "8632200",
     "name": "Kiptopeke",
     "lat": 37.16519,
@@ -41285,11 +43517,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 57
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.57,
+      "MHW": 6.34,
+      "MSL": 5.05,
+      "MLW": 3.74,
+      "MLLW": 3.62
+    }
   },
-  {
+  "8632366": {
     "id": "8632366",
-    "name": "CAPE CHARLES HBR (U.S. G. WHARF)",
+    "name": "Cape Charles Hbr (u.s. G. Wharf)",
     "lat": 37.2633,
     "lng": -76.02,
     "state": "VA",
@@ -41406,9 +43645,10 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 71.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8632837": {
     "id": "8632837",
     "name": "Rappahannock Light",
     "lat": 37.538333,
@@ -41507,11 +43747,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 115.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.33,
+      "MHW": 27.16,
+      "MSL": 26.4,
+      "MLW": 25.59,
+      "MLLW": 25.46
+    }
   },
-  {
+  "8632869": {
     "id": "8632869",
-    "name": "GASKINS PT., OCCOHANNOCK CREEK",
+    "name": "Gaskins Pt., Occohannock Creek",
     "lat": 37.5567,
     "lng": -75.9167,
     "state": "VA",
@@ -41618,9 +43865,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 133.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.73,
+      "MHW": 3.56,
+      "MSL": 2.71,
+      "MLW": 1.83,
+      "MLLW": 1.68
+    }
   },
-  {
+  "8633532": {
     "id": "8633532",
     "name": "Tangier Island",
     "lat": 37.8283,
@@ -41719,11 +43973,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 160.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.48,
+      "MHW": 4.32,
+      "MSL": 3.57,
+      "MLW": 2.81,
+      "MLLW": 2.72
+    }
   },
-  {
+  "8633777": {
     "id": "8633777",
-    "name": "SAXIS, STARLING CREEK",
+    "name": "Saxis, Starling Creek",
     "lat": 37.9217,
     "lng": -75.7283,
     "state": "",
@@ -41880,9 +44141,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 261.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.24,
+      "MHW": 6.07,
+      "MSL": 4.95,
+      "MLW": 3.84,
+      "MLLW": 3.7
+    }
   },
-  {
+  "8635027": {
     "id": "8635027",
     "name": "Dahlgren",
     "lat": 38.319753,
@@ -42026,9 +44294,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 56.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.08,
+      "MHW": 17.91,
+      "MSL": 17.11,
+      "MLW": 16.32,
+      "MLLW": 16.17
+    }
   },
-  {
+  "8635150": {
     "id": "8635150",
     "name": "Colonial Beach, Potomac River",
     "lat": 38.2517,
@@ -42167,9 +44442,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 246.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.58,
+      "MHW": 4.42,
+      "MSL": 3.61,
+      "MLW": 2.79,
+      "MLLW": 2.64
+    }
   },
-  {
+  "8635257": {
     "id": "8635257",
     "name": "Rappahannock Bend",
     "lat": 38.2133,
@@ -42333,9 +44615,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 177.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.39,
+      "MHW": 22.23,
+      "MSL": 21.25,
+      "MLW": 20.1,
+      "MLLW": 19.96
+    }
   },
-  {
+  "8635750": {
     "id": "8635750",
     "name": "Lewisetta",
     "lat": 37.995278,
@@ -42439,9 +44728,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 201.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.28,
+      "MHW": 6.14,
+      "MSL": 5.53,
+      "MLW": 4.89,
+      "MLLW": 4.77
+    }
   },
-  {
+  "8635985": {
     "id": "8635985",
     "name": "Wares Wharf",
     "lat": 37.8733,
@@ -42575,9 +44871,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 255.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.24,
+      "MHW": 5.09,
+      "MSL": 4.24,
+      "MLW": 3.3,
+      "MLLW": 3.18
+    }
   },
-  {
+  "8636580": {
     "id": "8636580",
     "name": "Windmill Point",
     "lat": 37.6155,
@@ -42706,9 +45009,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 151.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.6,
+      "MHW": 3.47,
+      "MSL": 2.91,
+      "MLW": 2.31,
+      "MLLW": 2.21
+    }
   },
-  {
+  "8636653": {
     "id": "8636653",
     "name": "Lester Manor",
     "lat": 37.5833,
@@ -42817,9 +45127,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 252.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.4,
+      "MHW": 1.23,
+      "MSL": -0.17,
+      "MLW": -1.79,
+      "MLLW": -1.9
+    }
   },
-  {
+  "8636941": {
     "id": "8636941",
     "name": "Richmond Deepwater Terminal, James River",
     "lat": 37.4596,
@@ -42948,11 +45265,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 327.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.16,
+      "MHW": 4.91,
+      "MSL": 3.52,
+      "MLW": 1.87,
+      "MLLW": 1.73
+    }
   },
-  {
+  "8637289": {
     "id": "8637289",
-    "name": "NEW POINT",
+    "name": "New Point",
     "lat": 37.3467,
     "lng": -76.2733,
     "state": "VA",
@@ -43109,11 +45433,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 80.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8637590": {
     "id": "8637590",
-    "name": "NEW POINT, COMFORT SHOAL",
+    "name": "New Point, Comfort Shoal",
     "lat": 37.2567,
     "lng": -76.2217,
     "state": "VA",
@@ -43230,9 +45555,10 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 70.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8637624": {
     "id": "8637624",
     "name": "Gloucester Point",
     "lat": 37.2467,
@@ -43376,11 +45702,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 196.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.33,
+      "MHW": 4.13,
+      "MSL": 2.93,
+      "MLW": 1.75,
+      "MLLW": 1.64
+    }
   },
-  {
+  "8637689": {
     "id": "8637689",
-    "name": "Yorktown USCG Training Center",
+    "name": "Yorktown Uscg Training Center",
     "lat": 37.2265,
     "lng": -76.478806,
     "state": "VA",
@@ -43537,9 +45870,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 182.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.78,
+      "MHW": 7.58,
+      "MSL": 6.44,
+      "MLW": 5.32,
+      "MLLW": 5.2
+    }
   },
-  {
+  "8637712": {
     "id": "8637712",
     "name": "Jamestown Wharf",
     "lat": 37.2201,
@@ -43693,11 +46033,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 217
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.18,
+      "MHW": 1,
+      "MSL": 0.05,
+      "MLW": -0.92,
+      "MLLW": -1.05
+    }
   },
-  {
+  "8638017": {
     "id": "8638017",
-    "name": "FORT EUSTIS (MARAD), JAMES RIVER",
+    "name": "Fort Eustis (marad), James River",
     "lat": 37.1382,
     "lng": -76.62275,
     "state": "VA",
@@ -43809,9 +46156,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 124.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.9,
+      "MHW": 27.72,
+      "MSL": 26.65,
+      "MLW": 25.53,
+      "MLLW": 25.37
+    }
   },
-  {
+  "8638339": {
     "id": "8638339",
     "name": "Western Branch",
     "lat": 36.8232,
@@ -43980,11 +46334,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 258.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.36,
+      "MHW": 30.15,
+      "MSL": 28.78,
+      "MLW": 27.39,
+      "MLLW": 27.24
+    }
   },
-  {
+  "8638421": {
     "id": "8638421",
-    "name": "BURWELL BAY, JAMES RIVER",
+    "name": "Burwell Bay, James River",
     "lat": 37.0567,
     "lng": -76.6683,
     "state": "VA",
@@ -44146,9 +46507,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 111.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8638424": {
     "id": "8638424",
     "name": "Kingsmill",
     "lat": 37.22,
@@ -44272,9 +46634,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 141.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.27,
+      "MHW": 11.06,
+      "MSL": 9.93,
+      "MLW": 8.8,
+      "MLLW": 8.65
+    }
   },
-  {
+  "8638433": {
     "id": "8638433",
     "name": "Scotland",
     "lat": 37.185,
@@ -44403,9 +46772,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 122.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.14,
+      "MHW": 9.94,
+      "MSL": 8.97,
+      "MLW": 7.99,
+      "MLLW": 7.82
+    }
   },
-  {
+  "8638445": {
     "id": "8638445",
     "name": "Lanexa, Chickahominy River",
     "lat": 37.4033,
@@ -44574,9 +46950,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 223.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.42,
+      "MHW": 5.26,
+      "MSL": 4.05,
+      "MLW": 2.7,
+      "MLLW": 2.58
+    }
   },
-  {
+  "8638450": {
     "id": "8638450",
     "name": "Tettington, James River",
     "lat": 37.24,
@@ -44735,9 +47118,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 246.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.23,
+      "MHW": 21.03,
+      "MSL": 20.15,
+      "MLW": 19.16,
+      "MLLW": 19.02
+    }
   },
-  {
+  "8638464": {
     "id": "8638464",
     "name": "Wilcox Wharf",
     "lat": 37.315,
@@ -44846,9 +47236,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 342.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.55,
+      "MHW": 6.31,
+      "MSL": 5.34,
+      "MLW": 4.19,
+      "MLLW": 4.03
+    }
   },
-  {
+  "8638481": {
     "id": "8638481",
     "name": "Hopewell",
     "lat": 37.3133,
@@ -44997,9 +47394,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 355.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.18,
+      "MHW": 5.93,
+      "MSL": 4.77,
+      "MLW": 3.47,
+      "MLLW": 3.36
+    }
   },
-  {
+  "8638489": {
     "id": "8638489",
     "name": "Puddledock",
     "lat": 37.2667,
@@ -45138,9 +47542,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 200.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.43,
+      "MHW": 7.21,
+      "MSL": 5.98,
+      "MLW": 4.42,
+      "MLLW": 4.26
+    }
   },
-  {
+  "8638495": {
     "id": "8638495",
     "name": "Richmond River Locks, James River",
     "lat": 37.525,
@@ -45304,9 +47715,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 115.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.87,
+      "MHW": 2.65,
+      "MSL": 1.11,
+      "MLW": -0.66,
+      "MLLW": -0.81
+    }
   },
-  {
+  "8638610": {
     "id": "8638610",
     "name": "Sewells Point",
     "lat": 36.942694,
@@ -45465,11 +47883,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 221.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.14,
+      "MHW": 6.94,
+      "MSL": 5.74,
+      "MLW": 4.51,
+      "MLLW": 4.38
+    }
   },
-  {
+  "8638660": {
     "id": "8638660",
-    "name": "PORTSMOUTH, NORFOLK NAVAL SHIPYARD",
+    "name": "Portsmouth, Norfolk Naval Shipyard",
     "lat": 36.8217,
     "lng": -76.2933,
     "state": "VA",
@@ -45631,9 +48056,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 211.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.47,
+      "MHW": 9.26,
+      "MSL": 7.89,
+      "MLW": 6.5,
+      "MLLW": 6.36
+    }
   },
-  {
+  "8638671": {
     "id": "8638671",
     "name": "Lafayette River",
     "lat": 36.8842,
@@ -45777,9 +48209,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 226.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.04,
+      "MHW": 29.84,
+      "MSL": 28.52,
+      "MLW": 27.17,
+      "MLLW": 27.04
+    }
   },
-  {
+  "8638863": {
     "id": "8638863",
     "name": "Chesapeake Bay Bridge Tunnel",
     "lat": 36.9667,
@@ -45913,11 +48352,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 147.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.18,
+      "MHW": 27.95,
+      "MSL": 26.69,
+      "MLW": 25.4,
+      "MLLW": 25.27
+    }
   },
-  {
+  "8638901": {
     "id": "8638901",
-    "name": "CBBT, Chesapeake Channel",
+    "name": "Cbbt, Chesapeake Channel",
     "lat": 37.032902,
     "lng": -76.083298,
     "state": "VA",
@@ -46079,9 +48525,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 170.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.46,
+      "MHW": 7.22,
+      "MSL": 5.92,
+      "MLW": 4.56,
+      "MLLW": 4.45
+    }
   },
-  {
+  "8639207": {
     "id": "8639207",
     "name": "Rudee Inlet",
     "lat": 36.8317,
@@ -46240,9 +48693,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.24,
+      "MHW": 5.95,
+      "MSL": 4.33,
+      "MLW": 2.66,
+      "MLLW": 2.53
+    }
   },
-  {
+  "8639348": {
     "id": "8639348",
     "name": "Money Point",
     "lat": 36.778194,
@@ -46406,9 +48866,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 229.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.8,
+      "MHW": 24.59,
+      "MSL": 23.17,
+      "MLW": 21.74,
+      "MLLW": 21.6
+    }
   },
-  {
+  "8651370": {
     "id": "8651370",
     "name": "Duck",
     "lat": 36.1833,
@@ -46562,9 +49029,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 73.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.27,
+      "MHW": 21.95,
+      "MSL": 20.35,
+      "MLW": 18.72,
+      "MLLW": 18.58
+    }
   },
-  {
+  "8652247": {
     "id": "8652247",
     "name": "Manns Harbor",
     "lat": 35.9033,
@@ -46633,9 +49107,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 146.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.15,
+      "MHW": 3.12,
+      "MSL": 2.96,
+      "MLW": 2.81,
+      "MLLW": 2.74
+    }
   },
-  {
+  "8652437": {
     "id": "8652437",
     "name": "Oyster Creek",
     "lat": 35.845,
@@ -46699,9 +49180,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 308.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.43,
+      "MHW": 2.35,
+      "MSL": 2.14,
+      "MLW": 1.93,
+      "MLLW": 1.83
+    }
   },
-  {
+  "8652547": {
     "id": "8652547",
     "name": "Roanoke Marshes Light",
     "lat": 35.8117,
@@ -46770,9 +49258,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 164.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.78,
+      "MHW": 4.69,
+      "MSL": 4.49,
+      "MLW": 4.29,
+      "MLLW": 4.18
+    }
   },
-  {
+  "8652587": {
     "id": "8652587",
     "name": "Oregon Inlet Marina",
     "lat": 35.795694,
@@ -46921,9 +49416,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 28.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.77,
+      "MHW": 3.62,
+      "MSL": 3.17,
+      "MLW": 2.72,
+      "MLLW": 2.59
+    }
   },
-  {
+  "8652648": {
     "id": "8652648",
     "name": "Old House Channel",
     "lat": 35.7767,
@@ -47017,11 +49519,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 39.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.38,
+      "MHW": 3.25,
+      "MSL": 2.94,
+      "MLW": 2.61,
+      "MLLW": 2.48
+    }
   },
-  {
+  "8652678": {
     "id": "8652678",
-    "name": "USCG LIFEBOAT STATION, OREGON INLET",
+    "name": "Uscg Lifeboat Station, Oregon Inlet",
     "lat": 35.7683,
     "lng": -75.5267,
     "state": "NC",
@@ -47143,9 +49652,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 26.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.59,
+      "MHW": 5.39,
+      "MSL": 4.43,
+      "MLW": 3.5,
+      "MLLW": 3.41
+    }
   },
-  {
+  "8653471": {
     "id": "8653471",
     "name": "Engelhard",
     "lat": 35.5094,
@@ -47269,9 +49785,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 237.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.08,
+      "MHW": 31,
+      "MSL": 30.78,
+      "MLW": 30.57,
+      "MLLW": 30.51
+    }
   },
-  {
+  "8653951": {
     "id": "8653951",
     "name": "Peter's Ditch",
     "lat": 35.350139,
@@ -47325,9 +49848,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 109.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.84,
+      "MHW": 29.74,
+      "MSL": 29.52,
+      "MLW": 29.31,
+      "MLLW": 29.23
+    }
   },
-  {
+  "8654400": {
     "id": "8654400",
     "name": "Cape Hatteras Fishing Pier",
     "lat": 35.2233,
@@ -47451,11 +49981,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 16.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.62,
+      "MHW": 6.26,
+      "MSL": 4.77,
+      "MLW": 3.27,
+      "MLLW": 3.15
+    }
   },
-  {
+  "8654467": {
     "id": "8654467",
-    "name": "USCG Station Hatteras",
+    "name": "Uscg Station Hatteras",
     "lat": 35.208611,
     "lng": -75.704194,
     "state": "NC",
@@ -47557,9 +50094,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 26
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.12,
+      "MHW": 28.01,
+      "MSL": 27.79,
+      "MLW": 27.55,
+      "MLLW": 27.47
+    }
   },
-  {
+  "8654769": {
     "id": "8654769",
     "name": "Ocracoke, Pamlico Sound",
     "lat": 35.1155,
@@ -47653,11 +50197,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 30.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.43,
+      "MHW": 0.28,
+      "MSL": -0.14,
+      "MLW": -0.52,
+      "MLLW": -0.6
+    }
   },
-  {
+  "8654792": {
     "id": "8654792",
-    "name": "OCRACOKE ISLAND",
+    "name": "Ocracoke Island",
     "lat": 35.115,
     "lng": -75.9883,
     "state": "NC",
@@ -47749,9 +50300,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 37
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.14,
+      "MHW": 4.02,
+      "MSL": 3.49,
+      "MLW": 3.03,
+      "MLLW": 2.97
+    }
   },
-  {
+  "8655875": {
     "id": "8655875",
     "name": "Sea Level",
     "lat": 34.875,
@@ -47840,11 +50398,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 155.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.15,
+      "MHW": 31.11,
+      "MSL": 30.82,
+      "MLW": 30.53,
+      "MLLW": 30.43
+    }
   },
-  {
+  "8656084": {
     "id": "8656084",
-    "name": "CORE CREEK BRIDGE",
+    "name": "Core Creek Bridge",
     "lat": 34.825,
     "lng": -76.69,
     "state": "NC",
@@ -47966,9 +50531,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 130.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.63,
+      "MHW": 3.4,
+      "MSL": 2.26,
+      "MLW": 1.23,
+      "MLLW": 1.14
+    }
   },
-  {
+  "8656201": {
     "id": "8656201",
     "name": "Core Sound",
     "lat": 34.79675,
@@ -48077,9 +50649,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 129.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.9,
+      "MHW": 29.75,
+      "MSL": 29.21,
+      "MLW": 28.67,
+      "MLLW": 28.58
+    }
   },
-  {
+  "8656467": {
     "id": "8656467",
     "name": "Spooners Creek",
     "lat": 34.725,
@@ -48208,9 +50787,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 169.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.45,
+      "MHW": 25.25,
+      "MSL": 24.48,
+      "MLW": 23.62,
+      "MLLW": 23.5
+    }
   },
-  {
+  "8656483": {
     "id": "8656483",
     "name": "Beaufort, Duke Marine Lab",
     "lat": 34.717331,
@@ -48384,9 +50970,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 132.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.38,
+      "MHW": 5.09,
+      "MSL": 3.55,
+      "MLW": 1.99,
+      "MLLW": 1.84
+    }
   },
-  {
+  "8656590": {
     "id": "8656590",
     "name": "Atlantic Beach Triple S Pier",
     "lat": 34.6933,
@@ -48535,9 +51128,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 113.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.41,
+      "MHW": 9.07,
+      "MSL": 7.27,
+      "MLW": 5.42,
+      "MLLW": 5.27
+    }
   },
-  {
+  "8656613": {
     "id": "8656613",
     "name": "Swansboro, East Corbett Ave Bridge",
     "lat": 34.6866,
@@ -48706,11 +51306,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 52.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.07,
+      "MHW": 1.89,
+      "MSL": 1.18,
+      "MLW": 0.41,
+      "MLLW": 0.25
+    }
   },
-  {
+  "8656841": {
     "id": "8656841",
-    "name": "CAPE LOOKOUT, LOOKOUT BIGHT",
+    "name": "Cape Lookout, Lookout Bight",
     "lat": 34.6133,
     "lng": -76.5383,
     "state": "NC",
@@ -48842,9 +51449,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 13.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.35,
+      "MHW": 10,
+      "MSL": 7.99,
+      "MLW": 5.95,
+      "MLLW": 5.79
+    }
   },
-  {
+  "8657002": {
     "id": "8657002",
     "name": "Sneads Ferry, New River",
     "lat": 34.576275,
@@ -48968,9 +51582,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 75.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8657813": {
     "id": "8657813",
     "name": "Hampstead",
     "lat": 34.33941,
@@ -49144,9 +51759,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 291.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.3,
+      "MHW": 29.97,
+      "MSL": 28.35,
+      "MLW": 26.65,
+      "MLLW": 26.49
+    }
   },
-  {
+  "8658120": {
     "id": "8658120",
     "name": "Wilmington",
     "lat": 34.2275,
@@ -49315,9 +51937,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 30
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.13,
+      "MHW": 6.88,
+      "MSL": 4.89,
+      "MLW": 2.61,
+      "MLLW": 2.45
+    }
   },
-  {
+  "8658145": {
     "id": "8658145",
     "name": "Shinn Point",
     "lat": 34.2179,
@@ -49486,9 +52115,10 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 185.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8658163": {
     "id": "8658163",
     "name": "Wrightsville Beach",
     "lat": 34.213333,
@@ -49617,11 +52247,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 154.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.31,
+      "MHW": 22.97,
+      "MSL": 20.98,
+      "MLW": 18.98,
+      "MLLW": 18.83
+    }
   },
-  {
+  "8658579": {
     "id": "8658579",
-    "name": "SUNNY POINT, MOTSU NORTH WHARF",
+    "name": "Sunny Point, Motsu North Wharf",
     "lat": 34.0233,
     "lng": -77.9467,
     "state": "NC",
@@ -49753,11 +52390,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 111.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.03,
+      "MHW": 6.72,
+      "MSL": 4.7,
+      "MLW": 2.57,
+      "MLLW": 2.41
+    }
   },
-  {
+  "8658741": {
     "id": "8658741",
-    "name": "ZEKES ISLAND, CAPE FEAR RIVER",
+    "name": "Zekes Island, Cape Fear River",
     "lat": 33.95,
     "lng": -77.9517,
     "state": "NC",
@@ -49889,9 +52533,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 53.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.9,
+      "MHW": 6.58,
+      "MSL": 4.56,
+      "MLW": 2.49,
+      "MLLW": 2.34
+    }
   },
-  {
+  "8659084": {
     "id": "8659084",
     "name": "Southport",
     "lat": 33.915,
@@ -50020,9 +52671,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 142.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.4,
+      "MHW": 15.07,
+      "MSL": 12.99,
+      "MLW": 10.83,
+      "MLLW": 10.67
+    }
   },
-  {
+  "8659182": {
     "id": "8659182",
     "name": "Oak Island, Atlantic Ocean",
     "lat": 33.9017,
@@ -50186,9 +52844,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 203.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.7,
+      "MHW": 8.33,
+      "MSL": 5.98,
+      "MLW": 3.6,
+      "MLLW": 3.44
+    }
   },
-  {
+  "8659414": {
     "id": "8659414",
     "name": "Varnamtown, Lockwoods Folly River",
     "lat": 33.933083,
@@ -50317,9 +52982,10 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 60.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8659665": {
     "id": "8659665",
     "name": "Bowen Point, Shallotte Inlet",
     "lat": 33.913983,
@@ -50488,9 +53154,10 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 262.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8659897": {
     "id": "8659897",
     "name": "Sunset Beach",
     "lat": 33.865,
@@ -50659,9 +53326,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 223.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.02,
+      "MHW": 10.63,
+      "MSL": 8.16,
+      "MLW": 5.68,
+      "MLLW": 5.49
+    }
   },
-  {
+  "8660754": {
     "id": "8660754",
     "name": "Carolina Forest",
     "lat": 33.734917,
@@ -50765,9 +53439,10 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 314.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8661070": {
     "id": "8661070",
     "name": "Springmaid Pier",
     "lat": 33.655556,
@@ -50931,11 +53606,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 240
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 34.89,
+      "MHW": 34.5,
+      "MSL": 32,
+      "MLW": 29.48,
+      "MLLW": 29.29
+    }
   },
-  {
+  "8661139": {
     "id": "8661139",
-    "name": "BUCKSPORT, WACCAMAW RIVER",
+    "name": "Bucksport, Waccamaw River",
     "lat": 33.6467,
     "lng": -79.095,
     "state": "SC",
@@ -51092,11 +53774,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 153.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.49,
+      "MHW": 6.38,
+      "MSL": 5.47,
+      "MLW": 4.22,
+      "MLLW": 4.05
+    }
   },
-  {
+  "8661419": {
     "id": "8661419",
-    "name": "GARDEN CITY BRIDGE, MURRELLS INLET",
+    "name": "Garden City Bridge, Murrells Inlet",
     "lat": 33.5783,
     "lng": -79.0033,
     "state": "SC",
@@ -51258,11 +53947,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 26.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.36,
+      "MHW": 5.96,
+      "MSL": 3.86,
+      "MLW": 1.7,
+      "MLLW": 1.58
+    }
   },
-  {
+  "8661437": {
     "id": "8661437",
-    "name": "GARDEN CITY PIER, MURRELLS INLET",
+    "name": "Garden City Pier, Murrells Inlet",
     "lat": 33.575,
     "lng": -78.9967,
     "state": "SC",
@@ -51394,11 +54090,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 49.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.87,
+      "MHW": 7.47,
+      "MSL": 4.98,
+      "MLW": 2.46,
+      "MLLW": 2.27
+    }
   },
-  {
+  "8661684": {
     "id": "8661684",
-    "name": "OAKS CREEK, UPPER END, MURRELLS INLET",
+    "name": "Oaks Creek, Upper End, Murrells Inlet",
     "lat": 33.5117,
     "lng": -79.0683,
     "state": "SC",
@@ -51525,11 +54228,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 75.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.93,
+      "MHW": 7.52,
+      "MSL": 5.48,
+      "MLW": 3.17,
+      "MLLW": 2.97
+    }
   },
-  {
+  "8661703": {
     "id": "8661703",
-    "name": "SANDY ISLAND, THOROUGHFARE CREEK",
+    "name": "Sandy Island, Thoroughfare Creek",
     "lat": 33.5067,
     "lng": -79.145,
     "state": "SC",
@@ -51656,11 +54366,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 336.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.93,
+      "MHW": 6.76,
+      "MSL": 5.26,
+      "MLW": 3.42,
+      "MLLW": 3.25
+    }
   },
-  {
+  "8661989": {
     "id": "8661989",
-    "name": "BENNETT'S DOCK",
+    "name": "Bennett's Dock",
     "lat": 33.435,
     "lng": -79.1267,
     "state": "SC",
@@ -51787,11 +54504,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 93.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.02,
+      "MHW": 6.65,
+      "MSL": 4.8,
+      "MLW": 2.82,
+      "MLLW": 2.59
+    }
   },
-  {
+  "8662006": {
     "id": "8662006",
-    "name": "PAWLEYS ISLAND PIER, ATLANTIC OCEAN",
+    "name": "Pawleys Island Pier, Atlantic Ocean",
     "lat": 33.4317,
     "lng": -79.1167,
     "state": "SC",
@@ -51973,11 +54697,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 249
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.24,
+      "MHW": 8.85,
+      "MSL": 6.41,
+      "MLW": 3.94,
+      "MLLW": 3.75
+    }
   },
-  {
+  "8662071": {
     "id": "8662071",
-    "name": "PAWLEYS INLET, WARDS DOCK",
+    "name": "Pawleys Inlet, Wards Dock",
     "lat": 33.4117,
     "lng": -79.135,
     "state": "SC",
@@ -52114,11 +54845,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 124.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.31,
+      "MHW": 6.99,
+      "MSL": 5.41,
+      "MLW": 3.67,
+      "MLLW": 3.49
+    }
   },
-  {
+  "8662245": {
     "id": "8662245",
-    "name": "Oyster Landing (N Inlet Estuary)",
+    "name": "Oyster Landing (n Inlet Estuary)",
     "lat": 33.3517,
     "lng": -79.1867,
     "state": "",
@@ -52285,11 +55023,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 294.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.09,
+      "MHW": 8.74,
+      "MSL": 6.67,
+      "MLW": 4.17,
+      "MLLW": 3.99
+    }
   },
-  {
+  "8662299": {
     "id": "8662299",
-    "name": "CLAMBANK CREEK DOCK, GOAT ISLAND",
+    "name": "Clambank Creek Dock, Goat Island",
     "lat": 33.3333,
     "lng": -79.1933,
     "state": "SC",
@@ -52461,11 +55206,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 250.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.42,
+      "MHW": 8.07,
+      "MSL": 5.9,
+      "MLW": 3.38,
+      "MLLW": 3.19
+    }
   },
-  {
+  "8662746": {
     "id": "8662746",
-    "name": "WINYAH BAY, SOUTH ISLAND PLANTATION",
+    "name": "Winyah Bay, South Island Plantation",
     "lat": 33.235,
     "lng": -79.2033,
     "state": "",
@@ -52632,11 +55384,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 359.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.72,
+      "MHW": 7.41,
+      "MSL": 5.48,
+      "MLW": 3.6,
+      "MLLW": 3.43
+    }
   },
-  {
+  "8662926": {
     "id": "8662926",
-    "name": "GEORGETOWN, SAMPIT RIVER ENT.",
+    "name": "Georgetown, Sampit River Ent.",
     "lat": 33.3606,
     "lng": -79.2861,
     "state": "SC",
@@ -52768,11 +55527,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 187.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8662931": {
     "id": "8662931",
-    "name": "WACCAMAW RIVER ENTRANCE",
+    "name": "Waccamaw River Entrance",
     "lat": 33.3667,
     "lng": -79.255,
     "state": "",
@@ -52939,11 +55699,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 46.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.36,
+      "MHW": 10.1,
+      "MSL": 8.38,
+      "MLW": 6.5,
+      "MLLW": 6.39
+    }
   },
-  {
+  "8662953": {
     "id": "8662953",
-    "name": "WINDSOR PLANTATION, BLACK RIVER",
+    "name": "Windsor Plantation, Black River",
     "lat": 33.415,
     "lng": -79.25,
     "state": "SC",
@@ -53130,11 +55897,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 72.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.52,
+      "MHW": 7.3,
+      "MSL": 5.68,
+      "MLW": 3.86,
+      "MLLW": 3.72
+    }
   },
-  {
+  "8663219": {
     "id": "8663219",
-    "name": "S. SANTEE R.,IWW(4 MI. CANAL CR)",
+    "name": "S. Santee R.,iww(4 Mi. Canal Cr)",
     "lat": 33.15417,
     "lng": -79.354417,
     "state": "SC",
@@ -53266,11 +56040,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 93.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8663858": {
     "id": "8663858",
-    "name": "BUCK HALL, AWENDAW CREEK",
+    "name": "Buck Hall, Awendaw Creek",
     "lat": 33.039,
     "lng": -79.5605,
     "state": "SC",
@@ -53407,11 +56182,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 192.3
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8664022": {
     "id": "8664022",
-    "name": "GEN. DYNAMICS PIER, COOPER R.",
+    "name": "Gen. Dynamics Pier, Cooper R.",
     "lat": 33.0083,
     "lng": -79.9233,
     "state": "SC",
@@ -53583,9 +56359,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 307.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.93,
+      "MHW": 7.64,
+      "MSL": 5.68,
+      "MLW": 3.29,
+      "MLLW": 3.08
+    }
   },
-  {
+  "8664545": {
     "id": "8664545",
     "name": "Cainhoy, Wando River",
     "lat": 32.9267,
@@ -53759,9 +56542,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 265.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.45,
+      "MHW": 7.11,
+      "MSL": 4.44,
+      "MLW": 1.09,
+      "MLLW": 0.9
+    }
   },
-  {
+  "8664662": {
     "id": "8664662",
     "name": "Army Depot",
     "lat": 32.91,
@@ -53890,9 +56680,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 6.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.2,
+      "MHW": 7.87,
+      "MSL": 5.41,
+      "MLW": 2.46,
+      "MLLW": 2.27
+    }
   },
-  {
+  "8664699": {
     "id": "8664699",
     "name": "North Charleston, Ashley River",
     "lat": 32.90028,
@@ -54031,9 +56828,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 10.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.07,
+      "MHW": 28.79,
+      "MSL": 26.33,
+      "MLW": 22.88,
+      "MLLW": 22.66
+    }
   },
-  {
+  "8664941": {
     "id": "8664941",
     "name": "South Capers Island",
     "lat": 32.8567,
@@ -54212,11 +57016,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 170.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.43,
+      "MHW": 8.04,
+      "MSL": 5.68,
+      "MLW": 3.26,
+      "MLLW": 3.1
+    }
   },
-  {
+  "8665099": {
     "id": "8665099",
-    "name": "I-526 BRIDGE, ASHLEY RIVER",
+    "name": "I-526 Bridge, Ashley River",
     "lat": 32.8367,
     "lng": -80.0217,
     "state": "SC",
@@ -54393,9 +57204,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 274.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.62,
+      "MHW": 14.28,
+      "MSL": 11.68,
+      "MLW": 8.6,
+      "MLLW": 8.39
+    }
   },
-  {
+  "8665530": {
     "id": "8665530",
     "name": "Charleston",
     "lat": 32.780833,
@@ -54559,9 +57377,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 239.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.53,
+      "MHW": 8.17,
+      "MSL": 5.69,
+      "MLW": 2.95,
+      "MLLW": 2.77
+    }
   },
-  {
+  "8667295": {
     "id": "8667295",
     "name": "White House Woods, Mosquito Creek",
     "lat": 32.558701,
@@ -54700,11 +57525,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 325.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.86,
+      "MHW": 27.58,
+      "MSL": 24.92,
+      "MLW": 21.68,
+      "MLLW": 21.47
+    }
   },
-  {
+  "8667612": {
     "id": "8667612",
-    "name": "Air Station Beaufort, McCalleys Creek",
+    "name": "Air Station Beaufort, Mccalleys Creek",
     "lat": 32.501861,
     "lng": -80.68494,
     "state": "SC",
@@ -54841,9 +57673,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 53.3
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8667633": {
     "id": "8667633",
     "name": "Clarendon Plantation",
     "lat": 32.5025,
@@ -54972,11 +57805,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 20.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.54,
+      "MHW": 10.17,
+      "MSL": 6.74,
+      "MLW": 2.15,
+      "MLLW": 1.94
+    }
   },
-  {
+  "8667999": {
     "id": "8667999",
-    "name": "BEAUFORT",
+    "name": "Beaufort",
     "lat": 32.43,
     "lng": -80.675,
     "state": "SC",
@@ -55113,9 +57953,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 354.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.04,
+      "MHW": 10.66,
+      "MSL": 7.38,
+      "MLW": 3.27,
+      "MLLW": 3.06
+    }
   },
-  {
+  "8668498": {
     "id": "8668498",
     "name": "Fripps Inlet",
     "lat": 32.34,
@@ -55284,11 +58131,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 245.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.78,
+      "MHW": 25.39,
+      "MSL": 22.45,
+      "MLW": 19.29,
+      "MLLW": 19.09
+    }
   },
-  {
+  "8668918": {
     "id": "8668918",
-    "name": "RIBAUT ISLAND, SKULL CREEK",
+    "name": "Ribaut Island, Skull Creek",
     "lat": 32.2667,
     "lng": -80.7367,
     "state": "SC",
@@ -55425,9 +58279,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 336.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.45,
+      "MHW": 9.09,
+      "MSL": 5.95,
+      "MLW": 2.26,
+      "MLLW": 2.06
+    }
   },
-  {
+  "8669246": {
     "id": "8669246",
     "name": "Brighton Beach",
     "lat": 32.214103,
@@ -55566,9 +58427,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 291.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8670424": {
     "id": "8670424",
     "name": "Port Wentworth",
     "lat": 32.1433,
@@ -55707,11 +58569,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 6.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.92,
+      "MHW": 9.62,
+      "MSL": 5.95,
+      "MLW": 1.48,
+      "MLLW": 1.28
+    }
   },
-  {
+  "8670681": {
     "id": "8670681",
-    "name": "BULL STREET, SAVANNAH RIVER",
+    "name": "Bull Street, Savannah River",
     "lat": 32.0817,
     "lng": -81.0917,
     "state": "GA",
@@ -55878,9 +58747,10 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 326
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8670870": {
     "id": "8670870",
     "name": "Fort Pulaski",
     "lat": 32.034694,
@@ -56054,11 +58924,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 272.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11,
+      "MHW": 10.63,
+      "MSL": 7.32,
+      "MLW": 3.71,
+      "MLLW": 3.5
+    }
   },
-  {
+  "8670893": {
     "id": "8670893",
-    "name": "PALMER JOHNSON SHIPYARD, WILMINGTON R.",
+    "name": "Palmer Johnson Shipyard, Wilmington R.",
     "lat": 32.0233,
     "lng": -81.0467,
     "state": "GA",
@@ -56200,11 +59077,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 271.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8671086": {
     "id": "8671086",
-    "name": "SKIDAWAY INSTITUTE, SKIDAWAY RIVER",
+    "name": "Skidaway Institute, Skidaway River",
     "lat": 31.99,
     "lng": -81.0233,
     "state": "",
@@ -56346,11 +59224,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 276
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.01,
+      "MHW": 15.61,
+      "MSL": 11.91,
+      "MLW": 7.88,
+      "MLLW": 7.64
+    }
   },
-  {
+  "8671314": {
     "id": "8671314",
-    "name": "HALFMOON REEF, HALFMOON RIVER",
+    "name": "Halfmoon Reef, Halfmoon River",
     "lat": 31.9633,
     "lng": -80.9433,
     "state": "",
@@ -56487,11 +59372,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 146.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.73,
+      "MHW": 14.33,
+      "MSL": 10.93,
+      "MLW": 7.35,
+      "MLLW": 7.13
+    }
   },
-  {
+  "8671315": {
     "id": "8671315",
-    "name": "PRIEST LANDING, WILMINGTON RIVER",
+    "name": "Priest Landing, Wilmington River",
     "lat": 31.9633,
     "lng": -81.0117,
     "state": "",
@@ -56633,9 +59525,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 171.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.48,
+      "MHW": 14.09,
+      "MSL": 10.57,
+      "MLW": 6.81,
+      "MLLW": 6.58
+    }
   },
-  {
+  "8671489": {
     "id": "8671489",
     "name": "Richmond Hill, Ogeechee River",
     "lat": 31.942972,
@@ -56774,9 +59673,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 289.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8672667": {
     "id": "8672667",
     "name": "Range A Light, Bear River",
     "lat": 31.7933,
@@ -56915,9 +59815,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 336.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.02,
+      "MHW": 7.65,
+      "MSL": 4.22,
+      "MLW": 0.29,
+      "MLLW": 0.08
+    }
   },
-  {
+  "8672875": {
     "id": "8672875",
     "name": "Sunbury, Sunbury Channel",
     "lat": 31.7667,
@@ -57056,9 +59963,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 353.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.75,
+      "MHW": 9.4,
+      "MSL": 6.13,
+      "MLW": 2.11,
+      "MLLW": 1.89
+    }
   },
-  {
+  "8673171": {
     "id": "8673171",
     "name": "South Ossabaw Island, Bear River",
     "lat": 31.723028,
@@ -57197,9 +60111,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 272.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.76,
+      "MHW": 10.41,
+      "MSL": 7.08,
+      "MLW": 3.44,
+      "MLLW": 3.25
+    }
   },
-  {
+  "8674301": {
     "id": "8674301",
     "name": "Daymark #135, South Newport River",
     "lat": 31.575,
@@ -57333,11 +60254,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 252.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.19,
+      "MHW": 31.83,
+      "MSL": 28.51,
+      "MLW": 24.93,
+      "MLLW": 24.72
+    }
   },
-  {
+  "8674975": {
     "id": "8674975",
-    "name": "Daymark #156, Head of Mud River",
+    "name": "Daymark #156, Head Of Mud River",
     "lat": 31.4867,
     "lng": -81.32,
     "state": "GA",
@@ -57474,9 +60402,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 312.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.67,
+      "MHW": 8.28,
+      "MSL": 4.76,
+      "MLW": 0.78,
+      "MLLW": 0.56
+    }
   },
-  {
+  "8675761": {
     "id": "8675761",
     "name": "Daymark #185, Rockdedundy River Entrance",
     "lat": 31.373861,
@@ -57610,11 +60545,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 321.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.1,
+      "MHW": 10.73,
+      "MSL": 7.42,
+      "MLW": 3.8,
+      "MLLW": 3.59
+    }
   },
-  {
+  "8676808": {
     "id": "8676808",
-    "name": "CRISPEN ISLAND,TURTLE RIVER",
+    "name": "Crispen Island,turtle River",
     "lat": 31.2133,
     "lng": -81.55,
     "state": "GA",
@@ -57751,11 +60693,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 332.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.35,
+      "MHW": 10.01,
+      "MSL": 6.43,
+      "MLW": 2.06,
+      "MLLW": 1.87
+    }
   },
-  {
+  "8677344": {
     "id": "8677344",
-    "name": "St.Simons Island",
+    "name": "St.simons Island",
     "lat": 31.1317,
     "lng": -81.3967,
     "state": "GA",
@@ -57922,9 +60871,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 285.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.9,
+      "MHW": 8.53,
+      "MSL": 5.27,
+      "MLW": 1.91,
+      "MLLW": 1.7
+    }
   },
-  {
+  "8677406": {
     "id": "8677406",
     "name": "Howe Street Pier, Brunswick",
     "lat": 31.1446,
@@ -58058,9 +61014,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 326.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.73,
+      "MHW": 27.36,
+      "MSL": 24.02,
+      "MLW": 20.23,
+      "MLLW": 20.01
+    }
   },
-  {
+  "8678124": {
     "id": "8678124",
     "name": "Raccoon Key Spit",
     "lat": 31.014806,
@@ -58199,9 +61162,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 299.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.8,
+      "MHW": 31.45,
+      "MSL": 28.24,
+      "MLW": 24.89,
+      "MLLW": 24.68
+    }
   },
-  {
+  "8678322": {
     "id": "8678322",
     "name": "Bailey Cut, Satilla River",
     "lat": 30.985,
@@ -58340,11 +61310,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 123
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32,
+      "MHW": 31.71,
+      "MSL": 28.62,
+      "MLW": 24.92,
+      "MLLW": 24.69
+    }
   },
-  {
+  "8679511": {
     "id": "8679511",
-    "name": "KINGS BAY",
+    "name": "Kings Bay",
     "lat": 30.7967,
     "lng": -81.515,
     "state": "GA",
@@ -58506,11 +61483,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 236.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.22,
+      "MHW": 9.85,
+      "MSL": 6.77,
+      "MLW": 3.42,
+      "MLLW": 3.21
+    }
   },
-  {
+  "8679598": {
     "id": "8679598",
-    "name": "Kings Bay MSF Pier",
+    "name": "Kings Bay Msf Pier",
     "lat": 30.778056,
     "lng": -81.491389,
     "state": "GA",
@@ -58642,11 +61626,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 310.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.04,
+      "MHW": 14.68,
+      "MSL": 11.61,
+      "MLW": 8.31,
+      "MLLW": 8.13
+    }
   },
-  {
+  "8679758": {
     "id": "8679758",
-    "name": "DUNGENESS, SEACAMP DOCK",
+    "name": "Dungeness, Seacamp Dock",
     "lat": 30.7633,
     "lng": -81.4717,
     "state": "GA",
@@ -58818,11 +61809,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 247.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.03,
+      "MHW": 7.68,
+      "MSL": 4.68,
+      "MLW": 1.45,
+      "MLLW": 1.25
+    }
   },
-  {
+  "8679964": {
     "id": "8679964",
-    "name": "ST. MARYS, ST. MARYS RIVER",
+    "name": "St. Marys, St. Marys River",
     "lat": 30.72,
     "lng": -81.5483,
     "state": "GA",
@@ -58969,11 +61967,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 283.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.96,
+      "MHW": 7.63,
+      "MSL": 4.87,
+      "MLW": 1.77,
+      "MLLW": 1.57
+    }
   },
-  {
+  "8720004": {
     "id": "8720004",
-    "name": "CRANDALL, ST. MARYS RIVER",
+    "name": "Crandall, St. Marys River",
     "lat": 30.7217,
     "lng": -81.6217,
     "state": "FL",
@@ -59110,11 +62115,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 79.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.16,
+      "MHW": 6.89,
+      "MSL": 4.68,
+      "MLW": 2.05,
+      "MLLW": 1.86
+    }
   },
-  {
+  "8720011": {
     "id": "8720011",
-    "name": "CUT 1N FRONT RANGE, ST MARYS RIVER ENTR",
+    "name": "Cut 1n Front Range, St Marys River Entr",
     "lat": 30.7083,
     "lng": -81.465,
     "state": "FL",
@@ -59281,11 +62293,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 203.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.62,
+      "MHW": 2.27,
+      "MSL": -0.68,
+      "MLW": -3.69,
+      "MLLW": -3.88
+    }
   },
-  {
+  "8720012": {
     "id": "8720012",
-    "name": "CUT 2N FRONT RANGE, ST MARYS RIVER ENTR",
+    "name": "Cut 2n Front Range, St Marys River Entr",
     "lat": 30.7167,
     "lng": -81.3017,
     "state": "FL",
@@ -59447,11 +62466,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 123.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8720023": {
     "id": "8720023",
-    "name": "CHESTER, BELLS RIVER",
+    "name": "Chester, Bells River",
     "lat": 30.6833,
     "lng": -81.5333,
     "state": "FL",
@@ -59588,9 +62608,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 320.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.86,
+      "MHW": 8.51,
+      "MSL": 5.55,
+      "MLW": 2.24,
+      "MLLW": 2.03
+    }
   },
-  {
+  "8720030": {
     "id": "8720030",
     "name": "Fernandina Beach",
     "lat": 30.671356,
@@ -59764,11 +62791,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 230.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.26,
+      "MHW": 7.91,
+      "MSL": 4.99,
+      "MLW": 1.89,
+      "MLLW": 1.7
+    }
   },
-  {
+  "8720051": {
     "id": "8720051",
-    "name": "LANCEFORD CREEK, LOFTON",
+    "name": "Lanceford Creek, Lofton",
     "lat": 30.6433,
     "lng": -81.5233,
     "state": "FL",
@@ -59905,9 +62939,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 297.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.06,
+      "MHW": 6.69,
+      "MSL": 3.64,
+      "MLW": 0.36,
+      "MLLW": 0.17
+    }
   },
-  {
+  "8720059": {
     "id": "8720059",
     "name": "Vaughns Landing",
     "lat": 30.63,
@@ -60026,11 +63067,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 102.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.26,
+      "MHW": 31.15,
+      "MSL": 30.08,
+      "MLW": 28.53,
+      "MLLW": 28.25
+    }
   },
-  {
+  "8720098": {
     "id": "8720098",
-    "name": "NASSAUVILLE, NASSAU RIVER EAST",
+    "name": "Nassauville, Nassau River East",
     "lat": 30.5683,
     "lng": -81.515,
     "state": "FL",
@@ -60152,9 +63200,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 133.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.22,
+      "MHW": 7.92,
+      "MSL": 5.64,
+      "MLW": 3.17,
+      "MLLW": 2.98
+    }
   },
-  {
+  "8720145": {
     "id": "8720145",
     "name": "Edwards Creek",
     "lat": 30.5017,
@@ -60318,11 +63373,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 37.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.51,
+      "MHW": 5.29,
+      "MSL": 3.23,
+      "MLW": 0.7,
+      "MLLW": 0.49
+    }
   },
-  {
+  "8720189": {
     "id": "8720189",
-    "name": "CEDAR HEIGHTS",
+    "name": "Cedar Heights",
     "lat": 30.4367,
     "lng": -81.6417,
     "state": "FL",
@@ -60449,11 +63511,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 23.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.32,
+      "MHW": 6.18,
+      "MSL": 4.73,
+      "MLW": 3.19,
+      "MLLW": 3.11
+    }
   },
-  {
+  "8720196": {
     "id": "8720196",
-    "name": "SISTERS CREEK",
+    "name": "Sisters Creek",
     "lat": 30.4167,
     "lng": -81.4533,
     "state": "FL",
@@ -60570,11 +63639,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 16.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.76,
+      "MHW": 7.52,
+      "MSL": 5.48,
+      "MLW": 3.22,
+      "MLLW": 3.1
+    }
   },
-  {
+  "8720198": {
     "id": "8720198",
-    "name": "CLAPBOARD CREEK",
+    "name": "Clapboard Creek",
     "lat": 30.4067,
     "lng": -81.51,
     "state": "FL",
@@ -60716,9 +63792,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 301.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.59,
+      "MHW": 7.39,
+      "MSL": 5.59,
+      "MLW": 3.8,
+      "MLLW": 3.69
+    }
   },
-  {
+  "8720211": {
     "id": "8720211",
     "name": "Mayport Naval Sta., St Johns River",
     "lat": 30.4,
@@ -60892,11 +63975,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 162.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.05,
+      "MHW": 1.76,
+      "MSL": -0.52,
+      "MLW": -2.91,
+      "MLLW": -3.06
+    }
   },
-  {
+  "8720213": {
     "id": "8720213",
-    "name": "TROUT R., SHERWOOD FOREST",
+    "name": "Trout R., Sherwood Forest",
     "lat": 30.42,
     "lng": -81.7283,
     "state": "FL",
@@ -61008,9 +64098,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 322.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.91,
+      "MHW": 6.76,
+      "MSL": 5.44,
+      "MLW": 4.15,
+      "MLLW": 4.06
+    }
   },
-  {
+  "8720214": {
     "id": "8720214",
     "name": "Degaussing Structure",
     "lat": 30.3967,
@@ -61194,11 +64291,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 139
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.18,
+      "MHW": 1.85,
+      "MSL": -0.55,
+      "MLW": -2.95,
+      "MLLW": -3.11
+    }
   },
-  {
+  "8720218": {
     "id": "8720218",
-    "name": "Mayport (Bar Pilots Dock)",
+    "name": "Mayport (bar Pilots Dock)",
     "lat": 30.398167,
     "lng": -81.427889,
     "state": "FL",
@@ -61370,9 +64474,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 179.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.03,
+      "MHW": 13.77,
+      "MSL": 11.55,
+      "MLW": 9.23,
+      "MLLW": 9.08
+    }
   },
-  {
+  "8720219": {
     "id": "8720219",
     "name": "Dames Point",
     "lat": 30.387222,
@@ -61531,11 +64642,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 280.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.48,
+      "MHW": 7.32,
+      "MSL": 5.68,
+      "MLW": 3.93,
+      "MLLW": 3.82
+    }
   },
-  {
+  "8720220": {
     "id": "8720220",
-    "name": "Mayport (Ferry Depot)",
+    "name": "Mayport (ferry Depot)",
     "lat": 30.3933,
     "lng": -81.4317,
     "state": "FL",
@@ -61687,11 +64805,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 180.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.67,
+      "MHW": 6.4,
+      "MSL": 4.22,
+      "MLW": 1.95,
+      "MLLW": 1.8
+    }
   },
-  {
+  "8720224": {
     "id": "8720224",
-    "name": "MAYPORT, ST JOHNS RIVER",
+    "name": "Mayport, St Johns River",
     "lat": 30.395,
     "lng": -81.4317,
     "state": "FL",
@@ -61878,11 +65003,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 175
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.69,
+      "MHW": 6.42,
+      "MSL": 4.2,
+      "MLW": 1.88,
+      "MLLW": 1.73
+    }
   },
-  {
+  "8720225": {
     "id": "8720225",
-    "name": "PHOENIX PARK",
+    "name": "Phoenix Park",
     "lat": 30.3833,
     "lng": -81.6367,
     "state": "FL",
@@ -61999,9 +65131,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 40.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.37,
+      "MHW": 7.24,
+      "MSL": 5.97,
+      "MLW": 4.73,
+      "MLLW": 4.65
+    }
   },
-  {
+  "8720226": {
     "id": "8720226",
     "name": "Southbank Riverwalk, St Johns River",
     "lat": 30.320499,
@@ -62155,9 +65294,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 11.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.64,
+      "MHW": 0.58,
+      "MSL": -0.25,
+      "MLW": -1.21,
+      "MLLW": -1.31
+    }
   },
-  {
+  "8720242": {
     "id": "8720242",
     "name": "Long Branch",
     "lat": 30.36,
@@ -62321,9 +65467,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 74.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.85,
+      "MHW": 5.76,
+      "MSL": 4.51,
+      "MLW": 3.24,
+      "MLLW": 3.14
+    }
   },
-  {
+  "8720291": {
     "id": "8720291",
     "name": "Jacksonville Beach",
     "lat": 30.2833,
@@ -62462,9 +65615,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 332.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.84,
+      "MHW": 11.46,
+      "MSL": 8.77,
+      "MLW": 6.39,
+      "MLLW": 6.22
+    }
   },
-  {
+  "8720357": {
     "id": "8720357",
     "name": "I-295 Buckman Bridge",
     "lat": 30.192417,
@@ -62598,11 +65758,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 251.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.38,
+      "MHW": 0.34,
+      "MSL": -0.12,
+      "MLW": -0.55,
+      "MLLW": -0.63
+    }
   },
-  {
+  "8720406": {
     "id": "8720406",
-    "name": "DOCTORS LAKE, PEORIA POINT",
+    "name": "Doctors Lake, Peoria Point",
     "lat": 30.12,
     "lng": -81.7583,
     "state": "FL",
@@ -62684,11 +65851,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 288.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.63,
+      "MHW": 6.56,
+      "MSL": 6.14,
+      "MLW": 5.76,
+      "MLLW": 5.72
+    }
   },
-  {
+  "8720434": {
     "id": "8720434",
-    "name": "BLACK CREEK",
+    "name": "Black Creek",
     "lat": 30.08,
     "lng": -81.7617,
     "state": "FL",
@@ -62770,9 +65944,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 199.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.91,
+      "MHW": 5.85,
+      "MSL": 5.42,
+      "MLW": 5.02,
+      "MLLW": 4.98
+    }
   },
-  {
+  "8720503": {
     "id": "8720503",
     "name": "Red Bay Point, St Johns River",
     "lat": 29.9817,
@@ -62891,11 +66072,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 317.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.31,
+      "MHW": 0.27,
+      "MSL": -0.15,
+      "MLW": -0.6,
+      "MLLW": -0.69
+    }
   },
-  {
+  "8720554": {
     "id": "8720554",
-    "name": "Vilano Beach ICWW",
+    "name": "Vilano Beach Icww",
     "lat": 29.9167,
     "lng": -81.3,
     "state": "FL",
@@ -63077,9 +66265,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 131.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.87,
+      "MHW": 1.54,
+      "MSL": -0.55,
+      "MLW": -2.7,
+      "MLLW": -2.88
+    }
   },
-  {
+  "8720582": {
     "id": "8720582",
     "name": "State Road 312, Matanzas River",
     "lat": 29.8667,
@@ -63238,9 +66433,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 186.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.99,
+      "MHW": 1.65,
+      "MSL": -0.44,
+      "MLW": -2.63,
+      "MLLW": -2.82
+    }
   },
-  {
+  "8720587": {
     "id": "8720587",
     "name": "St. Augustine Beach",
     "lat": 29.8567,
@@ -63409,9 +66611,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 96.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.15,
+      "MHW": 7.78,
+      "MSL": 5.44,
+      "MLW": 3.17,
+      "MLLW": 3.01
+    }
   },
-  {
+  "8720625": {
     "id": "8720625",
     "name": "Racy Point, St Johns River",
     "lat": 29.8017,
@@ -63535,9 +66744,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.64,
+      "MHW": 0.58,
+      "MSL": 0.01,
+      "MLW": -0.55,
+      "MLLW": -0.63
+    }
   },
-  {
+  "8720651": {
     "id": "8720651",
     "name": "Crescent Beach, Matanzas River",
     "lat": 29.7683,
@@ -63731,11 +66947,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 51.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.89,
+      "MHW": 1.58,
+      "MSL": -0.36,
+      "MLW": -2.48,
+      "MLLW": -2.67
+    }
   },
-  {
+  "8720692": {
     "id": "8720692",
-    "name": "State Road A1A Bridge",
+    "name": "State Road A1a Bridge",
     "lat": 29.704531,
     "lng": -81.22786,
     "state": "FL",
@@ -63872,9 +67095,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 11
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.83,
+      "MHW": 1.52,
+      "MSL": -0.34,
+      "MLW": -2.12,
+      "MLLW": -2.28
+    }
   },
-  {
+  "8720757": {
     "id": "8720757",
     "name": "Bings Landing, Matanzas River",
     "lat": 29.615,
@@ -64033,9 +67263,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 134.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.66,
+      "MHW": 0.51,
+      "MSL": -0.16,
+      "MLW": -0.95,
+      "MLLW": -1.1
+    }
   },
-  {
+  "8720767": {
     "id": "8720767",
     "name": "Buffalo Bluff, St Johns River",
     "lat": 29.595,
@@ -64194,9 +67431,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 132.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.57,
+      "MHW": 0.55,
+      "MSL": 0.02,
+      "MLW": -0.49,
+      "MLLW": -0.56
+    }
   },
-  {
+  "8720774": {
     "id": "8720774",
     "name": "Palatka, St Johns River",
     "lat": 29.6433,
@@ -64355,9 +67599,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 85.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.62,
+      "MHW": 0.59,
+      "MSL": -0.05,
+      "MLW": -0.68,
+      "MLLW": -0.77
+    }
   },
-  {
+  "8720832": {
     "id": "8720832",
     "name": "Welaka",
     "lat": 29.4767,
@@ -64421,11 +67672,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 281.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.5,
+      "MHW": 0.48,
+      "MSL": 0.26,
+      "MLW": 0.05,
+      "MLLW": 0.01
+    }
   },
-  {
+  "8721020": {
     "id": "8721020",
-    "name": "DAYTONA BEACH (OCEAN)",
+    "name": "Daytona Beach (ocean)",
     "lat": 29.2283,
     "lng": -81.005,
     "state": "FL",
@@ -64527,11 +67785,12 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 33.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8721120": {
     "id": "8721120",
-    "name": "DAYTONA BEACH SHORES",
+    "name": "Daytona Beach Shores",
     "lat": 29.1467,
     "lng": -80.9633,
     "state": "FL",
@@ -64703,9 +67962,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 99.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.82,
+      "MHW": 6.45,
+      "MSL": 4.46,
+      "MLW": 2.54,
+      "MLLW": 2.39
+    }
   },
-  {
+  "8721147": {
     "id": "8721147",
     "name": "Ponce De Leon Inlet South",
     "lat": 29.063,
@@ -64854,9 +68120,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 124.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.71,
+      "MHW": 5.43,
+      "MSL": 3.92,
+      "MLW": 2.39,
+      "MLLW": 2.25
+    }
   },
-  {
+  "8721164": {
     "id": "8721164",
     "name": "New Smyrna Beach",
     "lat": 29.0233,
@@ -64970,11 +68243,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 60.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.79,
+      "MHW": 0.57,
+      "MSL": -0.63,
+      "MLW": -1.86,
+      "MLLW": -2
+    }
   },
-  {
+  "8721222": {
     "id": "8721222",
-    "name": "PACKWOOD PLACE",
+    "name": "Packwood Place",
     "lat": 28.94,
     "lng": -80.87,
     "state": "FL",
@@ -65061,11 +68341,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 359
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.58,
+      "MHW": 3.41,
+      "MSL": 2.87,
+      "MLW": 2.35,
+      "MLLW": 2.33
+    }
   },
-  {
+  "8721223": {
     "id": "8721223",
-    "name": "TURTLE MOUND",
+    "name": "Turtle Mound",
     "lat": 28.9267,
     "lng": -80.825,
     "state": "FL",
@@ -65137,9 +68424,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 149.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.67,
+      "MHW": 3.57,
+      "MSL": 3.29,
+      "MLW": 3.11,
+      "MLLW": 3.11
+    }
   },
-  {
+  "8721604": {
     "id": "8721604",
     "name": "Trident Pier, Port Canaveral",
     "lat": 28.415833,
@@ -65318,11 +68612,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.93,
+      "MHW": 21.58,
+      "MSL": 19.88,
+      "MLW": 18.17,
+      "MLLW": 18
+    }
   },
-  {
+  "8721608": {
     "id": "8721608",
-    "name": "CANAVERAL HARBOR ENTRANCE",
+    "name": "Canaveral Harbor Entrance",
     "lat": 28.4083,
     "lng": -80.6017,
     "state": "FL",
@@ -65459,11 +68760,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 91.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8721649": {
     "id": "8721649",
-    "name": "COCOA BEACH, ATLANTIC OCEAN",
+    "name": "Cocoa Beach, Atlantic Ocean",
     "lat": 28.3683,
     "lng": -80.6,
     "state": "FL",
@@ -65630,9 +68932,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 94
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.01,
+      "MHW": 16.66,
+      "MSL": 14.93,
+      "MLW": 13.2,
+      "MLLW": 13.04
+    }
   },
-  {
+  "8722125": {
     "id": "8722125",
     "name": "Vero Beach",
     "lat": 27.6317,
@@ -65716,9 +69025,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 167.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.44,
+      "MHW": 3.36,
+      "MSL": 2.98,
+      "MLW": 2.61,
+      "MLLW": 2.55
+    }
   },
-  {
+  "8722208": {
     "id": "8722208",
     "name": "North Beach Causeway",
     "lat": 27.4717,
@@ -65827,9 +69143,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 52.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -0.05,
+      "MHW": -0.18,
+      "MSL": -0.89,
+      "MLW": -1.68,
+      "MLLW": -1.84
+    }
   },
-  {
+  "8722213": {
     "id": "8722213",
     "name": "Binney Dock",
     "lat": 27.4683,
@@ -65938,9 +69261,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 44
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.04,
+      "MHW": 3.87,
+      "MSL": 2.91,
+      "MLW": 1.85,
+      "MLLW": 1.68
+    }
   },
-  {
+  "8722219": {
     "id": "8722219",
     "name": "South Beach Causeway",
     "lat": 27.4567,
@@ -66044,11 +69374,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 62.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -0.1,
+      "MHW": -0.25,
+      "MSL": -0.93,
+      "MLW": -1.68,
+      "MLLW": -1.81
+    }
   },
-  {
+  "8722548": {
     "id": "8722548",
-    "name": "PGA Boulevard Bridge, Palm Beach",
+    "name": "Pga Boulevard Bridge, Palm Beach",
     "lat": 26.8433,
     "lng": -80.0667,
     "state": "FL",
@@ -66180,11 +69517,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 60.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.37,
+      "MHW": 5.21,
+      "MSL": 3.9,
+      "MLW": 2.57,
+      "MLLW": 2.43
+    }
   },
-  {
+  "8722588": {
     "id": "8722588",
-    "name": "Port of West Palm Beach",
+    "name": "Port Of West Palm Beach",
     "lat": 26.77,
     "lng": -80.0517,
     "state": "FL",
@@ -66331,11 +69675,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 157.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.86,
+      "MHW": 27.68,
+      "MSL": 26.34,
+      "MLW": 24.97,
+      "MLLW": 24.82
+    }
   },
-  {
+  "8722669": {
     "id": "8722669",
-    "name": "Lake Worth ICW",
+    "name": "Lake Worth Icw",
     "lat": 26.6133,
     "lng": -80.0467,
     "state": "FL",
@@ -66447,9 +69798,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 163.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.89,
+      "MHW": 28.73,
+      "MSL": 27.36,
+      "MLW": 26.04,
+      "MLLW": 25.91
+    }
   },
-  {
+  "8722670": {
     "id": "8722670",
     "name": "Lake Worth Pier, Atlantic Ocean",
     "lat": 26.612778,
@@ -66598,11 +69956,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 133.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 33.05,
+      "MHW": 32.87,
+      "MSL": 31.53,
+      "MLW": 30.15,
+      "MLLW": 29.99
+    }
   },
-  {
+  "8722706": {
     "id": "8722706",
-    "name": "BOYNTON BEACH",
+    "name": "Boynton Beach",
     "lat": 26.5483,
     "lng": -80.0533,
     "state": "FL",
@@ -66744,11 +70109,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 118.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8722718": {
     "id": "8722718",
-    "name": "OCEAN RIDGE",
+    "name": "Ocean Ridge",
     "lat": 26.5267,
     "lng": -80.0533,
     "state": "FL",
@@ -66855,11 +70221,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 240.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.23,
+      "MHW": 4.07,
+      "MSL": 2.76,
+      "MLW": 1.6,
+      "MLLW": 1.44
+    }
   },
-  {
+  "8722761": {
     "id": "8722761",
-    "name": "SOUTH DELRAY BEACH",
+    "name": "South Delray Beach",
     "lat": 26.4467,
     "lng": -80.065,
     "state": "FL",
@@ -66966,11 +70339,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 260.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.28,
+      "MHW": 3.15,
+      "MSL": 1.9,
+      "MLW": 0.78,
+      "MLLW": 0.63
+    }
   },
-  {
+  "8722802": {
     "id": "8722802",
-    "name": "LAKE WYMAN",
+    "name": "Lake Wyman",
     "lat": 26.37,
     "lng": -80.07,
     "state": "FL",
@@ -67072,11 +70452,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 124.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.64,
+      "MHW": 4.52,
+      "MSL": 3.39,
+      "MLW": 2.38,
+      "MLLW": 2.23
+    }
   },
-  {
+  "8722816": {
     "id": "8722816",
-    "name": "BOCA RATON",
+    "name": "Boca Raton",
     "lat": 26.3433,
     "lng": -80.0767,
     "state": "FL",
@@ -67213,11 +70600,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 62.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.73,
+      "MHW": 4.6,
+      "MSL": 3.52,
+      "MLW": 2.41,
+      "MLLW": 2.26
+    }
   },
-  {
+  "8722859": {
     "id": "8722859",
-    "name": "HILLSBORO",
+    "name": "Hillsboro",
     "lat": 26.26,
     "lng": -80.085,
     "state": "FL",
@@ -67344,11 +70738,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 52
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.8,
+      "MHW": 3.67,
+      "MSL": 2.45,
+      "MLW": 1.27,
+      "MLLW": 1.12
+    }
   },
-  {
+  "8722899": {
     "id": "8722899",
-    "name": "LAUDERDALE-BY-THE-SEA",
+    "name": "Lauderdale-by-the-sea",
     "lat": 26.1883,
     "lng": -80.0933,
     "state": "FL",
@@ -67505,9 +70906,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 167.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6,
+      "MHW": 5.88,
+      "MSL": 4.6,
+      "MLW": 3.31,
+      "MLLW": 3.14
+    }
   },
-  {
+  "8722956": {
     "id": "8722956",
     "name": "South Port Everglades",
     "lat": 26.081667,
@@ -67656,11 +71064,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 159.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.91,
+      "MHW": 26.78,
+      "MSL": 25.54,
+      "MLW": 24.28,
+      "MLLW": 24.13
+    }
   },
-  {
+  "8723080": {
     "id": "8723080",
-    "name": "HAULOVER PIER, N. MIAMI BEACH",
+    "name": "Haulover Pier, N. Miami Beach",
     "lat": 25.9033,
     "lng": -80.12,
     "state": "FL",
@@ -67777,11 +71192,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 44.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.88,
+      "MHW": 5.81,
+      "MSL": 4.59,
+      "MLW": 3.34,
+      "MLLW": 3.2
+    }
   },
-  {
+  "8723165": {
     "id": "8723165",
-    "name": "MIAMI, BISCAYNE BAY",
+    "name": "Miami, Biscayne Bay",
     "lat": 25.7783,
     "lng": -80.185,
     "state": "FL",
@@ -67908,9 +71330,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 69.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.32,
+      "MHW": 5.26,
+      "MSL": 4.17,
+      "MLW": 3.08,
+      "MLLW": 2.95
+    }
   },
-  {
+  "8723170": {
     "id": "8723170",
     "name": "Miami Beach",
     "lat": 25.7683,
@@ -67994,11 +71423,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 56.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.19,
+      "MHW": 5.11,
+      "MSL": 3.9,
+      "MLW": 2.65,
+      "MLLW": 2.49
+    }
   },
-  {
+  "8723178": {
     "id": "8723178",
-    "name": "MIAMI BEACH, GOVERNMENT CUT",
+    "name": "Miami Beach, Government Cut",
     "lat": 25.7633,
     "lng": -80.13,
     "state": "FL",
@@ -68120,9 +71556,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 166.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.08,
+      "MHW": 10.04,
+      "MSL": 8.88,
+      "MLW": 7.72,
+      "MLLW": 7.58
+    }
   },
-  {
+  "8723214": {
     "id": "8723214",
     "name": "Virginia Key, Biscayne Bay",
     "lat": 25.731667,
@@ -68241,11 +71684,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 112.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.38,
+      "MHW": 12.3,
+      "MSL": 11.26,
+      "MLW": 10.27,
+      "MLLW": 10.13
+    }
   },
-  {
+  "8723289": {
     "id": "8723289",
-    "name": "CUTLER, BISCAYNE BAY",
+    "name": "Cutler, Biscayne Bay",
     "lat": 25.615,
     "lng": -80.305,
     "state": "FL",
@@ -68382,11 +71832,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 101
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.96,
+      "MHW": 4.9,
+      "MSL": 3.93,
+      "MLW": 2.96,
+      "MLLW": 2.83
+    }
   },
-  {
+  "8723355": {
     "id": "8723355",
-    "name": "RAGGED KEY NO. 5, BISCAYNE BAY",
+    "name": "Ragged Key No. 5, Biscayne Bay",
     "lat": 25.5233,
     "lng": -80.175,
     "state": "FL",
@@ -68493,11 +71950,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 95.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.94,
+      "MHW": 4.93,
+      "MSL": 4.15,
+      "MLW": 3.4,
+      "MLLW": 3.26
+    }
   },
-  {
+  "8723409": {
     "id": "8723409",
-    "name": "ELLIOTT KEY HARBOR, ELLIOTT KEY",
+    "name": "Elliott Key Harbor, Elliott Key",
     "lat": 25.4533,
     "lng": -80.1967,
     "state": "FL",
@@ -68599,11 +72063,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 352.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.06,
+      "MHW": 4.98,
+      "MSL": 4.21,
+      "MLW": 3.5,
+      "MLLW": 3.4
+    }
   },
-  {
+  "8723423": {
     "id": "8723423",
-    "name": "TURKEY POINT, BISCAYNE BAY",
+    "name": "Turkey Point, Biscayne Bay",
     "lat": 25.4367,
     "lng": -80.33,
     "state": "FL",
@@ -68710,11 +72181,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 14.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.55,
+      "MHW": 3.49,
+      "MSL": 2.65,
+      "MLW": 1.87,
+      "MLLW": 1.76
+    }
   },
-  {
+  "8723465": {
     "id": "8723465",
-    "name": "EAST ARSENICKER, CARD SOUND",
+    "name": "East Arsenicker, Card Sound",
     "lat": 25.3733,
     "lng": -80.29,
     "state": "FL",
@@ -68801,11 +72279,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 151.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4,
+      "MHW": 3.95,
+      "MSL": 3.49,
+      "MLW": 3.06,
+      "MLLW": 2.98
+    }
   },
-  {
+  "8723506": {
     "id": "8723506",
-    "name": "PUMPKIN KEY, CARD SOUND",
+    "name": "Pumpkin Key, Card Sound",
     "lat": 25.325,
     "lng": -80.2933,
     "state": "FL",
@@ -68892,11 +72377,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 151.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.3,
+      "MHW": 4.3,
+      "MSL": 3.92,
+      "MLW": 3.64,
+      "MLLW": 3.55
+    }
   },
-  {
+  "8723534": {
     "id": "8723534",
-    "name": "CARD SOUND BRIDGE",
+    "name": "Card Sound Bridge",
     "lat": 25.2883,
     "lng": -80.37,
     "state": "FL",
@@ -69023,9 +72515,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 174.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.06,
+      "MHW": 4.02,
+      "MSL": 3.75,
+      "MLW": 3.48,
+      "MLLW": 3.42
+    }
   },
-  {
+  "8723962": {
     "id": "8723962",
     "name": "Key Colony Beach",
     "lat": 24.7183,
@@ -69169,9 +72668,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 211.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.52,
+      "MHW": 5.3,
+      "MSL": 4.5,
+      "MLW": 3.64,
+      "MLLW": 3.45
+    }
   },
-  {
+  "8723970": {
     "id": "8723970",
     "name": "Vaca Key, Florida Bay",
     "lat": 24.711,
@@ -69335,11 +72841,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 111.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.52,
+      "MHW": 3.41,
+      "MSL": 3.05,
+      "MLW": 2.7,
+      "MLLW": 2.54
+    }
   },
-  {
+  "8724493": {
     "id": "8724493",
-    "name": "BOCA CHICA MARINA",
+    "name": "Boca Chica Marina",
     "lat": 24.575,
     "lng": -81.7083,
     "state": "FL",
@@ -69451,9 +72964,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 143.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.64,
+      "MHW": 13.39,
+      "MSL": 13.04,
+      "MLW": 12.56,
+      "MLLW": 12.39
+    }
   },
-  {
+  "8724571": {
     "id": "8724571",
     "name": "Fleming Key",
     "lat": 24.5917,
@@ -69562,9 +73082,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 157.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.77,
+      "MHW": 30.51,
+      "MSL": 30.02,
+      "MLW": 29.5,
+      "MLLW": 29.31
+    }
   },
-  {
+  "8724580": {
     "id": "8724580",
     "name": "Key West",
     "lat": 24.555778,
@@ -69698,11 +73225,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 247.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.37,
+      "MHW": 6.08,
+      "MSL": 5.45,
+      "MLW": 4.8,
+      "MLLW": 4.56
+    }
   },
-  {
+  "8724635": {
     "id": "8724635",
-    "name": "SAND KEY LIGHTHOUSE",
+    "name": "Sand Key Lighthouse",
     "lat": 24.4533,
     "lng": -81.8783,
     "state": "FL",
@@ -69814,9 +73348,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 71
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.98,
+      "MHW": 2.69,
+      "MSL": 2.1,
+      "MLW": 1.46,
+      "MLLW": 1.24
+    }
   },
-  {
+  "8724671": {
     "id": "8724671",
     "name": "Smith Shoal Light",
     "lat": 24.71828,
@@ -69935,9 +73476,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 147.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.27,
+      "MHW": 28.02,
+      "MSL": 26.72,
+      "MLW": 25.4,
+      "MLLW": 24.83
+    }
   },
-  {
+  "8724698": {
     "id": "8724698",
     "name": "Loggerhead Key",
     "lat": 24.6317,
@@ -70071,11 +73619,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 233.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.45,
+      "MHW": 4.17,
+      "MSL": 3.61,
+      "MLW": 3.05,
+      "MLLW": 2.78
+    }
   },
-  {
+  "8724963": {
     "id": "8724963",
-    "name": "DISMAL KEY, PUMPKIN BAY",
+    "name": "Dismal Key, Pumpkin Bay",
     "lat": 25.895,
     "lng": -81.5583,
     "state": "FL",
@@ -70187,11 +73742,18 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 217
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.38,
+      "MHW": 5.09,
+      "MSL": 3.65,
+      "MLW": 2.2,
+      "MLLW": 1.61
+    }
   },
-  {
+  "8724964": {
     "id": "8724964",
-    "name": "COON KEY PASS, GULLIVAN BAY",
+    "name": "Coon Key Pass, Gullivan Bay",
     "lat": 25.8967,
     "lng": -81.6367,
     "state": "FL",
@@ -70313,11 +73875,18 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 213.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.02,
+      "MHW": 5.75,
+      "MSL": 4.29,
+      "MLW": 2.85,
+      "MLLW": 2.23
+    }
   },
-  {
+  "8724967": {
     "id": "8724967",
-    "name": "MARCO ISLAND, CAXAMBAS PASS",
+    "name": "Marco Island, Caxambas Pass",
     "lat": 25.9083,
     "lng": -81.7283,
     "state": "FL",
@@ -70444,11 +74013,18 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 179.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.24,
+      "MHW": 3.99,
+      "MSL": 2.86,
+      "MLW": 1.77,
+      "MLLW": 1.18
+    }
   },
-  {
+  "8724991": {
     "id": "8724991",
-    "name": "MARCO, BIG MARCO RIVER",
+    "name": "Marco, Big Marco River",
     "lat": 25.9717,
     "lng": -81.7283,
     "state": "FL",
@@ -70570,11 +74146,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 185.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.24,
+      "MHW": 4.03,
+      "MSL": 2.97,
+      "MLW": 1.98,
+      "MLLW": 1.47
+    }
   },
-  {
+  "8724996": {
     "id": "8724996",
-    "name": "MCILVAINE BAY",
+    "name": "Mcilvaine Bay",
     "lat": 25.985,
     "lng": -81.7017,
     "state": "FL",
@@ -70706,11 +74289,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 314.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.18,
+      "MHW": 2.94,
+      "MSL": 2.01,
+      "MLW": 1.03,
+      "MLLW": 0.57
+    }
   },
-  {
+  "8725019": {
     "id": "8725019",
-    "name": "KEEWAYDIN ISLAND, INSIDE",
+    "name": "Keewaydin Island, Inside",
     "lat": 26.025,
     "lng": -81.7683,
     "state": "FL",
@@ -70832,11 +74422,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 197.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.24,
+      "MHW": 2.99,
+      "MSL": 2.08,
+      "MLW": 1.1,
+      "MLLW": 0.63
+    }
   },
-  {
+  "8725110": {
     "id": "8725110",
-    "name": "Naples, Gulf of Mexico",
+    "name": "Naples, Gulf Of Mexico",
     "lat": 26.131667,
     "lng": -81.807472,
     "state": "FL",
@@ -71003,11 +74600,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 141.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.01,
+      "MHW": 4.76,
+      "MSL": 3.79,
+      "MLW": 2.75,
+      "MLLW": 2.14
+    }
   },
-  {
+  "8725319": {
     "id": "8725319",
-    "name": "COCONUT POINT, ESTERO BAY",
+    "name": "Coconut Point, Estero Bay",
     "lat": 26.4,
     "lng": -81.8433,
     "state": "FL",
@@ -71144,11 +74748,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 256
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.45,
+      "MHW": 4.18,
+      "MSL": 3.34,
+      "MLW": 2.43,
+      "MLLW": 1.97
+    }
   },
-  {
+  "8725325": {
     "id": "8725325",
-    "name": "CARLOS POINT, ESTERO BAY",
+    "name": "Carlos Point, Estero Bay",
     "lat": 26.405001,
     "lng": -81.885,
     "state": "FL",
@@ -71315,11 +74926,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 331
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.71,
+      "MHW": 6.44,
+      "MSL": 5.55,
+      "MLW": 4.71,
+      "MLLW": 4.21
+    }
   },
-  {
+  "8725351": {
     "id": "8725351",
-    "name": "ESTERO ISLAND, ESTERO BAY",
+    "name": "Estero Island, Estero Bay",
     "lat": 26.4383,
     "lng": -81.9183,
     "state": "FL",
@@ -71456,11 +75074,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 212
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.83,
+      "MHW": 4.56,
+      "MSL": 3.7,
+      "MLW": 2.79,
+      "MLLW": 2.3
+    }
   },
-  {
+  "8725362": {
     "id": "8725362",
-    "name": "TARPON BAY",
+    "name": "Tarpon Bay",
     "lat": 26.4433,
     "lng": -82.0817,
     "state": "FL",
@@ -71627,11 +75252,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 281.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.44,
+      "MHW": 5.18,
+      "MSL": 4.43,
+      "MLW": 3.62,
+      "MLLW": 3.17
+    }
   },
-  {
+  "8725377": {
     "id": "8725377",
-    "name": "HENDRY CREEK, ESTERO BAY",
+    "name": "Hendry Creek, Estero Bay",
     "lat": 26.47,
     "lng": -81.8767,
     "state": "FL",
@@ -71753,11 +75385,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 255.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.7,
+      "MHW": 4.41,
+      "MSL": 3.66,
+      "MLW": 2.9,
+      "MLLW": 2.64
+    }
   },
-  {
+  "8725391": {
     "id": "8725391",
-    "name": "PUNTA RASSA, SAN CARLOS BAY",
+    "name": "Punta Rassa, San Carlos Bay",
     "lat": 26.488111,
     "lng": -82.013333,
     "state": "FL",
@@ -71924,11 +75563,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 215
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.98,
+      "MHW": 4.73,
+      "MSL": 3.99,
+      "MLW": 3.19,
+      "MLLW": 2.72
+    }
   },
-  {
+  "8725451": {
     "id": "8725451",
-    "name": "CAPE CORAL BR.,CALOOSAHATCHEE R.",
+    "name": "Cape Coral Br.,caloosahatchee R.",
     "lat": 26.563299,
     "lng": -81.933296,
     "state": "FL",
@@ -72085,11 +75731,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 257.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.52,
+      "MHW": 28.33,
+      "MSL": 27.93,
+      "MLW": 27.52,
+      "MLLW": 27.38
+    }
   },
-  {
+  "8725488": {
     "id": "8725488",
-    "name": "NORTH CAPTIVA ISLAND",
+    "name": "North Captiva Island",
     "lat": 26.605,
     "lng": -82.2183,
     "state": "FL",
@@ -72206,9 +75859,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 171.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.18,
+      "MHW": 2.98,
+      "MSL": 2.2,
+      "MLW": 1.43,
+      "MLLW": 1.16
+    }
   },
-  {
+  "8725520": {
     "id": "8725520",
     "name": "Fort Myers",
     "lat": 26.648,
@@ -72362,11 +76022,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 104.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.68,
+      "MHW": 5.46,
+      "MSL": 4.99,
+      "MLW": 4.51,
+      "MLLW": 4.36
+    }
   },
-  {
+  "8725541": {
     "id": "8725541",
-    "name": "BOKEELIA, CHARLOTTE HARBOR",
+    "name": "Bokeelia, Charlotte Harbor",
     "lat": 26.7067,
     "lng": -82.1633,
     "state": "FL",
@@ -72478,11 +76145,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 191.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.75,
+      "MHW": 4.6,
+      "MSL": 3.95,
+      "MLW": 3.26,
+      "MLLW": 3.03
+    }
   },
-  {
+  "8725577": {
     "id": "8725577",
-    "name": "PORT BOCA GRANDE, CHARLOTTE HBR.",
+    "name": "Port Boca Grande, Charlotte Hbr.",
     "lat": 26.72,
     "lng": -82.2583,
     "state": "FL",
@@ -72599,11 +76273,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 159
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.38,
+      "MHW": 3.15,
+      "MSL": 2.69,
+      "MLW": 2.21,
+      "MLLW": 1.82
+    }
   },
-  {
+  "8725649": {
     "id": "8725649",
-    "name": "TURTLE BAY",
+    "name": "Turtle Bay",
     "lat": 26.7967,
     "lng": -82.1833,
     "state": "FL",
@@ -72755,11 +76436,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 355.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.64,
+      "MHW": 4.46,
+      "MSL": 3.95,
+      "MLW": 3.44,
+      "MLLW": 3.09
+    }
   },
-  {
+  "8725685": {
     "id": "8725685",
-    "name": "CUTOFF SOUTH",
+    "name": "Cutoff South",
     "lat": 26.855,
     "lng": -82.3033,
     "state": "FL",
@@ -72876,11 +76564,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 170.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.05,
+      "MHW": 3.8,
+      "MSL": 3.36,
+      "MLW": 2.89,
+      "MLLW": 2.57
+    }
   },
-  {
+  "8725745": {
     "id": "8725745",
-    "name": "LOCUST POINT, HOG ISLAND",
+    "name": "Locust Point, Hog Island",
     "lat": 26.93,
     "lng": -82.1367,
     "state": "FL",
@@ -73002,11 +76697,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 230.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.83,
+      "MHW": 4.51,
+      "MSL": 3.88,
+      "MLW": 3.29,
+      "MLLW": 2.88
+    }
   },
-  {
+  "8725791": {
     "id": "8725791",
-    "name": "HARBOUR HEIGHTS, PEACE RIVER",
+    "name": "Harbour Heights, Peace River",
     "lat": 26.9883,
     "lng": -81.9933,
     "state": "FL",
@@ -73168,11 +76870,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 90
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.99,
+      "MHW": 4.73,
+      "MSL": 4.07,
+      "MLW": 3.41,
+      "MLLW": 2.97
+    }
   },
-  {
+  "8725809": {
     "id": "8725809",
-    "name": "MANASOTA",
+    "name": "Manasota",
     "lat": 27.0117,
     "lng": -82.41,
     "state": "FL",
@@ -73289,11 +76998,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 206.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.44,
+      "MHW": 4.15,
+      "MSL": 3.63,
+      "MLW": 3.09,
+      "MLLW": 2.76
+    }
   },
-  {
+  "8725837": {
     "id": "8725837",
-    "name": "MYAKKA RIVER, US 41",
+    "name": "Myakka River, Us 41",
     "lat": 27.045,
     "lng": -82.2933,
     "state": "FL",
@@ -73410,11 +77126,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 302.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.67,
+      "MHW": 5.41,
+      "MSL": 4.79,
+      "MLW": 4.14,
+      "MLLW": 3.77
+    }
   },
-  {
+  "8725858": {
     "id": "8725858",
-    "name": "VENICE, GULF OF MEXICO",
+    "name": "Venice, Gulf Of Mexico",
     "lat": 27.0717,
     "lng": -82.4533,
     "state": "FL",
@@ -73576,9 +77299,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 17.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.22,
+      "MHW": 2.95,
+      "MSL": 2.19,
+      "MLW": 1.39,
+      "MLLW": 1.02
+    }
   },
-  {
+  "8726034": {
     "id": "8726034",
     "name": "Siesta Key, Big Sarasota Pass",
     "lat": 27.2839,
@@ -73742,9 +77472,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 15.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.66,
+      "MHW": 28.38,
+      "MSL": 27.68,
+      "MLW": 26.99,
+      "MLLW": 26.63
+    }
   },
-  {
+  "8726265": {
     "id": "8726265",
     "name": "Ellenton, Manatee River",
     "lat": 27.5149,
@@ -73913,11 +77650,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 251.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.77,
+      "MHW": 30.48,
+      "MSL": 29.79,
+      "MLW": 29.02,
+      "MLLW": 28.7
+    }
   },
-  {
+  "8726347": {
     "id": "8726347",
-    "name": "EGMONT KEY, TAMPA BAY",
+    "name": "Egmont Key, Tampa Bay",
     "lat": 27.6017,
     "lng": -82.76,
     "state": "FL",
@@ -74044,11 +77788,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 65.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.44,
+      "MHW": 3.19,
+      "MSL": 2.45,
+      "MLW": 1.67,
+      "MLLW": 1.29
+    }
   },
-  {
+  "8726364": {
     "id": "8726364",
-    "name": "MULLET KEY, TAMPA BAY",
+    "name": "Mullet Key, Tampa Bay",
     "lat": 27.615,
     "lng": -82.7267,
     "state": "FL",
@@ -74185,9 +77936,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 68.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.31,
+      "MHW": 3.06,
+      "MSL": 2.34,
+      "MLW": 1.58,
+      "MLLW": 1.23
+    }
   },
-  {
+  "8726384": {
     "id": "8726384",
     "name": "Port Manatee",
     "lat": 27.638333,
@@ -74331,11 +78089,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 187.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.38,
+      "MHW": 2.12,
+      "MSL": 1.37,
+      "MLW": 0.57,
+      "MLLW": 0.21
+    }
   },
-  {
+  "8726436": {
     "id": "8726436",
-    "name": "LITTLE MANATEE RIVER",
+    "name": "Little Manatee River",
     "lat": 27.705,
     "lng": -82.4483,
     "state": "FL",
@@ -74447,9 +78212,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 264
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.47,
+      "MHW": 4.29,
+      "MSL": 3.52,
+      "MLW": 2.75,
+      "MLLW": 2.49
+    }
   },
-  {
+  "8726520": {
     "id": "8726520",
     "name": "St. Petersburg, Tampa Bay",
     "lat": 27.761111,
@@ -74578,11 +78350,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 215
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.63,
+      "MHW": 5.35,
+      "MSL": 4.57,
+      "MLW": 3.76,
+      "MLLW": 3.37
+    }
   },
-  {
+  "8726539": {
     "id": "8726539",
-    "name": "NEWMAN BRANCH",
+    "name": "Newman Branch",
     "lat": 27.7833,
     "lng": -82.4067,
     "state": "",
@@ -74699,9 +78478,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 222.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.19,
+      "MHW": 4.89,
+      "MSL": 3.98,
+      "MLW": 3.01,
+      "MLLW": 2.58
+    }
   },
-  {
+  "8726607": {
     "id": "8726607",
     "name": "Old Port Tampa",
     "lat": 27.8578,
@@ -74855,11 +78641,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 230.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.75,
+      "MHW": 30.43,
+      "MSL": 29.57,
+      "MLW": 28.71,
+      "MLLW": 28.27
+    }
   },
-  {
+  "8726639": {
     "id": "8726639",
-    "name": "TAMPA, BALLAST POINT",
+    "name": "Tampa, Ballast Point",
     "lat": 27.89,
     "lng": -82.48,
     "state": "FL",
@@ -74986,9 +78779,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 222.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.75,
+      "MHW": 3.44,
+      "MSL": 2.49,
+      "MLW": 1.46,
+      "MLLW": 1.02
+    }
   },
-  {
+  "8726667": {
     "id": "8726667",
     "name": "Mckay Bay Entrance",
     "lat": 27.9133,
@@ -75157,9 +78957,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 280.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.95,
+      "MHW": 2.62,
+      "MSL": 1.73,
+      "MLW": 0.77,
+      "MLLW": 0.27
+    }
   },
-  {
+  "8726674": {
     "id": "8726674",
     "name": "East Bay",
     "lat": 27.923056,
@@ -75328,9 +79135,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 284.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.84,
+      "MHW": 2.5,
+      "MSL": 1.62,
+      "MLW": 0.69,
+      "MLLW": 0.16
+    }
   },
-  {
+  "8726724": {
     "id": "8726724",
     "name": "Clearwater Beach",
     "lat": 27.978333,
@@ -75474,11 +79288,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 90.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.47,
+      "MHW": 4.13,
+      "MSL": 3.2,
+      "MLW": 2.24,
+      "MLLW": 1.73
+    }
   },
-  {
+  "8726738": {
     "id": "8726738",
-    "name": "SAFETY HARBOR, OLD TAMPA BAY",
+    "name": "Safety Harbor, Old Tampa Bay",
     "lat": 27.9883,
     "lng": -82.685,
     "state": "FL",
@@ -75580,11 +79401,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 263.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.66,
+      "MHW": 4.32,
+      "MSL": 3.36,
+      "MLW": 2.4,
+      "MLLW": 1.88
+    }
   },
-  {
+  "8726917": {
     "id": "8726917",
-    "name": "ANCLOTE LIGHTHOUSE, ANCLOTE KEY",
+    "name": "Anclote Lighthouse, Anclote Key",
     "lat": 28.165,
     "lng": -82.8433,
     "state": "FL",
@@ -75711,11 +79539,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 154.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.62,
+      "MHW": 5.34,
+      "MSL": 4.01,
+      "MLW": 2.69,
+      "MLLW": 2.31
+    }
   },
-  {
+  "8727151": {
     "id": "8727151",
-    "name": "BAYPORT",
+    "name": "Bayport",
     "lat": 28.5333,
     "lng": -82.65,
     "state": "FL",
@@ -75842,11 +79677,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 250.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.79,
+      "MHW": 4.41,
+      "MSL": 3.21,
+      "MLW": 2.08,
+      "MLLW": 1.63
+    }
   },
-  {
+  "8727235": {
     "id": "8727235",
-    "name": "JOHNS ISLAND, CHASSAHOWITZKA BAY",
+    "name": "Johns Island, Chassahowitzka Bay",
     "lat": 28.6917,
     "lng": -82.6383,
     "state": "FL",
@@ -75998,11 +79840,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 91.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.12,
+      "MHW": 3.79,
+      "MSL": 2.84,
+      "MLW": 1.99,
+      "MLLW": 1.75
+    }
   },
-  {
+  "8727246": {
     "id": "8727246",
-    "name": "CHASSAHOWITZKA RIVER",
+    "name": "Chassahowitzka River",
     "lat": 28.715,
     "lng": -82.5767,
     "state": "FL",
@@ -76074,11 +79923,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 0.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.89,
+      "MHW": 11.78,
+      "MSL": 11.57,
+      "MLW": 11.41,
+      "MLLW": 11.31
+    }
   },
-  {
+  "8727274": {
     "id": "8727274",
-    "name": "MASON CREEK, HOMOSASSA BAY",
+    "name": "Mason Creek, Homosassa Bay",
     "lat": 28.7617,
     "lng": -82.6383,
     "state": "FL",
@@ -76220,11 +80076,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 211
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.15,
+      "MHW": 2.92,
+      "MSL": 2.39,
+      "MLW": 1.96,
+      "MLLW": 1.8
+    }
   },
-  {
+  "8727277": {
     "id": "8727277",
-    "name": "TUCKERS ISLAND, HOMOSASSA RIVER",
+    "name": "Tuckers Island, Homosassa River",
     "lat": 28.7717,
     "lng": -82.695,
     "state": "FL",
@@ -76336,11 +80199,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 293.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.17,
+      "MHW": 3.85,
+      "MSL": 3.08,
+      "MLW": 2.49,
+      "MLLW": 2.25
+    }
   },
-  {
+  "8727293": {
     "id": "8727293",
-    "name": "HALLS RIVER BRIDGE, HALLS RIVER",
+    "name": "Halls River Bridge, Halls River",
     "lat": 28.8,
     "lng": -82.6033,
     "state": "FL",
@@ -76442,11 +80312,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 262.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.23,
+      "MHW": 2.08,
+      "MSL": 1.88,
+      "MLW": 1.63,
+      "MLLW": 1.55
+    }
   },
-  {
+  "8727306": {
     "id": "8727306",
-    "name": "OZELLO",
+    "name": "Ozello",
     "lat": 28.825,
     "lng": -82.6583,
     "state": "FL",
@@ -76518,11 +80395,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 21
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.7,
+      "MHW": 4.54,
+      "MSL": 4.31,
+      "MLW": 4.06,
+      "MLLW": 3.96
+    }
   },
-  {
+  "8727328": {
     "id": "8727328",
-    "name": "OZELLO NORTH",
+    "name": "Ozello North",
     "lat": 28.8633,
     "lng": -82.6667,
     "state": "FL",
@@ -76634,9 +80518,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 304
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.5,
+      "MHW": 5.17,
+      "MSL": 4.32,
+      "MLW": 3.66,
+      "MLLW": 3.48
+    }
   },
-  {
+  "8727333": {
     "id": "8727333",
     "name": "Mangrove Point",
     "lat": 28.87,
@@ -76755,11 +80646,18 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 248.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.39,
+      "MHW": 5.04,
+      "MSL": 3.62,
+      "MLW": 2.22,
+      "MLLW": 1.75
+    }
   },
-  {
+  "8727336": {
     "id": "8727336",
-    "name": "DIXIE BAY",
+    "name": "Dixie Bay",
     "lat": 28.8817,
     "lng": -82.635,
     "state": "FL",
@@ -76876,11 +80774,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 315.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.37,
+      "MHW": 4.1,
+      "MSL": 3.23,
+      "MLW": 2.42,
+      "MLLW": 2.2
+    }
   },
-  {
+  "8727343": {
     "id": "8727343",
-    "name": "CRYSTAL RIVER, KINGS BAY",
+    "name": "Crystal River, Kings Bay",
     "lat": 28.8983,
     "lng": -82.5983,
     "state": "FL",
@@ -76997,9 +80902,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 318.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.55,
+      "MHW": 6.27,
+      "MSL": 5.38,
+      "MLW": 4.47,
+      "MLLW": 4.21
+    }
   },
-  {
+  "8727348": {
     "id": "8727348",
     "name": "Twin Rivers Marina",
     "lat": 28.905,
@@ -77128,11 +81040,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 285.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.97,
+      "MHW": 4.64,
+      "MSL": 3.67,
+      "MLW": 2.74,
+      "MLLW": 2.43
+    }
   },
-  {
+  "8727359": {
     "id": "8727359",
-    "name": "SHELL ISLAND, CRYSTAL RIVER",
+    "name": "Shell Island, Crystal River",
     "lat": 28.9233,
     "lng": -82.6917,
     "state": "FL",
@@ -77254,9 +81173,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 256.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.15,
+      "MHW": 3.85,
+      "MSL": 2.63,
+      "MLW": 1.49,
+      "MLLW": 1.12
+    }
   },
-  {
+  "8727520": {
     "id": "8727520",
     "name": "Cedar Key",
     "lat": 29.135,
@@ -77415,9 +81341,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 292
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.6,
+      "MHW": 5.27,
+      "MSL": 3.84,
+      "MLW": 2.44,
+      "MLLW": 1.8
+    }
   },
-  {
+  "8727535": {
     "id": "8727535",
     "name": "Shell Mound",
     "lat": 29.20639,
@@ -77551,11 +81484,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 212.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.76,
+      "MHW": 21.46,
+      "MSL": 20.09,
+      "MLW": 18.71,
+      "MLLW": 18.07
+    }
   },
-  {
+  "8727648": {
     "id": "8727648",
-    "name": "HORSESHOE POINT",
+    "name": "Horseshoe Point",
     "lat": 29.4367,
     "lng": -83.2933,
     "state": "FL",
@@ -77677,9 +81617,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 217.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.39,
+      "MHW": 4.09,
+      "MSL": 2.7,
+      "MLW": 1.4,
+      "MLLW": 0.81
+    }
   },
-  {
+  "8727792": {
     "id": "8727792",
     "name": "Hagens Cove",
     "lat": 29.797,
@@ -77808,11 +81755,12 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 218.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8727843": {
     "id": "8727843",
-    "name": "SPRING WARRIOR CREEK",
+    "name": "Spring Warrior Creek",
     "lat": 29.92,
     "lng": -83.6717,
     "state": "FL",
@@ -77959,9 +81907,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 25.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.91,
+      "MHW": 5.65,
+      "MSL": 4.24,
+      "MLW": 2.97,
+      "MLLW": 2.45
+    }
   },
-  {
+  "8728104": {
     "id": "8728104",
     "name": "Port Leon",
     "lat": 30.124417,
@@ -78090,11 +82045,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 47
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.66,
+      "MHW": 26.46,
+      "MSL": 25.2,
+      "MLW": 23.87,
+      "MLLW": 23.24
+    }
   },
-  {
+  "8728130": {
     "id": "8728130",
-    "name": "ST. MARKS LHTSE., APALACHEE BAY",
+    "name": "St. Marks Lhtse., Apalachee Bay",
     "lat": 30.0783,
     "lng": -84.1783,
     "state": "FL",
@@ -78236,9 +82198,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 42.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.31,
+      "MHW": 4.07,
+      "MSL": 2.74,
+      "MLW": 1.44,
+      "MLLW": 0.82
+    }
   },
-  {
+  "8728152": {
     "id": "8728152",
     "name": "St Marks, Wakulla River",
     "lat": 30.159,
@@ -78377,11 +82346,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 61.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8728229": {
     "id": "8728229",
-    "name": "SHELL POINT, WALKER CREEK",
+    "name": "Shell Point, Walker Creek",
     "lat": 30.06,
     "lng": -84.29,
     "state": "FL",
@@ -78528,11 +82498,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 51.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.6,
+      "MHW": 3.36,
+      "MSL": 1.99,
+      "MLW": 0.71,
+      "MLLW": 0.04
+    }
   },
-  {
+  "8728360": {
     "id": "8728360",
-    "name": "TURKEY POINT",
+    "name": "Turkey Point",
     "lat": 29.915,
     "lng": -84.5117,
     "state": "FL",
@@ -78664,11 +82641,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 232.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.28,
+      "MHW": 3.07,
+      "MSL": 2.07,
+      "MLW": 1.15,
+      "MLLW": 0.55
+    }
   },
-  {
+  "8728408": {
     "id": "8728408",
-    "name": "DOG ISLAND, EAST END",
+    "name": "Dog Island, East End",
     "lat": 29.81,
     "lng": -84.585,
     "state": "FL",
@@ -78795,11 +82779,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 237.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.97,
+      "MHW": 2.79,
+      "MSL": 1.9,
+      "MLW": 1.08,
+      "MLLW": 0.52
+    }
   },
-  {
+  "8728412": {
     "id": "8728412",
-    "name": "LANARK, ST. GEORGES SOUND",
+    "name": "Lanark, St. Georges Sound",
     "lat": 29.8783,
     "lng": -84.595,
     "state": "",
@@ -78926,11 +82917,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 232.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.4,
+      "MHW": 3.2,
+      "MSL": 2.27,
+      "MLW": 1.39,
+      "MLLW": 0.78
+    }
   },
-  {
+  "8728464": {
     "id": "8728464",
-    "name": "CARRABELLE RIVER, ST. GEORGE SOUND",
+    "name": "Carrabelle River, St. George Sound",
     "lat": 29.85,
     "lng": -84.665,
     "state": "FL",
@@ -79057,11 +83055,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 243.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.73,
+      "MHW": 4.54,
+      "MSL": 3.7,
+      "MLW": 2.95,
+      "MLLW": 2.38
+    }
   },
-  {
+  "8728486": {
     "id": "8728486",
-    "name": "NE END, ST. GEORGE ISLAND",
+    "name": "Ne End, St. George Island",
     "lat": 29.7667,
     "lng": -84.7,
     "state": "",
@@ -79178,11 +83183,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 258.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.35,
+      "MHW": 4.21,
+      "MSL": 3.36,
+      "MLW": 2.65,
+      "MLLW": 2.15
+    }
   },
-  {
+  "8728488": {
     "id": "8728488",
-    "name": "SOUTH CARRABELLE BEACH",
+    "name": "South Carrabelle Beach",
     "lat": 29.8017,
     "lng": -84.7367,
     "state": "",
@@ -79309,9 +83321,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 251.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.45,
+      "MHW": 4.26,
+      "MSL": 3.39,
+      "MLW": 2.6,
+      "MLLW": 1.99
+    }
   },
-  {
+  "8728593": {
     "id": "8728593",
     "name": "East Bayou",
     "lat": 29.819,
@@ -79445,11 +83464,12 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 282.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8728619": {
     "id": "8728619",
-    "name": "CAT POINT, APALACHICOLA BAY",
+    "name": "Cat Point, Apalachicola Bay",
     "lat": 29.72361,
     "lng": -84.887,
     "state": "FL",
@@ -79561,11 +83581,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 255.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.66,
+      "MHW": 3.36,
+      "MSL": 2.55,
+      "MLW": 1.77,
+      "MLLW": 1.03
+    }
   },
-  {
+  "8728626": {
     "id": "8728626",
-    "name": "ST. GEORGE ISLAND, BAYSIDE",
+    "name": "St. George Island, Bayside",
     "lat": 29.6533,
     "lng": -84.8967,
     "state": "",
@@ -79672,11 +83699,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 277.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.68,
+      "MHW": 3.5,
+      "MSL": 2.76,
+      "MLW": 2.01,
+      "MLLW": 1.51
+    }
   },
-  {
+  "8728669": {
     "id": "8728669",
-    "name": "SIKES CUT, ST. GEORGE ISLAND",
+    "name": "Sikes Cut, St. George Island",
     "lat": 29.6133,
     "lng": -84.9583,
     "state": "",
@@ -79788,9 +83822,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 252.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.41,
+      "MHW": 4.18,
+      "MSL": 3.57,
+      "MLW": 2.96,
+      "MLLW": 2.44
+    }
   },
-  {
+  "8728690": {
     "id": "8728690",
     "name": "Apalachicola",
     "lat": 29.724444,
@@ -79959,11 +84000,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.9,
+      "MHW": 5.8,
+      "MSL": 5.2,
+      "MLW": 4.69,
+      "MLLW": 4.29
+    }
   },
-  {
+  "8728694": {
     "id": "8728694",
-    "name": "WHITE BEACH, EAST BAY",
+    "name": "White Beach, East Bay",
     "lat": 29.785,
     "lng": -84.8983,
     "state": "",
@@ -80080,11 +84128,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 300.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.85,
+      "MHW": 4.7,
+      "MSL": 3.99,
+      "MLW": 3.43,
+      "MLLW": 2.87
+    }
   },
-  {
+  "8728711": {
     "id": "8728711",
-    "name": "APALACHICOLA RIVER",
+    "name": "Apalachicola River",
     "lat": 29.7633,
     "lng": -85.0333,
     "state": "FL",
@@ -80241,9 +84296,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 135.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.08,
+      "MHW": 3,
+      "MSL": 2.49,
+      "MLW": 2.04,
+      "MLLW": 1.73
+    }
   },
-  {
+  "8728728": {
     "id": "8728728",
     "name": "Little St George Island",
     "lat": 29.60361,
@@ -80362,11 +84424,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 281.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8728757": {
     "id": "8728757",
-    "name": "HUCKLEBERRY LANDING, JACKSON RIVER",
+    "name": "Huckleberry Landing, Jackson River",
     "lat": 29.77,
     "lng": -85.085,
     "state": "",
@@ -80473,11 +84536,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 342.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.78,
+      "MHW": 1.67,
+      "MSL": 1.27,
+      "MLW": 0.95,
+      "MLLW": 0.57
+    }
   },
-  {
+  "8728786": {
     "id": "8728786",
-    "name": "ELEVEN MILE, ST. VINCENT SOUND",
+    "name": "Eleven Mile, St. Vincent Sound",
     "lat": 29.7067,
     "lng": -85.1533,
     "state": "",
@@ -80604,9 +84674,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 344.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.79,
+      "MHW": 4.66,
+      "MSL": 4.02,
+      "MLW": 3.53,
+      "MLLW": 3.12
+    }
   },
-  {
+  "8728852": {
     "id": "8728852",
     "name": "Indian Pass",
     "lat": 29.68506,
@@ -80720,11 +84797,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 287.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8728853": {
     "id": "8728853",
-    "name": "White City, ICWW",
+    "name": "White City, Icww",
     "lat": 29.880694,
     "lng": -85.2214,
     "state": "FL",
@@ -80851,9 +84929,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 3.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.64,
+      "MHW": 3.58,
+      "MSL": 3.15,
+      "MLW": 2.72,
+      "MLLW": 2.63
+    }
   },
-  {
+  "8728912": {
     "id": "8728912",
     "name": "Port St. Joe",
     "lat": 29.815,
@@ -80992,11 +85077,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 48.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.63,
+      "MHW": 4.33,
+      "MSL": 3.8,
+      "MLW": 3.18,
+      "MLLW": 2.98
+    }
   },
-  {
+  "8728949": {
     "id": "8728949",
-    "name": "RICHARDSON HAMMOCK, ST. JOSEPH BAY",
+    "name": "Richardson Hammock, St. Joseph Bay",
     "lat": 29.69,
     "lng": -85.3633,
     "state": "",
@@ -81093,11 +85185,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 125.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8728957": {
     "id": "8728957",
-    "name": "OVERSTREET",
+    "name": "Overstreet",
     "lat": 29.9967,
     "lng": -85.37,
     "state": "",
@@ -81194,11 +85287,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 197.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.23,
+      "MHW": 4.13,
+      "MSL": 3.45,
+      "MLW": 2.8,
+      "MLLW": 2.64
+    }
   },
-  {
+  "8728958": {
     "id": "8728958",
-    "name": "ST. JOSEPH POINT, ST. JOSEPH BAY",
+    "name": "St. Joseph Point, St. Joseph Bay",
     "lat": 29.8733,
     "lng": -85.39,
     "state": "",
@@ -81300,9 +85400,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 98.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.01,
+      "MHW": 1.7,
+      "MSL": 1.21,
+      "MLW": 0.54,
+      "MLLW": 0.45
+    }
   },
-  {
+  "8728978": {
     "id": "8728978",
     "name": "Cape San Blas, Western Cape",
     "lat": 29.764408,
@@ -81411,9 +85518,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 90.7
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729026": {
     "id": "8729026",
     "name": "East Bay, Goose Point",
     "lat": 30.061192,
@@ -81507,9 +85615,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 157.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729082": {
     "id": "8729082",
     "name": "Deer Point Lake",
     "lat": 30.269619,
@@ -81598,9 +85707,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 159.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729108": {
     "id": "8729108",
     "name": "Panama City",
     "lat": 30.15228,
@@ -81714,9 +85824,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 118.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.68,
+      "MHW": 4.64,
+      "MSL": 4.01,
+      "MLW": 3.39,
+      "MLLW": 3.34
+    }
   },
-  {
+  "8729132": {
     "id": "8729132",
     "name": "Courtney Point, St Andrew Bay",
     "lat": 30.1517,
@@ -81805,11 +85922,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 139.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.31,
+      "MHW": 27.26,
+      "MSL": 26.62,
+      "MLW": 25.99,
+      "MLLW": 25.95
+    }
   },
-  {
+  "8729142": {
     "id": "8729142",
-    "name": "Sulphur Point, Port of Panama City",
+    "name": "Sulphur Point, Port Of Panama City",
     "lat": 30.183,
     "lng": -85.732806,
     "state": "FL",
@@ -81931,11 +86055,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 122.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729197": {
     "id": "8729197",
-    "name": "WEST BAY CREEK  WEST BAY",
+    "name": "West Bay Creek West Bay",
     "lat": 30.293301,
     "lng": -85.858299,
     "state": "FL",
@@ -82027,9 +86152,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 168.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.76,
+      "MHW": 16.69,
+      "MSL": 16.02,
+      "MLW": 15.35,
+      "MLLW": 15.27
+    }
   },
-  {
+  "8729210": {
     "id": "8729210",
     "name": "Panama City Beach",
     "lat": 30.21375,
@@ -82153,9 +86285,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 327.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.4,
+      "MHW": 28.32,
+      "MSL": 27.67,
+      "MLW": 27.07,
+      "MLLW": 27
+    }
   },
-  {
+  "8729425": {
     "id": "8729425",
     "name": "Driftwood Point, Choctawhatcheee Bay",
     "lat": 30.3894,
@@ -82224,11 +86363,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 106.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.53,
+      "MHW": 29.51,
+      "MSL": 29.24,
+      "MLW": 28.96,
+      "MLLW": 28.97
+    }
   },
-  {
+  "8729479": {
     "id": "8729479",
-    "name": "ROCKY BAYOU",
+    "name": "Rocky Bayou",
     "lat": 30.506701,
     "lng": -86.446701,
     "state": "FL",
@@ -82295,9 +86441,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 106.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.76,
+      "MHW": 14.74,
+      "MSL": 14.47,
+      "MLW": 14.22,
+      "MLLW": 14.2
+    }
   },
-  {
+  "8729501": {
     "id": "8729501",
     "name": "Valparaiso",
     "lat": 30.5033,
@@ -82366,9 +86519,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 112.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.94,
+      "MHW": 4.94,
+      "MSL": 4.68,
+      "MLW": 4.4,
+      "MLLW": 4.4
+    }
   },
-  {
+  "8729547": {
     "id": "8729547",
     "name": "Okaloosa Island",
     "lat": 30.391399,
@@ -82472,9 +86632,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 97.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.92,
+      "MHW": 26.83,
+      "MSL": 26.18,
+      "MLW": 25.58,
+      "MLLW": 25.52
+    }
   },
-  {
+  "8729572": {
     "id": "8729572",
     "name": "Mary Esther",
     "lat": 30.4065,
@@ -82548,11 +86715,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 83.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.47,
+      "MHW": 30.44,
+      "MSL": 30.01,
+      "MLW": 29.6,
+      "MLLW": 29.58
+    }
   },
-  {
+  "8729678": {
     "id": "8729678",
-    "name": "NAVARRE BEACH",
+    "name": "Navarre Beach",
     "lat": 30.3767,
     "lng": -86.865,
     "state": "FL",
@@ -82669,11 +86843,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 329
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.16,
+      "MHW": 27.09,
+      "MSL": 26.43,
+      "MLW": 25.83,
+      "MLLW": 25.77
+    }
   },
-  {
+  "8729702": {
     "id": "8729702",
-    "name": "EAST BAY, HOLLEY",
+    "name": "East Bay, Holley",
     "lat": 30.45,
     "lng": -86.9183,
     "state": "",
@@ -82815,9 +86996,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 101.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.45,
+      "MHW": 3.37,
+      "MSL": 2.69,
+      "MLW": 2.01,
+      "MLLW": 1.95
+    }
   },
-  {
+  "8729717": {
     "id": "8729717",
     "name": "Navarre, North Side",
     "lat": 30.443097,
@@ -82966,11 +87154,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 96.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729736": {
     "id": "8729736",
-    "name": "WOODLAWN BEACH",
+    "name": "Woodlawn Beach",
     "lat": 30.3867,
     "lng": -86.9917,
     "state": "FL",
@@ -83057,11 +87246,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 211.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.08,
+      "MHW": 3.04,
+      "MSL": 2.38,
+      "MLW": 1.74,
+      "MLLW": 1.72
+    }
   },
-  {
+  "8729738": {
     "id": "8729738",
-    "name": "UPPER BLACKWATER RIVER",
+    "name": "Upper Blackwater River",
     "lat": 30.6583,
     "lng": -86.9883,
     "state": "FL",
@@ -83168,11 +87364,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 251.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8729747": {
     "id": "8729747",
-    "name": "SHIELD POINT, BLACKWATER RIVER",
+    "name": "Shield Point, Blackwater River",
     "lat": 30.5817,
     "lng": -87.015,
     "state": "",
@@ -83324,11 +87521,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 143.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.58,
+      "MHW": 4.48,
+      "MSL": 3.78,
+      "MLW": 3.09,
+      "MLLW": 2.99
+    }
   },
-  {
+  "8729753": {
     "id": "8729753",
-    "name": "BLACKWATER RIVER",
+    "name": "Blackwater River",
     "lat": 30.6367,
     "lng": -87.0283,
     "state": "",
@@ -83485,11 +87689,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 162.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.02,
+      "MHW": 4.89,
+      "MSL": 4.19,
+      "MLW": 3.48,
+      "MLLW": 3.36
+    }
   },
-  {
+  "8729791": {
     "id": "8729791",
-    "name": "HERNANDEZ POINT NORTH",
+    "name": "Hernandez Point North",
     "lat": 30.455,
     "lng": -87.1,
     "state": "",
@@ -83571,11 +87782,18 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 64.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.14,
+      "MHW": 4.09,
+      "MSL": 3.49,
+      "MLW": 2.93,
+      "MLLW": 2.84
+    }
   },
-  {
+  "8729806": {
     "id": "8729806",
-    "name": "FISHING BEND, SANTA ROSA SOUND",
+    "name": "Fishing Bend, Santa Rosa Sound",
     "lat": 30.3367,
     "lng": -87.14,
     "state": "FL",
@@ -83662,9 +87880,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 107.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.1,
+      "MHW": 4.03,
+      "MSL": 3.45,
+      "MLW": 2.87,
+      "MLLW": 2.82
+    }
   },
-  {
+  "8729807": {
     "id": "8729807",
     "name": "Pensacola Beach Pier",
     "lat": 30.328,
@@ -83763,11 +87988,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 100.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.05,
+      "MHW": 6.97,
+      "MSL": 6.32,
+      "MLW": 5.72,
+      "MLLW": 5.66
+    }
   },
-  {
+  "8729816": {
     "id": "8729816",
-    "name": "LORA POINT, ESCAMBIA BAY",
+    "name": "Lora Point, Escambia Bay",
     "lat": 30.515,
     "lng": -87.1617,
     "state": "FL",
@@ -83889,11 +88121,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 191.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.58,
+      "MHW": 4.52,
+      "MSL": 3.86,
+      "MLW": 3.22,
+      "MLLW": 3.17
+    }
   },
-  {
+  "8729824": {
     "id": "8729824",
-    "name": "FLORIDATOWN, ESCAMBIA BAY",
+    "name": "Floridatown, Escambia Bay",
     "lat": 30.5817,
     "lng": -87.18,
     "state": "",
@@ -83985,9 +88224,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 203.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.03,
+      "MHW": 3.97,
+      "MSL": 3.29,
+      "MLW": 2.68,
+      "MLLW": 2.58
+    }
   },
-  {
+  "8729840": {
     "id": "8729840",
     "name": "Pensacola",
     "lat": 30.404389,
@@ -84076,9 +88322,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 188
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.69,
+      "MHW": 9.65,
+      "MSL": 9.05,
+      "MLW": 8.46,
+      "MLLW": 8.43
+    }
   },
-  {
+  "8729905": {
     "id": "8729905",
     "name": "Millview, Perdido Bay",
     "lat": 30.4183,
@@ -84157,11 +88410,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 98.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.82,
+      "MHW": 2.8,
+      "MSL": 2.37,
+      "MLW": 1.99,
+      "MLLW": 2
+    }
   },
-  {
+  "8729909": {
     "id": "8729909",
-    "name": "BIG LAGOON",
+    "name": "Big Lagoon",
     "lat": 30.3267,
     "lng": -87.3567,
     "state": "",
@@ -84253,9 +88513,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 133.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.04,
+      "MHW": 4.01,
+      "MSL": 3.49,
+      "MLW": 3.03,
+      "MLLW": 2.99
+    }
   },
-  {
+  "8729941": {
     "id": "8729941",
     "name": "Blue Angels Park",
     "lat": 30.38694,
@@ -84324,9 +88591,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 213.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.56,
+      "MHW": 28.55,
+      "MSL": 28.14,
+      "MLW": 27.73,
+      "MLLW": 27.73
+    }
   },
-  {
+  "8730561": {
     "id": "8730561",
     "name": "Arnica Bay, Mill Point",
     "lat": 30.3102,
@@ -84395,9 +88669,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 89.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.32,
+      "MHW": 30.3,
+      "MSL": 29.91,
+      "MLW": 29.54,
+      "MLLW": 29.53
+    }
   },
-  {
+  "8730667": {
     "id": "8730667",
     "name": "Alabama Point",
     "lat": 30.27861,
@@ -84496,9 +88777,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 210.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.61,
+      "MHW": 3.57,
+      "MSL": 3.16,
+      "MLW": 2.77,
+      "MLLW": 2.75
+    }
   },
-  {
+  "8730849": {
     "id": "8730849",
     "name": "Wolf Bay",
     "lat": 30.355,
@@ -84577,9 +88865,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 92.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.96,
+      "MHW": 21.94,
+      "MSL": 21.5,
+      "MLW": 21.1,
+      "MLLW": 21.08
+    }
   },
-  {
+  "8731269": {
     "id": "8731269",
     "name": "Gulf State Park Pier",
     "lat": 30.2483,
@@ -84673,11 +88968,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 100.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.44,
+      "MHW": 23.42,
+      "MSL": 22.71,
+      "MLW": 22.06,
+      "MLLW": 22.04
+    }
   },
-  {
+  "8731439": {
     "id": "8731439",
-    "name": "Gulf Shores, ICWW",
+    "name": "Gulf Shores, Icww",
     "lat": 30.2799,
     "lng": -87.68428,
     "state": "AL",
@@ -84799,9 +89101,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 112
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.45,
+      "MHW": 29.4,
+      "MSL": 28.83,
+      "MLW": 28.31,
+      "MLLW": 28.24
+    }
   },
-  {
+  "8732828": {
     "id": "8732828",
     "name": "Weeks Bay, Mobile Bay",
     "lat": 30.416901,
@@ -84920,9 +89229,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 122.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.84,
+      "MHW": 31.72,
+      "MSL": 31.03,
+      "MLW": 30.34,
+      "MLLW": 30.23
+    }
   },
-  {
+  "8733502": {
     "id": "8733502",
     "name": "Fly Creek, Mobile Bay",
     "lat": 30.5428,
@@ -85021,9 +89337,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 32.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.69,
+      "MHW": 17.64,
+      "MSL": 16.82,
+      "MLW": 15.95,
+      "MLLW": 15.96
+    }
   },
-  {
+  "8733821": {
     "id": "8733821",
     "name": "Point Clear, Mobile Bay",
     "lat": 30.486639,
@@ -85122,9 +89445,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 241.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.66,
+      "MHW": 29.68,
+      "MSL": 28.94,
+      "MLW": 28.18,
+      "MLLW": 28.16
+    }
   },
-  {
+  "8733839": {
     "id": "8733839",
     "name": "Meaher State Park, Mobile Bay",
     "lat": 30.66717,
@@ -85218,9 +89548,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 149.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.15,
+      "MHW": 31.14,
+      "MSL": 30.4,
+      "MLW": 29.66,
+      "MLLW": 29.61
+    }
   },
-  {
+  "8735180": {
     "id": "8735180",
     "name": "Dauphin Island",
     "lat": 30.25,
@@ -85304,9 +89641,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 222.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.09,
+      "MHW": 4.07,
+      "MSL": 3.44,
+      "MLW": 2.89,
+      "MLLW": 2.87
+    }
   },
-  {
+  "8735181": {
     "id": "8735181",
     "name": "Dauphin Island Hydro",
     "lat": 30.251319,
@@ -85390,9 +89734,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 222.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.12,
+      "MHW": 4.1,
+      "MSL": 3.47,
+      "MLW": 2.89,
+      "MLLW": 2.88
+    }
   },
-  {
+  "8735391": {
     "id": "8735391",
     "name": "Dog River Bridge",
     "lat": 30.565278,
@@ -85521,9 +89872,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 222.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.58,
+      "MHW": 30.49,
+      "MSL": 29.74,
+      "MLW": 29.03,
+      "MLLW": 28.94
+    }
   },
-  {
+  "8735523": {
     "id": "8735523",
     "name": "East Fowl River Bridge",
     "lat": 30.443701,
@@ -85637,9 +89995,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 218.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.95,
+      "MHW": 14.9,
+      "MSL": 14.21,
+      "MLW": 13.55,
+      "MLLW": 13.48
+    }
   },
-  {
+  "8736897": {
     "id": "8736897",
     "name": "Coast Guard Sector Mobile",
     "lat": 30.6495,
@@ -85768,9 +90133,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 206.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.32,
+      "MHW": 30.25,
+      "MSL": 29.47,
+      "MLW": 28.72,
+      "MLLW": 28.63
+    }
   },
-  {
+  "8737048": {
     "id": "8737048",
     "name": "Mobile State Docks",
     "lat": 30.70461,
@@ -85899,9 +90271,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 230.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.13,
+      "MHW": 3.04,
+      "MSL": 2.3,
+      "MLW": 1.57,
+      "MLLW": 1.48
+    }
   },
-  {
+  "8737138": {
     "id": "8737138",
     "name": "Chickasaw Creek",
     "lat": 30.7819,
@@ -86035,9 +90414,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 244.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.3,
+      "MHW": 26.2,
+      "MSL": 25.44,
+      "MLW": 24.7,
+      "MLLW": 24.58
+    }
   },
-  {
+  "8737373": {
     "id": "8737373",
     "name": "Lower Bryant Landing",
     "lat": 30.9783,
@@ -86131,9 +90517,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 335.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.84,
+      "MHW": 21.76,
+      "MSL": 21.01,
+      "MLW": 20.15,
+      "MLLW": 20.08
+    }
   },
-  {
+  "8738043": {
     "id": "8738043",
     "name": "West Fowl River Bridge",
     "lat": 30.3766,
@@ -86267,9 +90660,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 130.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.16,
+      "MHW": 21,
+      "MSL": 20.32,
+      "MLW": 19.62,
+      "MLLW": 19.48
+    }
   },
-  {
+  "8739803": {
     "id": "8739803",
     "name": "Bayou La Batre Bridge",
     "lat": 30.40625,
@@ -86413,11 +90813,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 99.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.41,
+      "MHW": 28.25,
+      "MSL": 27.57,
+      "MLW": 26.89,
+      "MLLW": 26.75
+    }
   },
-  {
+  "8740166": {
     "id": "8740166",
-    "name": "Grand Bay NERR, Mississippi Sound",
+    "name": "Grand Bay Nerr, Mississippi Sound",
     "lat": 30.413194,
     "lng": -88.402889,
     "state": "MS",
@@ -86539,11 +90946,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 97.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.69,
+      "MHW": 15.59,
+      "MSL": 14.87,
+      "MLW": 14.23,
+      "MLLW": 14.1
+    }
   },
-  {
+  "8740405": {
     "id": "8740405",
-    "name": "PETIT BOIS ISLAND, MISS. SOUND",
+    "name": "Petit Bois Island, Miss. Sound",
     "lat": 30.2033,
     "lng": -88.4417,
     "state": "MS",
@@ -86625,9 +91039,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 145
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.52,
+      "MHW": 3.46,
+      "MSL": 2.76,
+      "MLW": 2.1,
+      "MLLW": 2.05
+    }
   },
-  {
+  "8740993": {
     "id": "8740993",
     "name": "Pascagoula, South Side",
     "lat": 30.322194,
@@ -86786,11 +91207,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 62.3
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8741041": {
     "id": "8741041",
-    "name": "Dock E, Port of Pascagoula",
+    "name": "Dock E, Port Of Pascagoula",
     "lat": 30.347778,
     "lng": -88.505833,
     "state": "MS",
@@ -86922,9 +91344,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.18,
+      "MHW": 23.08,
+      "MSL": 22.39,
+      "MLW": 21.72,
+      "MLLW": 21.63
+    }
   },
-  {
+  "8741196": {
     "id": "8741196",
     "name": "Pascagoula Point",
     "lat": 30.34,
@@ -87018,11 +91447,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 6.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.22,
+      "MHW": 4.14,
+      "MSL": 3.45,
+      "MLW": 2.77,
+      "MLLW": 2.69
+    }
   },
-  {
+  "8741533": {
     "id": "8741533",
-    "name": "Pascagoula NOAA Lab",
+    "name": "Pascagoula Noaa Lab",
     "lat": 30.367778,
     "lng": -88.563056,
     "state": "MS",
@@ -87149,9 +91585,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 114.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.41,
+      "MHW": 23.32,
+      "MSL": 22.64,
+      "MLW": 21.97,
+      "MLLW": 21.88
+    }
   },
-  {
+  "8741798": {
     "id": "8741798",
     "name": "Gautier",
     "lat": 30.3833,
@@ -87280,11 +91723,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 114.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.87,
+      "MHW": 4.82,
+      "MSL": 4.16,
+      "MLW": 3.52,
+      "MLLW": 3.44
+    }
   },
-  {
+  "8742205": {
     "id": "8742205",
-    "name": "GRAVELINE BAYOU ENTRANCE",
+    "name": "Graveline Bayou Entrance",
     "lat": 30.3617,
     "lng": -88.6633,
     "state": "MS",
@@ -87436,9 +91886,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 111.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.79,
+      "MHW": 4.7,
+      "MSL": 3.99,
+      "MLW": 3.26,
+      "MLLW": 3.16
+    }
   },
-  {
+  "8742221": {
     "id": "8742221",
     "name": "Horn Island",
     "lat": 30.2383,
@@ -87517,9 +91974,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 189.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.74,
+      "MHW": 4.64,
+      "MSL": 3.95,
+      "MLW": 3.26,
+      "MLLW": 3.14
+    }
   },
-  {
+  "8742523": {
     "id": "8742523",
     "name": "North Shore",
     "lat": 30.3733,
@@ -87623,11 +92087,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 204.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.85,
+      "MHW": 4.75,
+      "MSL": 4.05,
+      "MLW": 3.27,
+      "MLLW": 3.18
+    }
   },
-  {
+  "8743081": {
     "id": "8743081",
-    "name": "HOLLINGSWORTH POINT, DAVIS BAYOU",
+    "name": "Hollingsworth Point, Davis Bayou",
     "lat": 30.3867,
     "lng": -88.7733,
     "state": "MS",
@@ -87779,9 +92250,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 194.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.01,
+      "MHW": 3.9,
+      "MSL": 3.11,
+      "MLW": 2.31,
+      "MLLW": 2.2
+    }
   },
-  {
+  "8743181": {
     "id": "8743181",
     "name": "Old Fort Bayou, Ocean Springs Marina",
     "lat": 30.4217,
@@ -87890,9 +92368,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 209.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.18,
+      "MHW": 4.96,
+      "MSL": 4.29,
+      "MLW": 3.61,
+      "MLLW": 3.32
+    }
   },
-  {
+  "8743281": {
     "id": "8743281",
     "name": "Ocean Springs",
     "lat": 30.3917,
@@ -87981,11 +92466,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 185.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.91,
+      "MHW": 31.83,
+      "MSL": 31.05,
+      "MLW": 30.33,
+      "MLLW": 30.18
+    }
   },
-  {
+  "8743301": {
     "id": "8743301",
-    "name": "BAYOU TALLA, BACK BAY OF BILOXI",
+    "name": "Bayou Talla, Back Bay Of Biloxi",
     "lat": 30.43,
     "lng": -88.8,
     "state": "MS",
@@ -88082,11 +92574,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 222.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.88,
+      "MHW": 4.68,
+      "MSL": 3.96,
+      "MLW": 3.3,
+      "MLLW": 3.1
+    }
   },
-  {
+  "8743495": {
     "id": "8743495",
-    "name": "OCEAN SPRINGS, OLD FORT BAYOU",
+    "name": "Ocean Springs, Old Fort Bayou",
     "lat": 30.42,
     "lng": -88.8283,
     "state": "MS",
@@ -88238,11 +92737,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 202
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.32,
+      "MHW": 3.2,
+      "MSL": 2.41,
+      "MLW": 1.6,
+      "MLLW": 1.48
+    }
   },
-  {
+  "8743639": {
     "id": "8743639",
-    "name": "BAYOU POITO, BACK BAY OF BILOXI",
+    "name": "Bayou Poito, Back Bay Of Biloxi",
     "lat": 30.4383,
     "lng": -88.845,
     "state": "MS",
@@ -88339,11 +92845,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 202.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.64,
+      "MHW": 3.48,
+      "MSL": 2.73,
+      "MLW": 1.96,
+      "MLLW": 1.8
+    }
   },
-  {
+  "8743735": {
     "id": "8743735",
-    "name": "Biloxi (Cadet Point)",
+    "name": "Biloxi (cadet Point)",
     "lat": 30.39,
     "lng": -88.8567,
     "state": "MS",
@@ -88475,9 +92988,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 149.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.47,
+      "MHW": 4.37,
+      "MSL": 3.6,
+      "MLW": 2.82,
+      "MLLW": 2.71
+    }
   },
-  {
+  "8743812": {
     "id": "8743812",
     "name": "Deer Island",
     "lat": 30.3833,
@@ -88566,9 +93086,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 188.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.98,
+      "MHW": 3.8,
+      "MSL": 3.09,
+      "MLW": 2.38,
+      "MLLW": 2.19
+    }
   },
-  {
+  "8743838": {
     "id": "8743838",
     "name": "Langley Point",
     "lat": 30.425,
@@ -88662,9 +93189,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 198.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.03,
+      "MHW": 3.88,
+      "MSL": 3.14,
+      "MLW": 2.46,
+      "MLLW": 2.25
+    }
   },
-  {
+  "8744117": {
     "id": "8744117",
     "name": "Biloxi",
     "lat": 30.4117,
@@ -88753,11 +93287,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 219.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.35,
+      "MHW": 22.27,
+      "MSL": 21.48,
+      "MLW": 20.73,
+      "MLLW": 20.58
+    }
   },
-  {
+  "8744284": {
     "id": "8744284",
-    "name": "KEESLER AFB, BACK BAY OF BILOXI",
+    "name": "Keesler Afb, Back Bay Of Biloxi",
     "lat": 30.4183,
     "lng": -88.925,
     "state": "MS",
@@ -88844,9 +93385,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 204.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8744663": {
     "id": "8744663",
     "name": "Tchoutacabouffa River Entrance",
     "lat": 30.4417,
@@ -88940,11 +93482,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 225.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8744671": {
     "id": "8744671",
-    "name": "POPPS FERRY, BACK BAY OF BILOXI",
+    "name": "Popps Ferry, Back Bay Of Biloxi",
     "lat": 30.4133,
     "lng": -88.975,
     "state": "MS",
@@ -89101,9 +93644,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 271.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.94,
+      "MHW": 3.8,
+      "MSL": 2.99,
+      "MLW": 2.13,
+      "MLLW": 1.98
+    }
   },
-  {
+  "8744756": {
     "id": "8744756",
     "name": "Ship Island, Mississippi Sound",
     "lat": 30.2133,
@@ -89202,11 +93752,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 180.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.41,
+      "MHW": 5.38,
+      "MSL": 4.6,
+      "MLW": 3.89,
+      "MLLW": 3.81
+    }
   },
-  {
+  "8744934": {
     "id": "8744934",
-    "name": "BILOXI RIVER, LOWER END",
+    "name": "Biloxi River, Lower End",
     "lat": 30.435,
     "lng": -89.0083,
     "state": "MS",
@@ -89298,11 +93855,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 220.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.3,
+      "MHW": 3.03,
+      "MSL": 2.29,
+      "MLW": 1.45,
+      "MLLW": 1.22
+    }
   },
-  {
+  "8745101": {
     "id": "8745101",
-    "name": "HANDSBORO BRIDGE, BERNARD BAYOU",
+    "name": "Handsboro Bridge, Bernard Bayou",
     "lat": 30.4067,
     "lng": -89.0267,
     "state": "MS",
@@ -89409,9 +93973,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 224.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.25,
+      "MHW": 3.1,
+      "MSL": 2.3,
+      "MLW": 1.46,
+      "MLLW": 1.27
+    }
   },
-  {
+  "8745555": {
     "id": "8745555",
     "name": "Landon",
     "lat": 30.4317,
@@ -89575,9 +94146,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 286.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.7,
+      "MHW": 4.49,
+      "MSL": 3.7,
+      "MLW": 2.84,
+      "MLLW": 2.62
+    }
   },
-  {
+  "8745557": {
     "id": "8745557",
     "name": "Gulfport Harbor",
     "lat": 30.36,
@@ -89716,11 +94294,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 167.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.09,
+      "MHW": 4,
+      "MSL": 3.24,
+      "MLW": 2.46,
+      "MLLW": 2.37
+    }
   },
-  {
+  "8746819": {
     "id": "8746819",
-    "name": "PASS CHRISTIAN YACHT CLUB, MISS. SOUND",
+    "name": "Pass Christian Yacht Club, Miss. Sound",
     "lat": 30.31,
     "lng": -89.245,
     "state": "MS",
@@ -89862,9 +94447,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 191.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.65,
+      "MHW": 3.56,
+      "MSL": 2.8,
+      "MLW": 2.03,
+      "MLLW": 1.93
+    }
   },
-  {
+  "8747437": {
     "id": "8747437",
     "name": "Bay Waveland Yacht Club",
     "lat": 30.326342,
@@ -90003,9 +94595,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 275.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.15,
+      "MHW": 4.02,
+      "MSL": 3.26,
+      "MLW": 2.5,
+      "MLLW": 2.36
+    }
   },
-  {
+  "8747766": {
     "id": "8747766",
     "name": "Waveland",
     "lat": 30.2817,
@@ -90144,9 +94743,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 196.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.33,
+      "MHW": 29.25,
+      "MSL": 28.53,
+      "MLW": 27.82,
+      "MLLW": 27.73
+    }
   },
-  {
+  "8760417": {
     "id": "8760417",
     "name": "Devon Energy Facility",
     "lat": 29.20075,
@@ -90270,9 +94876,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 342.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 41.12,
+      "MHW": 41.11,
+      "MSL": 40.52,
+      "MLW": 39.94,
+      "MLLW": 39.93
+    }
   },
-  {
+  "8760551": {
     "id": "8760551",
     "name": "South Pass",
     "lat": 28.99,
@@ -90361,11 +94974,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 107.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.48,
+      "MHW": 5.47,
+      "MSL": 4.86,
+      "MLW": 4.28,
+      "MLLW": 4.26
+    }
   },
-  {
+  "8760668": {
     "id": "8760668",
-    "name": "GRAND PASS",
+    "name": "Grand Pass",
     "lat": 30.1267,
     "lng": -89.2217,
     "state": "LA",
@@ -90452,9 +95072,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 210.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.23,
+      "MHW": 4.17,
+      "MSL": 3.49,
+      "MLW": 2.82,
+      "MLLW": 2.76
+    }
   },
-  {
+  "8760721": {
     "id": "8760721",
     "name": "Pilottown",
     "lat": 29.179306,
@@ -90548,11 +95175,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 153.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.65,
+      "MHW": 6.65,
+      "MSL": 6.24,
+      "MLW": 5.85,
+      "MLLW": 5.85
+    }
   },
-  {
+  "8760849": {
     "id": "8760849",
-    "name": "VENICE, GRAND PASS",
+    "name": "Venice, Grand Pass",
     "lat": 29.2733,
     "lng": -89.3517,
     "state": "LA",
@@ -90634,9 +95268,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 191
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8760889": {
     "id": "8760889",
     "name": "Olga Compressor Station, Grand Bay",
     "lat": 29.3866,
@@ -90735,11 +95370,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 189.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.07,
+      "MHW": 36.05,
+      "MSL": 35.45,
+      "MLW": 34.81,
+      "MLLW": 34.78
+    }
   },
-  {
+  "8760922": {
     "id": "8760922",
-    "name": "Pilots Station East, S.W. Pass",
+    "name": "Pilots Station East, S.w. Pass",
     "lat": 28.932222,
     "lng": -89.4075,
     "state": "LA",
@@ -90831,11 +95473,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 94.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.01,
+      "MHW": 32,
+      "MSL": 31.43,
+      "MLW": 30.86,
+      "MLLW": 30.84
+    }
   },
-  {
+  "8760943": {
     "id": "8760943",
-    "name": "SW Pass",
+    "name": "Sw Pass",
     "lat": 28.925,
     "lng": -89.4183,
     "state": "LA",
@@ -90932,9 +95581,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 90.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.28,
+      "MHW": 16.26,
+      "MSL": 15.65,
+      "MLW": 15.05,
+      "MLLW": 15.02
+    }
   },
-  {
+  "8761305": {
     "id": "8761305",
     "name": "Shell Beach",
     "lat": 29.8683,
@@ -91078,11 +95734,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 298.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.82,
+      "MHW": 32.75,
+      "MSL": 32.1,
+      "MLW": 31.43,
+      "MLLW": 31.35
+    }
   },
-  {
+  "8761385": {
     "id": "8761385",
-    "name": "VICINITY OF UNO CHEF MENTEUR",
+    "name": "Vicinity Of Uno Chef Menteur",
     "lat": 30.06875,
     "lng": -89.802083,
     "state": "LA",
@@ -91179,9 +95842,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 290
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.95,
+      "MHW": 24.92,
+      "MSL": 24.4,
+      "MLW": 23.87,
+      "MLLW": 23.82
+    }
   },
-  {
+  "8761402": {
     "id": "8761402",
     "name": "The Rigolets",
     "lat": 30.1667,
@@ -91280,11 +95950,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 278
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.71,
+      "MHW": 3.69,
+      "MSL": 3.38,
+      "MLW": 3.03,
+      "MLLW": 2.99
+    }
   },
-  {
+  "8761529": {
     "id": "8761529",
-    "name": "MARTELLO CASTLE, LAKE BORGNE",
+    "name": "Martello Castle, Lake Borgne",
     "lat": 29.945,
     "lng": -89.835,
     "state": "LA",
@@ -91366,11 +96043,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 23.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 64.61,
+      "MHW": 64.49,
+      "MSL": 63.92,
+      "MLW": 63.29,
+      "MLLW": 63.24
+    }
   },
-  {
+  "8761720": {
     "id": "8761720",
-    "name": "GRAND ISLE",
+    "name": "Grand Isle",
     "lat": 29.255,
     "lng": -89.9683,
     "state": "",
@@ -91432,9 +96116,10 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 48.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8761724": {
     "id": "8761724",
     "name": "Grand Isle",
     "lat": 29.263333,
@@ -91523,11 +96208,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 153.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.41,
+      "MHW": 7.41,
+      "MSL": 6.89,
+      "MLW": 6.36,
+      "MLLW": 6.35
+    }
   },
-  {
+  "8761742": {
     "id": "8761742",
-    "name": "MENDICANT ISLAND, BARATARIA BAY",
+    "name": "Mendicant Island, Barataria Bay",
     "lat": 29.3183,
     "lng": -89.98,
     "state": "",
@@ -91634,11 +96326,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 190
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.19,
+      "MHW": 4.18,
+      "MSL": 3.69,
+      "MLW": 3.19,
+      "MLLW": 3.19
+    }
   },
-  {
+  "8761819": {
     "id": "8761819",
-    "name": "TEXACO DOCK, HACKBERRY BAY",
+    "name": "Texaco Dock, Hackberry Bay",
     "lat": 29.4017,
     "lng": -90.0383,
     "state": "LA",
@@ -91740,11 +96439,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 207
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.15,
+      "MHW": 4.15,
+      "MSL": 3.71,
+      "MLW": 3.26,
+      "MLLW": 3.25
+    }
   },
-  {
+  "8761826": {
     "id": "8761826",
-    "name": "CHENIERE CAMINADA, CAMINADA PASS",
+    "name": "Cheniere Caminada, Caminada Pass",
     "lat": 29.21,
     "lng": -90.04,
     "state": "LA",
@@ -91846,11 +96552,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 187.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.34,
+      "MHW": 4.34,
+      "MSL": 3.84,
+      "MLW": 3.35,
+      "MLLW": 3.35
+    }
   },
-  {
+  "8761899": {
     "id": "8761899",
-    "name": "LAFITTE, BARATARIA WATERWAY",
+    "name": "Lafitte, Barataria Waterway",
     "lat": 29.6667,
     "lng": -90.1117,
     "state": "LA",
@@ -91912,9 +96625,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 140.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.64,
+      "MHW": 3.64,
+      "MSL": 3.49,
+      "MLW": 3.32,
+      "MLLW": 3.32
+    }
   },
-  {
+  "8761927": {
     "id": "8761927",
     "name": "New Canal Station",
     "lat": 30.027222,
@@ -91988,9 +96708,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 72.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.84,
+      "MHW": 4.84,
+      "MSL": 4.57,
+      "MLW": 4.29,
+      "MLLW": 4.3
+    }
   },
-  {
+  "8762075": {
     "id": "8762075",
     "name": "Port Fourchon, Belle Pass",
     "lat": 29.114167,
@@ -92079,11 +96806,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 29.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.12,
+      "MHW": 31.11,
+      "MSL": 30.54,
+      "MLW": 29.93,
+      "MLLW": 29.91
+    }
   },
-  {
+  "8762084": {
     "id": "8762084",
-    "name": "LEEVILLE, BAYOU LAFOURCHE",
+    "name": "Leeville, Bayou Lafourche",
     "lat": 29.2483,
     "lng": -90.2117,
     "state": "",
@@ -92185,11 +96919,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 270.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.36,
+      "MHW": 4.35,
+      "MSL": 3.95,
+      "MLW": 3.5,
+      "MLLW": 3.48
+    }
   },
-  {
+  "8762184": {
     "id": "8762184",
-    "name": "GOLDEN MEADOW, PLAISANCE CANAL",
+    "name": "Golden Meadow, Plaisance Canal",
     "lat": 29.3733,
     "lng": -90.265,
     "state": "",
@@ -92276,11 +97017,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 338.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.93,
+      "MHW": 3.93,
+      "MSL": 3.67,
+      "MLW": 3.38,
+      "MLLW": 3.37
+    }
   },
-  {
+  "8762223": {
     "id": "8762223",
-    "name": "EAST TIMBALIER ISLAND, TIMBALIER BAY",
+    "name": "East Timbalier Island, Timbalier Bay",
     "lat": 29.0767,
     "lng": -90.285,
     "state": "LA",
@@ -92402,11 +97150,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 196.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.2,
+      "MHW": 4.17,
+      "MSL": 3.56,
+      "MLW": 2.91,
+      "MLLW": 2.87
+    }
   },
-  {
+  "8762372": {
     "id": "8762372",
-    "name": "East Bank 1, Norco, B. LaBranche",
+    "name": "East Bank 1, Norco, B. Labranche",
     "lat": 30.0503,
     "lng": -90.368,
     "state": "LA",
@@ -92468,9 +97223,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 66.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.97,
+      "MHW": 32.97,
+      "MSL": 32.76,
+      "MLW": 32.52,
+      "MLLW": 32.51
+    }
   },
-  {
+  "8762483": {
     "id": "8762483",
     "name": "I-10 Bonnet Carre Floodway",
     "lat": 30.0679,
@@ -92554,11 +97316,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 63
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.45,
+      "MHW": 0.45,
+      "MSL": 0.16,
+      "MLW": -0.13,
+      "MLLW": -0.13
+    }
   },
-  {
+  "8762888": {
     "id": "8762888",
-    "name": "E. ISLE DERNIERES, LAKE PELTO",
+    "name": "E. Isle Dernieres, Lake Pelto",
     "lat": 29.0717,
     "lng": -90.64,
     "state": "",
@@ -92655,9 +97424,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 157.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.45,
+      "MHW": 4.42,
+      "MSL": 3.83,
+      "MLW": 3.19,
+      "MLLW": 3.14
+    }
   },
-  {
+  "8762928": {
     "id": "8762928",
     "name": "Cocodrie",
     "lat": 29.245,
@@ -92731,9 +97507,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 229.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.54,
+      "MHW": 4.52,
+      "MSL": 4.05,
+      "MLW": 3.51,
+      "MLLW": 3.49
+    }
   },
-  {
+  "8763535": {
     "id": "8763535",
     "name": "Texas Gas Platform, Caillou Bay",
     "lat": 29.1748,
@@ -92872,9 +97655,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 158.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.66,
+      "MHW": 23.55,
+      "MSL": 22.93,
+      "MLW": 22.22,
+      "MLLW": 22.04
+    }
   },
-  {
+  "8763843": {
     "id": "8763843",
     "name": "Fourleague Bay",
     "lat": 29.3418,
@@ -92993,11 +97783,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 286.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.94,
+      "MHW": 31.77,
+      "MSL": 31.01,
+      "MLW": 30.32,
+      "MLLW": 29.92
+    }
   },
-  {
+  "8764025": {
     "id": "8764025",
-    "name": "Stouts Pass at Six Mile Lake",
+    "name": "Stouts Pass At Six Mile Lake",
     "lat": 29.7433,
     "lng": -91.23,
     "state": "",
@@ -93139,9 +97936,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 8.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.11,
+      "MHW": 22.03,
+      "MSL": 21.64,
+      "MLW": 21.29,
+      "MLLW": 21.22
+    }
   },
-  {
+  "8764044": {
     "id": "8764044",
     "name": "Berwick, Atchafalaya River",
     "lat": 29.6675,
@@ -93255,11 +98059,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 311.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.12,
+      "MHW": 20.08,
+      "MSL": 19.88,
+      "MLW": 19.64,
+      "MLLW": 19.59
+    }
   },
-  {
+  "8764227": {
     "id": "8764227",
-    "name": "LAWMA, Amerada Pass",
+    "name": "Lawma, Amerada Pass",
     "lat": 29.4496,
     "lng": -91.338097,
     "state": "LA",
@@ -93406,9 +98217,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 254.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.04,
+      "MHW": 24.89,
+      "MSL": 24.28,
+      "MLW": 23.75,
+      "MLLW": 23.43
+    }
   },
-  {
+  "8764311": {
     "id": "8764311",
     "name": "Eugene Island",
     "lat": 29.3717,
@@ -93527,11 +98345,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 254
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8764314": {
     "id": "8764314",
-    "name": "Eugene Island, North of, Atchafalaya Bay",
+    "name": "Eugene Island, North Of, Atchafalaya Bay",
     "lat": 29.3675,
     "lng": -91.3839,
     "state": "LA",
@@ -93688,9 +98507,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 223.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.15,
+      "MHW": 14.01,
+      "MSL": 13.31,
+      "MLW": 12.68,
+      "MLLW": 12.29
+    }
   },
-  {
+  "8765148": {
     "id": "8765148",
     "name": "Weeks Bay",
     "lat": 29.8372,
@@ -93799,9 +98625,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 36
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.2,
+      "MHW": 2.11,
+      "MSL": 1.48,
+      "MLW": 0.84,
+      "MLLW": 0.59
+    }
   },
-  {
+  "8765251": {
     "id": "8765251",
     "name": "Cypremort Point",
     "lat": 29.713361,
@@ -93905,9 +98738,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 359.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.8,
+      "MHW": 25.66,
+      "MSL": 25,
+      "MLW": 24.34,
+      "MLLW": 24.1
+    }
   },
-  {
+  "8765746": {
     "id": "8765746",
     "name": "Bayou Fearman, Vermillion Bay",
     "lat": 29.674,
@@ -94021,9 +98861,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 13
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.8,
+      "MHW": 31.68,
+      "MSL": 30.98,
+      "MLW": 30.32,
+      "MLLW": 30.08
+    }
   },
-  {
+  "8765785": {
     "id": "8765785",
     "name": "Intracoastal City",
     "lat": 29.783001,
@@ -94142,9 +98989,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 314.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.69,
+      "MHW": 30.57,
+      "MSL": 29.92,
+      "MLW": 29.35,
+      "MLLW": 29.09
+    }
   },
-  {
+  "8765969": {
     "id": "8765969",
     "name": "Freshwater Bayou",
     "lat": 29.6554,
@@ -94228,9 +99082,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 45
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.89,
+      "MHW": 31.84,
+      "MSL": 31.5,
+      "MLW": 31.15,
+      "MLLW": 31.05
+    }
   },
-  {
+  "8765994": {
     "id": "8765994",
     "name": "Schooner Bayou",
     "lat": 29.7581,
@@ -94329,9 +99190,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 48
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.31,
+      "MHW": 29.24,
+      "MSL": 28.66,
+      "MLW": 28.27,
+      "MLLW": 28.04
+    }
   },
-  {
+  "8766072": {
     "id": "8766072",
     "name": "Freshwater Canal Locks",
     "lat": 29.551694,
@@ -94490,9 +99358,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 261.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.09,
+      "MHW": 22.94,
+      "MSL": 22.2,
+      "MLW": 21.51,
+      "MLLW": 21.01
+    }
   },
-  {
+  "8766941": {
     "id": "8766941",
     "name": "Joseph Harbor",
     "lat": 29.6375,
@@ -94616,9 +99491,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 139.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.27,
+      "MHW": 30.09,
+      "MSL": 29.31,
+      "MLW": 28.58,
+      "MLLW": 28.07
+    }
   },
-  {
+  "8767095": {
     "id": "8767095",
     "name": "Catfish Point",
     "lat": 29.8629,
@@ -94757,11 +99639,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 234.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.69,
+      "MHW": 30.59,
+      "MSL": 30.07,
+      "MLW": 29.56,
+      "MLLW": 29.33
+    }
   },
-  {
+  "8767403": {
     "id": "8767403",
-    "name": "MERMENTAU RIVER, GRAND CHENIER",
+    "name": "Mermentau River, Grand Chenier",
     "lat": 29.775,
     "lng": -93.008301,
     "state": "",
@@ -94923,9 +99812,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 52.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.18,
+      "MHW": 5.06,
+      "MSL": 4.39,
+      "MLW": 3.77,
+      "MLLW": 3.35
+    }
   },
-  {
+  "8767816": {
     "id": "8767816",
     "name": "Lake Charles",
     "lat": 30.223611,
@@ -95079,9 +99975,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 5.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.79,
+      "MHW": 27.69,
+      "MSL": 27.17,
+      "MLW": 26.64,
+      "MLLW": 26.39
+    }
   },
-  {
+  "8767911": {
     "id": "8767911",
     "name": "East Calcasieu Lake",
     "lat": 29.9939,
@@ -95230,9 +100133,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 237.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.97,
+      "MHW": 28.89,
+      "MSL": 28.44,
+      "MLW": 27.97,
+      "MLLW": 27.76
+    }
   },
-  {
+  "8767961": {
     "id": "8767961",
     "name": "Bulk Terminal",
     "lat": 30.1903,
@@ -95386,9 +100296,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 344.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.43,
+      "MHW": 24.34,
+      "MSL": 23.84,
+      "MLW": 23.32,
+      "MLLW": 23.09
+    }
   },
-  {
+  "8768094": {
     "id": "8768094",
     "name": "Calcasieu Pass",
     "lat": 29.768167,
@@ -95547,11 +100464,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 351
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.69,
+      "MHW": 28.59,
+      "MSL": 28,
+      "MLW": 27.37,
+      "MLLW": 26.88
+    }
   },
-  {
+  "8768772": {
     "id": "8768772",
-    "name": "Gum Cove, ICWW",
+    "name": "Gum Cove, Icww",
     "lat": 30.0587,
     "lng": -93.522598,
     "state": "",
@@ -95683,9 +100607,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 25.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.37,
+      "MHW": 28.31,
+      "MSL": 27.97,
+      "MLW": 27.56,
+      "MLLW": 27.46
+    }
   },
-  {
+  "8769858": {
     "id": "8769858",
     "name": "East Sabine Lake",
     "lat": 29.8127,
@@ -95819,9 +100750,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 28.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.96,
+      "MHW": 30.94,
+      "MSL": 30.56,
+      "MLW": 30.19,
+      "MLLW": 30.08
+    }
   },
-  {
+  "8770475": {
     "id": "8770475",
     "name": "Port Arthur",
     "lat": 29.867083,
@@ -95940,9 +100878,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 19
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.65,
+      "MHW": 5.6,
+      "MSL": 5.21,
+      "MLW": 4.75,
+      "MLLW": 4.61
+    }
   },
-  {
+  "8770520": {
     "id": "8770520",
     "name": "Rainbow Bridge",
     "lat": 29.981194,
@@ -96071,9 +101016,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 29.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.82,
+      "MHW": 4.77,
+      "MSL": 4.39,
+      "MLW": 3.96,
+      "MLLW": 3.84
+    }
   },
-  {
+  "8770539": {
     "id": "8770539",
     "name": "Mesquite Point",
     "lat": 29.7667,
@@ -96187,9 +101139,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 341.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.1,
+      "MHW": 7.02,
+      "MSL": 6.6,
+      "MLW": 6.1,
+      "MLLW": 5.85
+    }
   },
-  {
+  "8770542": {
     "id": "8770542",
     "name": "Buffalo Bayou",
     "lat": 29.7619,
@@ -96343,9 +101302,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 81.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.17,
+      "MHW": 29.03,
+      "MSL": 28.4,
+      "MLW": 27.73,
+      "MLLW": 27.5
+    }
   },
-  {
+  "8770559": {
     "id": "8770559",
     "name": "Round Point",
     "lat": 29.7133,
@@ -96469,9 +101435,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 60.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.1,
+      "MHW": 3.01,
+      "MSL": 2.46,
+      "MLW": 1.88,
+      "MLLW": 1.7
+    }
   },
-  {
+  "8770570": {
     "id": "8770570",
     "name": "Sabine Pass North",
     "lat": 29.7284,
@@ -96600,9 +101573,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 338.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.05,
+      "MHW": 4.94,
+      "MSL": 4.41,
+      "MLW": 3.85,
+      "MLLW": 3.44
+    }
   },
-  {
+  "8770597": {
     "id": "8770597",
     "name": "Orange",
     "lat": 30.0983,
@@ -96681,9 +101661,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 13.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.05,
+      "MHW": 5,
+      "MSL": 4.7,
+      "MLW": 4.32,
+      "MLLW": 4.22
+    }
   },
-  {
+  "8770613": {
     "id": "8770613",
     "name": "Morgans Point, Barbours Cut",
     "lat": 29.681667,
@@ -96797,11 +101784,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 87.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.46,
+      "MHW": 6.39,
+      "MSL": 5.86,
+      "MLW": 5.26,
+      "MLLW": 5.13
+    }
   },
-  {
+  "8770625": {
     "id": "8770625",
-    "name": "UMBRELLA POINT, TRINITY BAY",
+    "name": "Umbrella Point, Trinity Bay",
     "lat": 29.68,
     "lng": -94.8683,
     "state": "TX",
@@ -96938,11 +101932,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 342.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.71,
+      "MHW": 7.67,
+      "MSL": 7.13,
+      "MLW": 6.53,
+      "MLLW": 6.43
+    }
   },
-  {
+  "8770653": {
     "id": "8770653",
-    "name": "CYPRESS, SAN JACINTO RIVER",
+    "name": "Cypress, San Jacinto River",
     "lat": 29.846701,
     "lng": -95.088303,
     "state": "",
@@ -97054,9 +102055,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 102.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.98,
+      "MHW": 25.91,
+      "MSL": 25.27,
+      "MLW": 24.74,
+      "MLLW": 24.39
+    }
   },
-  {
+  "8770733": {
     "id": "8770733",
     "name": "Lynchburg Landing",
     "lat": 29.764861,
@@ -97190,9 +102198,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 103
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.05,
+      "MHW": 5.95,
+      "MSL": 5.37,
+      "MLW": 4.74,
+      "MLLW": 4.56
+    }
   },
-  {
+  "8770743": {
     "id": "8770743",
     "name": "Battleship Texas State Park",
     "lat": 29.7567,
@@ -97321,11 +102336,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 99.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.12,
+      "MHW": 12.03,
+      "MSL": 11.46,
+      "MLW": 10.82,
+      "MLLW": 10.65
+    }
   },
-  {
+  "8770752": {
     "id": "8770752",
-    "name": "COX WC-53 Platform",
+    "name": "Cox Wc-53 Platform",
     "lat": 29.624,
     "lng": -93.75,
     "state": "",
@@ -97442,9 +102464,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 251.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -54.45,
+      "MHW": -54.7,
+      "MSL": -55.53,
+      "MLW": -56.28,
+      "MLLW": -56.86
+    }
   },
-  {
+  "8770777": {
     "id": "8770777",
     "name": "Manchester",
     "lat": 29.726222,
@@ -97588,9 +102617,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 83.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.14,
+      "MHW": 7.02,
+      "MSL": 6.41,
+      "MLW": 5.76,
+      "MLLW": 5.52
+    }
   },
-  {
+  "8770808": {
     "id": "8770808",
     "name": "High Island",
     "lat": 29.59472,
@@ -97739,9 +102775,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 15.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.51,
+      "MHW": 14.41,
+      "MSL": 13.93,
+      "MLW": 13.38,
+      "MLLW": 13.19
+    }
   },
-  {
+  "8770822": {
     "id": "8770822",
     "name": "Texas Point, Sabine Pass",
     "lat": 29.689389,
@@ -97895,11 +102938,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 345.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.11,
+      "MHW": 4.99,
+      "MSL": 4.33,
+      "MLW": 3.66,
+      "MLLW": 3.18
+    }
   },
-  {
+  "8770931": {
     "id": "8770931",
-    "name": "SMITH POINT, GALVESTON BAY",
+    "name": "Smith Point, Galveston Bay",
     "lat": 29.535,
     "lng": -94.7817,
     "state": "",
@@ -98026,9 +103076,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 70.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.12,
+      "MHW": 30.05,
+      "MSL": 29.54,
+      "MLW": 28.95,
+      "MLLW": 28.85
+    }
   },
-  {
+  "8770933": {
     "id": "8770933",
     "name": "Clear Lake",
     "lat": 29.5633,
@@ -98147,9 +103204,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 110.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.25,
+      "MHW": 6.19,
+      "MSL": 5.71,
+      "MLW": 5.16,
+      "MLLW": 5.07
+    }
   },
-  {
+  "8770971": {
     "id": "8770971",
     "name": "Rollover Pass",
     "lat": 29.515694,
@@ -98303,9 +103367,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 318.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.55,
+      "MHW": 4.45,
+      "MSL": 3.94,
+      "MLW": 3.39,
+      "MLLW": 3.2
+    }
   },
-  {
+  "8771013": {
     "id": "8771013",
     "name": "Eagle Point, Galveston Bay",
     "lat": 29.481306,
@@ -98399,11 +103470,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 71.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.39,
+      "MHW": 5.35,
+      "MSL": 4.88,
+      "MLW": 4.33,
+      "MLLW": 4.27
+    }
   },
-  {
+  "8771050": {
     "id": "8771050",
-    "name": "Renaissance SA-13 Platform",
+    "name": "Renaissance Sa-13 Platform",
     "lat": 29.479,
     "lng": -93.64,
     "state": "",
@@ -98530,11 +103608,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 244
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -58.08,
+      "MHW": -58.23,
+      "MSL": -59.01,
+      "MLW": -59.75,
+      "MLLW": -60.26
+    }
   },
-  {
+  "8771074": {
     "id": "8771074",
-    "name": "Fieldwood WC-289 Platform",
+    "name": "Fieldwood Wc-289 Platform",
     "lat": 29.347,
     "lng": -93.635002,
     "state": "",
@@ -98651,9 +103736,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 247.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -36.58,
+      "MHW": -36.78,
+      "MSL": -37.57,
+      "MLW": -38.29,
+      "MLLW": -38.79
+    }
   },
-  {
+  "8771081": {
     "id": "8771081",
     "name": "Sabine Offshore",
     "lat": 29.4983,
@@ -98797,9 +103889,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 281.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "8771165": {
     "id": "8771165",
     "name": "Goat Island",
     "lat": 29.431,
@@ -98898,9 +103991,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 336.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.33,
+      "MHW": 29.25,
+      "MSL": 28.83,
+      "MLW": 28.24,
+      "MLLW": 28.17
+    }
   },
-  {
+  "8771262": {
     "id": "8771262",
     "name": "Texas City",
     "lat": 29.3906,
@@ -98999,9 +104099,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 339.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.16,
+      "MHW": 28.11,
+      "MSL": 27.67,
+      "MLW": 27.14,
+      "MLLW": 27.08
+    }
   },
-  {
+  "8771328": {
     "id": "8771328",
     "name": "Port Bolivar",
     "lat": 29.365,
@@ -99125,9 +104232,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 10.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.42,
+      "MHW": 5.34,
+      "MSL": 4.86,
+      "MLW": 4.21,
+      "MLLW": 4.02
+    }
   },
-  {
+  "8771341": {
     "id": "8771341",
     "name": "Galveston Bay Entrance, North Jetty",
     "lat": 29.357461,
@@ -99281,9 +104395,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 344.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.76,
+      "MHW": 10.64,
+      "MSL": 10.06,
+      "MLW": 9.48,
+      "MLLW": 9.09
+    }
   },
-  {
+  "8771367": {
     "id": "8771367",
     "name": "Sabine Offshore Light",
     "lat": 29.469,
@@ -99407,9 +104528,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 257.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 0.48,
+      "MHW": 0.29,
+      "MSL": -0.55,
+      "MLW": -1.31,
+      "MLLW": -1.82
+    }
   },
-  {
+  "8771416": {
     "id": "8771416",
     "name": "Galveston Bay Entrance, South Jetty",
     "lat": 29.3267,
@@ -99573,9 +104701,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 239.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.67,
+      "MHW": 9.47,
+      "MSL": 8.7,
+      "MLW": 7.94,
+      "MLLW": 7.53
+    }
   },
-  {
+  "8771450": {
     "id": "8771450",
     "name": "Galveston Pier 21",
     "lat": 29.31,
@@ -99694,9 +104829,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 19.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.79,
+      "MHW": 5.7,
+      "MSL": 5.21,
+      "MLW": 4.68,
+      "MLLW": 4.38
+    }
   },
-  {
+  "8771486": {
     "id": "8771486",
     "name": "Galveston Railroad Bridge",
     "lat": 29.302583,
@@ -99835,9 +104977,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 39.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.72,
+      "MHW": 20.64,
+      "MSL": 20.2,
+      "MLW": 19.66,
+      "MLLW": 19.45
+    }
   },
-  {
+  "8771510": {
     "id": "8771510",
     "name": "Galveston Pleasure Pier",
     "lat": 29.2853,
@@ -99961,9 +105110,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 224.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.54,
+      "MHW": 5.34,
+      "MSL": 4.61,
+      "MLW": 3.89,
+      "MLLW": 3.5
+    }
   },
-  {
+  "8771722": {
     "id": "8771722",
     "name": "Jamaica Beach",
     "lat": 29.1986,
@@ -100057,9 +105213,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 26.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.51,
+      "MHW": 28.48,
+      "MSL": 28.04,
+      "MLW": 27.61,
+      "MLLW": 27.55
+    }
   },
-  {
+  "8771972": {
     "id": "8771972",
     "name": "San Luis Pass",
     "lat": 29.080556,
@@ -100188,9 +105351,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 347.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.22,
+      "MHW": 5.16,
+      "MSL": 4.74,
+      "MLW": 4.26,
+      "MLLW": 4.05
+    }
   },
-  {
+  "8772391": {
     "id": "8772391",
     "name": "Old Brazos River Freeport",
     "lat": 28.9611,
@@ -100334,9 +105504,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 258.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.68,
+      "MHW": 25.56,
+      "MSL": 24.83,
+      "MLW": 24.05,
+      "MLLW": 23.81
+    }
   },
-  {
+  "8772440": {
     "id": "8772440",
     "name": "Freeport",
     "lat": 28.9483,
@@ -100450,9 +105627,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 279.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.81,
+      "MHW": 5.67,
+      "MSL": 5,
+      "MLW": 4.32,
+      "MLLW": 4.05
+    }
   },
-  {
+  "8772447": {
     "id": "8772447",
     "name": "Freeport",
     "lat": 28.943306,
@@ -100586,9 +105770,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 180.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.27,
+      "MHW": 29.13,
+      "MSL": 28.53,
+      "MLW": 27.88,
+      "MLLW": 27.63
+    }
   },
-  {
+  "8772471": {
     "id": "8772471",
     "name": "Freeport Harbor",
     "lat": 28.935699,
@@ -100732,9 +105923,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 166.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.02,
+      "MHW": 28.88,
+      "MSL": 28.26,
+      "MLW": 27.63,
+      "MLLW": 27.35
+    }
   },
-  {
+  "8772479": {
     "id": "8772479",
     "name": "Freeport Entrance Jetty",
     "lat": 28.9303,
@@ -100873,9 +106071,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 287.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.25,
+      "MHW": 24.11,
+      "MSL": 23.46,
+      "MLW": 22.76,
+      "MLLW": 22.54
+    }
   },
-  {
+  "8772985": {
     "id": "8772985",
     "name": "Sargent",
     "lat": 28.771417,
@@ -100979,9 +106184,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 268.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.8,
+      "MHW": 31.76,
+      "MSL": 31.5,
+      "MLW": 31.15,
+      "MLLW": 31.11
+    }
   },
-  {
+  "8773037": {
     "id": "8773037",
     "name": "Seadrift",
     "lat": 28.4069,
@@ -101045,9 +106257,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 211
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.63,
+      "MHW": 1.63,
+      "MSL": 1.47,
+      "MLW": 1.3,
+      "MLLW": 1.28
+    }
   },
-  {
+  "8773146": {
     "id": "8773146",
     "name": "Matagorda City",
     "lat": 28.71006,
@@ -101141,9 +106360,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 351.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.32,
+      "MHW": 31.32,
+      "MSL": 31.12,
+      "MLW": 30.86,
+      "MLLW": 30.85
+    }
   },
-  {
+  "8773259": {
     "id": "8773259",
     "name": "Port Lavaca",
     "lat": 28.6406,
@@ -101252,11 +106478,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 49.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.9,
+      "MHW": 3.87,
+      "MSL": 3.49,
+      "MLW": 3.06,
+      "MLLW": 3
+    }
   },
-  {
+  "8773701": {
     "id": "8773701",
-    "name": "Port O'Connor",
+    "name": "Port O'connor",
     "lat": 28.445861,
     "lng": -96.395556,
     "state": "TX",
@@ -101343,9 +106576,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 350.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.13,
+      "MHW": 12.12,
+      "MSL": 11.81,
+      "MLW": 11.43,
+      "MLLW": 11.41
+    }
   },
-  {
+  "8773767": {
     "id": "8773767",
     "name": "Matagorda Bay Entrance Channel",
     "lat": 28.426901,
@@ -101489,9 +106729,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 51.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.62,
+      "MHW": 26.59,
+      "MSL": 26.12,
+      "MLW": 25.49,
+      "MLLW": 25.38
+    }
   },
-  {
+  "8773808": {
     "id": "8773808",
     "name": "Barroom Bay",
     "lat": 28.403,
@@ -101580,9 +106827,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 266.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.37,
+      "MHW": 31.36,
+      "MSL": 31.18,
+      "MLW": 30.97,
+      "MLLW": 30.96
+    }
   },
-  {
+  "8773896": {
     "id": "8773896",
     "name": "Shoalwater Flats",
     "lat": 28.3645,
@@ -101641,9 +106895,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 124.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.12,
+      "MHW": 29.12,
+      "MSL": 28.98,
+      "MLW": 28.82,
+      "MLLW": 28.81
+    }
   },
-  {
+  "8774230": {
     "id": "8774230",
     "name": "Aransas Wildlife Refuge",
     "lat": 28.227556,
@@ -101702,9 +106963,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 170.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.28,
+      "MHW": 29.28,
+      "MSL": 29.12,
+      "MLW": 28.95,
+      "MLLW": 28.95
+    }
   },
-  {
+  "8774513": {
     "id": "8774513",
     "name": "Copano Bay",
     "lat": 28.114,
@@ -101763,11 +107031,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 76.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.6,
+      "MHW": 5.6,
+      "MSL": 5.42,
+      "MLW": 5.21,
+      "MLLW": 5.21
+    }
   },
-  {
+  "8774652": {
     "id": "8774652",
-    "name": "BAYSIDE, COPANO BAY",
+    "name": "Bayside, Copano Bay",
     "lat": 28.0683,
     "lng": -97.196,
     "state": "",
@@ -101819,9 +107094,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 127.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.69,
+      "MHW": 22.68,
+      "MSL": 22.5,
+      "MLW": 22.29,
+      "MLLW": 22.27
+    }
   },
-  {
+  "8774770": {
     "id": "8774770",
     "name": "Rockport",
     "lat": 28.021694,
@@ -101895,11 +107177,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 102.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.82,
+      "MHW": 6.81,
+      "MSL": 6.64,
+      "MLW": 6.46,
+      "MLLW": 6.45
+    }
   },
-  {
+  "8775083": {
     "id": "8775083",
-    "name": "ARANSAS PASS, REDFISH BAY",
+    "name": "Aransas Pass, Redfish Bay",
     "lat": 27.9081,
     "lng": -97.1353,
     "state": "",
@@ -101971,9 +107260,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 303.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.94,
+      "MHW": 26.93,
+      "MSL": 26.72,
+      "MLW": 26.41,
+      "MLLW": 26.4
+    }
   },
-  {
+  "8775131": {
     "id": "8775131",
     "name": "Portland",
     "lat": 27.8828,
@@ -102047,9 +107343,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 116.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.5,
+      "MHW": 31.48,
+      "MSL": 31.24,
+      "MLW": 30.9,
+      "MLLW": 30.88
+    }
   },
-  {
+  "8775132": {
     "id": "8775132",
     "name": "La Quinta Channel North",
     "lat": 27.879167,
@@ -102123,9 +107426,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 100.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.82,
+      "MHW": 7.8,
+      "MSL": 7.51,
+      "MLW": 7.15,
+      "MLLW": 7.12
+    }
   },
-  {
+  "8775188": {
     "id": "8775188",
     "name": "White Point",
     "lat": 27.8583,
@@ -102234,9 +107544,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 63.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 1.78,
+      "MHW": 1.76,
+      "MSL": 1.45,
+      "MLW": 1.14,
+      "MLLW": 1.11
+    }
   },
-  {
+  "8775222": {
     "id": "8775222",
     "name": "Viola Turning Basin",
     "lat": 27.841944,
@@ -102340,9 +107657,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 19
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.69,
+      "MHW": 27.68,
+      "MSL": 27.39,
+      "MLW": 27.01,
+      "MLLW": 26.99
+    }
   },
-  {
+  "8775237": {
     "id": "8775237",
     "name": "Port Aransas",
     "lat": 27.839756,
@@ -102491,9 +107815,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 113
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.65,
+      "MHW": 5.62,
+      "MSL": 5.26,
+      "MLW": 4.73,
+      "MLLW": 4.61
+    }
   },
-  {
+  "8775241": {
     "id": "8775241",
     "name": "Aransas, Aransas Pass",
     "lat": 27.836599,
@@ -102647,9 +107978,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 106.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.46,
+      "MHW": 25.41,
+      "MSL": 24.92,
+      "MLW": 24.3,
+      "MLLW": 24.09
+    }
   },
-  {
+  "8775244": {
     "id": "8775244",
     "name": "Nueces Bay",
     "lat": 27.83275,
@@ -102758,11 +108096,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 56.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.19,
+      "MHW": 25.17,
+      "MSL": 24.87,
+      "MLW": 24.52,
+      "MLLW": 24.49
+    }
   },
-  {
+  "8775270": {
     "id": "8775270",
-    "name": "PORT ARANSAS, H. CALDWELL PIER",
+    "name": "Port Aransas, H. Caldwell Pier",
     "lat": 27.8267,
     "lng": -97.05,
     "state": "TX",
@@ -102859,9 +108204,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 264.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.83,
+      "MHW": 5.72,
+      "MSL": 5.12,
+      "MLW": 4.42,
+      "MLLW": 4.2
+    }
   },
-  {
+  "8775283": {
     "id": "8775283",
     "name": "Enbridge, Ingleside",
     "lat": 27.818611,
@@ -102955,11 +108307,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 43
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.52,
+      "MHW": 20.5,
+      "MSL": 20.26,
+      "MLW": 19.95,
+      "MLLW": 19.93
+    }
   },
-  {
+  "8775296": {
     "id": "8775296",
-    "name": "USS Lexington, Corpus Christi Bay",
+    "name": "Uss Lexington, Corpus Christi Bay",
     "lat": 27.811694,
     "lng": -97.39,
     "state": "TX",
@@ -103066,9 +108425,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 33.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.22,
+      "MHW": 5.21,
+      "MSL": 4.96,
+      "MLW": 4.63,
+      "MLLW": 4.62
+    }
   },
-  {
+  "8775421": {
     "id": "8775421",
     "name": "Naval Air Station",
     "lat": 27.705,
@@ -103157,9 +108523,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 36.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.13,
+      "MHW": 5.12,
+      "MSL": 4.85,
+      "MLW": 4.53,
+      "MLLW": 4.51
+    }
   },
-  {
+  "8775792": {
     "id": "8775792",
     "name": "Packery Channel",
     "lat": 27.634183,
@@ -103238,9 +108611,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 49.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.26,
+      "MHW": 3.26,
+      "MSL": 3.06,
+      "MLW": 2.83,
+      "MLLW": 2.84
+    }
   },
-  {
+  "8775870": {
     "id": "8775870",
     "name": "Bob Hall Pier, Corpus Christi",
     "lat": 27.58,
@@ -103384,9 +108764,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 118.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.44,
+      "MHW": 22.35,
+      "MSL": 21.74,
+      "MLW": 21.03,
+      "MLLW": 20.81
+    }
   },
-  {
+  "8778485": {
     "id": "8778485",
     "name": "Padre Island, Port Mansfield Channel Ent",
     "lat": 26.564199,
@@ -103530,9 +108917,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 295.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.11,
+      "MHW": 25.05,
+      "MSL": 24.51,
+      "MLW": 23.83,
+      "MLLW": 23.67
+    }
   },
-  {
+  "8779280": {
     "id": "8779280",
     "name": "Realitos Peninsula",
     "lat": 26.2625,
@@ -103631,11 +109025,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 19.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.18,
+      "MHW": 16.17,
+      "MSL": 15.93,
+      "MLW": 15.64,
+      "MLLW": 15.62
+    }
   },
-  {
+  "8779748": {
     "id": "8779748",
-    "name": "South Padre Island CG Station",
+    "name": "South Padre Island Cg Station",
     "lat": 26.072472,
     "lng": -97.166861,
     "state": "TX",
@@ -103762,11 +109163,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 314.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5,
+      "MHW": 4.94,
+      "MSL": 4.44,
+      "MLW": 3.77,
+      "MLLW": 3.63
+    }
   },
-  {
+  "8779749": {
     "id": "8779749",
-    "name": "SPI Brazos Santiago",
+    "name": "Spi Brazos Santiago",
     "lat": 26.0675,
     "lng": -97.154722,
     "state": "TX",
@@ -103898,9 +109306,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 302.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.71,
+      "MHW": 25.65,
+      "MSL": 25.11,
+      "MLW": 24.41,
+      "MLLW": 24.24
+    }
   },
-  {
+  "8779750": {
     "id": "8779750",
     "name": "South Padre Island, Brazos Santiago Pass",
     "lat": 26.0683,
@@ -104004,9 +109419,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 265.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.38,
+      "MHW": 3.32,
+      "MSL": 2.78,
+      "MLW": 2.07,
+      "MLLW": 1.9
+    }
   },
-  {
+  "8779770": {
     "id": "8779770",
     "name": "Port Isabel",
     "lat": 26.061167,
@@ -104135,9 +109557,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 312.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.23,
+      "MHW": 5.17,
+      "MSL": 4.67,
+      "MLW": 4.02,
+      "MLLW": 3.86
+    }
   },
-  {
+  "8779911": {
     "id": "8779911",
     "name": "San Martin Lake Channel",
     "lat": 26.001801,
@@ -104286,11 +109715,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 309.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.98,
+      "MHW": 30.91,
+      "MSL": 30.42,
+      "MLW": 29.8,
+      "MLLW": 29.62
+    }
   },
-  {
+  "9410032": {
     "id": "9410032",
-    "name": "WILSON COVE, SAN CLEMENTE IS.",
+    "name": "Wilson Cove, San Clemente Is.",
     "lat": 33.005001,
     "lng": -118.556999,
     "state": "CA",
@@ -104417,11 +109853,18 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 137.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.6,
+      "MHW": 19.85,
+      "MSL": 18.03,
+      "MLW": 16.25,
+      "MLLW": 15.36
+    }
   },
-  {
+  "9410079": {
     "id": "9410079",
-    "name": "AVALON, SANTA CATALINA ISLAND",
+    "name": "Avalon, Santa Catalina Island",
     "lat": 33.345,
     "lng": -118.325,
     "state": "CA",
@@ -104548,9 +109991,16 @@ const stations = [
         "amplitude": 0.18,
         "phaseLag": 139.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.4,
+      "MHW": 16.65,
+      "MSL": 14.78,
+      "MLW": 12.95,
+      "MLLW": 12.06
+    }
   },
-  {
+  "9410135": {
     "id": "9410135",
     "name": "South San Diego Bay",
     "lat": 32.629101,
@@ -104679,9 +110129,16 @@ const stations = [
         "amplitude": 0.21,
         "phaseLag": 142.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.08,
+      "MHW": 25.33,
+      "MSL": 23.2,
+      "MLW": 21.09,
+      "MLLW": 20.15
+    }
   },
-  {
+  "9410155": {
     "id": "9410155",
     "name": "Ballast Point",
     "lat": 32.6867,
@@ -104795,9 +110252,16 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 137.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.22,
+      "MHW": 12.5,
+      "MSL": 10.54,
+      "MLW": 8.62,
+      "MLLW": 7.74
+    }
   },
-  {
+  "9410170": {
     "id": "9410170",
     "name": "San Diego, San Diego Bay",
     "lat": 32.715708,
@@ -104956,9 +110420,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 203.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.51,
+      "MHW": 8.78,
+      "MSL": 6.73,
+      "MLW": 4.73,
+      "MLLW": 3.79
+    }
   },
-  {
+  "9410196": {
     "id": "9410196",
     "name": "Mission Bay",
     "lat": 32.7937,
@@ -105087,9 +110558,16 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 141
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.6,
+      "MHW": 20.87,
+      "MSL": 18.96,
+      "MLW": 17.06,
+      "MLLW": 16.15
+    }
   },
-  {
+  "9410230": {
     "id": "9410230",
     "name": "La Jolla",
     "lat": 32.866889,
@@ -105213,11 +110691,18 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 130.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.69,
+      "MHW": 8.97,
+      "MSL": 7.1,
+      "MLW": 5.27,
+      "MLLW": 4.37
+    }
   },
-  {
+  "9410580": {
     "id": "9410580",
-    "name": "NEWPORT BEACH, NEWPORT BAY ENTRANCE",
+    "name": "Newport Beach, Newport Bay Entrance",
     "lat": 33.6033,
     "lng": -117.883,
     "state": "CA",
@@ -105349,9 +110834,16 @@ const stations = [
         "amplitude": 0.2,
         "phaseLag": 133.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.74,
+      "MHW": 8.01,
+      "MSL": 6.11,
+      "MLW": 4.25,
+      "MLLW": 3.33
+    }
   },
-  {
+  "9410660": {
     "id": "9410660",
     "name": "Los Angeles",
     "lat": 33.719944,
@@ -105475,11 +110967,18 @@ const stations = [
         "amplitude": 0.2,
         "phaseLag": 135.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.32,
+      "MHW": 8.58,
+      "MSL": 6.65,
+      "MLW": 4.77,
+      "MLLW": 3.83
+    }
   },
-  {
+  "9410680": {
     "id": "9410680",
-    "name": "LONG BEACH, TERMINAL ISLAND",
+    "name": "Long Beach, Terminal Island",
     "lat": 33.7517,
     "lng": -118.227,
     "state": "CA",
@@ -105611,9 +111110,16 @@ const stations = [
         "amplitude": 0.2,
         "phaseLag": 134.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.5,
+      "MHW": 6.76,
+      "MSL": 4.83,
+      "MLW": 2.93,
+      "MLLW": 1.99
+    }
   },
-  {
+  "9410840": {
     "id": "9410840",
     "name": "Santa Monica",
     "lat": 34.0083,
@@ -105752,11 +111258,18 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 135.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.87,
+      "MHW": 7.13,
+      "MSL": 5.23,
+      "MLW": 3.37,
+      "MLLW": 2.44
+    }
   },
-  {
+  "9411270": {
     "id": "9411270",
-    "name": "RINCON ISLAND, PACIFIC OCEAN",
+    "name": "Rincon Island, Pacific Ocean",
     "lat": 34.3483,
     "lng": -119.443,
     "state": "CA",
@@ -105888,9 +111401,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 141.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.78,
+      "MHW": 9.02,
+      "MSL": 7.15,
+      "MLW": 5.31,
+      "MLLW": 4.32
+    }
   },
-  {
+  "9411340": {
     "id": "9411340",
     "name": "Santa Barbara",
     "lat": 34.404589,
@@ -106029,9 +111549,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 143.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.53,
+      "MHW": 7.78,
+      "MSL": 5.92,
+      "MLW": 4.11,
+      "MLLW": 3.14
+    }
   },
-  {
+  "9411399": {
     "id": "9411399",
     "name": "Gaviota State Park, Pacific Ocean",
     "lat": 34.46939,
@@ -106150,9 +111677,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 150.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 48.89,
+      "MHW": 48.15,
+      "MSL": 46.35,
+      "MLW": 44.58,
+      "MLLW": 43.6
+    }
   },
-  {
+  "9411406": {
     "id": "9411406",
     "name": "Oil Platform Harvest",
     "lat": 34.469167,
@@ -106286,9 +111820,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 150.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 50.08,
+      "MHW": 49.35,
+      "MSL": 47.58,
+      "MLW": 45.85,
+      "MLLW": 44.86
+    }
   },
-  {
+  "9412110": {
     "id": "9412110",
     "name": "Port San Luis",
     "lat": 35.168697,
@@ -106422,9 +111963,16 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 156.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.58,
+      "MHW": 8.87,
+      "MSL": 7.05,
+      "MLW": 5.29,
+      "MLLW": 4.25
+    }
   },
-  {
+  "9412802": {
     "id": "9412802",
     "name": "Mansfield Cone",
     "lat": 35.949528,
@@ -106558,9 +112106,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 173.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.59,
+      "MHW": 29.88,
+      "MSL": 28.09,
+      "MLW": 26.38,
+      "MLLW": 25.35
+    }
   },
-  {
+  "9413450": {
     "id": "9413450",
     "name": "Monterey",
     "lat": 36.605,
@@ -106689,11 +112244,18 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 170.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.72,
+      "MHW": 8.02,
+      "MSL": 6.21,
+      "MLW": 4.47,
+      "MLLW": 3.38
+    }
   },
-  {
+  "9413631": {
     "id": "9413631",
-    "name": "Elkhorn Slough at Elkhorn",
+    "name": "Elkhorn Slough At Elkhorn",
     "lat": 36.8183,
     "lng": -121.747,
     "state": "CA",
@@ -106850,9 +112412,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 122.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.62,
+      "MHW": 10.91,
+      "MSL": 9.09,
+      "MLW": 7.28,
+      "MLLW": 6.25
+    }
   },
-  {
+  "9413643": {
     "id": "9413643",
     "name": "Tidal Creek, Elkhorn Slough",
     "lat": 36.83,
@@ -106971,9 +112540,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 101.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.48,
+      "MHW": 29.77,
+      "MSL": 27.99,
+      "MLW": 26.18,
+      "MLLW": 25.12
+    }
   },
-  {
+  "9413651": {
     "id": "9413651",
     "name": "Kirby Park, Elkhorn Slough",
     "lat": 36.8413,
@@ -107107,9 +112683,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 108
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.95,
+      "MHW": 13.23,
+      "MSL": 11.39,
+      "MLW": 9.52,
+      "MLLW": 8.44
+    }
   },
-  {
+  "9413663": {
     "id": "9413663",
     "name": "Elkhorn Slough Railroad Bridge",
     "lat": 36.85667,
@@ -107233,9 +112816,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 78.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.6,
+      "MHW": 22.87,
+      "MSL": 21.01,
+      "MLW": 19.14,
+      "MLLW": 18.08
+    }
   },
-  {
+  "9414131": {
     "id": "9414131",
     "name": "Pillar Point Harbor",
     "lat": 37.5025,
@@ -107359,9 +112949,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 190
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.64,
+      "MHW": 4.99,
+      "MSL": 3.03,
+      "MLW": 1.15,
+      "MLLW": 0.04
+    }
   },
-  {
+  "9414290": {
     "id": "9414290",
     "name": "San Francisco",
     "lat": 37.806306,
@@ -107525,11 +113122,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 149
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.82,
+      "MHW": 11.21,
+      "MSL": 9.1,
+      "MLW": 7.11,
+      "MLLW": 5.98
+    }
   },
-  {
+  "9414305": {
     "id": "9414305",
-    "name": "NORTH POINT [PIER 41] S.F.BAY",
+    "name": "North Point [pier 41] S.f.bay",
     "lat": 37.81,
     "lng": -122.413,
     "state": "CA",
@@ -107676,11 +113280,12 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 147.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9414317": {
     "id": "9414317",
-    "name": "PIER 22 1/2, SAN FRANCISCO",
+    "name": "Pier 22 1/2, San Francisco",
     "lat": 37.79,
     "lng": -122.387,
     "state": "CA",
@@ -107837,11 +113442,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 150.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.74,
+      "MHW": 9.12,
+      "MSL": 6.75,
+      "MLW": 4.6,
+      "MLLW": 3.48
+    }
   },
-  {
+  "9414358": {
     "id": "9414358",
-    "name": "HUNTERS POINT, S.F. BAY",
+    "name": "Hunters Point, S.f. Bay",
     "lat": 37.73,
     "lng": -122.357,
     "state": "CA",
@@ -108003,11 +113615,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 173.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.35,
+      "MHW": 8.73,
+      "MSL": 6.11,
+      "MLW": 3.69,
+      "MLLW": 2.55
+    }
   },
-  {
+  "9414392": {
     "id": "9414392",
-    "name": "OYSTER POINT MARINA, SAN FRANCISCO BAY",
+    "name": "Oyster Point Marina, San Francisco Bay",
     "lat": 37.665,
     "lng": -122.377,
     "state": "CA",
@@ -108164,9 +113783,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 228.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.02,
+      "MHW": 8.38,
+      "MSL": 5.61,
+      "MLW": 2.98,
+      "MLLW": 1.84
+    }
   },
-  {
+  "9414458": {
     "id": "9414458",
     "name": "San Mateo Bridge",
     "lat": 37.58,
@@ -108330,11 +113956,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.43,
+      "MHW": 21.8,
+      "MSL": 18.82,
+      "MLW": 15.9,
+      "MLLW": 14.71
+    }
   },
-  {
+  "9414501": {
     "id": "9414501",
-    "name": "REDWOOD CREEK,C.M. NO. 8,S.F.BAY",
+    "name": "Redwood Creek,c.m. No. 8,s.f.bay",
     "lat": 37.5333,
     "lng": -122.193,
     "state": "CA",
@@ -108501,9 +114134,10 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 7.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9414509": {
     "id": "9414509",
     "name": "Dumbarton Bridge",
     "lat": 37.5067,
@@ -108672,9 +114306,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 23.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.61,
+      "MHW": 20,
+      "MSL": 16.68,
+      "MLW": 13.26,
+      "MLLW": 12
+    }
   },
-  {
+  "9414523": {
     "id": "9414523",
     "name": "Redwood City",
     "lat": 37.506814,
@@ -108843,9 +114484,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 343.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.94,
+      "MHW": 14.31,
+      "MSL": 11.14,
+      "MLW": 7.94,
+      "MLLW": 6.74
+    }
   },
-  {
+  "9414575": {
     "id": "9414575",
     "name": "Coyote Creek",
     "lat": 37.465,
@@ -109019,9 +114667,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 24.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.58,
+      "MHW": 7.99,
+      "MSL": 4.6,
+      "MLW": 0.91,
+      "MLLW": -0.27
+    }
   },
-  {
+  "9414688": {
     "id": "9414688",
     "name": "San Leandro Marina",
     "lat": 37.695,
@@ -109190,11 +114845,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 50.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.15,
+      "MHW": 11.51,
+      "MSL": 8.64,
+      "MLW": 5.89,
+      "MLLW": 4.72
+    }
   },
-  {
+  "9414746": {
     "id": "9414746",
-    "name": "PARK STREET BRIDGE",
+    "name": "Park Street Bridge",
     "lat": 37.7717,
     "lng": -122.235,
     "state": "CA",
@@ -109321,9 +114983,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 235.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.2,
+      "MHW": 7.58,
+      "MSL": 5.07,
+      "MLW": 2.81,
+      "MLLW": 1.69
+    }
   },
-  {
+  "9414750": {
     "id": "9414750",
     "name": "Alameda",
     "lat": 37.771953,
@@ -109492,9 +115161,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 161.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.93,
+      "MHW": 9.31,
+      "MSL": 6.78,
+      "MLW": 4.47,
+      "MLLW": 3.33
+    }
   },
-  {
+  "9414764": {
     "id": "9414764",
     "name": "Oakland Inner Harbor",
     "lat": 37.795,
@@ -109623,11 +115299,18 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 229.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.79,
+      "MHW": 10.17,
+      "MSL": 7.74,
+      "MLW": 5.52,
+      "MLLW": 4.42
+    }
   },
-  {
+  "9414767": {
     "id": "9414767",
-    "name": "ALAMEDA NAS, NAVY FUEL PIER",
+    "name": "Alameda Nas, Navy Fuel Pier",
     "lat": 37.7933,
     "lng": -122.315,
     "state": "CA",
@@ -109764,11 +115447,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 182.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.04,
+      "MHW": 10.42,
+      "MSL": 8.01,
+      "MLW": 5.77,
+      "MLLW": 4.63
+    }
   },
-  {
+  "9414806": {
     "id": "9414806",
-    "name": "SAUSALITO, SAN FRANCISCO BAY",
+    "name": "Sausalito, San Francisco Bay",
     "lat": 37.8467,
     "lng": -122.477,
     "state": "CA",
@@ -109925,9 +115615,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 177.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.82,
+      "MHW": 8.23,
+      "MSL": 6.2,
+      "MLW": 4.28,
+      "MLLW": 3.13
+    }
   },
-  {
+  "9414811": {
     "id": "9414811",
     "name": "Bradmoor Island",
     "lat": 38.1833,
@@ -110051,11 +115748,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 183.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.48,
+      "MHW": 8.96,
+      "MSL": 6.89,
+      "MLW": 4.75,
+      "MLLW": 4
+    }
   },
-  {
+  "9414816": {
     "id": "9414816",
-    "name": "BERKELEY,S.F.BAY",
+    "name": "Berkeley,s.f.bay",
     "lat": 37.865,
     "lng": -122.307,
     "state": "CA",
@@ -110187,11 +115891,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 229.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.98,
+      "MHW": 10.37,
+      "MSL": 8.16,
+      "MLW": 6.02,
+      "MLLW": 4.88
+    }
   },
-  {
+  "9414819": {
     "id": "9414819",
-    "name": "SAUSALITO, COE DOCK, S.F. BAY",
+    "name": "Sausalito, Coe Dock, S.f. Bay",
     "lat": 37.865,
     "lng": -122.493,
     "state": "CA",
@@ -110348,9 +116059,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 192
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.58,
+      "MHW": 15.97,
+      "MSL": 13.93,
+      "MLW": 11.97,
+      "MLLW": 10.84
+    }
   },
-  {
+  "9414863": {
     "id": "9414863",
     "name": "Richmond",
     "lat": 37.928299,
@@ -110514,11 +116232,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 226.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.63,
+      "MHW": 17.02,
+      "MSL": 14.84,
+      "MLW": 12.71,
+      "MLLW": 11.59
+    }
   },
-  {
+  "9414874": {
     "id": "9414874",
-    "name": "CORTE MADERA CREEK",
+    "name": "Corte Madera Creek",
     "lat": 37.9433,
     "lng": -122.513,
     "state": "CA",
@@ -110685,9 +116410,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 305
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.17,
+      "MHW": 14.57,
+      "MSL": 12.47,
+      "MLW": 10.45,
+      "MLLW": 9.37
+    }
   },
-  {
+  "9414958": {
     "id": "9414958",
     "name": "Bolinas, Bolinas Lagoon",
     "lat": 37.908001,
@@ -110856,9 +116588,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 17.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.6,
+      "MHW": 5.99,
+      "MSL": 4.56,
+      "MLW": 3.07,
+      "MLLW": 2.33
+    }
   },
-  {
+  "9415020": {
     "id": "9415020",
     "name": "Point Reyes",
     "lat": 37.994167,
@@ -110982,11 +116721,18 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 187
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.72,
+      "MHW": 9.06,
+      "MSL": 7.06,
+      "MLW": 5.14,
+      "MLLW": 3.96
+    }
   },
-  {
+  "9415021": {
     "id": "9415021",
-    "name": "BLACKSLOUGH LANDING, SAN JOAQUIN RIVER",
+    "name": "Blackslough Landing, San Joaquin River",
     "lat": 37.994694,
     "lng": -121.41904,
     "state": "CA",
@@ -111128,9 +116874,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 52.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 332.46,
+      "MHW": 332,
+      "MSL": 330.66,
+      "MLW": 329.27,
+      "MLLW": 328.82
+    }
   },
-  {
+  "9415056": {
     "id": "9415056",
     "name": "Pinole Point, San Pablo Bay",
     "lat": 38.015,
@@ -111259,11 +117012,18 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 254.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.22,
+      "MHW": 13.62,
+      "MSL": 11.3,
+      "MLW": 9.06,
+      "MLLW": 7.98
+    }
   },
-  {
+  "9415064": {
     "id": "9415064",
-    "name": "ANTIOCH, SAN JOAQUIN RIVER",
+    "name": "Antioch, San Joaquin River",
     "lat": 38.02,
     "lng": -121.815,
     "state": "CA",
@@ -111405,11 +117165,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 193
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.18,
+      "MHW": 6.71,
+      "MSL": 5.34,
+      "MLW": 3.89,
+      "MLLW": 3.3
+    }
   },
-  {
+  "9415102": {
     "id": "9415102",
-    "name": "Martinez-Amorco Pier",
+    "name": "Martinez-amorco Pier",
     "lat": 38.034639,
     "lng": -122.125194,
     "state": "CA",
@@ -111526,11 +117293,18 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 289.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 40.43,
+      "MHW": 39.91,
+      "MSL": 37.93,
+      "MLW": 35.95,
+      "MLLW": 35.07
+    }
   },
-  {
+  "9415105": {
     "id": "9415105",
-    "name": "WARDS ISLAND, SAN JOAQUIN RIVER",
+    "name": "Wards Island, San Joaquin River",
     "lat": 38.050025,
     "lng": -121.49686,
     "state": "CA",
@@ -111672,11 +117446,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 48.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 325.53,
+      "MHW": 325.09,
+      "MSL": 323.85,
+      "MLW": 322.6,
+      "MLLW": 322.16
+    }
   },
-  {
+  "9415112": {
     "id": "9415112",
-    "name": "MALLARD ISLAND, SUISUN BAY",
+    "name": "Mallard Island, Suisun Bay",
     "lat": 38.0433,
     "lng": -121.918,
     "state": "CA",
@@ -111818,11 +117599,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 158.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.62,
+      "MHW": 7.13,
+      "MSL": 5.53,
+      "MLW": 3.89,
+      "MLLW": 3.21
+    }
   },
-  {
+  "9415143": {
     "id": "9415143",
-    "name": "CROCKETT, CARQUINEZ STRAIT",
+    "name": "Crockett, Carquinez Strait",
     "lat": 38.0583,
     "lng": -122.223,
     "state": "CA",
@@ -111984,9 +117772,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 27.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.2,
+      "MHW": 12.65,
+      "MSL": 10.47,
+      "MLW": 8.25,
+      "MLLW": 7.26
+    }
   },
-  {
+  "9415144": {
     "id": "9415144",
     "name": "Port Chicago",
     "lat": 38.056,
@@ -112165,11 +117960,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 150.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.9,
+      "MHW": 8.39,
+      "MSL": 6.55,
+      "MLW": 4.73,
+      "MLLW": 3.99
+    }
   },
-  {
+  "9415193": {
     "id": "9415193",
-    "name": "THREE MILE SLOUGH,SAN JOAQUIN R.",
+    "name": "Three Mile Slough,san Joaquin R.",
     "lat": 38.0867,
     "lng": -121.685,
     "state": "CA",
@@ -112311,9 +118113,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 24.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.78,
+      "MHW": 14.3,
+      "MSL": 13.12,
+      "MLW": 11.88,
+      "MLLW": 11.36
+    }
   },
-  {
+  "9415218": {
     "id": "9415218",
     "name": "Mare Island",
     "lat": 38.07,
@@ -112472,11 +118281,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 65.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.68,
+      "MHW": 8.12,
+      "MSL": 6,
+      "MLW": 3.88,
+      "MLLW": 2.93
+    }
   },
-  {
+  "9415229": {
     "id": "9415229",
-    "name": "KORTHS HBR, SAN JOAQUIN RIVER",
+    "name": "Korths Hbr, San Joaquin River",
     "lat": 38.09761,
     "lng": -121.568383,
     "state": "CA",
@@ -112613,11 +118429,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 33.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.47,
+      "MHW": 18.03,
+      "MSL": 16.88,
+      "MLW": 15.72,
+      "MLLW": 15.28
+    }
   },
-  {
+  "9415252": {
     "id": "9415252",
-    "name": "PETALUMA RIVER ENTRANCE",
+    "name": "Petaluma River Entrance",
     "lat": 38.115306,
     "lng": -122.5057,
     "state": "CA",
@@ -112749,11 +118572,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 53.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.35,
+      "MHW": 8.82,
+      "MSL": 6.57,
+      "MLW": 4.28,
+      "MLLW": 3.34
+    }
   },
-  {
+  "9415265": {
     "id": "9415265",
-    "name": "SUISUN SLOUGH ENTRANCE",
+    "name": "Suisun Slough Entrance",
     "lat": 38.1283,
     "lng": -122.073,
     "state": "CA",
@@ -112885,9 +118715,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 155.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8,
+      "MHW": 7.49,
+      "MSL": 5.63,
+      "MLW": 3.75,
+      "MLLW": 3.02
+    }
   },
-  {
+  "9415316": {
     "id": "9415316",
     "name": "Rio Vista",
     "lat": 38.145,
@@ -113056,9 +118893,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 240.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.82,
+      "MHW": 16.34,
+      "MSL": 14.87,
+      "MLW": 13.33,
+      "MLLW": 12.74
+    }
   },
-  {
+  "9415338": {
     "id": "9415338",
     "name": "Sonoma Creek Entrance",
     "lat": 38.1567,
@@ -113192,11 +119036,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 68.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.5,
+      "MHW": 5.91,
+      "MSL": 3.78,
+      "MLW": 1.73,
+      "MLLW": 1.07
+    }
   },
-  {
+  "9415423": {
     "id": "9415423",
-    "name": "LAKEVILLE, PETALUMA RIVER",
+    "name": "Lakeville, Petaluma River",
     "lat": 38.1983,
     "lng": -122.547,
     "state": "CA",
@@ -113323,9 +119174,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 286.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.66,
+      "MHW": 8.17,
+      "MSL": 5.74,
+      "MLW": 3.18,
+      "MLLW": 2.29
+    }
   },
-  {
+  "9415584": {
     "id": "9415584",
     "name": "Petaluma River, Upper Drawbridge",
     "lat": 38.2283,
@@ -113459,9 +119317,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 263.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.36,
+      "MHW": 7.89,
+      "MSL": 5.43,
+      "MLW": 2.68,
+      "MLLW": 1.7
+    }
   },
-  {
+  "9416409": {
     "id": "9416409",
     "name": "Green Cove",
     "lat": 38.7043,
@@ -113585,9 +119450,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 204.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.33,
+      "MHW": 17.66,
+      "MSL": 15.77,
+      "MLW": 14.03,
+      "MLLW": 13.1
+    }
   },
-  {
+  "9416841": {
     "id": "9416841",
     "name": "Arena Cove",
     "lat": 38.914556,
@@ -113716,11 +119588,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 195.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 34.8,
+      "MHW": 34.13,
+      "MSL": 32.07,
+      "MLW": 30.08,
+      "MLLW": 28.93
+    }
   },
-  {
+  "9417426": {
     "id": "9417426",
-    "name": "NOYO HARBOR",
+    "name": "Noyo Harbor",
     "lat": 39.4258,
     "lng": -123.8051,
     "state": "CA",
@@ -113837,11 +119716,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 212.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.93,
+      "MHW": 5.26,
+      "MSL": 3.11,
+      "MLW": 1.04,
+      "MLLW": -0.17
+    }
   },
-  {
+  "9418024": {
     "id": "9418024",
-    "name": "SHELTER COVE",
+    "name": "Shelter Cove",
     "lat": 40.025,
     "lng": -124.058,
     "state": "CA",
@@ -113958,9 +119844,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 219.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.26,
+      "MHW": 28.6,
+      "MSL": 26.42,
+      "MLW": 24.33,
+      "MLLW": 23.12
+    }
   },
-  {
+  "9418637": {
     "id": "9418637",
     "name": "Cockrobin Island Bridge",
     "lat": 40.637199,
@@ -114134,11 +120027,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 334.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.23,
+      "MHW": 25.54,
+      "MSL": 23.38,
+      "MLW": 21.15,
+      "MLLW": 20.01
+    }
   },
-  {
+  "9418723": {
     "id": "9418723",
-    "name": "FIELDS LANDING, HUMBOLDT BAY",
+    "name": "Fields Landing, Humboldt Bay",
     "lat": 40.7233,
     "lng": -124.222,
     "state": "CA",
@@ -114270,9 +120170,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 237.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.67,
+      "MHW": 7.96,
+      "MSL": 5.49,
+      "MLW": 3.03,
+      "MLLW": 1.77
+    }
   },
-  {
+  "9418767": {
     "id": "9418767",
     "name": "North Spit",
     "lat": 40.76691,
@@ -114426,9 +120333,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 239.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.4,
+      "MHW": 20.69,
+      "MSL": 18.25,
+      "MLW": 15.8,
+      "MLLW": 14.55
+    }
   },
-  {
+  "9418817": {
     "id": "9418817",
     "name": "Samoa, Humboldt Bay",
     "lat": 40.8267,
@@ -114577,9 +120491,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 304.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.08,
+      "MHW": 8.36,
+      "MSL": 5.7,
+      "MLW": 3.01,
+      "MLLW": 1.71
+    }
   },
-  {
+  "9419551": {
     "id": "9419551",
     "name": "Requa Dock",
     "lat": 41.545,
@@ -114708,9 +120629,13 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 268
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.87,
+      "MHW": 36.26
+    }
   },
-  {
+  "9419750": {
     "id": "9419750",
     "name": "Crescent City",
     "lat": 41.74561,
@@ -114839,9 +120764,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 223.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.56,
+      "MHW": 9.92,
+      "MSL": 7.39,
+      "MLW": 4.93,
+      "MLLW": 3.69
+    }
   },
-  {
+  "9419945": {
     "id": "9419945",
     "name": "Pyramid Point",
     "lat": 41.94525,
@@ -114975,9 +120907,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 165.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.98,
+      "MHW": 26.37,
+      "MSL": 23.99,
+      "MLW": 21.7,
+      "MLLW": 20.57
+    }
   },
-  {
+  "9431011": {
     "id": "9431011",
     "name": "Gold Beach",
     "lat": 42.421639,
@@ -115136,9 +121075,16 @@ const stations = [
         "amplitude": 0.16,
         "phaseLag": 229.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 49.29,
+      "MHW": 48.63,
+      "MSL": 46.04,
+      "MLW": 43.5,
+      "MLLW": 42.13
+    }
   },
-  {
+  "9431647": {
     "id": "9431647",
     "name": "Port Orford",
     "lat": 42.738972,
@@ -115252,9 +121198,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 232.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.39,
+      "MHW": 29.68,
+      "MSL": 27.04,
+      "MLW": 24.47,
+      "MLLW": 23.11
+    }
   },
-  {
+  "9432436": {
     "id": "9432436",
     "name": "Coquille River",
     "lat": 43.157902,
@@ -115378,9 +121331,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 36
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.26,
+      "MHW": 19.55,
+      "MSL": 17.53,
+      "MLW": 15.56,
+      "MLLW": 15.04
+    }
   },
-  {
+  "9432780": {
     "id": "9432780",
     "name": "Charleston",
     "lat": 43.345,
@@ -115534,9 +121494,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 248.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.38,
+      "MHW": 10.72,
+      "MSL": 7.84,
+      "MLW": 5.03,
+      "MLLW": 3.76
+    }
   },
-  {
+  "9433445": {
     "id": "9433445",
     "name": "Half Moon Bay",
     "lat": 43.675,
@@ -115680,11 +121647,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 329.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.84,
+      "MHW": 18.19,
+      "MSL": 15.51,
+      "MLW": 12.9,
+      "MLLW": 11.7
+    }
   },
-  {
+  "9433501": {
     "id": "9433501",
-    "name": "REEDSPORT",
+    "name": "Reedsport",
     "lat": 43.708,
     "lng": -124.098,
     "state": "OR",
@@ -115806,9 +121780,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 216.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.45,
+      "MHW": 20.79,
+      "MSL": 17.98,
+      "MLW": 15.14,
+      "MLLW": 14.03
+    }
   },
-  {
+  "9434068": {
     "id": "9434068",
     "name": "Cushman",
     "lat": 43.985,
@@ -115947,11 +121928,18 @@ const stations = [
         "amplitude": 0.18,
         "phaseLag": 289.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.29,
+      "MHW": 31.64,
+      "MSL": 28.83,
+      "MLW": 25.97,
+      "MLLW": 24.89
+    }
   },
-  {
+  "9434098": {
     "id": "9434098",
-    "name": "Florence USCG Pier, Siuslaw River",
+    "name": "Florence Uscg Pier, Siuslaw River",
     "lat": 44.0021,
     "lng": -124.123,
     "state": "OR",
@@ -116118,9 +122106,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 324.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.61,
+      "MHW": 26.97,
+      "MSL": 24.2,
+      "MLW": 21.44,
+      "MLLW": 20.2
+    }
   },
-  {
+  "9434939": {
     "id": "9434939",
     "name": "Waldport",
     "lat": 44.434361,
@@ -116289,11 +122284,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 9.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.3,
+      "MHW": 23.59,
+      "MSL": 20.8,
+      "MLW": 17.96,
+      "MLLW": 16.71
+    }
   },
-  {
+  "9435308": {
     "id": "9435308",
-    "name": "WEISER POINT, YAQUINA RIVER",
+    "name": "Weiser Point, Yaquina River",
     "lat": 44.5933,
     "lng": -124.008,
     "state": "OR",
@@ -116435,9 +122437,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 236.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.53,
+      "MHW": 11.86,
+      "MSL": 8.6,
+      "MLW": 5.4,
+      "MLLW": 4.06
+    }
   },
-  {
+  "9435380": {
     "id": "9435380",
     "name": "South Beach",
     "lat": 44.6254,
@@ -116606,11 +122615,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 239.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.91,
+      "MHW": 12.21,
+      "MSL": 9.02,
+      "MLW": 5.95,
+      "MLLW": 4.57
+    }
   },
-  {
+  "9435827": {
     "id": "9435827",
-    "name": "DEPOE BAY",
+    "name": "Depoe Bay",
     "lat": 44.81,
     "lng": -124.058,
     "state": "OR",
@@ -116742,9 +122758,16 @@ const stations = [
         "amplitude": 0.21,
         "phaseLag": 240.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.64,
+      "MHW": 10.93,
+      "MSL": 7.82,
+      "MLW": 4.77,
+      "MLLW": 3.4
+    }
   },
-  {
+  "9435992": {
     "id": "9435992",
     "name": "Chinook Bend",
     "lat": 44.88,
@@ -116868,9 +122891,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 299.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.4,
+      "MHW": 31.72,
+      "MSL": 29.58,
+      "MLW": 27.5,
+      "MLLW": 26.88
+    }
   },
-  {
+  "9436381": {
     "id": "9436381",
     "name": "Cascade Head, Salmon River",
     "lat": 45.04794,
@@ -117044,9 +123074,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 82
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.31,
+      "MHW": 23.62,
+      "MSL": 20.78,
+      "MLW": 18.15,
+      "MLLW": 17.18
+    }
   },
-  {
+  "9437381": {
     "id": "9437381",
     "name": "Dick Point",
     "lat": 45.4817,
@@ -117225,9 +123262,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 152.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.61,
+      "MHW": 26.91,
+      "MSL": 23.97,
+      "MLW": 21.37,
+      "MLLW": 20.66
+    }
   },
-  {
+  "9437540": {
     "id": "9437540",
     "name": "Garibaldi",
     "lat": 45.55453,
@@ -117406,11 +123450,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 286.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.31,
+      "MHW": 11.6,
+      "MSL": 8.49,
+      "MLW": 5.36,
+      "MLLW": 3.99
+    }
   },
-  {
+  "9437585": {
     "id": "9437585",
-    "name": "NORTH JETTY, TILLAMOOK BAY",
+    "name": "North Jetty, Tillamook Bay",
     "lat": 45.57,
     "lng": -123.965,
     "state": "OR",
@@ -117547,9 +123598,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 318.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 40.86,
+      "MHW": 40.17,
+      "MSL": 37.09,
+      "MLW": 34.16,
+      "MLLW": 32.82
+    }
   },
-  {
+  "9437954": {
     "id": "9437954",
     "name": "North Fork",
     "lat": 45.7338,
@@ -117683,9 +123741,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 201.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.25,
+      "MHW": 28.54,
+      "MSL": 25.17,
+      "MLW": 21.89,
+      "MLLW": 20.72
+    }
   },
-  {
+  "9438772": {
     "id": "9438772",
     "name": "Cathcart Landing",
     "lat": 46.12425,
@@ -117859,9 +123924,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 64.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 39.51,
+      "MHW": 38.81,
+      "MSL": 35.33,
+      "MLW": 31.82,
+      "MLLW": 30.67
+    }
   },
-  {
+  "9439011": {
     "id": "9439011",
     "name": "Hammond",
     "lat": 46.2017,
@@ -118030,9 +124102,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 296.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.86,
+      "MHW": 10.15,
+      "MSL": 6.88,
+      "MLW": 3.76,
+      "MLLW": 2.5
+    }
   },
-  {
+  "9439040": {
     "id": "9439040",
     "name": "Astoria",
     "lat": 46.207306,
@@ -118206,9 +124285,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 107.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.84,
+      "MHW": 10.17,
+      "MSL": 6.74,
+      "MLW": 3.4,
+      "MLLW": 2.23
+    }
   },
-  {
+  "9439099": {
     "id": "9439099",
     "name": "Wauna",
     "lat": 46.16,
@@ -118387,9 +124473,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 205.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.99,
+      "MHW": 7.39,
+      "MSL": 4.4,
+      "MLW": 1.67,
+      "MLLW": 1
+    }
   },
-  {
+  "9439189": {
     "id": "9439189",
     "name": "Rocky Point",
     "lat": 45.6967,
@@ -118548,9 +124641,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 52.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.15,
+      "MHW": 4.59,
+      "MSL": 3.26,
+      "MLW": 2.07,
+      "MLLW": 1.84
+    }
   },
-  {
+  "9439201": {
     "id": "9439201",
     "name": "St Helens",
     "lat": 45.865002,
@@ -118724,9 +124824,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 344.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.28,
+      "MHW": 4.8,
+      "MSL": 3.54,
+      "MLW": 2.28,
+      "MLLW": 2.05
+    }
   },
-  {
+  "9439221": {
     "id": "9439221",
     "name": "Portland Morrison Street Bridge",
     "lat": 45.51,
@@ -118885,11 +124992,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 20.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.27,
+      "MHW": 4.76,
+      "MSL": 3.17,
+      "MLW": 1.9,
+      "MLLW": 1.65
+    }
   },
-  {
+  "9440047": {
     "id": "9440047",
-    "name": "WASHOUGAL, COLUMBIA RIVER",
+    "name": "Washougal, Columbia River",
     "lat": 45.5783,
     "lng": -122.382,
     "state": "WA",
@@ -118991,9 +125105,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 149.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.49,
+      "MHW": 16.11,
+      "MSL": 15.46,
+      "MLW": 14.93,
+      "MLLW": 14.65
+    }
   },
-  {
+  "9440079": {
     "id": "9440079",
     "name": "Beacon Rock State Park",
     "lat": 45.6203,
@@ -119102,9 +125223,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 192.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 35.14,
+      "MHW": 34.74,
+      "MSL": 34.18,
+      "MLW": 33.72,
+      "MLLW": 33.4
+    }
   },
-  {
+  "9440083": {
     "id": "9440083",
     "name": "Vancouver",
     "lat": 45.631172,
@@ -119273,11 +125401,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 73
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.97,
+      "MHW": 4.44,
+      "MSL": 3.13,
+      "MLW": 2,
+      "MLLW": 1.78
+    }
   },
-  {
+  "9440171": {
     "id": "9440171",
-    "name": "KNAPP(THORNES)LNDG, WILLOW BAR",
+    "name": "Knapp(thornes)lndg, Willow Bar",
     "lat": 45.7417,
     "lng": -122.755,
     "state": "WA",
@@ -119399,11 +125534,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 89.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.03,
+      "MHW": 14.5,
+      "MSL": 13.25,
+      "MLW": 12.15,
+      "MLLW": 11.89
+    }
   },
-  {
+  "9440357": {
     "id": "9440357",
-    "name": "TEMCO Kalama Terminal",
+    "name": "Temco Kalama Terminal",
     "lat": 45.987,
     "lng": -122.837,
     "state": "",
@@ -119525,9 +125667,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 347
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.65,
+      "MHW": 11.19,
+      "MSL": 9.69,
+      "MLW": 8.32,
+      "MLLW": 8.02
+    }
   },
-  {
+  "9440422": {
     "id": "9440422",
     "name": "Longview",
     "lat": 46.106139,
@@ -119686,11 +125835,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 284.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.08,
+      "MHW": 6.61,
+      "MSL": 4.58,
+      "MLW": 2.86,
+      "MLLW": 2.53
+    }
   },
-  {
+  "9440482": {
     "id": "9440482",
-    "name": "CAPE HORN, COLUMBIA RIVER",
+    "name": "Cape Horn, Columbia River",
     "lat": 46.1517,
     "lng": -123.29,
     "state": "WA",
@@ -119817,9 +125973,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 161.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.09,
+      "MHW": 25.51,
+      "MSL": 22.72,
+      "MLW": 20.32,
+      "MLLW": 19.73
+    }
   },
-  {
+  "9440483": {
     "id": "9440483",
     "name": "Barlow Point",
     "lat": 46.152,
@@ -119943,9 +126106,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 257.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.56,
+      "MHW": 30.05,
+      "MSL": 27.78,
+      "MLW": 25.92,
+      "MLLW": 25.51
+    }
   },
-  {
+  "9440569": {
     "id": "9440569",
     "name": "Skamokawa",
     "lat": 46.270306,
@@ -120124,9 +126294,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 177.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.97,
+      "MHW": 7.34,
+      "MSL": 4.21,
+      "MLW": 1.25,
+      "MLLW": 0.48
+    }
   },
-  {
+  "9440581": {
     "id": "9440581",
     "name": "Cape Disappointment",
     "lat": 46.281028,
@@ -120280,9 +126457,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 241.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 60.34,
+      "MHW": 59.64,
+      "MSL": 56.57,
+      "MLW": 53.62,
+      "MLLW": 52.27
+    }
   },
-  {
+  "9440650": {
     "id": "9440650",
     "name": "Greenhead Slough",
     "lat": 46.372,
@@ -120421,11 +126605,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 208.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.12,
+      "MHW": 25.37,
+      "MSL": 21.32,
+      "MLW": 16.61,
+      "MLLW": 15.43
+    }
   },
-  {
+  "9440747": {
     "id": "9440747",
-    "name": "NAHCOTTA, WILLAPA BAY",
+    "name": "Nahcotta, Willapa Bay",
     "lat": 46.5017,
     "lng": -124.023,
     "state": "WA",
@@ -120547,11 +126738,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 170.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.22,
+      "MHW": 10.47,
+      "MSL": 6.54,
+      "MLW": 2.19,
+      "MLLW": 0.73
+    }
   },
-  {
+  "9440875": {
     "id": "9440875",
-    "name": "SOUTH BEND",
+    "name": "South Bend",
     "lat": 46.6633,
     "lng": -123.798,
     "state": "WA",
@@ -120673,9 +126871,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 143.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.39,
+      "MHW": 13.67,
+      "MSL": 9.99,
+      "MLW": 6.02,
+      "MLLW": 4.57
+    }
   },
-  {
+  "9440910": {
     "id": "9440910",
     "name": "Toke Point",
     "lat": 46.7075,
@@ -120829,9 +127034,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 30.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.44,
+      "MHW": 12.7,
+      "MSL": 9.3,
+      "MLW": 5.89,
+      "MLLW": 4.52
+    }
   },
-  {
+  "9441102": {
     "id": "9441102",
     "name": "Westport",
     "lat": 46.90431,
@@ -121000,9 +127212,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 254.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.14,
+      "MHW": 11.4,
+      "MSL": 7.87,
+      "MLW": 4.4,
+      "MLLW": 3
+    }
   },
-  {
+  "9441187": {
     "id": "9441187",
     "name": "Aberdeen",
     "lat": 46.9683,
@@ -121191,9 +127410,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 345.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.15,
+      "MHW": 16.45,
+      "MSL": 12.64,
+      "MLW": 8.51,
+      "MLLW": 7.04
+    }
   },
-  {
+  "9441644": {
     "id": "9441644",
     "name": "Taholah",
     "lat": 47.34817,
@@ -121332,9 +127558,13 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 32.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 33.15,
+      "MHW": 32.45
+    }
   },
-  {
+  "9442396": {
     "id": "9442396",
     "name": "La Push, Quillayute River",
     "lat": 47.91284,
@@ -121458,9 +127688,16 @@ const stations = [
         "amplitude": 0.24,
         "phaseLag": 254.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.69,
+      "MHW": 12.98,
+      "MSL": 9.75,
+      "MLW": 6.55,
+      "MLLW": 5.17
+    }
   },
-  {
+  "9442705": {
     "id": "9442705",
     "name": "Tskawahyah Island, Cape Alava",
     "lat": 48.171,
@@ -121594,9 +127831,16 @@ const stations = [
         "amplitude": 0.24,
         "phaseLag": 269.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.92,
+      "MHW": 30.18,
+      "MSL": 26.88,
+      "MLW": 23.67,
+      "MLLW": 22.21
+    }
   },
-  {
+  "9443090": {
     "id": "9443090",
     "name": "Neah Bay",
     "lat": 48.370722,
@@ -121750,11 +127994,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 68.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.96,
+      "MHW": 9.11,
+      "MSL": 6.32,
+      "MLW": 3.6,
+      "MLLW": 2
+    }
   },
-  {
+  "9443361": {
     "id": "9443361",
-    "name": "SEKIU, CLALLAM BAY",
+    "name": "Sekiu, Clallam Bay",
     "lat": 48.2633,
     "lng": -124.297,
     "state": "WA",
@@ -121921,9 +128172,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 84.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.09,
+      "MHW": 23.25,
+      "MSL": 20.75,
+      "MLW": 18.38,
+      "MLLW": 16.59
+    }
   },
-  {
+  "9443551": {
     "id": "9443551",
     "name": "Jim Creek",
     "lat": 48.1872,
@@ -122057,9 +128315,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 290.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.36,
+      "MHW": 19.68,
+      "MSL": 17.24,
+      "MLW": 14.77,
+      "MLLW": 13.18
+    }
   },
-  {
+  "9444090": {
     "id": "9444090",
     "name": "Port Angeles",
     "lat": 48.125,
@@ -122233,9 +128498,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 115.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 37.38,
+      "MHW": 36.83,
+      "MSL": 34.56,
+      "MLW": 32.24,
+      "MLLW": 30.32
+    }
   },
-  {
+  "9444900": {
     "id": "9444900",
     "name": "Port Townsend",
     "lat": 48.11122,
@@ -122399,9 +128671,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 83.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.88,
+      "MHW": 11.2,
+      "MSL": 8.36,
+      "MLW": 5.86,
+      "MLLW": 3.36
+    }
   },
-  {
+  "9445016": {
     "id": "9445016",
     "name": "Foulweather Bluff",
     "lat": 47.9267,
@@ -122540,9 +128819,16 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 31.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.56,
+      "MHW": 12.73,
+      "MSL": 9.43,
+      "MLW": 6.27,
+      "MLLW": 3.56
+    }
   },
-  {
+  "9445133": {
     "id": "9445133",
     "name": "Bangor",
     "lat": 47.7483,
@@ -122716,11 +129002,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 199.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.8,
+      "MHW": 12.91,
+      "MSL": 9.22,
+      "MLW": 5.6,
+      "MLLW": 2.73
+    }
   },
-  {
+  "9445478": {
     "id": "9445478",
-    "name": "UNION, HOOD CANAL",
+    "name": "Union, Hood Canal",
     "lat": 47.3583,
     "lng": -123.098,
     "state": "WA",
@@ -122852,9 +129145,16 @@ const stations = [
         "amplitude": 0.24,
         "phaseLag": 31.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.47,
+      "MHW": 12.49,
+      "MSL": 8.58,
+      "MLW": 4.63,
+      "MLLW": 1.62
+    }
   },
-  {
+  "9445958": {
     "id": "9445958",
     "name": "Bremerton",
     "lat": 47.561699,
@@ -122998,9 +129298,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 220.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.15,
+      "MHW": 22.25,
+      "MSL": 18.23,
+      "MLW": 14.27,
+      "MLLW": 11.44
+    }
   },
-  {
+  "9446291": {
     "id": "9446291",
     "name": "Wauna",
     "lat": 47.3783,
@@ -123139,9 +129446,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 302.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.7,
+      "MHW": 20.77,
+      "MSL": 15.83,
+      "MLW": 11.13,
+      "MLLW": 8.19
+    }
   },
-  {
+  "9446484": {
     "id": "9446484",
     "name": "Tacoma",
     "lat": 47.27,
@@ -123315,11 +129629,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 241.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.4,
+      "MHW": 11.52,
+      "MSL": 7.46,
+      "MLW": 3.46,
+      "MLLW": 0.62
+    }
   },
-  {
+  "9446705": {
     "id": "9446705",
-    "name": "YOMAN POINT, ANDERSON ISLAND",
+    "name": "Yoman Point, Anderson Island",
     "lat": 47.18,
     "lng": -122.675,
     "state": "WA",
@@ -123491,11 +129812,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 310.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.62,
+      "MHW": 13.69,
+      "MSL": 8.85,
+      "MLW": 4.08,
+      "MLLW": 1.14
+    }
   },
-  {
+  "9446804": {
     "id": "9446804",
-    "name": "SANDY POINT ANDERSON ISLAND, PUGET SOUND",
+    "name": "Sandy Point Anderson Island, Puget Sound",
     "lat": 47.153,
     "lng": -122.675102,
     "state": "",
@@ -123632,11 +129960,18 @@ const stations = [
         "amplitude": 0.25,
         "phaseLag": 59.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.71,
+      "MHW": 20.91,
+      "MSL": 16.77,
+      "MLW": 12.68,
+      "MLLW": 10.15
+    }
   },
-  {
+  "9446807": {
     "id": "9446807",
-    "name": "BUDD INLET, SOUTH OF GULL HARBOR",
+    "name": "Budd Inlet, South Of Gull Harbor",
     "lat": 47.0983,
     "lng": -122.895,
     "state": "WA",
@@ -123813,9 +130148,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 313.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 55.53,
+      "MHW": 54.58,
+      "MSL": 49.36,
+      "MLW": 44.11,
+      "MLLW": 41.03
+    }
   },
-  {
+  "9447130": {
     "id": "9447130",
     "name": "Seattle",
     "lat": 47.601944,
@@ -123984,11 +130326,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 229.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 19.3,
+      "MHW": 18.43,
+      "MSL": 14.58,
+      "MLW": 10.77,
+      "MLLW": 7.94
+    }
   },
-  {
+  "9447659": {
     "id": "9447659",
-    "name": "EVERETT",
+    "name": "Everett",
     "lat": 47.98,
     "lng": -122.223,
     "state": "WA",
@@ -124120,9 +130469,16 @@ const stations = [
         "amplitude": 0.23,
         "phaseLag": 39.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.83,
+      "MHW": 9.95,
+      "MSL": 6.22,
+      "MLW": 2.54,
+      "MLLW": -0.26
+    }
   },
-  {
+  "9447717": {
     "id": "9447717",
     "name": "Priest Point",
     "lat": 48.03494,
@@ -124266,9 +130622,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 284.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.39,
+      "MHW": 28.53,
+      "MSL": 24.8,
+      "MLW": 21.12,
+      "MLLW": 18.43
+    }
   },
-  {
+  "9447773": {
     "id": "9447773",
     "name": "Tulalip, Tulalip Bay",
     "lat": 48.065,
@@ -124407,9 +130770,16 @@ const stations = [
         "amplitude": 0.23,
         "phaseLag": 38.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 35.86,
+      "MHW": 35.03,
+      "MSL": 31.28,
+      "MLW": 27.58,
+      "MLLW": 24.8
+    }
   },
-  {
+  "9447883": {
     "id": "9447883",
     "name": "Green Bank",
     "lat": 48.105,
@@ -124553,11 +130923,18 @@ const stations = [
         "amplitude": 0.24,
         "phaseLag": 39.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.69,
+      "MHW": 22.83,
+      "MSL": 18.95,
+      "MLW": 15.12,
+      "MLLW": 12.34
+    }
   },
-  {
+  "9447973": {
     "id": "9447973",
-    "name": "NAS Whidbey Island",
+    "name": "Nas Whidbey Island",
     "lat": 48.3428,
     "lng": -122.6858,
     "state": "",
@@ -124684,11 +131061,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 358.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 41.72,
+      "MHW": 41.09,
+      "MSL": 38.72,
+      "MLW": 36.47,
+      "MLLW": 34.28
+    }
   },
-  {
+  "9448009": {
     "id": "9448009",
-    "name": "Spee-Bi-Dah",
+    "name": "Spee-bi-dah",
     "lat": 48.08825,
     "lng": -122.3223,
     "state": "WA",
@@ -124825,9 +131209,16 @@ const stations = [
         "amplitude": 0.23,
         "phaseLag": 37.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.01,
+      "MHW": 28.16,
+      "MSL": 24.36,
+      "MLW": 20.59,
+      "MLLW": 17.79
+    }
   },
-  {
+  "9448043": {
     "id": "9448043",
     "name": "Tulare Beach, Port Susan",
     "lat": 48.106806,
@@ -124971,9 +131362,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 211.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.68,
+      "MHW": 30.83,
+      "MSL": 27.06,
+      "MLW": 23.34,
+      "MLLW": 20.6
+    }
   },
-  {
+  "9448576": {
     "id": "9448576",
     "name": "Sneeoosh Point",
     "lat": 48.4,
@@ -125102,11 +131500,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 13
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.57,
+      "MHW": 13.71,
+      "MSL": 9.9,
+      "MLW": 6.08,
+      "MLLW": 3.51
+    }
   },
-  {
+  "9448601": {
     "id": "9448601",
-    "name": "YOKEKO POINT",
+    "name": "Yokeko Point",
     "lat": 48.4133,
     "lng": -122.615,
     "state": "WA",
@@ -125273,11 +131678,12 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 46.9
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9448614": {
     "id": "9448614",
-    "name": "BOWMAN BAY, FIDALGO ISLAND",
+    "name": "Bowman Bay, Fidalgo Island",
     "lat": 48.415,
     "lng": -122.652,
     "state": "WA",
@@ -125444,9 +131850,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 130.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.82,
+      "MHW": 11.17,
+      "MSL": 8.73,
+      "MLW": 6.55,
+      "MLLW": 4.1
+    }
   },
-  {
+  "9448657": {
     "id": "9448657",
     "name": "Turner Bay",
     "lat": 48.445,
@@ -125590,9 +132003,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 37.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.15,
+      "MHW": 12.28,
+      "MSL": 8.75,
+      "MLW": 5.3,
+      "MLLW": 2.81
+    }
   },
-  {
+  "9448682": {
     "id": "9448682",
     "name": "Swinomish",
     "lat": 48.4583,
@@ -125766,11 +132186,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 220.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 33.61,
+      "MHW": 32.82,
+      "MSL": 29.92,
+      "MLW": 27.38,
+      "MLLW": 24.88
+    }
   },
-  {
+  "9449161": {
     "id": "9449161",
-    "name": "VILLAGE POINT, LUMMI ISLAND",
+    "name": "Village Point, Lummi Island",
     "lat": 48.7167,
     "lng": -122.708,
     "state": "WA",
@@ -125897,9 +132324,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 44.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.55,
+      "MHW": 12.75,
+      "MSL": 9.9,
+      "MLW": 7.44,
+      "MLLW": 4.89
+    }
   },
-  {
+  "9449424": {
     "id": "9449424",
     "name": "Cherry Point",
     "lat": 48.862717,
@@ -126058,9 +132492,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 164
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.49,
+      "MHW": 14.66,
+      "MSL": 11.62,
+      "MLW": 8.95,
+      "MLLW": 6.34
+    }
   },
-  {
+  "9449639": {
     "id": "9449639",
     "name": "Point Roberts",
     "lat": 48.975,
@@ -126199,9 +132640,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 56.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.27,
+      "MHW": 25.4,
+      "MSL": 22.12,
+      "MLW": 19.19,
+      "MLLW": 16.48
+    }
   },
-  {
+  "9449679": {
     "id": "9449679",
     "name": "Blaine, Drayton Harbor",
     "lat": 48.9917,
@@ -126330,9 +132778,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 55.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.39,
+      "MHW": 10.53,
+      "MSL": 7.34,
+      "MLW": 4.52,
+      "MLLW": 1.86
+    }
   },
-  {
+  "9449746": {
     "id": "9449746",
     "name": "Waldron Island",
     "lat": 48.686798,
@@ -126466,9 +132921,16 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 43.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.86,
+      "MHW": 29.16,
+      "MSL": 26.32,
+      "MLW": 23.79,
+      "MLLW": 21.44
+    }
   },
-  {
+  "9449771": {
     "id": "9449771",
     "name": "Rosario, Orcas Island",
     "lat": 48.6467,
@@ -126602,11 +133064,18 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 30.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.15,
+      "MHW": 9.5,
+      "MSL": 6.91,
+      "MLW": 4.57,
+      "MLLW": 2.26
+    }
   },
-  {
+  "9449828": {
     "id": "9449828",
-    "name": "HANBURY POINT, SAN JUAN ISLAND",
+    "name": "Hanbury Point, San Juan Island",
     "lat": 48.5817,
     "lng": -123.17,
     "state": "WA",
@@ -126773,9 +133242,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 107.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.41,
+      "MHW": 9.75,
+      "MSL": 7.27,
+      "MLW": 5.11,
+      "MLLW": 2.79
+    }
   },
-  {
+  "9449856": {
     "id": "9449856",
     "name": "Kanaka Bay, San Juan Island",
     "lat": 48.485,
@@ -126904,9 +133380,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 5.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.56,
+      "MHW": 25.98,
+      "MSL": 23.62,
+      "MLW": 21.45,
+      "MLLW": 19.23
+    }
   },
-  {
+  "9449880": {
     "id": "9449880",
     "name": "Friday Harbor",
     "lat": 48.545278,
@@ -127085,9 +133568,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 134
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.61,
+      "MHW": 10.96,
+      "MSL": 8.4,
+      "MLW": 6.14,
+      "MLLW": 3.85
+    }
   },
-  {
+  "9449911": {
     "id": "9449911",
     "name": "Upright Head",
     "lat": 48.5717,
@@ -127216,9 +133706,16 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 28.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.02,
+      "MHW": 27.38,
+      "MSL": 24.8,
+      "MLW": 22.48,
+      "MLLW": 20.18
+    }
   },
-  {
+  "9449932": {
     "id": "9449932",
     "name": "Armitage Island",
     "lat": 48.535,
@@ -127387,9 +133884,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 142.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.89,
+      "MHW": 11.28,
+      "MSL": 8.71,
+      "MLW": 6.37,
+      "MLLW": 4.05
+    }
   },
-  {
+  "9449982": {
     "id": "9449982",
     "name": "Richardson",
     "lat": 48.4467,
@@ -127558,9 +134062,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 118.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.34,
+      "MHW": 9.8,
+      "MSL": 7.47,
+      "MLW": 5.26,
+      "MLLW": 3.17
+    }
   },
-  {
+  "9449988": {
     "id": "9449988",
     "name": "Telegraph Bay",
     "lat": 48.4433,
@@ -127689,11 +134200,18 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 11.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.18,
+      "MHW": 5.7,
+      "MSL": 3.68,
+      "MLW": 1.83,
+      "MLLW": -0.03
+    }
   },
-  {
+  "9450251": {
     "id": "9450251",
-    "name": "Entrance to Windy Cove",
+    "name": "Entrance To Windy Cove",
     "lat": 55.0354,
     "lng": -133.0238,
     "state": "AK",
@@ -127830,11 +134348,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 212.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.94,
+      "MHW": 10.06,
+      "MSL": 4.76,
+      "MLW": -0.55,
+      "MLLW": -2.09
+    }
   },
-  {
+  "9450286": {
     "id": "9450286",
-    "name": "Dunbar Inlet GPS Tide Buoy",
+    "name": "Dunbar Inlet Gps Tide Buoy",
     "lat": 55.0879,
     "lng": -132.81583,
     "state": "AK",
@@ -127976,9 +134501,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 215
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -5.97,
+      "MHW": -6.84,
+      "MSL": -12.16,
+      "MLW": -17.48,
+      "MLLW": -19.02
+    }
   },
-  {
+  "9450296": {
     "id": "9450296",
     "name": "Custom House Cove, Mary Island",
     "lat": 55.1,
@@ -128117,11 +134649,18 @@ const stations = [
         "amplitude": 0.52,
         "phaseLag": 302
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.33,
+      "MHW": 10.42,
+      "MSL": 4.05,
+      "MLW": -2.36,
+      "MLLW": -3.91
+    }
   },
-  {
+  "9450314": {
     "id": "9450314",
-    "name": "Metlakatla, Port Chester, AK",
+    "name": "Metlakatla, Port Chester, Ak",
     "lat": 55.1283,
     "lng": -131.567,
     "state": "AK",
@@ -128253,9 +134792,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 202.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.66,
+      "MHW": 23.77,
+      "MSL": 17.54,
+      "MLW": 11.34,
+      "MLLW": 9.79
+    }
   },
-  {
+  "9450364": {
     "id": "9450364",
     "name": "Hydaburg, Sukkwan Strait",
     "lat": 55.201698,
@@ -128399,9 +134945,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 224.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.13,
+      "MHW": 15.23,
+      "MSL": 9.9,
+      "MLW": 4.64,
+      "MLLW": 3.09
+    }
   },
-  {
+  "9450460": {
     "id": "9450460",
     "name": "Ketchikan",
     "lat": 55.331944,
@@ -128570,9 +135123,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 332.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.64,
+      "MHW": 20.74,
+      "MSL": 14.26,
+      "MLW": 7.76,
+      "MLLW": 6.19
+    }
   },
-  {
+  "9450463": {
     "id": "9450463",
     "name": "Trocadero Bay",
     "lat": 55.3517,
@@ -128691,11 +135251,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 15.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.69,
+      "MHW": 9.88,
+      "MSL": 5.9,
+      "MLW": 1.97,
+      "MLLW": 0.61
+    }
   },
-  {
+  "9450551": {
     "id": "9450551",
-    "name": "CRAIG",
+    "name": "Craig",
     "lat": 55.4883,
     "lng": -133.142,
     "state": "AK",
@@ -128807,9 +135374,16 @@ const stations = [
         "amplitude": 0.3,
         "phaseLag": 303.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.44,
+      "MHW": 14.59,
+      "MSL": 10.61,
+      "MLW": 6.64,
+      "MLLW": 5.27
+    }
   },
-  {
+  "9450623": {
     "id": "9450623",
     "name": "Big Salt Lake",
     "lat": 55.6,
@@ -128928,9 +135502,13 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 359.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.62,
+      "MHW": 3.9
+    }
   },
-  {
+  "9450625": {
     "id": "9450625",
     "name": "Lindeman Cove",
     "lat": 55.6017,
@@ -129064,11 +135642,18 @@ const stations = [
         "amplitude": 0.6,
         "phaseLag": 306.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.29,
+      "MHW": 26.39,
+      "MSL": 19.74,
+      "MLW": 13.12,
+      "MLLW": 11.53
+    }
   },
-  {
+  "9450642": {
     "id": "9450642",
-    "name": "Northern Carroll Inlet GPS Tide Buoy",
+    "name": "Northern Carroll Inlet Gps Tide Buoy",
     "lat": 55.629,
     "lng": -131.362694,
     "state": "AK",
@@ -129210,9 +135795,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 18
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": -4.58,
+      "MHW": -5.48,
+      "MSL": -12,
+      "MLW": -18.55,
+      "MLLW": -20.15
+    }
   },
-  {
+  "9450711": {
     "id": "9450711",
     "name": "Nossuk Bay",
     "lat": 55.7217,
@@ -129336,9 +135928,16 @@ const stations = [
         "amplitude": 0.34,
         "phaseLag": 304.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.97,
+      "MHW": 10.15,
+      "MSL": 6.03,
+      "MLW": 1.94,
+      "MLLW": 0.57
+    }
   },
-  {
+  "9450753": {
     "id": "9450753",
     "name": "Magnetic Point, Union Bay, Earnest Sound",
     "lat": 55.788283,
@@ -129467,9 +136066,16 @@ const stations = [
         "amplitude": 0.57,
         "phaseLag": 307.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.33,
+      "MHW": 7.44,
+      "MSL": 0.62,
+      "MLW": -6.14,
+      "MLLW": -7.71
+    }
   },
-  {
+  "9450914": {
     "id": "9450914",
     "name": "Burrough Bay, Behm Canal",
     "lat": 56.0383,
@@ -129598,9 +136204,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 336.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.84,
+      "MHW": 8.94,
+      "MSL": 2.2,
+      "MLW": -4.5,
+      "MLLW": -6.06
+    }
   },
-  {
+  "9450970": {
     "id": "9450970",
     "name": "Thoms Point",
     "lat": 56.1183,
@@ -129729,11 +136342,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 220.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.14,
+      "MHW": 5.26,
+      "MSL": -1.7,
+      "MLW": -8.64,
+      "MLLW": -10.19
+    }
   },
-  {
+  "9450997": {
     "id": "9450997",
-    "name": "EL Capitan Passage",
+    "name": "El Capitan Passage",
     "lat": 56.1633,
     "lng": -133.33,
     "state": "AK",
@@ -129875,11 +136495,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 268.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.22,
+      "MHW": 14.39,
+      "MSL": 9.91,
+      "MLW": 5.44,
+      "MLLW": 4.05
+    }
   },
-  {
+  "9450998": {
     "id": "9450998",
-    "name": "Dry Pass, EL Capitan Passage",
+    "name": "Dry Pass, El Capitan Passage",
     "lat": 56.1633,
     "lng": -133.413,
     "state": "AK",
@@ -130016,11 +136643,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 223.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.03,
+      "MHW": 15.2,
+      "MSL": 10.42,
+      "MLW": 5.68,
+      "MLLW": 4.28
+    }
   },
-  {
+  "9451005": {
     "id": "9451005",
-    "name": "POINT HARRINGTON, CLARENCE STRAIT",
+    "name": "Point Harrington, Clarence Strait",
     "lat": 56.1783,
     "lng": -132.697,
     "state": "AK",
@@ -130147,9 +136781,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 158.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.65,
+      "MHW": 12.76,
+      "MSL": 5.95,
+      "MLW": -0.78,
+      "MLLW": -2.3
+    }
   },
-  {
+  "9451012": {
     "id": "9451012",
     "name": "Bradfield Canal",
     "lat": 56.1833,
@@ -130283,9 +136924,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 53.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.59,
+      "MHW": 10.65,
+      "MSL": 3.56,
+      "MLW": -3.44,
+      "MLLW": -5
+    }
   },
-  {
+  "9451037": {
     "id": "9451037",
     "name": "Village Rock",
     "lat": 56.22,
@@ -130414,9 +137062,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 13
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.09,
+      "MHW": 8.23,
+      "MSL": 1.32,
+      "MLW": -5.52,
+      "MLLW": -7.04
+    }
   },
-  {
+  "9451054": {
     "id": "9451054",
     "name": "Port Alexander",
     "lat": 56.24661,
@@ -130570,11 +137225,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 340.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.69,
+      "MHW": 13.84,
+      "MSL": 9.49,
+      "MLW": 5.2,
+      "MLLW": 3.76
+    }
   },
-  {
+  "9451074": {
     "id": "9451074",
-    "name": "BUSHY ISLAND, SNOW PASSAGE",
+    "name": "Bushy Island, Snow Passage",
     "lat": 56.2767,
     "lng": -132.985,
     "state": "AK",
@@ -130706,11 +137368,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 356.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.44,
+      "MHW": 8.57,
+      "MSL": 2.26,
+      "MLW": -3.84,
+      "MLLW": -5.3
+    }
   },
-  {
+  "9451124": {
     "id": "9451124",
-    "name": "REEF POINT, STIKINE STRAIT",
+    "name": "Reef Point, Stikine Strait",
     "lat": 56.3533,
     "lng": -132.553,
     "state": "AK",
@@ -130837,9 +137506,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 111.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.54,
+      "MHW": 9.65,
+      "MSL": 2.83,
+      "MLW": -3.91,
+      "MLLW": -5.41
+    }
   },
-  {
+  "9451152": {
     "id": "9451152",
     "name": "Madan Bay",
     "lat": 56.3922,
@@ -130968,9 +137644,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 84
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.33,
+      "MHW": 11.42,
+      "MSL": 4.5,
+      "MLW": -2.39,
+      "MLLW": -3.9
+    }
   },
-  {
+  "9451204": {
     "id": "9451204",
     "name": "Wrangell",
     "lat": 56.47,
@@ -131099,9 +137782,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 224.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.45,
+      "MHW": 6.57,
+      "MSL": -0.24,
+      "MLW": -7,
+      "MLLW": -8.51
+    }
   },
-  {
+  "9451247": {
     "id": "9451247",
     "name": "Monte Carlo Island",
     "lat": 56.535,
@@ -131225,9 +137915,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 89.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.83,
+      "MHW": 15.99,
+      "MSL": 10.76,
+      "MLW": 5.64,
+      "MLLW": 4.16
+    }
   },
-  {
+  "9451263": {
     "id": "9451263",
     "name": "Point Lockwood",
     "lat": 56.5583,
@@ -131361,9 +138058,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 150.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.67,
+      "MHW": 22.79,
+      "MSL": 16.31,
+      "MLW": 10.12,
+      "MLLW": 8.58
+    }
   },
-  {
+  "9451287": {
     "id": "9451287",
     "name": "Beecher Pass",
     "lat": 56.595,
@@ -131497,9 +138201,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 116.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.77,
+      "MHW": 9.88,
+      "MSL": 3.2,
+      "MLW": -3.17,
+      "MLLW": -4.7
+    }
   },
-  {
+  "9451317": {
     "id": "9451317",
     "name": "Anchor Point",
     "lat": 56.6383,
@@ -131633,9 +138344,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 39.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.22,
+      "MHW": 17.33,
+      "MSL": 10.43,
+      "MLW": 3.78,
+      "MLLW": 2.23
+    }
   },
-  {
+  "9451346": {
     "id": "9451346",
     "name": "Papke's Landing",
     "lat": 56.6767,
@@ -131779,9 +138497,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 345.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.56,
+      "MHW": 26.67,
+      "MSL": 19.71,
+      "MLW": 12.76,
+      "MLLW": 11.17
+    }
   },
-  {
+  "9451349": {
     "id": "9451349",
     "name": "The Summit",
     "lat": 56.68242,
@@ -131910,9 +138635,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 88.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.94,
+      "MHW": 11.07,
+      "MSL": 4.78,
+      "MLW": -1.64,
+      "MLLW": -3.26
+    }
   },
-  {
+  "9451421": {
     "id": "9451421",
     "name": "Golf Island",
     "lat": 56.7867,
@@ -132031,11 +138763,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 120.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.38,
+      "MHW": 9.62,
+      "MSL": 5.84,
+      "MLW": 2.09,
+      "MLLW": 0.68
+    }
   },
-  {
+  "9451422": {
     "id": "9451422",
-    "name": "LECONTE BAY",
+    "name": "Leconte Bay",
     "lat": 56.7883,
     "lng": -132.502,
     "state": "AK",
@@ -132162,9 +138901,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 130.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.83,
+      "MHW": 10.87,
+      "MSL": 4.25,
+      "MLW": -2.61,
+      "MLLW": -4.18
+    }
   },
-  {
+  "9451434": {
     "id": "9451434",
     "name": "Turn Point",
     "lat": 56.8,
@@ -132298,9 +139044,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 28
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.29,
+      "MHW": 11.4,
+      "MSL": 4.56,
+      "MLW": -2.28,
+      "MLLW": -3.78
+    }
   },
-  {
+  "9451438": {
     "id": "9451438",
     "name": "Entrance Island",
     "lat": 56.8117,
@@ -132429,9 +139182,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 36
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.21,
+      "MHW": 10.35,
+      "MSL": 4.3,
+      "MLW": -1.81,
+      "MLLW": -3.35
+    }
   },
-  {
+  "9451467": {
     "id": "9451467",
     "name": "Red Bluff Bay, Baranof Island",
     "lat": 56.8567,
@@ -132550,9 +139310,16 @@ const stations = [
         "amplitude": 0.46,
         "phaseLag": 319
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.49,
+      "MHW": 23.59,
+      "MSL": 18.47,
+      "MLW": 13.21,
+      "MLLW": 11.68
+    }
   },
-  {
+  "9451497": {
     "id": "9451497",
     "name": "Saginaw Bay, Kuiu Island",
     "lat": 56.903,
@@ -132686,9 +139453,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 144.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.9,
+      "MHW": 20.05,
+      "MSL": 14.43,
+      "MLW": 8.69,
+      "MLLW": 7.16
+    }
   },
-  {
+  "9451528": {
     "id": "9451528",
     "name": "Kake Harbor, Keku Strait",
     "lat": 56.948306,
@@ -132812,9 +139586,16 @@ const stations = [
         "amplitude": 0.51,
         "phaseLag": 316.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 39.42,
+      "MHW": 38.52,
+      "MSL": 32.69,
+      "MLW": 26.71,
+      "MLLW": 25.18
+    }
   },
-  {
+  "9451600": {
     "id": "9451600",
     "name": "Sitka",
     "lat": 57.051308,
@@ -132938,11 +139719,18 @@ const stations = [
         "amplitude": 0.32,
         "phaseLag": 298.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.46,
+      "MHW": 13.68,
+      "MSL": 9.81,
+      "MLW": 5.98,
+      "MLLW": 4.52
+    }
   },
-  {
+  "9451625": {
     "id": "9451625",
-    "name": "Baranof,  Warm Spring Bay",
+    "name": "Baranof, Warm Spring Bay",
     "lat": 57.0883,
     "lng": -134.825,
     "state": "AK",
@@ -133064,11 +139852,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 135
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.7,
+      "MHW": 17.81,
+      "MSL": 12.18,
+      "MLW": 6.47,
+      "MLLW": 4.92
+    }
   },
-  {
+  "9451741": {
     "id": "9451741",
-    "name": "WHITESTONE NARROWS, Neva Strait",
+    "name": "Whitestone Narrows, Neva Strait",
     "lat": 57.25,
     "lng": -135.567,
     "state": "AK",
@@ -133205,11 +140000,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 152.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.95,
+      "MHW": 32.17,
+      "MSL": 28.24,
+      "MLW": 24.39,
+      "MLLW": 22.92
+    }
   },
-  {
+  "9451785": {
     "id": "9451785",
-    "name": "THE BROTHERS, STEPHENS PASSAGE",
+    "name": "The Brothers, Stephens Passage",
     "lat": 57.295,
     "lng": -133.797,
     "state": "AK",
@@ -133341,9 +140143,16 @@ const stations = [
         "amplitude": 0.53,
         "phaseLag": 315.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.83,
+      "MHW": 10.9,
+      "MSL": 4.79,
+      "MLW": -1.44,
+      "MLLW": -3
+    }
   },
-  {
+  "9451805": {
     "id": "9451805",
     "name": "Scraggy Island",
     "lat": 57.34,
@@ -133467,9 +140276,16 @@ const stations = [
         "amplitude": 0.31,
         "phaseLag": 307.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.85,
+      "MHW": 9,
+      "MSL": 5.16,
+      "MLW": 1.38,
+      "MLLW": -0.12
+    }
   },
-  {
+  "9451853": {
     "id": "9451853",
     "name": "Sergius Narrows",
     "lat": 57.41,
@@ -133608,9 +140424,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 268.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.79,
+      "MHW": 9.92,
+      "MSL": 4.72,
+      "MLW": -0.7,
+      "MLLW": -2.25
+    }
   },
-  {
+  "9451936": {
     "id": "9451936",
     "name": "Provorotni Island",
     "lat": 57.515,
@@ -133749,9 +140572,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 308.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.9,
+      "MHW": 12.92,
+      "MSL": 6.69,
+      "MLW": 0.27,
+      "MLLW": -1.24
+    }
   },
-  {
+  "9451953": {
     "id": "9451953",
     "name": "Target Island, Mitchell Bay",
     "lat": 57.5333,
@@ -133885,9 +140715,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 139.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 62.25,
+      "MHW": 61.34,
+      "MSL": 56.76,
+      "MLW": 52.1,
+      "MLLW": 51.05
+    }
   },
-  {
+  "9452210": {
     "id": "9452210",
     "name": "Juneau",
     "lat": 58.2988,
@@ -134056,9 +140893,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 47.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 19.45,
+      "MHW": 18.49,
+      "MSL": 11.73,
+      "MLW": 4.75,
+      "MLLW": 3.15
+    }
   },
-  {
+  "9452294": {
     "id": "9452294",
     "name": "Hawk Inlet",
     "lat": 58.085,
@@ -134197,9 +141041,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 337.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.95,
+      "MHW": 11.06,
+      "MSL": 4.75,
+      "MLW": -1.78,
+      "MLLW": -3.34
+    }
   },
-  {
+  "9452328": {
     "id": "9452328",
     "name": "False Bay, Chatham Strait",
     "lat": 57.9667,
@@ -134333,9 +141184,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 113.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.7,
+      "MHW": 14.77,
+      "MSL": 8.58,
+      "MLW": 2.22,
+      "MLLW": 0.62
+    }
   },
-  {
+  "9452400": {
     "id": "9452400",
     "name": "Skagway, Taiya Inlet",
     "lat": 59.4508,
@@ -134524,11 +141382,18 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 64.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.71,
+      "MHW": 17.71,
+      "MSL": 10.81,
+      "MLW": 3.6,
+      "MLLW": 1.98
+    }
   },
-  {
+  "9452421": {
     "id": "9452421",
-    "name": "CHILKAT INLET",
+    "name": "Chilkat Inlet",
     "lat": 59.17,
     "lng": -135.4,
     "state": "AK",
@@ -134655,9 +141520,16 @@ const stations = [
         "amplitude": 0.6,
         "phaseLag": 319.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.94,
+      "MHW": 9.94,
+      "MSL": 3.13,
+      "MLW": -3.94,
+      "MLLW": -5.53
+    }
   },
-  {
+  "9452438": {
     "id": "9452438",
     "name": "Hoonah, Port Fredrick",
     "lat": 58.1076,
@@ -134791,11 +141663,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 263.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 55.94,
+      "MHW": 55.02,
+      "MSL": 48.85,
+      "MLW": 42.5,
+      "MLLW": 40.94
+    }
   },
-  {
+  "9452534": {
     "id": "9452534",
-    "name": "BARTLETT COVE, GLACIER BAY",
+    "name": "Bartlett Cove, Glacier Bay",
     "lat": 58.455278,
     "lng": -135.888611,
     "state": "AK",
@@ -134937,9 +141816,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 293.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9452584": {
     "id": "9452584",
     "name": "Muir Inlet, Glacier Bay",
     "lat": 58.9133,
@@ -135068,11 +141948,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 27.3
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9452611": {
     "id": "9452611",
-    "name": "Pelican Harbor, Lisianski Inlet, AK",
+    "name": "Pelican Harbor, Lisianski Inlet, Ak",
     "lat": 57.958,
     "lng": -136.2268,
     "state": "AK",
@@ -135199,9 +142080,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 147.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.58,
+      "MHW": 17.7,
+      "MSL": 13.55,
+      "MLW": 9.43,
+      "MLLW": 7.98
+    }
   },
-  {
+  "9452634": {
     "id": "9452634",
     "name": "Elfin Cove",
     "lat": 58.19472,
@@ -135365,9 +142253,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 228.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.37,
+      "MHW": 19.49,
+      "MSL": 15.1,
+      "MLW": 10.83,
+      "MLLW": 9.37
+    }
   },
-  {
+  "9452749": {
     "id": "9452749",
     "name": "Tarr Inlet, Glacier Bay",
     "lat": 58.9648,
@@ -135511,9 +142406,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 194.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.68,
+      "MHW": 9.75,
+      "MSL": 2.7,
+      "MLW": -4.34,
+      "MLLW": -6.08
+    }
   },
-  {
+  "9453220": {
     "id": "9453220",
     "name": "Yakutat, Yakutat Bay",
     "lat": 59.548333,
@@ -135672,9 +142574,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 35.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.27,
+      "MHW": 10.4,
+      "MSL": 6.49,
+      "MLW": 2.59,
+      "MLLW": 1.19
+    }
   },
-  {
+  "9453443": {
     "id": "9453443",
     "name": "Moraine Bay",
     "lat": 59.93,
@@ -135823,9 +142732,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 231.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.75,
+      "MHW": 12.92,
+      "MSL": 9.14,
+      "MLW": 5.36,
+      "MLLW": 4.01
+    }
   },
-  {
+  "9454050": {
     "id": "9454050",
     "name": "Cordova",
     "lat": 60.5575,
@@ -135994,11 +142910,18 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 97.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.88,
+      "MHW": 17.96,
+      "MSL": 13.03,
+      "MLW": 7.8,
+      "MLLW": 6.29
+    }
   },
-  {
+  "9454153": {
     "id": "9454153",
-    "name": "GRAVINA RIVER",
+    "name": "Gravina River",
     "lat": 60.77,
     "lng": -146.084639,
     "state": "AK",
@@ -136130,9 +143053,10 @@ const stations = [
         "amplitude": 0.41,
         "phaseLag": 323.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9454240": {
     "id": "9454240",
     "name": "Valdez",
     "lat": 61.124194,
@@ -136291,9 +143215,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 103.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.89,
+      "MHW": 17.96,
+      "MSL": 13.24,
+      "MLW": 8.25,
+      "MLLW": 6.74
+    }
   },
-  {
+  "9454329": {
     "id": "9454329",
     "name": "Cape Hichinbrook",
     "lat": 60.2383,
@@ -136427,9 +143358,16 @@ const stations = [
         "amplitude": 0.38,
         "phaseLag": 327.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.11,
+      "MHW": 10.2,
+      "MSL": 5.81,
+      "MLW": 1.34,
+      "MLLW": -0.14
+    }
   },
-  {
+  "9454561": {
     "id": "9454561",
     "name": "Perch Point",
     "lat": 60.1267,
@@ -136568,9 +143506,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 31.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.09,
+      "MHW": 7.1,
+      "MSL": 2.53,
+      "MLW": -2.2,
+      "MLLW": -3.63
+    }
   },
-  {
+  "9454562": {
     "id": "9454562",
     "name": "Wooded Island",
     "lat": 59.875,
@@ -136704,11 +143649,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 214.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.36,
+      "MHW": 17.45,
+      "MSL": 13.51,
+      "MLW": 9.55,
+      "MLLW": 8.12
+    }
   },
-  {
+  "9454564": {
     "id": "9454564",
-    "name": "SEAL ISLAND",
+    "name": "Seal Island",
     "lat": 60.425,
     "lng": -147.41,
     "state": "AK",
@@ -136835,11 +143787,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 271.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.61,
+      "MHW": 9.71,
+      "MSL": 5.13,
+      "MLW": 0.31,
+      "MLLW": -1.17
+    }
   },
-  {
+  "9454571": {
     "id": "9454571",
-    "name": "STOREY ISLAND NORTH SIDE",
+    "name": "Storey Island North Side",
     "lat": 60.7317,
     "lng": -147.437,
     "state": "AK",
@@ -136966,9 +143925,10 @@ const stations = [
         "amplitude": 0.41,
         "phaseLag": 321.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9454616": {
     "id": "9454616",
     "name": "Montague Island",
     "lat": 60.025,
@@ -137097,11 +144057,18 @@ const stations = [
         "amplitude": 0.4,
         "phaseLag": 321.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.28,
+      "MHW": 9.36,
+      "MSL": 4.86,
+      "MLW": 0.22,
+      "MLLW": -1.22
+    }
   },
-  {
+  "9454652": {
     "id": "9454652",
-    "name": "SOUTH ARM, KNIGHT ISLAND, BAY OF ISLES",
+    "name": "South Arm, Knight Island, Bay Of Isles",
     "lat": 60.3667,
     "lng": -147.7,
     "state": "AK",
@@ -137223,9 +144190,16 @@ const stations = [
         "amplitude": 0.42,
         "phaseLag": 322.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.07,
+      "MHW": 7.15,
+      "MSL": 2.56,
+      "MLW": -2.27,
+      "MLLW": -3.81
+    }
   },
-  {
+  "9454662": {
     "id": "9454662",
     "name": "Snug Harbor",
     "lat": 60.25,
@@ -137359,11 +144333,18 @@ const stations = [
         "amplitude": 0.41,
         "phaseLag": 321.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.62,
+      "MHW": 6.74,
+      "MSL": 2.25,
+      "MLW": -2.43,
+      "MLLW": -3.91
+    }
   },
-  {
+  "9454672": {
     "id": "9454672",
-    "name": "COLLEGE FIORD",
+    "name": "College Fiord",
     "lat": 61.2058,
     "lng": -147.761417,
     "state": "AK",
@@ -137500,11 +144481,18 @@ const stations = [
         "amplitude": 0.43,
         "phaseLag": 325.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.85,
+      "MHW": 9.9,
+      "MSL": 5.03,
+      "MLW": -0.18,
+      "MLLW": -1.7
+    }
   },
-  {
+  "9454691": {
     "id": "9454691",
-    "name": "HERRING POINT, KNIGHT ISLAND, PR WIL SND",
+    "name": "Herring Point, Knight Island, Pr Wil Snd",
     "lat": 60.475,
     "lng": -147.792,
     "state": "AK",
@@ -137626,11 +144614,18 @@ const stations = [
         "amplitude": 0.42,
         "phaseLag": 321.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.5,
+      "MHW": 12.6,
+      "MSL": 7.96,
+      "MLW": 3.07,
+      "MLLW": 1.58
+    }
   },
-  {
+  "9454721": {
     "id": "9454721",
-    "name": "PERRY ISLAND (SOUTH BAY)",
+    "name": "Perry Island (south Bay)",
     "lat": 60.6717,
     "lng": -147.932,
     "state": "AK",
@@ -137762,9 +144757,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 95.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.62,
+      "MHW": 9.67,
+      "MSL": 5.03,
+      "MLW": 0.15,
+      "MLLW": -1.33
+    }
   },
-  {
+  "9454751": {
     "id": "9454751",
     "name": "Guguak",
     "lat": 60.1,
@@ -137898,9 +144900,16 @@ const stations = [
         "amplitude": 0.42,
         "phaseLag": 322.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.24,
+      "MHW": 10.31,
+      "MSL": 5.77,
+      "MLW": 1.12,
+      "MLLW": -0.33
+    }
   },
-  {
+  "9454755": {
     "id": "9454755",
     "name": "Bainbridge Point",
     "lat": 60.1967,
@@ -138044,9 +145053,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 283.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 9.73,
+      "MHW": 8.78,
+      "MSL": 4.21,
+      "MLW": -0.58,
+      "MLLW": -2.06
+    }
   },
-  {
+  "9454814": {
     "id": "9454814",
     "name": "Point Erlington, Erlington Island",
     "lat": 59.9383,
@@ -138190,9 +145206,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 178.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.12,
+      "MHW": 9.15,
+      "MSL": 4.98,
+      "MLW": 0.71,
+      "MLLW": -0.7
+    }
   },
-  {
+  "9454949": {
     "id": "9454949",
     "name": "Whittier",
     "lat": 60.7783,
@@ -138371,9 +145394,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 102.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.06,
+      "MHW": 11.14,
+      "MSL": 6.39,
+      "MLW": 1.36,
+      "MLLW": -0.13
+    }
   },
-  {
+  "9455090": {
     "id": "9455090",
     "name": "Seward",
     "lat": 60.1193,
@@ -138527,11 +145557,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 95.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.77,
+      "MHW": 15.85,
+      "MSL": 11.7,
+      "MLW": 7.52,
+      "MLLW": 6.14
+    }
   },
-  {
+  "9455120": {
     "id": "9455120",
-    "name": "AGNES COVE",
+    "name": "Agnes Cove",
     "lat": 59.7733,
     "lng": -149.588,
     "state": "AK",
@@ -138673,11 +145710,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 358.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.82,
+      "MHW": 6.9,
+      "MSL": 2.72,
+      "MLW": -1.49,
+      "MLLW": -2.87
+    }
   },
-  {
+  "9455145": {
     "id": "9455145",
-    "name": "AIALIK BAY, NORTH END",
+    "name": "Aialik Bay, North End",
     "lat": 59.9533,
     "lng": -149.715,
     "state": "AK",
@@ -138819,11 +145863,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 331.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 52.01,
+      "MHW": 51.1,
+      "MSL": 46.92,
+      "MLW": 42.73,
+      "MLLW": 41.39
+    }
   },
-  {
+  "9455146": {
     "id": "9455146",
-    "name": "AIALIK SILL, AIALIK BAY",
+    "name": "Aialik Sill, Aialik Bay",
     "lat": 59.885,
     "lng": -149.718,
     "state": "AK",
@@ -138945,11 +145996,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 20.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 41.16,
+      "MHW": 40.25,
+      "MSL": 36.07,
+      "MLW": 31.87,
+      "MLLW": 30.51
+    }
   },
-  {
+  "9455151": {
     "id": "9455151",
-    "name": "CAMP COVE, HARRIS PENNINSULA",
+    "name": "Camp Cove, Harris Penninsula",
     "lat": 59.6933,
     "lng": -149.748,
     "state": "AK",
@@ -139081,11 +146139,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 25.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.5,
+      "MHW": 15.6,
+      "MSL": 11.41,
+      "MLW": 7.2,
+      "MLLW": 5.83
+    }
   },
-  {
+  "9455159": {
     "id": "9455159",
-    "name": "CRATER BAY, HARRIS BAY",
+    "name": "Crater Bay, Harris Bay",
     "lat": 59.7133,
     "lng": -149.787,
     "state": "AK",
@@ -139212,11 +146277,18 @@ const stations = [
         "amplitude": 0.38,
         "phaseLag": 322.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.31,
+      "MHW": 16.4,
+      "MSL": 12.16,
+      "MLW": 7.91,
+      "MLLW": 6.59
+    }
   },
-  {
+  "9455204": {
     "id": "9455204",
-    "name": "UPPER NORTHWESTERN FIORD",
+    "name": "Upper Northwestern Fiord",
     "lat": 59.79,
     "lng": -150.032,
     "state": "AK",
@@ -139353,11 +146425,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 303.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.74,
+      "MHW": 14.85,
+      "MSL": 10.57,
+      "MLW": 6.26,
+      "MLLW": 4.9
+    }
   },
-  {
+  "9455258": {
     "id": "9455258",
-    "name": "McCarty Fiord",
+    "name": "Mccarty Fiord",
     "lat": 59.5116,
     "lng": -150.35517,
     "state": "AK",
@@ -139489,9 +146568,16 @@ const stations = [
         "amplitude": 0.4,
         "phaseLag": 329.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.77,
+      "MHW": 26.87,
+      "MSL": 22.31,
+      "MLW": 17.74,
+      "MLLW": 16.38
+    }
   },
-  {
+  "9455500": {
     "id": "9455500",
     "name": "Seldovia",
     "lat": 59.440498,
@@ -139665,9 +146751,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 114.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.83,
+      "MHW": 24.01,
+      "MSL": 16.34,
+      "MLW": 8.48,
+      "MLLW": 6.78
+    }
   },
-  {
+  "9455517": {
     "id": "9455517",
     "name": "Kasitsna Bay, Kachemak Bay",
     "lat": 59.468306,
@@ -139801,11 +146894,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 63.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.05,
+      "MHW": 4.24,
+      "MSL": -3.47,
+      "MLW": -11.41,
+      "MLLW": -13.09
+    }
   },
-  {
+  "9455558": {
     "id": "9455558",
-    "name": "COAL POINT",
+    "name": "Coal Point",
     "lat": 59.601398,
     "lng": -151.410599,
     "state": "AK",
@@ -139947,9 +147047,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 22.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.72,
+      "MHW": 19.88,
+      "MSL": 12.02,
+      "MLW": 3.95,
+      "MLLW": 2.29
+    }
   },
-  {
+  "9455595": {
     "id": "9455595",
     "name": "Bear Cove, Kachemak Bay",
     "lat": 59.725,
@@ -140083,9 +147190,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 49.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.24,
+      "MHW": 4.42,
+      "MSL": -3.57,
+      "MLW": -11.75,
+      "MLLW": -13.41
+    }
   },
-  {
+  "9455606": {
     "id": "9455606",
     "name": "Anchor Point, Cook Inlet",
     "lat": 59.771972,
@@ -140214,9 +147328,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 103.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 42.76,
+      "MHW": 41.97,
+      "MSL": 34.08,
+      "MLW": 26.11,
+      "MLLW": 24.37
+    }
   },
-  {
+  "9455653": {
     "id": "9455653",
     "name": "Ninilchik, Cook Inlet",
     "lat": 60.055,
@@ -140350,9 +147471,16 @@ const stations = [
         "amplitude": 0.79,
         "phaseLag": 27.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.97,
+      "MHW": 6.26,
+      "MSL": -1.9,
+      "MLW": -10.23,
+      "MLLW": -12.18
+    }
   },
-  {
+  "9455711": {
     "id": "9455711",
     "name": "Cape Kasilof",
     "lat": 60.3367,
@@ -140496,11 +147624,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 293.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.43,
+      "MHW": 11.77,
+      "MSL": 3.22,
+      "MLW": -5.63,
+      "MLLW": -7.66
+    }
   },
-  {
+  "9455732": {
     "id": "9455732",
-    "name": "KALIGAN ISLAND (NORTH END),  COOK INLET",
+    "name": "Kaligan Island (north End), Cook Inlet",
     "lat": 60.5117,
     "lng": -151.952,
     "state": "AK",
@@ -140632,11 +147767,18 @@ const stations = [
         "amplitude": 0.79,
         "phaseLag": 49.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.38,
+      "MHW": 15.62,
+      "MSL": 7.83,
+      "MLW": -0.36,
+      "MLLW": -2.34
+    }
   },
-  {
+  "9455735": {
     "id": "9455735",
-    "name": "CHINULNA POINT, COOK INLET",
+    "name": "Chinulna Point, Cook Inlet",
     "lat": 60.5033,
     "lng": -151.283,
     "state": "AK",
@@ -140778,9 +147920,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 349.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.93,
+      "MHW": 14.18,
+      "MSL": 5.48,
+      "MLW": -3.8,
+      "MLLW": -5.92
+    }
   },
-  {
+  "9455760": {
     "id": "9455760",
     "name": "Nikiski",
     "lat": 60.683333,
@@ -140954,9 +148103,16 @@ const stations = [
         "amplitude": 0.23,
         "phaseLag": 319.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.14,
+      "MHW": 26.41,
+      "MSL": 17.89,
+      "MLW": 8.73,
+      "MLLW": 6.6
+    }
   },
-  {
+  "9455866": {
     "id": "9455866",
     "name": "Point Possession",
     "lat": 61.0367,
@@ -141090,9 +148246,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 295.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.15,
+      "MHW": 26.48,
+      "MSL": 15.38,
+      "MLW": 3.33,
+      "MLLW": 1.12
+    }
   },
-  {
+  "9455869": {
     "id": "9455869",
     "name": "North Foreland",
     "lat": 61.043306,
@@ -141231,9 +148394,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 128.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.46,
+      "MHW": 29.78,
+      "MSL": 21.01,
+      "MLW": 11.67,
+      "MLLW": 9.51
+    }
   },
-  {
+  "9455912": {
     "id": "9455912",
     "name": "Fire Island, Cook Inlet",
     "lat": 61.1733,
@@ -141377,9 +148547,16 @@ const stations = [
         "amplitude": 0.08,
         "phaseLag": 293.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.89,
+      "MHW": 30.18,
+      "MSL": 18.86,
+      "MLW": 6.18,
+      "MLLW": 3.98
+    }
   },
-  {
+  "9455920": {
     "id": "9455920",
     "name": "Anchorage",
     "lat": 61.2375,
@@ -141572,10 +148749,428 @@ const stations = [
         "name": "MS",
         "amplitude": 0.57,
         "phaseLag": 128.2
+      },
+      {
+        "name": "SIGMA1",
+        "amplitude": 0.15,
+        "phaseLag": 24.4
+      },
+      {
+        "name": "MP1",
+        "amplitude": 0.22,
+        "phaseLag": 67.2
+      },
+      {
+        "name": "CHI1",
+        "amplitude": 0.02,
+        "phaseLag": 278.4
+      },
+      {
+        "name": "2PO1",
+        "amplitude": 0.06,
+        "phaseLag": 143
+      },
+      {
+        "name": "SO1",
+        "amplitude": 0.24,
+        "phaseLag": 151.1
+      },
+      {
+        "name": "MSN2",
+        "amplitude": 0.16,
+        "phaseLag": 335.1
+      },
+      {
+        "name": "MNS2",
+        "amplitude": 0.19,
+        "phaseLag": 201.8
+      },
+      {
+        "name": "OP2",
+        "amplitude": 0.02,
+        "phaseLag": 100.5
+      },
+      {
+        "name": "MKS2",
+        "amplitude": 0.05,
+        "phaseLag": 300.1
+      },
+      {
+        "name": "2NS2",
+        "amplitude": 0.03,
+        "phaseLag": 167.2
+      },
+      {
+        "name": "MLN2S2",
+        "amplitude": 0.13,
+        "phaseLag": 201.5
+      },
+      {
+        "name": "2ML2S2",
+        "amplitude": 0.08,
+        "phaseLag": 43.4
+      },
+      {
+        "name": "SKM2",
+        "amplitude": 0.08,
+        "phaseLag": 340.7
+      },
+      {
+        "name": "2MS2K2",
+        "amplitude": 0.02,
+        "phaseLag": 245
+      },
+      {
+        "name": "MKL2S2",
+        "amplitude": 0.01,
+        "phaseLag": 108.5
+      },
+      {
+        "name": "M2KS2",
+        "amplitude": 0.02,
+        "phaseLag": 126.9
+      },
+      {
+        "name": "2KMSN2",
+        "amplitude": 0.01,
+        "phaseLag": 167.5
+      },
+      {
+        "name": "SO3",
+        "amplitude": 0.17,
+        "phaseLag": 31.4
+      },
+      {
+        "name": "SK3",
+        "amplitude": 0.14,
+        "phaseLag": 67.6
+      },
+      {
+        "name": "NO3",
+        "amplitude": 0.13,
+        "phaseLag": 353.7
+      },
+      {
+        "name": "MK4",
+        "amplitude": 0.14,
+        "phaseLag": 122.2
+      },
+      {
+        "name": "SN4",
+        "amplitude": 0.07,
+        "phaseLag": 146.9
+      },
+      {
+        "name": "2MLS4",
+        "amplitude": 0.09,
+        "phaseLag": 220.8
+      },
+      {
+        "name": "3MS4",
+        "amplitude": 0.12,
+        "phaseLag": 161.2
+      },
+      {
+        "name": "ML4",
+        "amplitude": 0.09,
+        "phaseLag": 72.6
+      },
+      {
+        "name": "N4",
+        "amplitude": 0.06,
+        "phaseLag": 36.4
+      },
+      {
+        "name": "SL4",
+        "amplitude": 0.07,
+        "phaseLag": 117.4
+      },
+      {
+        "name": "MNO5",
+        "amplitude": 0.06,
+        "phaseLag": 249.7
+      },
+      {
+        "name": "2MO5",
+        "amplitude": 0.11,
+        "phaseLag": 268.3
+      },
+      {
+        "name": "2MK5",
+        "amplitude": 0.2,
+        "phaseLag": 256.3
+      },
+      {
+        "name": "MSK5",
+        "amplitude": 0.1,
+        "phaseLag": 324.6
+      },
+      {
+        "name": "3KM5",
+        "amplitude": 0.03,
+        "phaseLag": 305.5
+      },
+      {
+        "name": "2MP5",
+        "amplitude": 0.09,
+        "phaseLag": 285.1
+      },
+      {
+        "name": "3MP5",
+        "amplitude": 0.07,
+        "phaseLag": 357.4
+      },
+      {
+        "name": "MNK5",
+        "amplitude": 0.07,
+        "phaseLag": 239.1
+      },
+      {
+        "name": "2SM6",
+        "amplitude": 0.09,
+        "phaseLag": 114.6
+      },
+      {
+        "name": "2MN6",
+        "amplitude": 0.27,
+        "phaseLag": 352.7
+      },
+      {
+        "name": "MSN6",
+        "amplitude": 0.09,
+        "phaseLag": 48.1
+      },
+      {
+        "name": "2MS6",
+        "amplitude": 0.47,
+        "phaseLag": 59.4
+      },
+      {
+        "name": "2NMLS6",
+        "amplitude": 0.08,
+        "phaseLag": 297.7
+      },
+      {
+        "name": "2NM6",
+        "amplitude": 0.07,
+        "phaseLag": 325.4
+      },
+      {
+        "name": "MSL6",
+        "amplitude": 0.11,
+        "phaseLag": 70.2
+      },
+      {
+        "name": "2ML6",
+        "amplitude": 0.08,
+        "phaseLag": 34.3
+      },
+      {
+        "name": "MSK6",
+        "amplitude": 0.06,
+        "phaseLag": 91.8
+      },
+      {
+        "name": "2MLNS6",
+        "amplitude": 0.1,
+        "phaseLag": 325.1
+      },
+      {
+        "name": "3MLS6",
+        "amplitude": 0.1,
+        "phaseLag": 176.1
+      },
+      {
+        "name": "2MK6",
+        "amplitude": 0.12,
+        "phaseLag": 46.7
+      },
+      {
+        "name": "2MNO7",
+        "amplitude": 0.05,
+        "phaseLag": 245.7
+      },
+      {
+        "name": "2NMK7",
+        "amplitude": 0.01,
+        "phaseLag": 204.4
+      },
+      {
+        "name": "2MSO7",
+        "amplitude": 0.08,
+        "phaseLag": 293.2
+      },
+      {
+        "name": "MSKO7",
+        "amplitude": 0.1,
+        "phaseLag": 122.5
+      },
+      {
+        "name": "2MSN8",
+        "amplitude": 0.08,
+        "phaseLag": 14
+      },
+      {
+        "name": "3MS8",
+        "amplitude": 0.21,
+        "phaseLag": 26
+      },
+      {
+        "name": "2MS8",
+        "amplitude": 0.08,
+        "phaseLag": 80.3
+      },
+      {
+        "name": "2MN8",
+        "amplitude": 0.04,
+        "phaseLag": 292.9
+      },
+      {
+        "name": "3MN8",
+        "amplitude": 0.11,
+        "phaseLag": 319.3
+      },
+      {
+        "name": "2MSL8",
+        "amplitude": 0.07,
+        "phaseLag": 30.1
+      },
+      {
+        "name": "4MLS8",
+        "amplitude": 0.05,
+        "phaseLag": 128.4
+      },
+      {
+        "name": "3ML8",
+        "amplitude": 0.03,
+        "phaseLag": 350.6
+      },
+      {
+        "name": "3MK8",
+        "amplitude": 0.05,
+        "phaseLag": 16.8
+      },
+      {
+        "name": "2MSK8",
+        "amplitude": 0.05,
+        "phaseLag": 62.5
+      },
+      {
+        "name": "2M2NK9",
+        "amplitude": 0.01,
+        "phaseLag": 144.4
+      },
+      {
+        "name": "3MNK9",
+        "amplitude": 0.02,
+        "phaseLag": 171.4
+      },
+      {
+        "name": "4MK9",
+        "amplitude": 0.03,
+        "phaseLag": 201.2
+      },
+      {
+        "name": "3MSK9",
+        "amplitude": 0.05,
+        "phaseLag": 244.7
+      },
+      {
+        "name": "4MN10",
+        "amplitude": 0.05,
+        "phaseLag": 273.1
+      },
+      {
+        "name": "M10",
+        "amplitude": 0.06,
+        "phaseLag": 299.2
+      },
+      {
+        "name": "3MNS10",
+        "amplitude": 0.07,
+        "phaseLag": 315.2
+      },
+      {
+        "name": "4MS10",
+        "amplitude": 0.11,
+        "phaseLag": 336.3
+      },
+      {
+        "name": "3MSL10",
+        "amplitude": 0.04,
+        "phaseLag": 346.3
+      },
+      {
+        "name": "3M2S10",
+        "amplitude": 0.06,
+        "phaseLag": 22.5
+      },
+      {
+        "name": "4MSK11",
+        "amplitude": 0.03,
+        "phaseLag": 204
+      },
+      {
+        "name": "4MNS12",
+        "amplitude": 0.05,
+        "phaseLag": 276.2
+      },
+      {
+        "name": "5MS12",
+        "amplitude": 0.06,
+        "phaseLag": 298.3
+      },
+      {
+        "name": "4MSL12",
+        "amplitude": 0.03,
+        "phaseLag": 307
+      },
+      {
+        "name": "4M2S12",
+        "amplitude": 0.05,
+        "phaseLag": 343
+      },
+      {
+        "name": "TK1",
+        "amplitude": 0.03,
+        "phaseLag": 352.9
+      },
+      {
+        "name": "RP1",
+        "amplitude": 0.03,
+        "phaseLag": 322.1
+      },
+      {
+        "name": "KP1",
+        "amplitude": 0.01,
+        "phaseLag": 324.7
+      },
+      {
+        "name": "THETA1",
+        "amplitude": 0.04,
+        "phaseLag": 310.7
+      },
+      {
+        "name": "KJ2",
+        "amplitude": 0.02,
+        "phaseLag": 314.9
+      },
+      {
+        "name": "OO2",
+        "amplitude": 0.08,
+        "phaseLag": 31
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 35.43,
+      "MHW": 34.7,
+      "MSL": 22.74,
+      "MLW": 8.52,
+      "MLLW": 6.27
+    },
+    "missingData": true
   },
-  {
+  "9455934": {
     "id": "9455934",
     "name": "Port Mackenzie",
     "lat": 61.2683,
@@ -141704,9 +149299,16 @@ const stations = [
         "amplitude": 0.17,
         "phaseLag": 350.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 37.13,
+      "MHW": 36.41,
+      "MSL": 24.28,
+      "MLW": 10.26,
+      "MLLW": 8.03
+    }
   },
-  {
+  "9455963": {
     "id": "9455963",
     "name": "Goose Creek, Cook Inlet",
     "lat": 61.3933,
@@ -141860,11 +149462,18 @@ const stations = [
         "amplitude": 0.26,
         "phaseLag": 73.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.75,
+      "MHW": 1.99,
+      "MSL": -10.61,
+      "MLW": -26.04,
+      "MLLW": -28.28
+    }
   },
-  {
+  "9456717": {
     "id": "9456717",
-    "name": "NUKSHAK ISLAND, SHELIKOF STRAIT",
+    "name": "Nukshak Island, Shelikof Strait",
     "lat": 58.3917,
     "lng": -153.958,
     "state": "AK",
@@ -142001,11 +149610,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 89.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.52,
+      "MHW": 9.73,
+      "MSL": 3.97,
+      "MLW": -1.69,
+      "MLLW": -3.3
+    }
   },
-  {
+  "9456901": {
     "id": "9456901",
-    "name": "AGUCHIK ISLAND, KUKAK BAY",
+    "name": "Aguchik Island, Kukak Bay",
     "lat": 58.29,
     "lng": -154.27,
     "state": "AK",
@@ -142142,9 +149758,16 @@ const stations = [
         "amplitude": 0.52,
         "phaseLag": 1.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.37,
+      "MHW": 11.56,
+      "MSL": 5.84,
+      "MLW": 0.21,
+      "MLLW": -1.38
+    }
   },
-  {
+  "9457287": {
     "id": "9457287",
     "name": "Ouzinkie, Spruce Island",
     "lat": 57.9217,
@@ -142288,9 +149911,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 202.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.76,
+      "MHW": 7.91,
+      "MSL": 4.47,
+      "MLW": 0.98,
+      "MLLW": -0.15
+    }
   },
-  {
+  "9457292": {
     "id": "9457292",
     "name": "Kodiak Island",
     "lat": 57.730278,
@@ -142459,9 +150089,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 69.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 34.04,
+      "MHW": 33.14,
+      "MSL": 29.77,
+      "MLW": 26.37,
+      "MLLW": 25.27
+    }
   },
-  {
+  "9457376": {
     "id": "9457376",
     "name": "Uzkosti Point",
     "lat": 57.9283,
@@ -142605,11 +150242,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 81.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.99,
+      "MHW": 15.05,
+      "MSL": 10.76,
+      "MLW": 6.38,
+      "MLLW": 4.68
+    }
   },
-  {
+  "9457391": {
     "id": "9457391",
-    "name": "Port Lions, AK",
+    "name": "Port Lions, Ak",
     "lat": 57.873472,
     "lng": -152.8671,
     "state": "AK",
@@ -142751,9 +150395,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 236.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.18,
+      "MHW": 30.27,
+      "MSL": 26.61,
+      "MLW": 22.97,
+      "MLLW": 21.82
+    }
   },
-  {
+  "9457393": {
     "id": "9457393",
     "name": "Dovolno Point, Kizhuyak Bay",
     "lat": 57.7394,
@@ -142912,9 +150563,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 260.8
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9457407": {
     "id": "9457407",
     "name": "Nachalni Island",
     "lat": 57.9783,
@@ -143048,11 +150700,18 @@ const stations = [
         "amplitude": 0.52,
         "phaseLag": 5.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.21,
+      "MHW": 10.36,
+      "MSL": 4.81,
+      "MLW": -0.69,
+      "MLLW": -2.46
+    }
   },
-  {
+  "9457493": {
     "id": "9457493",
-    "name": "SW Terror Bay",
+    "name": "Sw Terror Bay",
     "lat": 57.744028,
     "lng": -153.195472,
     "state": "AK",
@@ -143189,11 +150848,18 @@ const stations = [
         "amplitude": 0.55,
         "phaseLag": 0.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.43,
+      "MHW": 11.53,
+      "MSL": 5.67,
+      "MLW": -0.07,
+      "MLLW": -1.72
+    }
   },
-  {
+  "9457512": {
     "id": "9457512",
-    "name": "Sitkalidak Island GPS Tide Buoy",
+    "name": "Sitkalidak Island Gps Tide Buoy",
     "lat": 56.96572,
     "lng": -153.252194,
     "state": "AK",
@@ -143320,11 +150986,18 @@ const stations = [
         "amplitude": 0.29,
         "phaseLag": 331.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 50.83,
+      "MHW": 50.22,
+      "MSL": 46.99,
+      "MLW": 43.78,
+      "MLLW": 42.65
+    }
   },
-  {
+  "9457527": {
     "id": "9457527",
-    "name": "OLD HARBOR, KODIAK ISLAND",
+    "name": "Old Harbor, Kodiak Island",
     "lat": 57.2028,
     "lng": -153.3039,
     "state": "AK",
@@ -143461,9 +151134,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 91.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.4,
+      "MHW": 25.76,
+      "MSL": 22.51,
+      "MLW": 19.29,
+      "MLLW": 18.08
+    }
   },
-  {
+  "9457535": {
     "id": "9457535",
     "name": "West Raspberry Island",
     "lat": 58.10717,
@@ -143597,9 +151277,16 @@ const stations = [
         "amplitude": 0.54,
         "phaseLag": 2.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.38,
+      "MHW": 13.53,
+      "MSL": 7.69,
+      "MLW": 1.98,
+      "MLLW": 0.34
+    }
   },
-  {
+  "9457634": {
     "id": "9457634",
     "name": "Japanese Bay, Kodiak Island",
     "lat": 56.96,
@@ -143753,11 +151440,18 @@ const stations = [
         "amplitude": 0.27,
         "phaseLag": 333.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.88,
+      "MHW": 7.27,
+      "MSL": 4.02,
+      "MLW": 0.8,
+      "MLLW": -0.36
+    }
   },
-  {
+  "9457724": {
     "id": "9457724",
-    "name": "Larsen Bay, Kodiak Island, AK",
+    "name": "Larsen Bay, Kodiak Island, Ak",
     "lat": 57.53,
     "lng": -153.99,
     "state": "AK",
@@ -143889,11 +151583,18 @@ const stations = [
         "amplitude": 0.53,
         "phaseLag": 358.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.73,
+      "MHW": 11.8,
+      "MSL": 6.12,
+      "MLW": 0.6,
+      "MLLW": -1.02
+    }
   },
-  {
+  "9457726": {
     "id": "9457726",
-    "name": "Geese Island GPS Tide Buoy",
+    "name": "Geese Island Gps Tide Buoy",
     "lat": 56.594694,
     "lng": -153.996028,
     "state": "AK",
@@ -144020,9 +151721,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 38.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 48.65,
+      "MHW": 48.04,
+      "MSL": 44.5,
+      "MLW": 41.12,
+      "MLLW": 39.89
+    }
   },
-  {
+  "9457728": {
     "id": "9457728",
     "name": "Uyak",
     "lat": 57.635,
@@ -144156,9 +151864,10 @@ const stations = [
         "amplitude": 0.52,
         "phaseLag": 0.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9457804": {
     "id": "9457804",
     "name": "Alitak",
     "lat": 56.89739,
@@ -144327,9 +152036,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 258.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.36,
+      "MHW": 16.56,
+      "MSL": 11.8,
+      "MLW": 7.2,
+      "MLLW": 5.63
+    }
   },
-  {
+  "9458209": {
     "id": "9458209",
     "name": "Puale Bay",
     "lat": 57.7067,
@@ -144468,9 +152184,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 91.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 14.73,
+      "MHW": 13.88,
+      "MSL": 8.86,
+      "MLW": 3.96,
+      "MLLW": 2.38
+    }
   },
-  {
+  "9458293": {
     "id": "9458293",
     "name": "Chirikof Island",
     "lat": 55.8083,
@@ -144594,11 +152317,18 @@ const stations = [
         "amplitude": 0.28,
         "phaseLag": 338
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 131.2,
+      "MHW": 130.36,
+      "MSL": 127.04,
+      "MLW": 123.91,
+      "MLLW": 122.43
+    }
   },
-  {
+  "9458519": {
     "id": "9458519",
-    "name": "Chowiet island",
+    "name": "Chowiet Island",
     "lat": 56.0517,
     "lng": -156.698,
     "state": "AK",
@@ -144730,11 +152460,18 @@ const stations = [
         "amplitude": 0.29,
         "phaseLag": 355.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.28,
+      "MHW": 14.49,
+      "MSL": 11.02,
+      "MLW": 7.74,
+      "MLLW": 6.32
+    }
   },
-  {
+  "9458665": {
     "id": "9458665",
-    "name": "WEST END, SUTWIK ISLAND",
+    "name": "West End, Sutwik Island",
     "lat": 56.54,
     "lng": -157.327,
     "state": "AK",
@@ -144856,9 +152593,10 @@ const stations = [
         "amplitude": 0.32,
         "phaseLag": 48.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9458907": {
     "id": "9458907",
     "name": "Castle Bay",
     "lat": 56.2317,
@@ -144987,9 +152725,16 @@ const stations = [
         "amplitude": 0.27,
         "phaseLag": 358.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.63,
+      "MHW": 30.81,
+      "MSL": 27.45,
+      "MLW": 24.24,
+      "MLLW": 22.81
+    }
   },
-  {
+  "9458964": {
     "id": "9458964",
     "name": "Hump Island, Kuiukta Bay",
     "lat": 56.1133,
@@ -145118,9 +152863,16 @@ const stations = [
         "amplitude": 0.26,
         "phaseLag": 358.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.79,
+      "MHW": 14.99,
+      "MSL": 12.05,
+      "MLW": 9.21,
+      "MLLW": 7.86
+    }
   },
-  {
+  "9459016": {
     "id": "9459016",
     "name": "Mitrofania Island",
     "lat": 55.89,
@@ -145244,9 +152996,16 @@ const stations = [
         "amplitude": 0.25,
         "phaseLag": 353.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.07,
+      "MHW": 28.3,
+      "MSL": 25.43,
+      "MLW": 22.68,
+      "MLLW": 21.34
+    }
   },
-  {
+  "9459163": {
     "id": "9459163",
     "name": "Herendeen Island, Shumagin Islands",
     "lat": 55.066,
@@ -145380,9 +153139,16 @@ const stations = [
         "amplitude": 0.22,
         "phaseLag": 355.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.46,
+      "MHW": 4.7,
+      "MSL": 2.01,
+      "MLW": -0.57,
+      "MLLW": -1.93
+    }
   },
-  {
+  "9459251": {
     "id": "9459251",
     "name": "Bird Island, Shumagin Bank",
     "lat": 54.8352,
@@ -145506,9 +153272,16 @@ const stations = [
         "amplitude": 0.21,
         "phaseLag": 346.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.34,
+      "MHW": 7.61,
+      "MSL": 5.09,
+      "MLW": 2.66,
+      "MLLW": 1.29
+    }
   },
-  {
+  "9459450": {
     "id": "9459450",
     "name": "Sand Point",
     "lat": 55.33172,
@@ -145672,11 +153445,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 304.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 37.75,
+      "MHW": 37.04,
+      "MSL": 34.39,
+      "MLW": 31.85,
+      "MLLW": 30.51
+    }
   },
-  {
+  "9459465": {
     "id": "9459465",
-    "name": "ZACHARY BAY, UNGA IS (N. SIDE)",
+    "name": "Zachary Bay, Unga Is (n. Side)",
     "lat": 55.335,
     "lng": -160.617,
     "state": "AK",
@@ -145798,9 +153578,16 @@ const stations = [
         "amplitude": 0.23,
         "phaseLag": 353.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 38.03,
+      "MHW": 37.31,
+      "MSL": 34.57,
+      "MLW": 31.93,
+      "MLLW": 30.6
+    }
   },
-  {
+  "9459758": {
     "id": "9459758",
     "name": "Dolgoi Harbor, Dolgoi Island",
     "lat": 55.1217,
@@ -145929,9 +153716,16 @@ const stations = [
         "amplitude": 0.2,
         "phaseLag": 358.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.14,
+      "MHW": 26.47,
+      "MSL": 24.01,
+      "MLW": 21.66,
+      "MLLW": 20.35
+    }
   },
-  {
+  "9459881": {
     "id": "9459881",
     "name": "King Cove",
     "lat": 55.059889,
@@ -146085,9 +153879,16 @@ const stations = [
         "amplitude": 0.2,
         "phaseLag": 346.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 10.82,
+      "MHW": 10.13,
+      "MSL": 7.68,
+      "MLW": 5.32,
+      "MLLW": 4
+    }
   },
-  {
+  "9459949": {
     "id": "9459949",
     "name": "Cold Bay",
     "lat": 55.2083,
@@ -146226,11 +154027,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 195.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.05,
+      "MHW": 7.34,
+      "MSL": 4.61,
+      "MLW": 1.96,
+      "MLLW": 0.62
+    }
   },
-  {
+  "9460150": {
     "id": "9460150",
-    "name": "ATTU, MASSACRE BAY",
+    "name": "Attu, Massacre Bay",
     "lat": 52.84,
     "lng": 173.195,
     "state": "AK",
@@ -146332,9 +154140,13 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 235.7
       }
-    ]
+    ],
+    "datums": {
+      "MSL": 0,
+      "MLLW": -1.94
+    }
   },
-  {
+  "9461380": {
     "id": "9461380",
     "name": "Adak Island",
     "lat": 51.860639,
@@ -146463,9 +154275,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 333.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.67,
+      "MHW": 6.42,
+      "MSL": 5.09,
+      "MLW": 3.53,
+      "MLLW": 2.96
+    }
   },
-  {
+  "9461710": {
     "id": "9461710",
     "name": "Atka",
     "lat": 52.23194,
@@ -146594,9 +154413,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 306.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.36,
+      "MHW": 30.14,
+      "MSL": 28.91,
+      "MLW": 27.46,
+      "MLLW": 26.94
+    }
   },
-  {
+  "9462450": {
     "id": "9462450",
     "name": "Nikolski",
     "lat": 52.94061,
@@ -146740,9 +154566,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 23.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.07,
+      "MHW": 7.74,
+      "MSL": 6.37,
+      "MLW": 5.08,
+      "MLLW": 4.07
+    }
   },
-  {
+  "9462620": {
     "id": "9462620",
     "name": "Unalaska",
     "lat": 53.879194,
@@ -146871,9 +154704,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 341
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.2,
+      "MHW": 5.91,
+      "MSL": 4.68,
+      "MLW": 3.53,
+      "MLLW": 2.6
+    }
   },
-  {
+  "9462645": {
     "id": "9462645",
     "name": "Biorka Village, Biverly Inlet",
     "lat": 53.828917,
@@ -146992,9 +154832,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 286.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.18,
+      "MHW": 6.74,
+      "MSL": 4.96,
+      "MLW": 3.23,
+      "MLLW": 2.08
+    }
   },
-  {
+  "9462662": {
     "id": "9462662",
     "name": "Reef Bight",
     "lat": 54.13072,
@@ -147113,9 +154960,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 86.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 152.13,
+      "MHW": 151.84,
+      "MSL": 150.54,
+      "MLW": 149.5,
+      "MLLW": 148.53
+    }
   },
-  {
+  "9462676": {
     "id": "9462676",
     "name": "Broad Bight",
     "lat": 54.064583,
@@ -147254,9 +155108,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 270.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 15.98,
+      "MHW": 15.45,
+      "MSL": 13.6,
+      "MLW": 11.86,
+      "MLLW": 10.42
+    }
   },
-  {
+  "9462694": {
     "id": "9462694",
     "name": "Akutan, Alaska",
     "lat": 54.13328,
@@ -147365,9 +155226,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 310.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 41.94,
+      "MHW": 41.63,
+      "MSL": 40.37,
+      "MLW": 39.1,
+      "MLLW": 38.21
+    }
   },
-  {
+  "9462705": {
     "id": "9462705",
     "name": "Green Bight",
     "lat": 54.11028,
@@ -147496,9 +155364,16 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 357.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 138.96,
+      "MHW": 138.45,
+      "MSL": 136.82,
+      "MLW": 135.28,
+      "MLLW": 133.95
+    }
   },
-  {
+  "9462711": {
     "id": "9462711",
     "name": "Surf Bay, Akutan Bay",
     "lat": 54.15083,
@@ -147632,9 +155507,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 289.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 60.57,
+      "MHW": 60.28,
+      "MSL": 59,
+      "MLW": 57.81,
+      "MLLW": 56.81
+    }
   },
-  {
+  "9462719": {
     "id": "9462719",
     "name": "Akun Cove, Akun Island",
     "lat": 54.2333,
@@ -147793,9 +155675,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 303.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.2,
+      "MHW": 6,
+      "MSL": 4.83,
+      "MLW": 3.61,
+      "MLLW": 3.11
+    }
   },
-  {
+  "9462721": {
     "id": "9462721",
     "name": "Trident Bay, Akun Island",
     "lat": 54.14,
@@ -147929,9 +155818,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 336.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.38,
+      "MHW": 29.98,
+      "MSL": 28.46,
+      "MLW": 26.81,
+      "MLLW": 26.25
+    }
   },
-  {
+  "9462723": {
     "id": "9462723",
     "name": "Rootok Island",
     "lat": 54.052,
@@ -148070,9 +155966,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 229.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.51,
+      "MHW": 22.96,
+      "MSL": 21.28,
+      "MLW": 19.67,
+      "MLLW": 18.45
+    }
   },
-  {
+  "9462782": {
     "id": "9462782",
     "name": "Tigalda Bay, Tigalda Island",
     "lat": 54.12,
@@ -148201,11 +156104,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 96
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.41,
+      "MHW": 22.3,
+      "MSL": 20.9,
+      "MLW": 19.42,
+      "MLLW": 19.28
+    }
   },
-  {
+  "9462786": {
     "id": "9462786",
-    "name": "SE Tigalda Island, Pacific Ocean",
+    "name": "Se Tigalda Island, Pacific Ocean",
     "lat": 54.101806,
     "lng": -164.941583,
     "state": "AK",
@@ -148337,9 +156247,16 @@ const stations = [
         "amplitude": 0.15,
         "phaseLag": 356.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.82,
+      "MHW": 26.23,
+      "MSL": 24.48,
+      "MLW": 22.84,
+      "MLLW": 21.52
+    }
   },
-  {
+  "9462787": {
     "id": "9462787",
     "name": "Cape Sarichef, Unimak Island",
     "lat": 54.6,
@@ -148458,11 +156375,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 102
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.93,
+      "MHW": 8.59,
+      "MSL": 6.93,
+      "MLW": 5.92,
+      "MLLW": 3.95
+    }
   },
-  {
+  "9462808": {
     "id": "9462808",
-    "name": "Scotch Cap, Unimak Island, AK",
+    "name": "Scotch Cap, Unimak Island, Ak",
     "lat": 54.393639,
     "lng": -164.74572,
     "state": "AK",
@@ -148584,11 +156508,18 @@ const stations = [
         "amplitude": 0.14,
         "phaseLag": 7.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 8.67,
+      "MHW": 8.12,
+      "MSL": 6.11,
+      "MLW": 4.11,
+      "MLLW": 2.49
+    }
   },
-  {
+  "9462941": {
     "id": "9462941",
-    "name": "Cape Chunak, AK",
+    "name": "Cape Chunak, Ak",
     "lat": 55.06428,
     "lng": -163.53417,
     "state": "AK",
@@ -148715,11 +156646,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 308.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 143.04,
+      "MHW": 142.47,
+      "MSL": 139.88,
+      "MLW": 137.39,
+      "MLLW": 135.59
+    }
   },
-  {
+  "9462948": {
     "id": "9462948",
-    "name": "NEUMANS COVE",
+    "name": "Neumans Cove",
     "lat": 54.9667,
     "lng": -163.44,
     "state": "AK",
@@ -148846,9 +156784,16 @@ const stations = [
         "amplitude": 0.11,
         "phaseLag": 15.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.6,
+      "MHW": 4.35,
+      "MSL": 2.88,
+      "MLW": 1.46,
+      "MLLW": 0.3
+    }
   },
-  {
+  "9462955": {
     "id": "9462955",
     "name": "False Pass, Unimak Island",
     "lat": 54.8583,
@@ -148977,11 +156922,18 @@ const stations = [
         "amplitude": 0.13,
         "phaseLag": 12.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.58,
+      "MHW": 6.28,
+      "MSL": 4.86,
+      "MLW": 3.28,
+      "MLLW": 2.42
+    }
   },
-  {
+  "9462961": {
     "id": "9462961",
-    "name": "ISANOTSKI STRAIT ENTRANCE",
+    "name": "Isanotski Strait Entrance",
     "lat": 54.7784,
     "lng": -163.36428,
     "state": "AK",
@@ -149113,9 +157065,16 @@ const stations = [
         "amplitude": 0.19,
         "phaseLag": 359.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.22,
+      "MHW": 31.56,
+      "MSL": 29.22,
+      "MLW": 26.98,
+      "MLLW": 25.62
+    }
   },
-  {
+  "9463502": {
     "id": "9463502",
     "name": "Port Moller",
     "lat": 55.985833,
@@ -149289,11 +157248,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 253.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 39.68,
+      "MHW": 38.81,
+      "MSL": 35.05,
+      "MLW": 31.37,
+      "MLLW": 29.2
+    }
   },
-  {
+  "9463885": {
     "id": "9463885",
-    "name": "ZAPADNI BAY, ST. GEORGE ISLAND",
+    "name": "Zapadni Bay, St. George Island",
     "lat": 56.5681,
     "lng": -169.7,
     "state": "AK",
@@ -149410,9 +157376,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 355.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9464075": {
     "id": "9464075",
     "name": "Meshik, Port Heiden",
     "lat": 56.9083,
@@ -149536,9 +157503,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 250.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 50.07,
+      "MHW": 48.91,
+      "MSL": 44.88,
+      "MLW": 40.78,
+      "MLLW": 38.46
+    }
   },
-  {
+  "9464212": {
     "id": "9464212",
     "name": "Village Cove, St Paul Island",
     "lat": 57.125278,
@@ -149672,9 +157646,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 48.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.68,
+      "MHW": 4.43,
+      "MSL": 3.32,
+      "MLW": 2.36,
+      "MLLW": 1.44
+    }
   },
-  {
+  "9464512": {
     "id": "9464512",
     "name": "Dago Creek Mouth, Ugashik Bay",
     "lat": 57.6148,
@@ -149798,11 +157779,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 83.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.18,
+      "MHW": 26.69,
+      "MSL": 21.51,
+      "MLW": 16.29,
+      "MLLW": 14.63
+    }
   },
-  {
+  "9464874": {
     "id": "9464874",
-    "name": "EGEGIK, EGEGIK R, BRISTOL BAY",
+    "name": "Egegik, Egegik R, Bristol Bay",
     "lat": 58.216702,
     "lng": -157.375,
     "state": "AK",
@@ -149924,11 +157912,18 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 208.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 43.15,
+      "MHW": 41.53,
+      "MSL": 35.31,
+      "MLW": 29.45,
+      "MLLW": 27.92
+    }
   },
-  {
+  "9464961": {
     "id": "9464961",
-    "name": "CAPE CONSTANTINE, NUSHAGAK PENINSULA",
+    "name": "Cape Constantine, Nushagak Peninsula",
     "lat": 58.521702,
     "lng": -159.152,
     "state": "AK",
@@ -150055,11 +158050,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 125.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.89,
+      "MHW": 11.81,
+      "MSL": 7.78,
+      "MLW": 3.69,
+      "MLLW": 1.73
+    }
   },
-  {
+  "9465056": {
     "id": "9465056",
-    "name": "PROTECTION POINT, NUSHAGAK BAY",
+    "name": "Protection Point, Nushagak Bay",
     "lat": 58.5,
     "lng": -158.712,
     "state": "AK",
@@ -150176,11 +158178,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 119.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.49,
+      "MHW": 21.69,
+      "MSL": 15.16,
+      "MLW": 8.55,
+      "MLLW": 5.76
+    }
   },
-  {
+  "9465123": {
     "id": "9465123",
-    "name": "PYRITE POINT, BRISTOL BAY",
+    "name": "Pyrite Point, Bristol Bay",
     "lat": 58.62,
     "lng": -161.542,
     "state": "AK",
@@ -150302,11 +158311,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 127.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9465137": {
     "id": "9465137",
-    "name": "CAPE PEIRCE, WEST SIDE",
+    "name": "Cape Peirce, West Side",
     "lat": 58.6267,
     "lng": -161.837,
     "state": "AK",
@@ -150418,11 +158428,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 236.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.71,
+      "MHW": 25.33,
+      "MSL": 23.17,
+      "MLW": 20.93,
+      "MLLW": 20.36
+    }
   },
-  {
+  "9465173": {
     "id": "9465173",
-    "name": "HIGH ISLAND, BRISTOL BAY",
+    "name": "High Island, Bristol Bay",
     "lat": 58.721699,
     "lng": -160.427,
     "state": "AK",
@@ -150539,9 +158556,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 178.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9465203": {
     "id": "9465203",
     "name": "Naknek",
     "lat": 58.7321,
@@ -150670,11 +158688,18 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 309.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.71,
+      "MHW": 22.2,
+      "MSL": 12.81,
+      "MLW": 4.96,
+      "MLLW": 3.67
+    }
   },
-  {
+  "9465234": {
     "id": "9465234",
-    "name": "NORTH END, HAGEMEISTER ISLAND",
+    "name": "North End, Hagemeister Island",
     "lat": 58.7767,
     "lng": -160.777,
     "state": "AK",
@@ -150796,11 +158821,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 164.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9465249": {
     "id": "9465249",
-    "name": "ESTUS POINT, HAGEMEISTER STRAIT",
+    "name": "Estus Point, Hagemeister Strait",
     "lat": 58.8083,
     "lng": -161.1,
     "state": "AK",
@@ -150922,11 +158948,12 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 161.4
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9465261": {
     "id": "9465261",
-    "name": "CLARKS POINT, NUSHAGAK BAY",
+    "name": "Clarks Point, Nushagak Bay",
     "lat": 58.8483,
     "lng": -158.552,
     "state": "AK",
@@ -151048,11 +159075,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 187.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.75,
+      "MHW": 24.97,
+      "MSL": 17.05,
+      "MLW": 8.74,
+      "MLLW": 6.08
+    }
   },
-  {
+  "9465265": {
     "id": "9465265",
-    "name": "KULUKAK POINT",
+    "name": "Kulukak Point",
     "lat": 58.84,
     "lng": -159.647,
     "state": "AK",
@@ -151164,11 +159198,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 133.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 35.2,
+      "MHW": 33.6,
+      "MSL": 29.94,
+      "MLW": 26.3,
+      "MLLW": 23.88
+    }
   },
-  {
+  "9465283": {
     "id": "9465283",
-    "name": "NE SIDE SUMMIT ISLAND, TOGIAK BAY A",
+    "name": "Ne Side Summit Island, Togiak Bay A",
     "lat": 58.8467,
     "lng": -160.21,
     "state": "AK",
@@ -151290,9 +159331,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 228.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.35,
+      "MHW": 12.17,
+      "MSL": 8.42,
+      "MLW": 4.22,
+      "MLLW": 2.73
+    }
   },
-  {
+  "9465374": {
     "id": "9465374",
     "name": "Snag Point, Dillingham",
     "lat": 59.04,
@@ -151421,9 +159469,16 @@ const stations = [
         "amplitude": 0.07,
         "phaseLag": 321.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 61.38,
+      "MHW": 59.63,
+      "MSL": 51.58,
+      "MLW": 43.06,
+      "MLLW": 40.74
+    }
   },
-  {
+  "9465396": {
     "id": "9465396",
     "name": "Platinum",
     "lat": 59.0467,
@@ -151547,11 +159602,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 13.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 45.42,
+      "MHW": 42.73,
+      "MSL": 39.83,
+      "MLW": 36.61,
+      "MLLW": 35.99
+    }
   },
-  {
+  "9465419": {
     "id": "9465419",
-    "name": "LEVELOCK, KVICHAK RIVER",
+    "name": "Levelock, Kvichak River",
     "lat": 59.107417,
     "lng": -156.861139,
     "state": "AK",
@@ -151673,9 +159735,16 @@ const stations = [
         "amplitude": 0.1,
         "phaseLag": 1.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.21,
+      "MHW": 28.7,
+      "MSL": 23.24,
+      "MLW": 19.55,
+      "MLLW": 19.02
+    }
   },
-  {
+  "9465601": {
     "id": "9465601",
     "name": "Carter Bay, Kuskokwim Bay",
     "lat": 59.378017,
@@ -151839,11 +159908,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 307.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.53,
+      "MHW": 21.18,
+      "MSL": 17.55,
+      "MLW": 13.51,
+      "MLLW": 12.85
+    }
   },
-  {
+  "9465831": {
     "id": "9465831",
-    "name": "Quinhagak (Kwinak), Kushkokwin River",
+    "name": "Quinhagak (kwinak), Kushkokwin River",
     "lat": 59.750553,
     "lng": -161.915436,
     "state": "AK",
@@ -152005,9 +160081,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 76
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 53.74,
+      "MHW": 51.5,
+      "MSL": 47.26,
+      "MLW": 42.48,
+      "MLLW": 41.81
+    }
   },
-  {
+  "9465911": {
     "id": "9465911",
     "name": "Kwigillinok",
     "lat": 59.87975,
@@ -152131,9 +160214,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 218.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.04,
+      "MHW": 25.95,
+      "MSL": 22.41,
+      "MLW": 18.26,
+      "MLLW": 17.66
+    }
   },
-  {
+  "9465951": {
     "id": "9465951",
     "name": "Kipnuk, Kuguklik River",
     "lat": 59.943199,
@@ -152257,9 +160347,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 190
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.89,
+      "MHW": 29.49,
+      "MSL": 26.68,
+      "MLW": 23.45,
+      "MLLW": 22.61
+    }
   },
-  {
+  "9465953": {
     "id": "9465953",
     "name": "Kinak Bay",
     "lat": 59.947528,
@@ -152383,11 +160480,18 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 331
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.2,
+      "MHW": 29.78,
+      "MSL": 26.57,
+      "MLW": 22.99,
+      "MLLW": 21.81
+    }
   },
-  {
+  "9465988": {
     "id": "9465988",
-    "name": "Cape Corwin GPS Tide Buoy",
+    "name": "Cape Corwin Gps Tide Buoy",
     "lat": 60.004639,
     "lng": -165.590972,
     "state": "AK",
@@ -152509,9 +160613,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 61.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 40.8,
+      "MHW": 40.33,
+      "MSL": 37.37,
+      "MLW": 34.39,
+      "MLLW": 33.64
+    }
   },
-  {
+  "9466012": {
     "id": "9466012",
     "name": "Eastern Nunivak Island",
     "lat": 60.04294,
@@ -152630,11 +160741,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 343.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 17.21,
+      "MHW": 16.77,
+      "MSL": 13.72,
+      "MLW": 10.66,
+      "MLLW": 9.95
+    }
   },
-  {
+  "9466057": {
     "id": "9466057",
-    "name": "Popokamute (Kokokamute), Kuskokwim River",
+    "name": "Popokamute (kokokamute), Kuskokwim River",
     "lat": 60.12328,
     "lng": -162.500361,
     "state": "AK",
@@ -152756,9 +160874,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 285
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.18,
+      "MHW": 29.08,
+      "MSL": 25.21,
+      "MLW": 20.77,
+      "MLLW": 20.16
+    }
   },
-  {
+  "9466084": {
     "id": "9466084",
     "name": "Chefornak",
     "lat": 60.159401,
@@ -152877,9 +161002,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 10.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.04,
+      "MHW": 27.14,
+      "MSL": 25.41,
+      "MLW": 23.46,
+      "MLLW": 22.93
+    }
   },
-  {
+  "9466153": {
     "id": "9466153",
     "name": "Helmick Point",
     "lat": 60.2703,
@@ -153003,9 +161135,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 14
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.4,
+      "MHW": 28.48,
+      "MSL": 24.98,
+      "MLW": 20.86,
+      "MLLW": 20.22
+    }
   },
-  {
+  "9466197": {
     "id": "9466197",
     "name": "Tuntutuliak",
     "lat": 60.3415,
@@ -153129,9 +161268,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 26.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.51,
+      "MHW": 27.99,
+      "MSL": 25.54,
+      "MLW": 22.35,
+      "MLLW": 21.88
+    }
   },
-  {
+  "9466217": {
     "id": "9466217",
     "name": "Mekoryuk, Mekoryuk River Entrance",
     "lat": 60.4167,
@@ -153255,9 +161401,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 59.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 61.27,
+      "MHW": 60.69,
+      "MSL": 57.51,
+      "MLW": 54.29,
+      "MLLW": 53.64
+    }
   },
-  {
+  "9466298": {
     "id": "9466298",
     "name": "Nelson Island, Tooksook Bay",
     "lat": 60.5167,
@@ -153381,9 +161534,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 271.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.69,
+      "MHW": 36.23,
+      "MSL": 32.15,
+      "MLW": 28.05,
+      "MLLW": 26.98
+    }
   },
-  {
+  "9466328": {
     "id": "9466328",
     "name": "Lomavik",
     "lat": 60.5543,
@@ -153502,11 +161662,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 237.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.68,
+      "MHW": 31.1,
+      "MSL": 28.64,
+      "MLW": 25.46,
+      "MLLW": 24.76
+    }
   },
-  {
+  "9466477": {
     "id": "9466477",
-    "name": "Bethel, Kuskokwim River, AK",
+    "name": "Bethel, Kuskokwim River, Ak",
     "lat": 60.8,
     "lng": -161.75,
     "state": "AK",
@@ -153658,9 +161825,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 241.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.7,
+      "MHW": 6.8,
+      "MSL": 5.66,
+      "MLW": 4.38,
+      "MLLW": 4.04
+    }
   },
-  {
+  "9466563": {
     "id": "9466563",
     "name": "Newtok",
     "lat": 60.934502,
@@ -153789,9 +161963,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 213
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.14,
+      "MHW": 20.91,
+      "MSL": 18.3,
+      "MLW": 15.58,
+      "MLLW": 14.91
+    }
   },
-  {
+  "9466931": {
     "id": "9466931",
     "name": "Dall Point",
     "lat": 61.5317,
@@ -153920,9 +162101,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 335.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 46.19,
+      "MHW": 45.49,
+      "MSL": 43.58,
+      "MLW": 42.11,
+      "MLLW": 41.74
+    }
   },
-  {
+  "9467124": {
     "id": "9467124",
     "name": "Kun River",
     "lat": 61.8417,
@@ -154056,11 +162244,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 228.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.75,
+      "MHW": 27.98,
+      "MSL": 25.48,
+      "MLW": 23.16,
+      "MLLW": 22.28
+    }
   },
-  {
+  "9467551": {
     "id": "9467551",
-    "name": "Nunam Iqua (Sheldon Point)",
+    "name": "Nunam Iqua (sheldon Point)",
     "lat": 62.53294,
     "lng": -164.84528,
     "state": "AK",
@@ -154172,9 +162367,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 193
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.84,
+      "MHW": 30.17,
+      "MSL": 29.25,
+      "MLW": 28.36,
+      "MLLW": 28.2
+    }
   },
-  {
+  "9467645": {
     "id": "9467645",
     "name": "Alakanuk, Yukon River",
     "lat": 62.6872,
@@ -154288,9 +162490,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 229.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.15,
+      "MHW": 28.5,
+      "MSL": 27.7,
+      "MLW": 26.94,
+      "MLLW": 26.79
+    }
   },
-  {
+  "9467701": {
     "id": "9467701",
     "name": "Emmonak",
     "lat": 62.8,
@@ -154409,11 +162618,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 298.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.5,
+      "MHW": 23.89,
+      "MSL": 23.31,
+      "MLW": 22.67,
+      "MLLW": 22.51
+    }
   },
-  {
+  "9467861": {
     "id": "9467861",
-    "name": "Kotlik, AK",
+    "name": "Kotlik, Ak",
     "lat": 63.037899,
     "lng": -163.5265,
     "state": "",
@@ -154540,9 +162756,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 312
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.08,
+      "MHW": 30.22,
+      "MSL": 29.03,
+      "MLW": 28.04,
+      "MLLW": 27.86
+    }
   },
-  {
+  "9468039": {
     "id": "9468039",
     "name": "Northeast Cape, St. Lawrence Island",
     "lat": 63.3167,
@@ -154651,11 +162874,18 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 30
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.58,
+      "MHW": 31.35,
+      "MSL": 30.37,
+      "MLW": 29.33,
+      "MLLW": 29.12
+    }
   },
-  {
+  "9468132": {
     "id": "9468132",
-    "name": "ST. MICHAEL, NORTON SOUND",
+    "name": "St. Michael, Norton Sound",
     "lat": 63.475,
     "lng": -162.027,
     "state": "AK",
@@ -154757,11 +162987,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 2.3
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9468151": {
     "id": "9468151",
-    "name": "STEBBINS, NORTON SOUND, EAST",
+    "name": "Stebbins, Norton Sound, East",
     "lat": 63.525,
     "lng": -162.293,
     "state": "AK",
@@ -154878,9 +163109,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 308.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.6,
+      "MHW": 22.36,
+      "MSL": 21.16,
+      "MLW": 20.18,
+      "MLLW": 19.95
+    }
   },
-  {
+  "9468258": {
     "id": "9468258",
     "name": "Savoonga",
     "lat": 63.679083,
@@ -154999,11 +163237,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 57.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.26,
+      "MHW": 12.01,
+      "MSL": 10.98,
+      "MLW": 9.96,
+      "MLLW": 9.7
+    }
   },
-  {
+  "9468261": {
     "id": "9468261",
-    "name": "Kavalghak Bay, AK",
+    "name": "Kavalghak Bay, Ak",
     "lat": 63.682861,
     "lng": -171.750194,
     "state": "AK",
@@ -155110,9 +163355,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 184.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.83,
+      "MHW": 26.66,
+      "MSL": 25.64,
+      "MLW": 24.78,
+      "MLLW": 24.42
+    }
   },
-  {
+  "9468283": {
     "id": "9468283",
     "name": "Akeftapak, St. Lawrence Island",
     "lat": 63.7185,
@@ -155226,9 +163478,10 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 302.2
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9468333": {
     "id": "9468333",
     "name": "Unalakleet",
     "lat": 63.871361,
@@ -155382,9 +163635,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 162.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.21,
+      "MHW": 4.81,
+      "MSL": 3.31,
+      "MLW": 2.04,
+      "MLLW": 1.76
+    }
   },
-  {
+  "9468691": {
     "id": "9468691",
     "name": "Shaktoolik",
     "lat": 64.3802,
@@ -155493,9 +163753,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 357.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.83,
+      "MHW": 25.15,
+      "MSL": 23.77,
+      "MLW": 22.72,
+      "MLLW": 22.1
+    }
   },
-  {
+  "9468756": {
     "id": "9468756",
     "name": "Nome, Norton Sound",
     "lat": 64.494611,
@@ -155614,11 +163881,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 238.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.29,
+      "MHW": 5.1,
+      "MSL": 4.58,
+      "MLW": 4.07,
+      "MLLW": 3.76
+    }
   },
-  {
+  "9468863": {
     "id": "9468863",
-    "name": "ELIM, NORTON BAY",
+    "name": "Elim, Norton Bay",
     "lat": 64.6167,
     "lng": -162.248,
     "state": "AK",
@@ -155740,9 +164014,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 13.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.13,
+      "MHW": 3.87,
+      "MSL": 2.79,
+      "MLW": 2.05,
+      "MLLW": 1.51
+    }
   },
-  {
+  "9469031": {
     "id": "9469031",
     "name": "Koyuk",
     "lat": 64.9312,
@@ -155861,9 +164142,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 105.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.99,
+      "MHW": 24.76,
+      "MSL": 23.38,
+      "MLW": 22.26,
+      "MLLW": 22.02
+    }
   },
-  {
+  "9469237": {
     "id": "9469237",
     "name": "Point Spencer, Port Clarence",
     "lat": 65.2567,
@@ -155942,11 +164230,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 302.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.93,
+      "MHW": 5.84,
+      "MSL": 5.38,
+      "MLW": 4.78,
+      "MLLW": 4.65
+    }
   },
-  {
+  "9469239": {
     "id": "9469239",
-    "name": "TELLER, PORT CLARENCE",
+    "name": "Teller, Port Clarence",
     "lat": 65.2667,
     "lng": -166.353,
     "state": "AK",
@@ -156028,11 +164323,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 331.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.28,
+      "MHW": 11.16,
+      "MSL": 10.7,
+      "MLW": 10.36,
+      "MLLW": 10.1
+    }
   },
-  {
+  "9469338": {
     "id": "9469338",
-    "name": "LOST RIVER, SEWARD PENINSULA",
+    "name": "Lost River, Seward Peninsula",
     "lat": 65.39,
     "lng": -167.145,
     "state": "AK",
@@ -156124,9 +164426,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 323.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 5.89,
+      "MHW": 5.75,
+      "MSL": 5.32,
+      "MLW": 4.89,
+      "MLLW": 4.8
+    }
   },
-  {
+  "9469439": {
     "id": "9469439",
     "name": "Tin City, Bering Sea",
     "lat": 65.5583,
@@ -156205,9 +164514,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 304.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.64,
+      "MHW": 4.45,
+      "MSL": 4.09,
+      "MLW": 3.72,
+      "MLLW": 3.62
+    }
   },
-  {
+  "9469515": {
     "id": "9469515",
     "name": "Outside Lopp Lagoon",
     "lat": 65.728806,
@@ -156291,9 +164607,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 325.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 57.38,
+      "MHW": 57.32,
+      "MSL": 56.89,
+      "MLW": 56.48,
+      "MLLW": 56.41
+    }
   },
-  {
+  "9469751": {
     "id": "9469751",
     "name": "Deering",
     "lat": 66.09717,
@@ -156377,9 +164700,16 @@ const stations = [
         "amplitude": 0.05,
         "phaseLag": 138.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.1,
+      "MHW": 17.91,
+      "MSL": 17.23,
+      "MLW": 16.56,
+      "MLLW": 16.28
+    }
   },
-  {
+  "9469833": {
     "id": "9469833",
     "name": "Goodhope Bay",
     "lat": 66.2303,
@@ -156468,9 +164798,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 141.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 38.76,
+      "MHW": 38.63,
+      "MSL": 37.95,
+      "MLW": 37.27,
+      "MLLW": 37.07
+    }
   },
-  {
+  "9469854": {
     "id": "9469854",
     "name": "Shishmaref Inlet 2",
     "lat": 66.2633,
@@ -156559,9 +164896,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 231
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.6,
+      "MHW": 4.44,
+      "MSL": 4.08,
+      "MLW": 3.67,
+      "MLLW": 3.57
+    }
   },
-  {
+  "9490096": {
     "id": "9490096",
     "name": "Cape Espenberg, Kotzebue Sound",
     "lat": 66.585694,
@@ -156645,9 +164989,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 27.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 153.81,
+      "MHW": 153.71,
+      "MSL": 153.35,
+      "MLW": 152.99,
+      "MLLW": 152.82
+    }
   },
-  {
+  "9490424": {
     "id": "9490424",
     "name": "Kotzebue",
     "lat": 66.9017,
@@ -156726,9 +165077,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 216.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.12,
+      "MHW": 4.05,
+      "MSL": 3.75,
+      "MLW": 3.54,
+      "MLLW": 3.41
+    }
   },
-  {
+  "9490571": {
     "id": "9490571",
     "name": "Cape Krusenstern",
     "lat": 67.054194,
@@ -156787,9 +165145,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 287
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 40.69,
+      "MHW": 40.64,
+      "MSL": 40.27,
+      "MLW": 40.16,
+      "MLLW": 40.04
+    }
   },
-  {
+  "9491094": {
     "id": "9491094",
     "name": "Red Dog Dock",
     "lat": 67.575806,
@@ -156898,9 +165263,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 314.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.24,
+      "MHW": 6.1,
+      "MSL": 5.73,
+      "MLW": 5.39,
+      "MLLW": 5.24
+    }
   },
-  {
+  "9491253": {
     "id": "9491253",
     "name": "Kivalina",
     "lat": 67.7267,
@@ -156979,9 +165351,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 340.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.82,
+      "MHW": 4.69,
+      "MSL": 4.36,
+      "MLW": 4.02,
+      "MLLW": 3.92
+    }
   },
-  {
+  "9491873": {
     "id": "9491873",
     "name": "Point Hope",
     "lat": 68.3417,
@@ -157055,9 +165434,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 8.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.91,
+      "MHW": 2.84,
+      "MSL": 2.57,
+      "MLW": 2.34,
+      "MLLW": 2.24
+    }
   },
-  {
+  "9494212": {
     "id": "9494212",
     "name": "Wainwright",
     "lat": 70.6438,
@@ -157136,9 +165522,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 325.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 73.15,
+      "MHW": 73.14,
+      "MSL": 72.98,
+      "MLW": 72.62,
+      "MLLW": 72.69
+    }
   },
-  {
+  "9494935": {
     "id": "9494935",
     "name": "Barrow Offshore",
     "lat": 71.3601,
@@ -157227,9 +165620,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 306
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 148.15,
+      "MHW": 148.04,
+      "MSL": 147.8,
+      "MLW": 147.55,
+      "MLLW": 147.49
+    }
   },
-  {
+  "9497645": {
     "id": "9497645",
     "name": "Prudhoe Bay",
     "lat": 70.411389,
@@ -157333,11 +165733,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 318.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 36.54,
+      "MHW": 36.43,
+      "MSL": 36.18,
+      "MLW": 35.92,
+      "MLLW": 35.84
+    }
   },
-  {
+  "9497649": {
     "id": "9497649",
-    "name": "PRUDHOE BAY #2",
+    "name": "Prudhoe Bay #2",
     "lat": 70.3883,
     "lng": -148.51,
     "state": "AK",
@@ -157424,11 +165831,12 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 334.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9497778": {
     "id": "9497778",
-    "name": "CROSS ISLAND, (DINKUM SANDS)",
+    "name": "Cross Island, (dinkum Sands)",
     "lat": 70.4917,
     "lng": -147.95,
     "state": "AK",
@@ -157505,9 +165913,10 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 349.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9499176": {
     "id": "9499176",
     "name": "Barter Island",
     "lat": 70.1286,
@@ -157571,9 +165980,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 332.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.68,
+      "MHW": 2.57,
+      "MSL": 2.35,
+      "MLW": 2.1,
+      "MLLW": 2.07
+    }
   },
-  {
+  "9500966": {
     "id": "9500966",
     "name": "Madero, Tampico Harbor, Mexico",
     "lat": 22.2617,
@@ -157717,11 +166133,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 259.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 12.51,
+      "MHW": 12.45,
+      "MSL": 11.96,
+      "MLW": 11.34,
+      "MLLW": 11.14
+    }
   },
-  {
+  "9635000": {
     "id": "9635000",
-    "name": "Puerto Quetzal (San Jose)",
+    "name": "Puerto Quetzal (san Jose)",
     "lat": 13.9167,
     "lng": -90.83,
     "state": "Guatemala",
@@ -157838,9 +166261,10 @@ const stations = [
         "amplitude": 0.12,
         "phaseLag": 320.5
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9640507": {
     "id": "9640507",
     "name": "La Union",
     "lat": 13.3333,
@@ -157969,9 +166393,13 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 5.8
       }
-    ]
+    ],
+    "datums": {
+      "MSL": 0,
+      "MLLW": -5.1
+    }
   },
-  {
+  "9650593": {
     "id": "9650593",
     "name": "Puerto Cortes",
     "lat": 15.835,
@@ -158060,9 +166488,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 15.6
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9662957": {
     "id": "9662957",
     "name": "Puerto Corinto",
     "lat": 12.4783,
@@ -158186,9 +166615,10 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 307.1
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9710441": {
     "id": "9710441",
     "name": "Settlement Point",
     "lat": 26.71,
@@ -158307,9 +166737,16 @@ const stations = [
         "amplitude": 0.06,
         "phaseLag": 36.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 41.65,
+      "MHW": 41.41,
+      "MSL": 40.05,
+      "MLW": 38.67,
+      "MLLW": 38.58
+    }
   },
-  {
+  "9751082": {
     "id": "9751082",
     "name": "Grapetree Bay",
     "lat": 17.7407,
@@ -158403,9 +166840,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 6.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.75,
+      "MHW": 23.75,
+      "MSL": 23.39,
+      "MLW": 23.04,
+      "MLLW": 23.04
+    }
   },
-  {
+  "9751084": {
     "id": "9751084",
     "name": "Teague Bay",
     "lat": 17.754999,
@@ -158494,9 +166938,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 29.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.73,
+      "MHW": 26.72,
+      "MSL": 26.38,
+      "MLW": 26.06,
+      "MLLW": 26.04
+    }
   },
-  {
+  "9751219": {
     "id": "9751219",
     "name": "Fareham Bay",
     "lat": 17.71,
@@ -158580,9 +167031,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 234
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.84,
+      "MHW": 27.84,
+      "MSL": 27.47,
+      "MLW": 27.11,
+      "MLLW": 27.11
+    }
   },
-  {
+  "9751274": {
     "id": "9751274",
     "name": "Johns Folly Bay",
     "lat": 18.316999,
@@ -158681,9 +167139,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 31.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.65,
+      "MHW": 28.59,
+      "MSL": 28.18,
+      "MLW": 27.82,
+      "MLLW": 27.77
+    }
   },
-  {
+  "9751309": {
     "id": "9751309",
     "name": "Leinster Point, Leinster Bay, St. John's",
     "lat": 18.36761,
@@ -158787,9 +167252,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 44.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.25,
+      "MHW": 29.02,
+      "MSL": 28.65,
+      "MLW": 28.24,
+      "MLLW": 28.12
+    }
   },
-  {
+  "9751364": {
     "id": "9751364",
     "name": "Christiansted Harbor, St Croix",
     "lat": 17.747694,
@@ -158888,11 +167360,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 16
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.82,
+      "MHW": 27.8,
+      "MSL": 27.45,
+      "MLW": 27.11,
+      "MLLW": 27.07
+    }
   },
-  {
+  "9751373": {
     "id": "9751373",
-    "name": "ST JOHN'S ISLAND, CORAL HARBOR",
+    "name": "St John's Island, Coral Harbor",
     "lat": 18.3483,
     "lng": -64.7167,
     "state": "VI",
@@ -158999,9 +167478,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 27.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.73,
+      "MHW": 3.64,
+      "MSL": 3.26,
+      "MLW": 2.92,
+      "MLLW": 2.84
+    }
   },
-  {
+  "9751381": {
     "id": "9751381",
     "name": "Lameshur Bay, St John",
     "lat": 18.31825,
@@ -159110,9 +167596,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 16.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.72,
+      "MHW": 29.67,
+      "MSL": 29.29,
+      "MLW": 28.95,
+      "MLLW": 28.89
+    }
   },
-  {
+  "9751388": {
     "id": "9751388",
     "name": "Fish Bay",
     "lat": 18.3192,
@@ -159216,9 +167709,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 17.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.26,
+      "MHW": 30.22,
+      "MSL": 29.83,
+      "MLW": 29.49,
+      "MLLW": 29.43
+    }
   },
-  {
+  "9751389": {
     "id": "9751389",
     "name": "Salt River Bay",
     "lat": 17.7753,
@@ -159312,9 +167812,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 21.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.69,
+      "MHW": 30.68,
+      "MSL": 30.34,
+      "MLW": 30.01,
+      "MLLW": 29.98
+    }
   },
-  {
+  "9751401": {
     "id": "9751401",
     "name": "Lime Tree Bay",
     "lat": 17.6947,
@@ -159418,9 +167925,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 355.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 34.79,
+      "MHW": 34.79,
+      "MSL": 34.45,
+      "MLW": 34.1,
+      "MLLW": 34.08
+    }
   },
-  {
+  "9751417": {
     "id": "9751417",
     "name": "Hawksnest Beach",
     "lat": 18.349,
@@ -159539,11 +168053,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 48.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.86,
+      "MHW": 30.6,
+      "MSL": 30.17,
+      "MLW": 29.7,
+      "MLLW": 29.58
+    }
   },
-  {
+  "9751419": {
     "id": "9751419",
-    "name": "HAULOVER BAY, ST. JOHNS",
+    "name": "Haulover Bay, St. Johns",
     "lat": 18.3497,
     "lng": -64.679604,
     "state": "",
@@ -159655,9 +168176,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 37.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.31,
+      "MHW": 29.15,
+      "MSL": 28.82,
+      "MLW": 28.47,
+      "MLLW": 28.36
+    }
   },
-  {
+  "9751467": {
     "id": "9751467",
     "name": "Lovango Cay, St. John",
     "lat": 18.3607,
@@ -159796,9 +168324,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 17.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.55,
+      "MHW": 28.29,
+      "MSL": 27.99,
+      "MLW": 27.68,
+      "MLLW": 27.5
+    }
   },
-  {
+  "9751472": {
     "id": "9751472",
     "name": "Cruz Bay",
     "lat": 18.332899,
@@ -159917,9 +168452,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 30.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.94,
+      "MHW": 2.81,
+      "MSL": 2.44,
+      "MLW": 2.09,
+      "MLLW": 1.98
+    }
   },
-  {
+  "9751494": {
     "id": "9751494",
     "name": "Dog Island, St. Thomas",
     "lat": 18.297139,
@@ -160043,9 +168585,16 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 26
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 20.28,
+      "MHW": 20.2,
+      "MSL": 19.85,
+      "MLW": 19.57,
+      "MLLW": 19.48
+    }
   },
-  {
+  "9751561": {
     "id": "9751561",
     "name": "Pavillion Point",
     "lat": 18.339899,
@@ -160149,11 +168698,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 39.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.71,
+      "MHW": 31.49,
+      "MSL": 31.11,
+      "MLW": 30.72,
+      "MLLW": 30.58
+    }
   },
-  {
+  "9751567": {
     "id": "9751567",
-    "name": "BENNER BAY",
+    "name": "Benner Bay",
     "lat": 18.32,
     "lng": -64.87,
     "state": "",
@@ -160230,9 +168786,10 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 18
       }
-    ]
+    ],
+    "datums": {}
   },
-  {
+  "9751574": {
     "id": "9751574",
     "name": "Jersey Bay",
     "lat": 18.3181,
@@ -160331,9 +168888,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 6.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.11,
+      "MHW": 29.09,
+      "MSL": 28.69,
+      "MLW": 28.34,
+      "MLLW": 28.32
+    }
   },
-  {
+  "9751583": {
     "id": "9751583",
     "name": "Water Bay",
     "lat": 18.34894,
@@ -160442,9 +169006,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 39.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 19.03,
+      "MHW": 18.8,
+      "MSL": 18.4,
+      "MLW": 17.99,
+      "MLLW": 17.84
+    }
   },
-  {
+  "9751584": {
     "id": "9751584",
     "name": "Fredericksted, St. Croix",
     "lat": 17.7133,
@@ -160563,9 +169134,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 325.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.26,
+      "MHW": 25.24,
+      "MSL": 24.87,
+      "MLW": 24.54,
+      "MLLW": 24.53
+    }
   },
-  {
+  "9751639": {
     "id": "9751639",
     "name": "Charlotte Amalie",
     "lat": 18.335833,
@@ -160674,9 +169252,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 6.04,
+      "MHW": 6,
+      "MSL": 5.63,
+      "MLW": 5.3,
+      "MLLW": 5.25
+    }
   },
-  {
+  "9751693": {
     "id": "9751693",
     "name": "Magens Bay",
     "lat": 18.3663,
@@ -160780,9 +169365,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 47.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 31.06,
+      "MHW": 30.81,
+      "MSL": 30.35,
+      "MLW": 29.89,
+      "MLLW": 29.76
+    }
   },
-  {
+  "9751749": {
     "id": "9751749",
     "name": "Crown Bay",
     "lat": 18.3329,
@@ -160881,9 +169473,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 5.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.4,
+      "MHW": 27.38,
+      "MSL": 26.99,
+      "MLW": 26.65,
+      "MLLW": 26.61
+    }
   },
-  {
+  "9751768": {
     "id": "9751768",
     "name": "Dorothea Bay, Saint Thomas",
     "lat": 18.37125,
@@ -160982,9 +169581,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 46.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 18.34,
+      "MHW": 18.09,
+      "MSL": 17.63,
+      "MLW": 17.16,
+      "MLLW": 17.05
+    }
   },
-  {
+  "9751774": {
     "id": "9751774",
     "name": "Botany Bay, St. Thomas",
     "lat": 18.3633,
@@ -161108,9 +169714,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 329.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 2.45,
+      "MHW": 2.19,
+      "MSL": 1.75,
+      "MLW": 1.29,
+      "MLLW": 1.16
+    }
   },
-  {
+  "9752062": {
     "id": "9752062",
     "name": "Culebrita",
     "lat": 18.3194,
@@ -161219,9 +169832,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 45
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.35,
+      "MHW": 22.13,
+      "MSL": 21.72,
+      "MLW": 21.28,
+      "MLLW": 21.14
+    }
   },
-  {
+  "9752235": {
     "id": "9752235",
     "name": "Culebra",
     "lat": 18.300861,
@@ -161345,11 +169965,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 29.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.56,
+      "MHW": 28.36,
+      "MSL": 27.98,
+      "MLW": 27.6,
+      "MLLW": 27.44
+    }
   },
-  {
+  "9752426": {
     "id": "9752426",
-    "name": "Playa la Plata",
+    "name": "Playa La Plata",
     "lat": 18.1166,
     "lng": -65.3729,
     "state": "",
@@ -161436,9 +170063,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 23.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 21.74,
+      "MHW": 21.74,
+      "MSL": 21.41,
+      "MLW": 21.05,
+      "MLLW": 21.03
+    }
   },
-  {
+  "9752619": {
     "id": "9752619",
     "name": "Isabel Segunda, Vieques Island",
     "lat": 18.1525,
@@ -161552,9 +170186,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 33.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.13,
+      "MHW": 24.9,
+      "MSL": 24.49,
+      "MLW": 24.06,
+      "MLLW": 23.9
+    }
   },
-  {
+  "9752695": {
     "id": "9752695",
     "name": "Esperanza, Vieques Island",
     "lat": 18.093861,
@@ -161663,9 +170304,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 5.7
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.77,
+      "MHW": 26.75,
+      "MSL": 26.42,
+      "MLW": 26.07,
+      "MLLW": 26.03
+    }
   },
-  {
+  "9752813": {
     "id": "9752813",
     "name": "Mosquito Pier",
     "lat": 18.148899,
@@ -161779,9 +170427,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 38.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24,
+      "MHW": 23.79,
+      "MSL": 23.42,
+      "MLW": 23.04,
+      "MLLW": 22.87
+    }
   },
-  {
+  "9752962": {
     "id": "9752962",
     "name": "Isla Palominos",
     "lat": 18.344972,
@@ -161895,11 +170550,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 156.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 22.16,
+      "MHW": 21.92,
+      "MSL": 21.38,
+      "MLW": 20.83,
+      "MLLW": 20.67
+    }
   },
-  {
+  "9752998": {
     "id": "9752998",
-    "name": "PUNTA ARENAS, VIEQUES ISLAND",
+    "name": "Punta Arenas, Vieques Island",
     "lat": 18.1124,
     "lng": -65.5759,
     "state": "",
@@ -161986,9 +170648,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 5.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.84,
+      "MHW": 27.83,
+      "MSL": 27.48,
+      "MLW": 27.12,
+      "MLLW": 27.09
+    }
   },
-  {
+  "9753182": {
     "id": "9753182",
     "name": "Ceiba, Roosevelt Road",
     "lat": 18.2281,
@@ -162102,9 +170771,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 42
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 25.8,
+      "MHW": 25.61,
+      "MSL": 25.25,
+      "MLW": 24.9,
+      "MLLW": 24.76
+    }
   },
-  {
+  "9753216": {
     "id": "9753216",
     "name": "Fajardo",
     "lat": 18.335278,
@@ -162233,9 +170909,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 39.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 24.78,
+      "MHW": 24.55,
+      "MSL": 24,
+      "MLW": 23.44,
+      "MLLW": 23.27
+    }
   },
-  {
+  "9753641": {
     "id": "9753641",
     "name": "Naguabo",
     "lat": 18.18706,
@@ -162359,11 +171042,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 93.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 7.57,
+      "MHW": 7.51,
+      "MSL": 7.14,
+      "MLW": 6.83,
+      "MLLW": 6.75
+    }
   },
-  {
+  "9753766": {
     "id": "9753766",
-    "name": "Luquillo, PR",
+    "name": "Luquillo, Pr",
     "lat": 18.3817,
     "lng": -65.7365,
     "state": "",
@@ -162480,11 +171170,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 37.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 30.9,
+      "MHW": 30.69,
+      "MSL": 30.13,
+      "MLW": 29.57,
+      "MLLW": 29.39
+    }
   },
-  {
+  "9754057": {
     "id": "9754057",
-    "name": "Palmas del Mar",
+    "name": "Palmas Del Mar",
     "lat": 18.0781,
     "lng": -65.795601,
     "state": "",
@@ -162571,9 +171268,16 @@ const stations = [
         "amplitude": 0.09,
         "phaseLag": 230.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.44,
+      "MHW": 28.45,
+      "MSL": 28.09,
+      "MLW": 27.72,
+      "MLLW": 27.73
+    }
   },
-  {
+  "9754228": {
     "id": "9754228",
     "name": "Yabucoa Harbor",
     "lat": 18.055083,
@@ -162682,9 +171386,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 336.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 11.7,
+      "MHW": 11.68,
+      "MSL": 11.33,
+      "MLW": 11.01,
+      "MLLW": 10.98
+    }
   },
-  {
+  "9754487": {
     "id": "9754487",
     "name": "Puerto Maunabo",
     "lat": 17.9914,
@@ -162773,11 +171484,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 344.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.32,
+      "MHW": 28.32,
+      "MSL": 27.96,
+      "MLW": 27.59,
+      "MLLW": 27.59
+    }
   },
-  {
+  "9754986": {
     "id": "9754986",
-    "name": "BOCA DE CANGREJOS",
+    "name": "Boca De Cangrejos",
     "lat": 18.4566,
     "lng": -65.991501,
     "state": "",
@@ -162889,9 +171607,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 60.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.3,
+      "MHW": 29.06,
+      "MSL": 28.58,
+      "MLW": 28.09,
+      "MLLW": 27.89
+    }
   },
-  {
+  "9755371": {
     "id": "9755371",
     "name": "San Juan, La Puntilla, San Juan Bay",
     "lat": 18.458944,
@@ -163030,9 +171755,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 49.6
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.96,
+      "MHW": 4.7,
+      "MSL": 4.15,
+      "MLW": 3.59,
+      "MLLW": 3.39
+    }
   },
-  {
+  "9755679": {
     "id": "9755679",
     "name": "Las Mareas",
     "lat": 17.9283,
@@ -163111,9 +171843,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 0.3
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 13.84,
+      "MHW": 13.83,
+      "MSL": 13.5,
+      "MLW": 13.19,
+      "MLLW": 13.17
+    }
   },
-  {
+  "9755971": {
     "id": "9755971",
     "name": "Central Aguirre",
     "lat": 17.95,
@@ -163202,11 +171941,18 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 3.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.07,
+      "MHW": 26.06,
+      "MSL": 25.7,
+      "MLW": 25.38,
+      "MLLW": 25.37
+    }
   },
-  {
+  "9756567": {
     "id": "9756567",
-    "name": "Boca del Cibuco",
+    "name": "Boca Del Cibuco",
     "lat": 18.4852,
     "lng": -66.384,
     "state": "",
@@ -163318,9 +172064,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 53
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 16.8,
+      "MHW": 16.45,
+      "MSL": 15.82,
+      "MLW": 15.19,
+      "MLLW": 14.98
+    }
   },
-  {
+  "9756639": {
     "id": "9756639",
     "name": "Santa Isabel",
     "lat": 17.955,
@@ -163439,9 +172192,16 @@ const stations = [
         "amplitude": 0.04,
         "phaseLag": 124.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.29,
+      "MHW": 26.28,
+      "MSL": 25.95,
+      "MLW": 25.6,
+      "MLLW": 25.59
+    }
   },
-  {
+  "9757487": {
     "id": "9757487",
     "name": "Ponce",
     "lat": 17.969601,
@@ -163540,9 +172300,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 355.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.47,
+      "MHW": 27.48,
+      "MSL": 27.12,
+      "MLW": 26.79,
+      "MLLW": 26.78
+    }
   },
-  {
+  "9757809": {
     "id": "9757809",
     "name": "Arecibo",
     "lat": 18.480528,
@@ -163661,11 +172428,18 @@ const stations = [
         "amplitude": 0.03,
         "phaseLag": 42
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.86,
+      "MHW": 23.54,
+      "MSL": 22.93,
+      "MLW": 22.3,
+      "MLLW": 22.11
+    }
   },
-  {
+  "9758053": {
     "id": "9758053",
-    "name": "Penuelas (Punta Guayanilla)",
+    "name": "Penuelas (punta Guayanilla)",
     "lat": 17.972528,
     "lng": -66.7618,
     "state": "PR",
@@ -163792,9 +172566,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 40.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 32.62,
+      "MHW": 32.61,
+      "MSL": 32.27,
+      "MLW": 31.94,
+      "MLLW": 31.92
+    }
   },
-  {
+  "9758627": {
     "id": "9758627",
     "name": "Guanica",
     "lat": 17.958,
@@ -163888,9 +172669,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 12.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 26.71,
+      "MHW": 26.71,
+      "MSL": 26.37,
+      "MLW": 26.04,
+      "MLLW": 26.02
+    }
   },
-  {
+  "9759110": {
     "id": "9759110",
     "name": "Magueyes Island",
     "lat": 17.9701,
@@ -163984,9 +172772,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 2.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.24,
+      "MHW": 4.24,
+      "MSL": 3.91,
+      "MLW": 3.59,
+      "MLLW": 3.58
+    }
   },
-  {
+  "9759173": {
     "id": "9759173",
     "name": "Boqueron",
     "lat": 18.024,
@@ -164085,9 +172880,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 29.9
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.56,
+      "MHW": 27.53,
+      "MSL": 27.16,
+      "MLW": 26.82,
+      "MLLW": 26.76
+    }
   },
-  {
+  "9759183": {
     "id": "9759183",
     "name": "Joyuda",
     "lat": 18.115801,
@@ -164211,9 +173013,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 40
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.47,
+      "MHW": 28.35,
+      "MSL": 27.95,
+      "MLW": 27.62,
+      "MLLW": 27.45
+    }
   },
-  {
+  "9759189": {
     "id": "9759189",
     "name": "Puerto Real",
     "lat": 18.074806,
@@ -164347,9 +173156,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 345.8
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.96,
+      "MHW": 29.88,
+      "MSL": 29.57,
+      "MLW": 29.25,
+      "MLLW": 29.15
+    }
   },
-  {
+  "9759197": {
     "id": "9759197",
     "name": "Bahia Salinas",
     "lat": 17.9514,
@@ -164473,9 +173289,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 19
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 27.51,
+      "MHW": 27.49,
+      "MSL": 27.17,
+      "MLW": 26.87,
+      "MLLW": 26.85
+    }
   },
-  {
+  "9759394": {
     "id": "9759394",
     "name": "Mayaguez",
     "lat": 18.218833,
@@ -164619,9 +173442,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 39.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.82,
+      "MHW": 4.61,
+      "MSL": 4.08,
+      "MLW": 3.57,
+      "MLLW": 3.45
+    }
   },
-  {
+  "9759412": {
     "id": "9759412",
     "name": "Aguadilla, Crashboat Beach",
     "lat": 18.456639,
@@ -164750,11 +173580,18 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 26.4
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 23.99,
+      "MHW": 23.75,
+      "MSL": 23.25,
+      "MLW": 22.75,
+      "MLLW": 22.62
+    }
   },
-  {
+  "9759421": {
     "id": "9759421",
-    "name": "PUNTA GUANAJIBO, MAYAGUES",
+    "name": "Punta Guanajibo, Mayagues",
     "lat": 18.165,
     "lng": -67.1817,
     "state": "PR",
@@ -164861,9 +173698,16 @@ const stations = [
         "amplitude": 0.02,
         "phaseLag": 37.2
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 3.38,
+      "MHW": 3.2,
+      "MSL": 2.8,
+      "MLW": 2.41,
+      "MLLW": 2.27
+    }
   },
-  {
+  "9759866": {
     "id": "9759866",
     "name": "Southeast Mona Island",
     "lat": 18.0653,
@@ -164962,9 +173806,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 4.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 4.99,
+      "MHW": 5.01,
+      "MSL": 4.63,
+      "MLW": 4.31,
+      "MLLW": 4.31
+    }
   },
-  {
+  "9759938": {
     "id": "9759938",
     "name": "Mona Island",
     "lat": 18.089289,
@@ -165078,9 +173929,16 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 54.5
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 29.41,
+      "MHW": 29.36,
+      "MSL": 29.01,
+      "MLW": 28.67,
+      "MLLW": 28.6
+    }
   },
-  {
+  "9761115": {
     "id": "9761115",
     "name": "Barbuda",
     "lat": 17.590834,
@@ -165184,6 +174042,13 @@ const stations = [
         "amplitude": 0.01,
         "phaseLag": 276.1
       }
-    ]
+    ],
+    "datums": {
+      "MHHW": 28.73,
+      "MHW": 28.71,
+      "MSL": 28.43,
+      "MLW": 28.11,
+      "MLLW": 27.99
+    }
   }
-]
+}
