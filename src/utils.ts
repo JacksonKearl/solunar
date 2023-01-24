@@ -20,11 +20,11 @@ export const scale = (
 ) => ((value - inMin) / (inMax - inMin)) * (outMax - outMin) + outMin
 
 /** rescale amt from 0-1 to min-max */
-export const sploot = (amt: number, min: number, max: number) =>
+export const sploot = (amt: number, min: number, max: number): number =>
 	scale(amt, 0, 1, min, max)
 
-export const bound2 = (val: number, min: number, max: number) =>
-	Math.max(min, Math.min(val, max))
+export const bound2 = (val: number, min: number, max: number): number =>
+	min > max ? bound2(val, max, min) : Math.max(min, Math.min(val, max))
 
 const perfStart = performance.now()
 let last = perfStart

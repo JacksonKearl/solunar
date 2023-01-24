@@ -1,7 +1,7 @@
 import { bound2, DisposableStore } from '$/utils'
 import { Disposable } from '$/types'
 import { addElementListener, findDPR } from './utils'
-import { cos, degToRad, sin } from '$/degreeMath'
+import { atan2, cos, degToRad, sin } from '$/degreeMath'
 
 /** Always in page-pixel-space (`page-space * dpr`) */
 export type Location = { x: number; y: number }
@@ -101,8 +101,8 @@ export abstract class CanvasElement implements Disposable {
 				if (this.locationInBounds(l)) {
 					const dpr = findDPR()
 					this.onDrag({
-						dx: -e.deltaX * dpr,
-						dy: -e.deltaY * dpr,
+						dx: -e.deltaX,
+						dy: -e.deltaY,
 						x: e.pageX * dpr,
 						y: e.pageY * dpr,
 					})
@@ -229,6 +229,19 @@ export abstract class CanvasElement implements Disposable {
 			canvasX: this.dimensions.centerX + this.scaleFactor * x,
 			canvasY: this.dimensions.centerY + this.scaleFactor * y,
 		}
+	}
+
+	protected toElementSpace(l: Location): {
+		x: number
+		y: number
+		r: number
+		deg: number
+	} {
+		const x = (l.x - this.dimensions.centerX) / this.scaleFactor
+		const y = -(l.y - this.dimensions.centerY) / this.scaleFactor
+		const r = Math.sqrt(x ** 2 + y ** 2)
+		const deg = atan2(x, y)
+		return { x, y, r, deg }
 	}
 
 	protected getRect(r: number, deg: number) {

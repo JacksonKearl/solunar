@@ -6,6 +6,7 @@ import { TideOScope } from './TideOScope'
 import { DisposableStore, MappedView } from '$/utils'
 import { Gauge } from './Gauge'
 import { Clock } from './Clock'
+import { Rotary } from './Rotary'
 
 declare const stations: Record<string, Station>
 
@@ -36,6 +37,8 @@ const configs = [
 	makeConfigArea('slider'),
 	makeConfigArea('slider'),
 	makeConfigArea('slider'),
+	makeConfigArea('slider'),
+	makeConfigArea('rotaries'),
 ]
 const tideOScopeToggles = [
 	makeConfigArea('toggle', configs[0]),
@@ -47,8 +50,14 @@ const clockToggles = [
 	makeConfigArea('toggle', configs[1]),
 	makeConfigArea('toggle', configs[1]),
 ]
+const rotaries = [
+	makeConfigArea('rotary', configs[7]),
+	makeConfigArea('rotary', configs[7]),
+	makeConfigArea('rotary', configs[7]),
+]
 configs[0].classList.add('flex')
 configs[1].classList.add('flex')
+configs[7].classList.add('flex')
 
 const go = () => {
 	disposables.clear()
@@ -131,12 +140,12 @@ const go = () => {
 	})
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
 		label: 'Scroll Speed',
-		max: 100000,
-		min: 1,
-		value: defaultOptions.timeRate,
+		max: Math.log(10000000),
+		min: Math.log(1),
+		value: Math.log(defaultOptions.timeRate),
 	})
 	const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
-		label: 'Window Range',
+		label: 'Time Range',
 		min: Math.log(8 * HOUR),
 		max: Math.log(2 * YEAR),
 		value: Math.log(defaultOptions.timeRange),
@@ -153,6 +162,30 @@ const go = () => {
 		max: 12,
 		value: defaultOptions.periodLoPass,
 	})
+	const tideRange = new Slider(ctx, drawZoneForElement(configs[6]), {
+		label: 'Tide Range',
+		min: Math.log2(2),
+		max: Math.log2(32),
+		value: Math.log2(defaultOptions.yRange),
+	})
+
+	const datumRotary = new Rotary(ctx, drawZoneForElement(rotaries[0]), {
+		label: 'Datum',
+		value: 'MSL',
+		values: ['MLLW', 'MLW', 'MSL', 'MHW', 'MHHW'],
+		minAngle: 220,
+		maxAngle: -40,
+	})
+
+	const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {
+		label: 'Time Zone',
+		value: 'Station',
+		values: ['GMT', 'DEV', 'STA'],
+		minAngle: 150,
+		maxAngle: 30,
+	})
+
+	// disposables.add(datumRotary.valueView((v) => console.log('datum:', v)))
 
 	const UTCOffset = 0
 	const LocalOffset = new Date().getTimezoneOffset()
@@ -227,7 +260,14 @@ const go = () => {
 		'timeRange',
 		MappedView(windowRangeSlider.valueView, (v) => Math.E ** v),
 	)
-	tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView)
+	tideOScope.viewInput(
+		'timeRate',
+		MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v),
+	)
+	tideOScope.viewInput(
+		'yRange',
+		MappedView(tideRange.valueView, (v) => 2 ** v),
+	)
 
 	tideFlowGauge.viewInput(
 		'value',
@@ -241,10 +281,24 @@ const go = () => {
 		'time',
 		MappedView(tideOScope.centralDataView, (v) => v.time),
 	)
-	timeGauge.viewInput('timeRate', scrollSpeedSlider.valueView)
+	timeGauge.viewInput(
+		'timeRate',
+		MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v),
+	)
 	timeGauge.viewInput('render60Count', numbers60Toggle.valueView)
 	timeGauge.viewInput('render12Count', numbers12Toggle.valueView)
 	timeGauge.viewInput('renderSecondHand', secondToggle.valueView)
+
+	timeGauge.viewInput(
+		'offset',
+		MappedView(timezoneRotary.valueView, (v) => {
+			if (v === 'DEV') return LocalOffset
+			if (v === 'STA') return StationOffset
+			return UTCOffset
+		}),
+	)
+
+	disposables.add(timezoneRotary.valueView((v) => console.log('timezone:', v)))
 
 	// hack to prevent these being drawn underneath the main scope...
 	// ideally they'd be on a different layer of canvas or something?
@@ -272,6 +326,9 @@ const go = () => {
 		numbers60Toggle,
 		secondToggle,
 		tideFlowGauge,
+		tideRange,
+		datumRotary,
+		timezoneRotary,
 	]
 
 	disposables.add(...allComponents)
@@ -280,4 +337,7 @@ const go = () => {
 
 window.addEventListener('resize', go)
 window.addEventListener('hashchange', go)
+// window.addEventListener('unload', () => {
+// 	disposables.dispose()
+// })
 go()

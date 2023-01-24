@@ -9,6 +9,7 @@ export const acos = (val: number) => radToDeg(Math.acos(val))
 
 export const tan = (deg: number) => Math.tan(degToRad(deg))
 export const atan = (val: number) => radToDeg(Math.atan(val))
+export const atan2 = (x: number, y: number) => radToDeg(Math.atan2(y, x))
 
 export const cot = (deg: number) => 1 / tan(deg)
 

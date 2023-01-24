@@ -67,25 +67,18 @@ export class Clock extends CanvasElement {
 				? 1 / 60
 				: 1 / 10 / this.options.timeRate) * 1000
 
-		if (timeout < 20) {
-			const handle = window.requestAnimationFrame(() => {
-				if (!this.active) {
-					this.render()
-				}
-				this.resetAutoAdvanceTimer()
-			})
+		const onFrame = () => {
+			this.render()
+			this.resetAutoAdvanceTimer()
+		}
 
+		if (timeout < 20) {
+			const handle = window.requestAnimationFrame(onFrame)
 			this.autoAdvanceDisposables.add({
 				dispose: () => window.cancelAnimationFrame(handle),
 			})
 		} else {
-			const handle = window.setTimeout(() => {
-				if (!this.active) {
-					this.render()
-				}
-				this.resetAutoAdvanceTimer()
-			}, timeout)
-
+			const handle = window.setTimeout(onFrame, timeout)
 			this.autoAdvanceDisposables.add({
 				dispose: () => window.clearTimeout(handle),
 			})

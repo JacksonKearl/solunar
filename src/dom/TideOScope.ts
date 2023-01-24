@@ -8,7 +8,7 @@ import {
 	Event,
 } from '$/utils'
 import { sin, cos, wrap } from '$/degreeMath'
-import { ConstituentName, Station, UnixTime } from '$/types'
+import { ConstituentName, Station } from '$/types'
 import {
 	StationLevelAtTime,
 	MoonSynodicalAngleAtTime,
@@ -71,17 +71,17 @@ export class TideOScope extends CanvasElement {
 			},
 			timeRange: () => {
 				this.resetAutoAdvanceTimer()
-				this.fetchAllData()
+				this.moveCenterWithTime()
 			},
 			timeRate: () => {
 				this.resetAutoAdvanceTimer()
 				this.moveCenterWithTime()
 			},
 			periodLoPass: () => {
-				this.fetchAllData()
+				this.moveCenterWithTime()
 			},
 			periodHiPass: () => {
-				this.fetchAllData()
+				this.moveCenterWithTime()
 			},
 		}
 
@@ -366,8 +366,8 @@ export class TideOScope extends CanvasElement {
 			const loScale = bound2(
 				scale(
 					logDaysPerRev,
-					this.options.periodLoPass + 0.5,
-					this.options.periodLoPass - 0.5,
+					this.options.periodLoPass + 0.25,
+					this.options.periodLoPass - 0.25,
 					0,
 					1,
 				),
@@ -377,8 +377,8 @@ export class TideOScope extends CanvasElement {
 			const hiScale = bound2(
 				scale(
 					logDaysPerRev,
-					this.options.periodHiPass - 0.5,
-					this.options.periodHiPass + 0.5,
+					this.options.periodHiPass - 0.25,
+					this.options.periodHiPass + 0.25,
 					0,
 					1,
 				),

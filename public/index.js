@@ -9,7 +9,7 @@ const dot = (a, b) => {
 const scale = (value, inMin, inMax, outMin, outMax) => ((value - inMin) / (inMax - inMin)) * (outMax - outMin) + outMin;
 /** rescale amt from 0-1 to min-max */
 const sploot = (amt, min, max) => scale(amt, 0, 1, min, max);
-const bound2 = (val, min, max) => Math.max(min, Math.min(val, max));
+const bound2 = (val, min, max) => min > max ? bound2(val, max, min) : Math.max(min, Math.min(val, max));
 performance.now();
 class Observable {
     view;
@@ -101,6 +101,7 @@ const cos = (deg) => Math.cos(degToRad(deg));
 const acos = (val) => radToDeg(Math.acos(val));
 const tan = (deg) => Math.tan(degToRad(deg));
 const atan = (val) => radToDeg(Math.atan(val));
+const atan2 = (x, y) => radToDeg(Math.atan2(y, x));
 const cot = (deg) => 1 / tan(deg);
 const wrap = (deg, limit = 360) => ((deg % limit) + limit) % limit;
 
@@ -165,8 +166,8 @@ class CanvasElement {
             if (this.locationInBounds(l)) {
                 const dpr = findDPR();
                 this.onDrag({
-                    dx: -e.deltaX * dpr,
-                    dy: -e.deltaY * dpr,
+                    dx: -e.deltaX,
+                    dy: -e.deltaY,
                     x: e.pageX * dpr,
                     y: e.pageY * dpr,
                 });
@@ -273,6 +274,13 @@ class CanvasElement {
             canvasX: this.dimensions.centerX + this.scaleFactor * x,
             canvasY: this.dimensions.centerY + this.scaleFactor * y,
         };
+    }
+    toElementSpace(l) {
+        const x = (l.x - this.dimensions.centerX) / this.scaleFactor;
+        const y = -(l.y - this.dimensions.centerY) / this.scaleFactor;
+        const r = Math.sqrt(x ** 2 + y ** 2);
+        const deg = atan2(x, y);
+        return { x, y, r, deg };
     }
     getRect(r, deg) {
         return {
@@ -777,17 +785,17 @@ class TideOScope extends CanvasElement {
             },
             timeRange: () => {
                 this.resetAutoAdvanceTimer();
-                this.fetchAllData();
+                this.moveCenterWithTime();
             },
             timeRate: () => {
                 this.resetAutoAdvanceTimer();
                 this.moveCenterWithTime();
             },
             periodLoPass: () => {
-                this.fetchAllData();
+                this.moveCenterWithTime();
             },
             periodHiPass: () => {
-                this.fetchAllData();
+                this.moveCenterWithTime();
             },
         };
         this.disposables.add(view((v) => {
@@ -1018,8 +1026,8 @@ class TideOScope extends CanvasElement {
             const revolutionsPerDay = (degreesPerSecond * (24 * 60 * 60)) / 360;
             const daysPerRev = 1 / revolutionsPerDay;
             const logDaysPerRev = Math.log2(daysPerRev);
-            const loScale = bound2(scale(logDaysPerRev, this.options.periodLoPass + 0.5, this.options.periodLoPass - 0.5, 0, 1), 0, 1);
-            const hiScale = bound2(scale(logDaysPerRev, this.options.periodHiPass - 0.5, this.options.periodHiPass + 0.5, 0, 1), 0, 1);
+            const loScale = bound2(scale(logDaysPerRev, this.options.periodLoPass + 0.25, this.options.periodLoPass - 0.25, 0, 1), 0, 1);
+            const hiScale = bound2(scale(logDaysPerRev, this.options.periodHiPass - 0.25, this.options.periodHiPass + 0.25, 0, 1), 0, 1);
             return loScale * hiScale;
         });
     }
@@ -1233,24 +1241,18 @@ class Clock extends CanvasElement {
         const timeout = (this.options.renderSecondHand
             ? 1 / 60
             : 1 / 10 / this.options.timeRate) * 1000;
+        const onFrame = () => {
+            this.render();
+            this.resetAutoAdvanceTimer();
+        };
         if (timeout < 20) {
-            const handle = window.requestAnimationFrame(() => {
-                if (!this.active) {
-                    this.render();
-                }
-                this.resetAutoAdvanceTimer();
-            });
+            const handle = window.requestAnimationFrame(onFrame);
             this.autoAdvanceDisposables.add({
                 dispose: () => window.cancelAnimationFrame(handle),
             });
         }
         else {
-            const handle = window.setTimeout(() => {
-                if (!this.active) {
-                    this.render();
-                }
-                this.resetAutoAdvanceTimer();
-            }, timeout);
+            const handle = window.setTimeout(onFrame, timeout);
             this.autoAdvanceDisposables.add({
                 dispose: () => window.clearTimeout(handle),
             });
@@ -1526,6 +1528,73 @@ class Clock extends CanvasElement {
     }
 }
 
+class Rotary extends CanvasElement {
+    options;
+    value = new Observable();
+    valueView = this.value.view;
+    constructor(context, drawZone, options) {
+        super(context, drawZone);
+        this.options = options;
+        const valueStore = new LocalStorageState(options.id ?? options.label, options.value);
+        this.options.value = valueStore.value;
+        this.value.set(this.options.value);
+        this.disposables.add(valueStore, this.valueView((v) => (valueStore.value = v)));
+    }
+    onDrag(l) {
+        this.handleTouch(l);
+    }
+    onClick(l) {
+        this.handleTouch(l);
+    }
+    locationToOptionIndex(l) {
+        let { r, deg } = this.toElementSpace(l);
+        // TODO: probably a better way to do this?
+        if (deg < -90)
+            deg += 360;
+        const i = Math.round(bound2(scale(deg, this.options.minAngle, this.options.maxAngle, 0, this.options.values.length - 1), 0, this.options.values.length - 1));
+        return i;
+    }
+    optionIndexToRotation(i) {
+        return scale(i, 0, this.options.values.length - 1, this.options.minAngle, this.options.maxAngle);
+    }
+    handleTouch(l) {
+        const valIndex = this.locationToOptionIndex(l);
+        this.value.set(this.options.values[valIndex]);
+        this.options.value = this.options.values[valIndex];
+        this.render();
+    }
+    render() {
+        this.context.save();
+        this.context.fillStyle = '#333';
+        this.context.fillRect(this.dimensions.left, this.dimensions.top, this.dimensions.width, this.dimensions.height);
+        this.context.fillStyle = '#888';
+        this.context.beginPath();
+        this.traceCircle(0.25, 0, 0);
+        this.context.fill();
+        const optionIndex = this.options.values.indexOf(this.options.value);
+        const rotation = this.optionIndexToRotation(optionIndex);
+        this.context.beginPath();
+        this.context.lineWidth = 8;
+        this.context.strokeStyle = '#fff';
+        this.moveTo(0, 0);
+        this.traceRay(0.3, rotation);
+        this.context.stroke();
+        this.context.fillStyle = '#fff';
+        this.context.lineWidth = 4;
+        this.context.font = this.scaleFactor * 0.2 + 'px system-ui';
+        this.options.values.forEach((v, i) => {
+            const rotation = this.optionIndexToRotation(i);
+            this.context.beginPath();
+            this.traceRay(0.4, rotation, 0, 0, 0.3);
+            this.context.stroke();
+            const { x, y } = this.getRect(0.55, rotation);
+            const justification = rotation > 95 ? 'right' : rotation < 85 ? 'left' : 'center';
+            this.fillText(x, y, v, justification);
+        });
+        this.context.restore();
+    }
+}
+
 const disposables = new DisposableStore();
 const HOUR = 1000 * 60 * 60;
 const DAY = HOUR * 24;
@@ -1548,6 +1617,8 @@ const configs = [
     makeConfigArea('slider'),
     makeConfigArea('slider'),
     makeConfigArea('slider'),
+    makeConfigArea('slider'),
+    makeConfigArea('rotaries'),
 ];
 const tideOScopeToggles = [
     makeConfigArea('toggle', configs[0]),
@@ -1559,8 +1630,14 @@ const clockToggles = [
     makeConfigArea('toggle', configs[1]),
     makeConfigArea('toggle', configs[1]),
 ];
+const rotaries = [
+    makeConfigArea('rotary', configs[7]),
+    makeConfigArea('rotary', configs[7]),
+    makeConfigArea('rotary', configs[7]),
+];
 configs[0].classList.add('flex');
 configs[1].classList.add('flex');
+configs[7].classList.add('flex');
 const go = () => {
     disposables.clear();
     const ref = document.location.hash.slice(1);
@@ -1626,12 +1703,12 @@ const go = () => {
     });
     const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
         label: 'Scroll Speed',
-        max: 100000,
-        min: 1,
-        value: defaultOptions.timeRate,
+        max: Math.log(10000000),
+        min: Math.log(1),
+        value: Math.log(defaultOptions.timeRate),
     });
     const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
-        label: 'Window Range',
+        label: 'Time Range',
         min: Math.log(8 * HOUR),
         max: Math.log(2 * YEAR),
         value: Math.log(defaultOptions.timeRange),
@@ -1648,7 +1725,29 @@ const go = () => {
         max: 12,
         value: defaultOptions.periodLoPass,
     });
-    new Date().getTimezoneOffset();
+    const tideRange = new Slider(ctx, drawZoneForElement(configs[6]), {
+        label: 'Tide Range',
+        min: Math.log2(2),
+        max: Math.log2(32),
+        value: Math.log2(defaultOptions.yRange),
+    });
+    const datumRotary = new Rotary(ctx, drawZoneForElement(rotaries[0]), {
+        label: 'Datum',
+        value: 'MSL',
+        values: ['MLLW', 'MLW', 'MSL', 'MHW', 'MHHW'],
+        minAngle: 220,
+        maxAngle: -40,
+    });
+    const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {
+        label: 'Time Zone',
+        value: 'Station',
+        values: ['GMT', 'DEV', 'STA'],
+        minAngle: 150,
+        maxAngle: 30,
+    });
+    // disposables.add(datumRotary.valueView((v) => console.log('datum:', v)))
+    const UTCOffset = 0;
+    const LocalOffset = new Date().getTimezoneOffset();
     const StationOffset = -(active.timezoneOffset ?? 0) * 60;
     const timeGauge = new Clock(ctx, {
         height: mainDrawZone.height / 4,
@@ -1702,14 +1801,23 @@ const go = () => {
     tideOScope.viewInput('renderMoon', moonToggle.valueView);
     tideOScope.viewInput('renderSun', sunToggle.valueView);
     tideOScope.viewInput('timeRange', MappedView(windowRangeSlider.valueView, (v) => Math.E ** v));
-    tideOScope.viewInput('timeRate', scrollSpeedSlider.valueView);
+    tideOScope.viewInput('timeRate', MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v));
+    tideOScope.viewInput('yRange', MappedView(tideRange.valueView, (v) => 2 ** v));
     tideFlowGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.flow));
     tideHeightGauge.viewInput('value', MappedView(tideOScope.centralDataView, (v) => v.total));
     timeGauge.viewInput('time', MappedView(tideOScope.centralDataView, (v) => v.time));
-    timeGauge.viewInput('timeRate', scrollSpeedSlider.valueView);
+    timeGauge.viewInput('timeRate', MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v));
     timeGauge.viewInput('render60Count', numbers60Toggle.valueView);
     timeGauge.viewInput('render12Count', numbers12Toggle.valueView);
     timeGauge.viewInput('renderSecondHand', secondToggle.valueView);
+    timeGauge.viewInput('offset', MappedView(timezoneRotary.valueView, (v) => {
+        if (v === 'DEV')
+            return LocalOffset;
+        if (v === 'STA')
+            return StationOffset;
+        return UTCOffset;
+    }));
+    disposables.add(timezoneRotary.valueView((v) => console.log('timezone:', v)));
     // hack to prevent these being drawn underneath the main scope...
     // ideally they'd be on a different layer of canvas or something?
     // TODO: Different canvas layers.
@@ -1733,11 +1841,17 @@ const go = () => {
         numbers60Toggle,
         secondToggle,
         tideFlowGauge,
+        tideRange,
+        datumRotary,
+        timezoneRotary,
     ];
     disposables.add(...allComponents);
     allComponents.map((c) => c.render());
 };
 window.addEventListener('resize', go);
 window.addEventListener('hashchange', go);
+window.addEventListener('unload', () => {
+	disposables.dispose()
+})
 go();
 //# sourceMappingURL=index.js.map
