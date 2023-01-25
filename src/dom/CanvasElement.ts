@@ -109,9 +109,10 @@ export abstract class CanvasElement implements Disposable {
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchstart', (e) => {
+				e.preventDefault()
 				const l = this.locationOfEvent(e)
 				if (l && this.locationInBounds(l)) {
-					touchTracker.set(e.touches[0].identifier, l)
+					touchTracker.set(e.changedTouches[0].identifier, l)
 					this.active = true
 				}
 			}),
@@ -122,12 +123,13 @@ export abstract class CanvasElement implements Disposable {
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchend', (e) => {
+				e.preventDefault()
 				const l = this.locationOfEvent(e)
 				if (l && this.locationInBounds(l) && this.active) {
 					this.onClick(l)
 				}
 				this.active = false
-				touchTracker.delete(e.touches[0].identifier)
+				touchTracker.delete(e.changedTouches[0].identifier)
 			}),
 			addElementListener(this.context.canvas, 'mouseup', (e) => {
 				const l = this.locationOfEvent(e)
@@ -138,7 +140,7 @@ export abstract class CanvasElement implements Disposable {
 			}),
 			addElementListener(this.context.canvas, 'touchcancel', (e) => {
 				this.active = false
-				touchTracker.delete(e.touches[0].identifier)
+				touchTracker.delete(e.changedTouches[0].identifier)
 			}),
 			addElementListener(this.context.canvas, 'mouseleave', (e) => {
 				this.active = false
@@ -155,20 +157,25 @@ export abstract class CanvasElement implements Disposable {
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchmove', (e) => {
-				if (this.active && e.touches.length === 1) {
+				if (this.active && e.changedTouches.length === 1) {
 					e.preventDefault()
-					const touch = e.touches[0]
-					const priorTouch = touchTracker.get(touch.identifier)
-					const movementX = priorTouch ? touch.pageX - priorTouch.x : 0
-					const movementY = priorTouch ? touch.pageY - priorTouch.y : 0
 					const dpr = findDPR()
-					const location = { x: touch.pageX * dpr, y: touch.pageY * dpr }
+					const touch = e.changedTouches[0]
+					const touchLocation: Location = {
+						x: touch.pageX * dpr,
+						y: touch.pageY * dpr,
+					}
+
+					const priorTouch = touchTracker.get(touch.identifier)
+					const movementX = priorTouch ? touchLocation.x - priorTouch.x : 0
+					const movementY = priorTouch ? touchLocation.y - priorTouch.y : 0
 					this.onDrag({
-						dx: movementX * dpr,
-						dy: movementY * dpr,
-						...location,
+						dx: movementX,
+						dy: movementY,
+						x: touchLocation.x,
+						y: touchLocation.y,
 					})
-					touchTracker.set(touch.identifier, location)
+					touchTracker.set(touch.identifier, touchLocation)
 				}
 			}),
 		)
@@ -181,8 +188,8 @@ export abstract class CanvasElement implements Disposable {
 	protected locationOfEvent(m: CursorEvent): Location | undefined {
 		let e: MouseEvent | Touch | undefined
 		if (m instanceof TouchEvent) {
-			if (m.touches.length !== 1) return undefined
-			e = m.touches[0]
+			if (m.changedTouches.length !== 1) return undefined
+			e = m.changedTouches[0]
 		} else {
 			e = m
 		}

@@ -62,9 +62,9 @@ configs[7].classList.add('flex')
 const go = () => {
 	disposables.clear()
 
+	const newport = stations['9410580']
 	const ref = document.location.hash.slice(1)
-	// const active = Stations.find((s) => s.id === ref) as Station
-	const active = stations[ref]
+	const active = stations[ref] ?? newport
 	if (!active) {
 		throw Error('not found')
 	}
@@ -337,7 +337,7 @@ const go = () => {
 
 window.addEventListener('resize', go)
 window.addEventListener('hashchange', go)
-// window.addEventListener('unload', () => {
-// 	disposables.dispose()
-// })
+window.addEventListener('unload', () => {
+	disposables.dispose()
+})
 go()

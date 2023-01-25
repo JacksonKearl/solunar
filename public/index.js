@@ -173,9 +173,10 @@ class CanvasElement {
                 });
             }
         }), addElementListener(this.context.canvas, 'touchstart', (e) => {
+            e.preventDefault();
             const l = this.locationOfEvent(e);
             if (l && this.locationInBounds(l)) {
-                touchTracker.set(e.touches[0].identifier, l);
+                touchTracker.set(e.changedTouches[0].identifier, l);
                 this.active = true;
             }
         }), addElementListener(this.context.canvas, 'mousedown', (e) => {
@@ -184,12 +185,13 @@ class CanvasElement {
                 this.active = true;
             }
         }), addElementListener(this.context.canvas, 'touchend', (e) => {
+            e.preventDefault();
             const l = this.locationOfEvent(e);
             if (l && this.locationInBounds(l) && this.active) {
                 this.onClick(l);
             }
             this.active = false;
-            touchTracker.delete(e.touches[0].identifier);
+            touchTracker.delete(e.changedTouches[0].identifier);
         }), addElementListener(this.context.canvas, 'mouseup', (e) => {
             const l = this.locationOfEvent(e);
             if (l && this.locationInBounds(l) && this.active) {
@@ -198,7 +200,7 @@ class CanvasElement {
             this.active = false;
         }), addElementListener(this.context.canvas, 'touchcancel', (e) => {
             this.active = false;
-            touchTracker.delete(e.touches[0].identifier);
+            touchTracker.delete(e.changedTouches[0].identifier);
         }), addElementListener(this.context.canvas, 'mouseleave', (e) => {
             this.active = false;
         }), addElementListener(this.context.canvas, 'mousemove', (e) => {
@@ -212,20 +214,24 @@ class CanvasElement {
                 });
             }
         }), addElementListener(this.context.canvas, 'touchmove', (e) => {
-            if (this.active && e.touches.length === 1) {
+            if (this.active && e.changedTouches.length === 1) {
                 e.preventDefault();
-                const touch = e.touches[0];
-                const priorTouch = touchTracker.get(touch.identifier);
-                const movementX = priorTouch ? touch.pageX - priorTouch.x : 0;
-                const movementY = priorTouch ? touch.pageY - priorTouch.y : 0;
                 const dpr = findDPR();
-                const location = { x: touch.pageX * dpr, y: touch.pageY * dpr };
+                const touch = e.changedTouches[0];
+                const touchLocation = {
+                    x: touch.pageX * dpr,
+                    y: touch.pageY * dpr,
+                };
+                const priorTouch = touchTracker.get(touch.identifier);
+                const movementX = priorTouch ? touchLocation.x - priorTouch.x : 0;
+                const movementY = priorTouch ? touchLocation.y - priorTouch.y : 0;
                 this.onDrag({
-                    dx: movementX * dpr,
-                    dy: movementY * dpr,
-                    ...location,
+                    dx: movementX,
+                    dy: movementY,
+                    x: touchLocation.x,
+                    y: touchLocation.y,
                 });
-                touchTracker.set(touch.identifier, location);
+                touchTracker.set(touch.identifier, touchLocation);
             }
         }));
     }
@@ -235,9 +241,9 @@ class CanvasElement {
     locationOfEvent(m) {
         let e;
         if (m instanceof TouchEvent) {
-            if (m.touches.length !== 1)
+            if (m.changedTouches.length !== 1)
                 return undefined;
-            e = m.touches[0];
+            e = m.changedTouches[0];
         }
         else {
             e = m;
@@ -1640,9 +1646,9 @@ configs[1].classList.add('flex');
 configs[7].classList.add('flex');
 const go = () => {
     disposables.clear();
+    const newport = stations['9410580'];
     const ref = document.location.hash.slice(1);
-    // const active = Stations.find((s) => s.id === ref) as Station
-    const active = stations[ref];
+    const active = stations[ref] ?? newport;
     if (!active) {
         throw Error('not found');
     }
@@ -1851,7 +1857,7 @@ const go = () => {
 window.addEventListener('resize', go);
 window.addEventListener('hashchange', go);
 window.addEventListener('unload', () => {
-	disposables.dispose()
-})
+    disposables.dispose();
+});
 go();
 //# sourceMappingURL=index.js.map
