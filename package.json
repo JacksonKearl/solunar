@@ -2,6 +2,11 @@
 	"name": "solunar",
 	"module": "index.ts",
 	"type": "module",
+	"scripts": {
+		"serve-dev": "live-server public --no-browser",
+		"bundle-dev": "rollup -cwm",
+		"bundle": "rollup -cm"
+	},
 	"dependencies": {
 		"bun-types": "^0.4.0",
 		"@rollup/plugin-typescript": "^11.0.0",

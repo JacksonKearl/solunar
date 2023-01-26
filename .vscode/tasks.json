@@ -17,13 +17,13 @@
 			"label": "Serve",
 			"type": "shell",
 			"isBackground": true,
-			"command": "bunx http-serve public -c-1"
+			"command": "bunx run serve-dev"
 		},
 		{
 			"label": "Bundle",
 			"type": "shell",
 			"isBackground": true,
-			"command": "bunx rollup -cwm"
+			"command": "bunx run bundle"
 		},
 		{
 			"label": "TypeCheck",
