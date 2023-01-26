@@ -298,16 +298,12 @@ export abstract class CanvasElement implements Disposable {
 		x: number,
 		y: number,
 		text: string,
-		justify: 'center' | 'left' | 'right' = 'center',
+		justifyAngle: number = 90,
 	) {
 		const textProps = this.context.measureText(text)
-		const xJustifyAdjust = {
-			center: textProps.width / 2,
-			left: 0,
-			right: textProps.width,
-		}[justify]
+		const xJustifyAdjust =
+			((-0.5 * cos(justifyAngle) + 1) * textProps.width) / 2
 		const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2
-
 		this.context.fillText(
 			text,
 			this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust,

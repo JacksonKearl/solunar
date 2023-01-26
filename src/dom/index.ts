@@ -171,16 +171,22 @@ const go = () => {
 
 	const datumRotary = new Rotary(ctx, drawZoneForElement(rotaries[0]), {
 		label: 'Datum',
-		value: 'MSL',
+		selectedIndex: 2,
 		values: ['MLLW', 'MLW', 'MSL', 'MHW', 'MHHW'],
 		minAngle: 220,
 		maxAngle: -40,
 	})
 
+	// const stationCode = active.timezone ?? 'STA'
+	// const localCode =
+	// 	new Intl.DateTimeFormat('en-us', { timeZoneName: 'short' })
+	// 		.formatToParts(new Date())
+	// 		.find((part) => part.type == 'timeZoneName')?.value ?? 'LOC'
+
 	const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {
 		label: 'Time Zone',
-		value: 'Station',
-		values: ['GMT', 'DEV', 'STA'],
+		selectedIndex: 2,
+		values: ['GMT', 'LOC', 'STA'],
 		minAngle: 150,
 		maxAngle: 30,
 	})
@@ -291,14 +297,11 @@ const go = () => {
 
 	timeGauge.viewInput(
 		'offset',
-		MappedView(timezoneRotary.valueView, (v) => {
-			if (v === 'DEV') return LocalOffset
-			if (v === 'STA') return StationOffset
-			return UTCOffset
-		}),
+		MappedView(
+			timezoneRotary.selectedIndexView,
+			(v) => [UTCOffset, LocalOffset, StationOffset][v],
+		),
 	)
-
-	disposables.add(timezoneRotary.valueView((v) => console.log('timezone:', v)))
 
 	// hack to prevent these being drawn underneath the main scope...
 	// ideally they'd be on a different layer of canvas or something?

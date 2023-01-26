@@ -2,7 +2,7 @@ import { scale, bound2, Observable, LocalStorageState } from '$/utils'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
 type RotaryOptions = {
-	value: string
+	selectedIndex: number
 	values: string[]
 	label: string
 	minAngle: number
@@ -11,8 +11,8 @@ type RotaryOptions = {
 }
 
 export class Rotary extends CanvasElement {
-	private value = new Observable<string>()
-	public valueView = this.value.view
+	private selectedIndex = new Observable<number>()
+	public selectedIndexView = this.selectedIndex.view
 
 	constructor(
 		context: CanvasRenderingContext2D,
@@ -20,17 +20,18 @@ export class Rotary extends CanvasElement {
 		private options: RotaryOptions,
 	) {
 		super(context, drawZone)
+		this.scaleFactor = this.dimensions.minDim * 0.7
 
 		const valueStore = new LocalStorageState(
 			options.id ?? options.label,
-			options.value,
+			options.selectedIndex,
 		)
-		this.options.value = valueStore.value
-		this.value.set(this.options.value)
+		this.options.selectedIndex = valueStore.value
+		this.selectedIndex.set(this.options.selectedIndex)
 
 		this.disposables.add(
 			valueStore,
-			this.valueView((v) => (valueStore.value = v)),
+			this.selectedIndexView((v) => (valueStore.value = v)),
 		)
 	}
 
@@ -74,8 +75,8 @@ export class Rotary extends CanvasElement {
 
 	private handleTouch(l: Location) {
 		const valIndex = this.locationToOptionIndex(l)
-		this.value.set(this.options.values[valIndex])
-		this.options.value = this.options.values[valIndex]
+		this.selectedIndex.set(valIndex)
+		this.options.selectedIndex = valIndex
 		this.render()
 	}
 
@@ -90,34 +91,64 @@ export class Rotary extends CanvasElement {
 			this.dimensions.height,
 		)
 
-		this.context.fillStyle = '#888'
-		this.context.beginPath()
-		this.traceCircle(0.25, 0, 0)
-		this.context.fill()
-
-		const optionIndex = this.options.values.indexOf(this.options.value)
-		const rotation = this.optionIndexToRotation(optionIndex)
-
-		this.context.beginPath()
-		this.context.lineWidth = 8
 		this.context.strokeStyle = '#fff'
-		this.moveTo(0, 0)
-		this.traceRay(0.3, rotation)
-		this.context.stroke()
-
 		this.context.fillStyle = '#fff'
-		this.context.lineWidth = 4
-		this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
+		this.setLineWidth(0.03)
+		this.context.font = this.scaleFactor * 0.15 + 'px system-ui'
 		this.options.values.forEach((v, i) => {
 			const rotation = this.optionIndexToRotation(i)
-			this.context.beginPath()
-			this.traceRay(0.4, rotation, 0, 0, 0.3)
-			this.context.stroke()
-			const { x, y } = this.getRect(0.55, rotation)
-			const justification =
-				rotation > 95 ? 'right' : rotation < 85 ? 'left' : 'center'
+			this.withRotation(rotation, 0, 0, () => {
+				this.context.beginPath()
+				this.traceRay(0.4, 0, 0, 0, 0.25)
+				this.context.stroke()
+			})
+			const { x, y } = this.getRect(0.52, rotation)
+			this.fillText(x, y, v, rotation)
+		})
 
-			this.fillText(x, y, v, justification)
+		this.context.fillStyle = '#555'
+		this.context.beginPath()
+		this.traceCircle(0.25, 0, 0)
+		this.context.clip()
+		this.context.fill()
+
+		const rotation = this.optionIndexToRotation(this.options.selectedIndex)
+		this.withRotation(rotation, 0, 0, () => {
+			this.context.beginPath()
+			this.context.fillStyle = '#888'
+			this.traceLine(0.5, 0)
+			this.traceLine(0, -0.15)
+			this.traceLine(-0.5, 0)
+			this.traceLine(0, 0.15)
+			this.context.fill()
+			this.context.clip()
+
+			this.context.beginPath()
+			this.context.fillStyle = '#000'
+			this.traceLine(0.3, 0)
+			this.traceLine(0.15, -0.07)
+			this.traceLine(-0.05, -0.03)
+			this.traceLine(-0.05, 0.03)
+			this.traceLine(0.15, 0.07)
+			this.context.fill()
+
+			this.context.beginPath()
+			this.context.strokeStyle = '#fff'
+			this.context.fillStyle = '#fff'
+			this.setLineWidth(0.03)
+			this.moveTo(0, 0)
+			this.traceRay(0.15, 0)
+			this.context.stroke()
+			this.traceCircle(0.015)
+			this.context.fill()
+
+			this.context.beginPath()
+			this.moveTo(0.15, 0.02)
+			this.traceLine(0.15, 0.04)
+			this.traceLine(0.225, 0.0)
+			this.traceLine(0.15, -0.04)
+			this.traceLine(0.15, 0.02)
+			this.context.fill()
 		})
 
 		this.context.restore()

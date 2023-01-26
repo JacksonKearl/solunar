@@ -124,7 +124,7 @@ export class Gauge extends CanvasElement {
 				)
 				const { x, y } = this.getRect(0.65, majorDeg)
 				this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
-				this.fillText(x, y, String(val), 'center')
+				this.fillText(x, y, String(val))
 
 				this.context.beginPath()
 				this.setLineWidth(0.02)
@@ -162,14 +162,9 @@ export class Gauge extends CanvasElement {
 			this.context.fillStyle = '#fff'
 
 			this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
-			this.fillText(0, -0.6, this.options.title.toLocaleUpperCase(), 'center')
+			this.fillText(0, -0.6, this.options.title.toLocaleUpperCase())
 			this.context.font = this.scaleFactor * 0.1 + 'px system-ui'
-			this.fillText(
-				0,
-				-0.4,
-				this.options.subtitle.toLocaleUpperCase(),
-				'center',
-			)
+			this.fillText(0, -0.4, this.options.subtitle.toLocaleUpperCase())
 		}
 
 		this.context.save()
