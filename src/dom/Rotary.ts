@@ -110,8 +110,8 @@ export class Rotary extends CanvasElement {
 				this.traceRay(0.4, 0, 0, 0, 0.25)
 				this.context.stroke()
 			})
-			const { x, y } = this.getRect(0.54, rotation)
-			this.fillText(x, y, v, rotation)
+			const { x, y } = this.getRect(0.55, rotation)
+			this.fillText(x, y, v, 90)
 		})
 
 		this.context.fillStyle = '#555'

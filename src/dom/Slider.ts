@@ -153,12 +153,12 @@ export class Slider extends CanvasElement {
 		if (this.vertical) {
 			this.context.font = this.dimensions.width * 0.15 + 'px system-ui'
 			this.fillText(0, 1.2, this.options.label.toLocaleUpperCase())
-			this.context.font = this.dimensions.width * 0.08 + 'px system-ui'
+			this.context.font = this.dimensions.width * 0.1 + 'px system-ui'
 			this.fillText(0, 1.3, subtitleToRender ?? '')
 		} else {
 			this.context.font = this.dimensions.height * 0.15 + 'px system-ui'
 			this.fillText(0, -0.3, this.options.label.toLocaleUpperCase())
-			this.context.font = this.dimensions.height * 0.08 + 'px system-ui'
+			this.context.font = this.dimensions.height * 0.1 + 'px system-ui'
 			this.fillText(0, -0.18, subtitleToRender ?? '')
 		}
 
@@ -171,7 +171,7 @@ export class Slider extends CanvasElement {
 				this.traceLine(-0.1, ticLoc)
 				this.traceLine(0.1, ticLoc)
 				this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
-				this.fillText(0.15, ticLoc, tic[1])
+				this.fillText(0.12, ticLoc, tic[1], 180)
 			} else {
 				const ticLoc = scale(tic[0], this.options.min, this.options.max, -1, 1)
 				this.traceLine(ticLoc, -0.1)

@@ -329,7 +329,7 @@ export abstract class CanvasElement implements Disposable {
 			textProps = this.context.measureText(text)
 			this.textMeasureCache.set(text + ' - ' + this.context.font, textProps)
 		}
-		const xJustifyAdjust = ((0.5 * cos(justifyAngle) + 1) * textProps.width) / 2
+		const xJustifyAdjust = ((cos(justifyAngle) + 1) * textProps.width) / 2
 		const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2
 
 		this.context.fillText(
