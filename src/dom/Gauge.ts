@@ -5,8 +5,8 @@ type GaugeOptions = {
 	value: number
 	minAngle: number
 	maxAngle: number
-	min: number
-	max: number
+	range: number
+	center: number
 	numMinorTics: number
 	numMajorTics: number
 	title: string
@@ -53,8 +53,8 @@ export class Gauge extends CanvasElement {
 		const renderHand = () => {
 			const valPercent = scale(
 				this.options.value,
-				this.options.min,
-				this.options.max,
+				this.options.center - this.options.range,
+				this.options.center + this.options.range,
 				0,
 				1,
 			)
@@ -119,10 +119,10 @@ export class Gauge extends CanvasElement {
 					iMaj,
 					0,
 					this.options.numMajorTics - 1,
-					this.options.min,
-					this.options.max,
+					this.options.center - this.options.range,
+					this.options.center + this.options.range,
 				)
-				const { x, y } = this.getRect(0.65, majorDeg)
+				const { x, y } = this.getRect(0.62, majorDeg)
 				this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
 				this.fillText(x, y, String(val))
 

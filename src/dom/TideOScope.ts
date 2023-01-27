@@ -20,7 +20,7 @@ import {
 import { Constituents } from '$/constituents'
 import { CanvasElement, DrawZone, Location } from './CanvasElement'
 
-type TideOScopeOptions = {
+export type TideOScopeOptions = {
 	renderScale: number
 	center: number
 	timeRange: number
@@ -32,6 +32,8 @@ type TideOScopeOptions = {
 	renderHarmonics: boolean
 	periodLoPass: number
 	periodHiPass: number
+	crosshairRender: 'rad' | 'rect' | 'none'
+	yOffset: number
 }
 export class TideOScope extends CanvasElement {
 	private activeRadius: number
@@ -45,6 +47,9 @@ export class TideOScope extends CanvasElement {
 	private onDidRenderEvent = new Event()
 	public onDidRender = this.onDidRenderEvent.view
 
+	private timeSpeedObservable = new Observable<number>()
+	public timeSpeedView = this.timeSpeedObservable.view
+
 	public constructor(
 		context: CanvasRenderingContext2D,
 		drawZone: DrawZone,
@@ -57,6 +62,16 @@ export class TideOScope extends CanvasElement {
 		this.data = this.fetchAllData()
 		this.resetAutoAdvanceTimer()
 		this.disposables.add(this.autoAdvanceDisposables)
+		this.disposables.add(
+			this.isActive((active) => {
+				if (active) {
+					this.timeSpeedObservable.set(0)
+				} else {
+					this.timeSpeedObservable.set(this.options.timeRate)
+				}
+				this.moveCenterWithTime()
+			}),
+		)
 	}
 
 	public viewInput<N extends keyof TideOScopeOptions>(
@@ -66,6 +81,9 @@ export class TideOScope extends CanvasElement {
 		const toRunOnChange: {
 			[K in keyof TideOScopeOptions]?: () => void
 		} = {
+			yOffset: () => {
+				this.outputCentralData()
+			},
 			center: () => {
 				this.fetchAllData()
 			},
@@ -76,6 +94,7 @@ export class TideOScope extends CanvasElement {
 			timeRate: () => {
 				this.resetAutoAdvanceTimer()
 				this.moveCenterWithTime()
+				this.timeSpeedObservable.set(this.options.timeRate)
 			},
 			periodLoPass: () => {
 				this.moveCenterWithTime()
@@ -163,7 +182,9 @@ export class TideOScope extends CanvasElement {
 		const timeout = bound2((60 / this.options.timeRate) * 1000, 0, 5000)
 
 		const doFrameUpdate = () => {
-			if (!this.active) {
+			if (this.active) {
+				this.lastFetchWallTime = undefined
+			} else {
 				this.moveCenterWithTime()
 				this.render()
 			}
@@ -209,6 +230,7 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
 	override render() {
+		console.log(this.options)
 		this.context.save()
 		this.renderClippingPath()
 		this.renderBackground()
@@ -253,7 +275,11 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center, periodHiPass, periodLoPass
 	private outputCentralData() {
-		this.centralDataObservable.set(this.stationLevelAtTime(this.options.center))
+		const raw = this.stationLevelAtTime(this.options.center)
+		this.centralDataObservable.set({
+			...raw,
+			total: raw.total - this.options.yOffset,
+		})
 	}
 
 	// reads: center, periodHiPass, periodLoPass
@@ -418,27 +444,68 @@ export class TideOScope extends CanvasElement {
 		this.context.stroke()
 
 		let i = 0
-		for (const daysPerRev of [1 / 4, 1, 4, 16, 64, 256, 1024]) {
-			this.context.beginPath()
-			if (i % 2 === 0) {
-				this.context.lineWidth = 1
-				this.context.setLineDash([5, 10])
-			} else {
-				this.context.lineWidth = 2
-				this.context.setLineDash([10, 5])
+		if (this.options.crosshairRender === 'rad') {
+			for (const daysPerRev of [1 / 4, 1, 4, 16, 64, 256, 1024]) {
+				this.context.beginPath()
+				if (i % 2 === 0) {
+					this.context.lineWidth = 1
+					this.context.setLineDash([5, 10])
+				} else {
+					this.context.lineWidth = 2
+					this.context.setLineDash([10, 5])
+				}
+				i++
+				const { r } = this.getCoordForData(0, { daysPerRev: daysPerRev })
+				this.context.arc(
+					this.dimensions.centerX,
+					this.dimensions.centerY,
+					r,
+					0,
+					2 * Math.PI,
+				)
+				this.context.stroke()
 			}
-			i++
-			const { r } = this.getCoordForData(0, { daysPerRev: daysPerRev })
-			this.context.arc(
-				this.dimensions.centerX,
-				this.dimensions.centerY,
-				r,
-				0,
-				2 * Math.PI,
-			)
-			this.context.stroke()
+		}
+
+		i = 0
+		if (this.options.crosshairRender === 'rect') {
+			for (const gridNum of [1, 2, 3, 4, 5, 6, 7]) {
+				if (i % 2 === 0) {
+					this.context.lineWidth = 1
+					this.context.setLineDash([5, 10])
+				} else {
+					this.context.lineWidth = 2
+					this.context.setLineDash([10, 5])
+				}
+				i++
+				this.context.beginPath()
+				this.traceLine(-1, gridNum / 8)
+				this.traceLine(1, gridNum / 8)
+				this.context.stroke()
+				this.context.beginPath()
+				this.traceLine(-1, -gridNum / 8)
+				this.traceLine(1, -gridNum / 8)
+				this.context.stroke()
+				this.context.beginPath()
+				this.traceLine(gridNum / 8, -1)
+				this.traceLine(gridNum / 8, 1)
+				this.context.stroke()
+				this.context.beginPath()
+				this.traceLine(-gridNum / 8, -1)
+				this.traceLine(-gridNum / 8, 1)
+				this.context.stroke()
+			}
 		}
 		this.context.setLineDash([])
+
+		if (this.options.yOffset) {
+			this.context.strokeStyle = '#f004'
+			this.setLineWidth(0.005)
+			this.context.beginPath()
+			this.traceLine(-1, -this.options.yOffset / this.options.yRange)
+			this.traceLine(1, -this.options.yOffset / this.options.yRange)
+			this.context.stroke()
+		}
 	}
 
 	private renderClippingPath() {

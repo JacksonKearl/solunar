@@ -6,8 +6,11 @@ type SliderOptions = {
 	min: number
 	max: number
 	label: string
+	subtitle?: string
 	id?: string
+	tics?: [number, string][]
 }
+
 export class Slider extends CanvasElement {
 	private vertical
 
@@ -114,7 +117,17 @@ export class Slider extends CanvasElement {
 					this.options.max,
 			  )
 
-		const boundVal = bound2(scaleVal, this.options.min, this.options.max)
+		let boundVal = bound2(scaleVal, this.options.min, this.options.max)
+
+		for (const [tic] of this.options.tics ?? []) {
+			if (
+				Math.abs(tic - boundVal) <
+				0.05 * Math.abs(this.options.max - this.options.min)
+			) {
+				boundVal = tic
+			}
+		}
+
 		this.options.value = boundVal
 		this.value.set(boundVal)
 		this.render()
@@ -132,17 +145,42 @@ export class Slider extends CanvasElement {
 		this.context.save()
 
 		this.context.fillStyle = '#fff'
-		this.context.font = this.scaleFactor * 0.13 + 'px system-ui'
-
+		
 		if (this.vertical) {
+			this.context.font = this.scaleFactor * 0.13 + 'px system-ui'
 			this.fillText(0, 1.2, this.options.label.toLocaleUpperCase())
+			this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
+			this.fillText(0, 1.3, this.options.subtitle?.toLocaleUpperCase() ?? '')
 		} else {
+			this.context.font = this.scaleFactor * 0.13 + 'px system-ui'
 			this.fillText(0, -0.3, this.options.label.toLocaleUpperCase())
+			this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
+			this.fillText(0, -0.2, this.options.subtitle?.toLocaleUpperCase() ?? '')
+		}
+
+		this.context.strokeStyle = '#fff'
+		this.setLineWidth(0.01)
+		for (const tic of this.options.tics ?? []) {
+			this.context.beginPath()
+			if (this.vertical) {
+				const ticLoc = scale(tic[0], this.options.min, this.options.max, 1, -1)
+				this.traceLine(-0.1, ticLoc)
+				this.traceLine(0.1, ticLoc)
+				this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
+				this.fillText(0.15, ticLoc, tic[1])
+			} else {
+				const ticLoc = scale(tic[0], this.options.min, this.options.max, -1, 1)
+				this.traceLine(ticLoc, -0.1)
+				this.traceLine(ticLoc, 0.1)
+				this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
+				this.fillText(ticLoc, 0.15, tic[1])
+			}
+			this.context.stroke()
 		}
 
 		this.context.beginPath()
 
-		const [dX, dY] = this.vertical ? [0, 1] : [1, 0]
+		const [dX, dY] = this.vertical ? [0, 1.01] : [1.01, 0]
 		this.moveTo(-dX, -dY)
 		this.traceLine(dX, dY)
 

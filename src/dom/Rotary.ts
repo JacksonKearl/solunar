@@ -13,6 +13,8 @@ type RotaryOptions = {
 export class Rotary extends CanvasElement {
 	private selectedIndex = new Observable<number>()
 	public selectedIndexView = this.selectedIndex.view
+	private selected = new Observable<string>()
+	public selectedView = this.selected.view
 
 	constructor(
 		context: CanvasRenderingContext2D,
@@ -21,14 +23,15 @@ export class Rotary extends CanvasElement {
 	) {
 		super(context, drawZone)
 		this.scaleFactor = this.dimensions.minDim * 0.7
-		this.centerY = this.dimensions.centerY + this.scaleFactor * 0.25
 
 		const valueStore = new LocalStorageState(
 			options.id ?? options.label,
 			options.selectedIndex,
 		)
 		this.options.selectedIndex = valueStore.value
+		console.log(this.options)
 		this.selectedIndex.set(this.options.selectedIndex)
+		this.selected.set(this.options.values[this.options.selectedIndex])
 
 		this.disposables.add(
 			valueStore,
@@ -47,7 +50,7 @@ export class Rotary extends CanvasElement {
 	private locationToOptionIndex(l: Location): number {
 		let { r, deg } = this.toElementSpace(l)
 		// TODO: probably a better way to do this?
-		if (deg < -90) deg += 360
+		if (deg > 90) deg -= 360
 		const i = Math.round(
 			bound2(
 				scale(
@@ -77,6 +80,7 @@ export class Rotary extends CanvasElement {
 	private handleTouch(l: Location) {
 		const valIndex = this.locationToOptionIndex(l)
 		this.selectedIndex.set(valIndex)
+		this.selected.set(this.options.values[valIndex])
 		this.options.selectedIndex = valIndex
 		this.render()
 	}
@@ -96,7 +100,7 @@ export class Rotary extends CanvasElement {
 		this.context.fillStyle = '#fff'
 
 		this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
-		this.fillText(0, -0.8, this.options.label.toLocaleUpperCase())
+		this.fillText(0, -0.6, this.options.label.toLocaleUpperCase())
 
 		this.setLineWidth(0.03)
 		this.context.font = this.scaleFactor * 0.15 + 'px system-ui'
@@ -107,7 +111,7 @@ export class Rotary extends CanvasElement {
 				this.traceRay(0.4, 0, 0, 0, 0.25)
 				this.context.stroke()
 			})
-			const { x, y } = this.getRect(0.52, rotation)
+			const { x, y } = this.getRect(0.54, rotation)
 			this.fillText(x, y, v, rotation)
 		})
 

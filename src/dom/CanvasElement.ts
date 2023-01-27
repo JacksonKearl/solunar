@@ -1,4 +1,4 @@
-import { bound2, DisposableStore } from '$/utils'
+import { bound2, DisposableStore, Observable } from '$/utils'
 import { Disposable } from '$/types'
 import { addElementListener, findDPR } from './utils'
 import { atan2, cos, degToRad, sin } from '$/degreeMath'
@@ -65,12 +65,22 @@ export abstract class CanvasElement implements Disposable {
 	protected centerX: number
 	protected centerY: number
 	protected scaleFactor: number
-	protected active: boolean = false
 
 	public abstract render(): void
 
 	protected onClick(l: Location): void {}
 	protected onDrag(l: Location & { dx: number; dy: number }): void {}
+
+	private _active: boolean = false
+	protected get active(): boolean {
+		return this._active
+	}
+	protected set active(value: boolean) {
+		this._active = value
+		this._isActive.set(value)
+	}
+	private _isActive = new Observable<boolean>()
+	protected isActive = this._isActive.view
 
 	constructor(protected context: CanvasRenderingContext2D, drawZone: DrawZone) {
 		this.dimensions = {
@@ -88,6 +98,7 @@ export abstract class CanvasElement implements Disposable {
 		this.scaleFactor = this.dimensions.minDim / 2
 		this.centerX = this.dimensions.centerX
 		this.centerY = this.dimensions.centerY
+		this._isActive.set(false)
 
 		const touchTracker = new Map<number, Location>()
 		this.disposables.add({
@@ -99,6 +110,7 @@ export abstract class CanvasElement implements Disposable {
 					this.dimensions.height,
 				),
 		})
+		let isDragging = false
 		this.disposables.add({ dispose: () => (this.disposed = true) })
 		this.disposables.add(
 			addElementListener(this.context.canvas, 'wheel', (e) => {
@@ -119,39 +131,46 @@ export abstract class CanvasElement implements Disposable {
 				if (l && this.locationInBounds(l)) {
 					touchTracker.set(e.changedTouches[0].identifier, l)
 					this.active = true
+					isDragging = false
 				}
 			}),
 			addElementListener(this.context.canvas, 'mousedown', (e) => {
 				const l = this.locationOfEvent(e)
 				if (this.locationInBounds(l)) {
 					this.active = true
+					isDragging = false
 				}
 			}),
 			addElementListener(this.context.canvas, 'touchend', (e) => {
 				e.preventDefault()
 				const l = this.locationOfEvent(e)
-				if (l && this.locationInBounds(l) && this.active) {
+				if (l && this.locationInBounds(l) && this.active && !isDragging) {
 					this.onClick(l)
 				}
 				this.active = false
+				isDragging = false
 				touchTracker.delete(e.changedTouches[0].identifier)
 			}),
 			addElementListener(this.context.canvas, 'mouseup', (e) => {
 				const l = this.locationOfEvent(e)
-				if (l && this.locationInBounds(l) && this.active) {
+				if (l && this.locationInBounds(l) && this.active && !isDragging) {
 					this.onClick(l)
 				}
+				isDragging = false
 				this.active = false
 			}),
 			addElementListener(this.context.canvas, 'touchcancel', (e) => {
 				this.active = false
+				isDragging = false
 				touchTracker.delete(e.changedTouches[0].identifier)
 			}),
 			addElementListener(this.context.canvas, 'mouseleave', (e) => {
 				this.active = false
+				isDragging = false
 			}),
 			addElementListener(this.context.canvas, 'mousemove', (e) => {
 				if (this.active && e.buttons) {
+					isDragging = true
 					const dpr = findDPR()
 					this.onDrag({
 						dx: e.movementX * dpr,
@@ -163,6 +182,7 @@ export abstract class CanvasElement implements Disposable {
 			}),
 			addElementListener(this.context.canvas, 'touchmove', (e) => {
 				if (this.active && e.changedTouches.length === 1) {
+					isDragging = true
 					e.preventDefault()
 					const dpr = findDPR()
 					const touch = e.changedTouches[0]

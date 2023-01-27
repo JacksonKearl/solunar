@@ -1,8 +1,8 @@
-import { Station } from '$/types'
+import { DatumName, Station } from '$/types'
 import { setupCanvas, drawZoneForElement } from './CanvasElement'
 import { Slider } from './Slider'
 import { Toggle } from './Toggle'
-import { TideOScope } from './TideOScope'
+import { TideOScope, TideOScopeOptions } from './TideOScope'
 import { DisposableStore, MappedView } from '$/utils'
 import { Gauge } from './Gauge'
 import { Clock } from './Clock'
@@ -55,7 +55,7 @@ const clockToggles = [
 const rotaries = [
 	makeConfigArea('rotary', configs[2]),
 	makeConfigArea('rotary', configs[2]),
-	// makeConfigArea('rotary', configs[2]),
+	makeConfigArea('rotary', configs[2]),
 ]
 configs[0].classList.add('flex')
 configs[1].classList.add('flex')
@@ -79,7 +79,7 @@ const go = () => {
 	ctx.fillStyle = '#333'
 	ctx.fillRect(dim.left, dim.top, dim.width, dim.height)
 
-	const defaultOptions = {
+	const defaultOptions: TideOScopeOptions = {
 		renderScale: 1,
 		labelConstituents: false,
 		yRange: 8,
@@ -91,7 +91,9 @@ const go = () => {
 		renderHarmonics: false,
 		periodLoPass: 12,
 		periodHiPass: -6,
-	}
+		crosshairRender: 'rad',
+		yOffset: 0,
+	} as const
 
 	const tideOScope = new TideOScope(
 		ctx,
@@ -142,49 +144,104 @@ const go = () => {
 	})
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(sliders[0]), {
 		label: 'Speed',
-		max: Math.log(10000000),
+		max: Math.log(30000000),
 		min: Math.log(1),
+		tics: [
+			[Math.log(1), '1'],
+			[Math.log(30), '30'],
+			[Math.log(1000), '1k'],
+			[Math.log(30000), '30k'],
+			[Math.log(1000000), '1M'],
+			[Math.log(30000000), '30M'],
+		],
 		value: Math.log(defaultOptions.timeRate),
 	})
 	const windowRangeSlider = new Slider(ctx, drawZoneForElement(sliders[1]), {
-		label: 'Time Range',
-		min: Math.log(8 * HOUR),
-		max: Math.log(2 * YEAR),
+		label: 'X Range',
+		subtitle: 'Time / grid',
+		min: Math.log(1 * HOUR * 8),
+		max: Math.log(2 * YEAR * 8),
+		tics: [
+			[Math.log(1 * HOUR * 8), '1h'],
+			[Math.log(6 * HOUR * 8), '6h'],
+			[Math.log(1 * DAY * 8), '1d'],
+			[Math.log(7 * DAY * 8), '1w'],
+			[Math.log(28 * DAY * 8), '28d'],
+			[Math.log(180 * DAY * 8), '180d'],
+			[Math.log(2 * YEAR * 8), '2y'],
+		],
 		value: Math.log(defaultOptions.timeRange),
 	})
-	const highpassCutoff = new Slider(ctx, drawZoneForElement(sliders[2]), {
+	const tideRange = new Slider(ctx, drawZoneForElement(sliders[2]), {
+		label: 'Y Range',
+		subtitle: 'Feet / grid',
+		min: Math.log2((1 / 2) * 8),
+		max: Math.log2(8 * 8),
+		tics: [
+			[Math.log2(0.5 * 8), '0.5'],
+			[Math.log2(1 * 8), '1'],
+			[Math.log2(2 * 8), '2'],
+			[Math.log2(4 * 8), '4'],
+			[Math.log2(8 * 8), '8'],
+		],
+		value: Math.log2(defaultOptions.yRange),
+	})
+	const highpassCutoff = new Slider(ctx, drawZoneForElement(sliders[3]), {
 		label: 'Hi Pass',
-		min: -6,
-		max: 12,
+		subtitle: 'time / cycle',
+		min: Math.log2(1 / 24),
+		max: Math.log2(365 * 2),
+		tics: [
+			[Math.log2(1 / 24), '1h'],
+			[Math.log2(1 / 4), '6h'],
+			[Math.log2(1), '1d'],
+			[Math.log2(7), '1w'],
+			[Math.log2(28), '28d'],
+			[Math.log2(180), '180d'],
+			[Math.log2(365 * 2), '2y'],
+		],
+
 		value: defaultOptions.periodHiPass,
 	})
-	const lowpassCutoff = new Slider(ctx, drawZoneForElement(sliders[3]), {
+	const lowpassCutoff = new Slider(ctx, drawZoneForElement(sliders[4]), {
 		label: 'Lo Pass',
-		min: -6,
-		max: 12,
+		subtitle: 'time / cycle',
+		min: Math.log2(1 / 24),
+		max: Math.log2(365 * 2),
+		tics: [
+			[Math.log2(1 / 24), '1h'],
+			[Math.log2(1 / 4), '6h'],
+			[Math.log2(1), '1d'],
+			[Math.log2(7), '1w'],
+			[Math.log2(28), '28d'],
+			[Math.log2(180), '180d'],
+			[Math.log2(365 * 2), '2y'],
+		],
 		value: defaultOptions.periodLoPass,
-	})
-	const tideRange = new Slider(ctx, drawZoneForElement(sliders[4]), {
-		label: 'Tide Range',
-		min: Math.log2(2),
-		max: Math.log2(32),
-		value: Math.log2(defaultOptions.yRange),
 	})
 
 	const datumRotary = new Rotary(ctx, drawZoneForElement(rotaries[0]), {
 		label: 'Datum',
 		selectedIndex: 2,
 		values: ['MLLW', 'MLW', 'MSL', 'MHW', 'MHHW'],
-		minAngle: 220,
-		maxAngle: -40,
+		minAngle: 40,
+		maxAngle: -220,
 	})
 
 	const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {
 		label: 'Time Zone',
-		selectedIndex: 2,
-		values: ['GMT', 'LOC', 'STA'],
-		minAngle: 150,
-		maxAngle: 30,
+		selectedIndex: 0,
+		values: ['DEV', 'GMT', 'STAT'],
+		minAngle: -150,
+		maxAngle: -30,
+	})
+
+	const crosshairRotary = new Rotary(ctx, drawZoneForElement(rotaries[2]), {
+		label: 'grid',
+		selectedIndex: 0,
+		values: ['RAD', 'RECT', 'OFF'],
+		minAngle: -150,
+		maxAngle: -30,
 	})
 
 	// disposables.add(datumRotary.valueView((v) => console.log('datum:', v)))
@@ -222,8 +279,8 @@ const go = () => {
 		{
 			title: 'Tide',
 			subtitle: 'Feet',
-			min: -defaultOptions.yRange,
-			max: defaultOptions.yRange,
+			range: defaultOptions.yRange * 2,
+			center: 0,
 			value: 0,
 			minAngle: 30,
 			maxAngle: -210,
@@ -243,8 +300,8 @@ const go = () => {
 		{
 			title: 'Flow',
 			subtitle: 'feet per hr',
-			min: -defaultOptions.yRange / 2,
-			max: defaultOptions.yRange / 2,
+			range: defaultOptions.yRange,
+			center: 0,
 			value: 0,
 			minAngle: 30,
 			maxAngle: -210,
@@ -253,6 +310,20 @@ const go = () => {
 		},
 	)
 
+	tideOScope.viewInput(
+		'yOffset',
+		MappedView(datumRotary.selectedView, (v) => {
+			return active.datums[v as DatumName] - active.datums.MSL
+		}),
+	)
+
+	tideOScope.viewInput(
+		'crosshairRender',
+		MappedView(
+			crosshairRotary.selectedIndexView,
+			(i) => (['rad', 'rect', 'none'] as const)[i],
+		),
+	)
 	tideOScope.viewInput('renderHarmonics', constituentToggle.valueView)
 	tideOScope.viewInput('periodLoPass', lowpassCutoff.valueView)
 	tideOScope.viewInput('periodHiPass', highpassCutoff.valueView)
@@ -279,14 +350,22 @@ const go = () => {
 		'value',
 		MappedView(tideOScope.centralDataView, (v) => v.total),
 	)
+	tideHeightGauge.viewInput(
+		'range',
+		MappedView(tideRange.valueView, (v) => 2 * 2 ** Math.round(v)),
+	)
+	tideHeightGauge.viewInput(
+		'center',
+		MappedView(datumRotary.selectedView, (v) => {
+			const offset = active.datums[v as DatumName] - active.datums.MSL
+			return -Math.round(offset)
+		}),
+	)
 	clock.viewInput(
 		'time',
 		MappedView(tideOScope.centralDataView, (v) => v.time),
 	)
-	clock.viewInput(
-		'timeRate',
-		MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v),
-	)
+	clock.viewInput('timeRate', tideOScope.timeSpeedView)
 	clock.viewInput('render60Count', numbers60Toggle.valueView)
 	clock.viewInput('render12Count', numbers12Toggle.valueView)
 	clock.viewInput('renderSecondHand', secondToggle.valueView)
@@ -295,7 +374,7 @@ const go = () => {
 		'offset',
 		MappedView(
 			timezoneRotary.selectedIndexView,
-			(v) => [UTCOffset, LocalOffset, StationOffset][v],
+			(v) => [LocalOffset, UTCOffset, StationOffset][v],
 		),
 	)
 
@@ -328,6 +407,7 @@ const go = () => {
 		tideRange,
 		datumRotary,
 		timezoneRotary,
+		crosshairRotary,
 	]
 
 	disposables.add(...allComponents)

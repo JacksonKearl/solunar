@@ -42,7 +42,7 @@ export class Observable<T> {
 	constructor() {
 		this.view = (w) => {
 			this.watchers.add(w)
-			if (this.value) {
+			if (this.value !== undefined) {
 				w(this.value)
 			}
 			return { dispose: () => this.watchers.delete(w) }
