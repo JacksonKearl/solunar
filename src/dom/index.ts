@@ -33,13 +33,15 @@ const makeConfigArea = (className: string, parent: HTMLElement = config) => {
 const configs = [
 	makeConfigArea('toggles'),
 	makeConfigArea('toggles'),
-	makeConfigArea('slider'),
-	makeConfigArea('slider'),
-	makeConfigArea('slider'),
-	makeConfigArea('slider'),
-	makeConfigArea('slider'),
 	makeConfigArea('rotaries'),
+	makeConfigArea('slider'),
+	makeConfigArea('slider'),
+	makeConfigArea('slider'),
+	makeConfigArea('slider'),
+	makeConfigArea('slider'),
 ]
+const sliders = configs.slice(3)
+
 const tideOScopeToggles = [
 	makeConfigArea('toggle', configs[0]),
 	makeConfigArea('toggle', configs[0]),
@@ -51,13 +53,13 @@ const clockToggles = [
 	makeConfigArea('toggle', configs[1]),
 ]
 const rotaries = [
-	makeConfigArea('rotary', configs[7]),
-	makeConfigArea('rotary', configs[7]),
-	makeConfigArea('rotary', configs[7]),
+	makeConfigArea('rotary', configs[2]),
+	makeConfigArea('rotary', configs[2]),
+	// makeConfigArea('rotary', configs[2]),
 ]
 configs[0].classList.add('flex')
 configs[1].classList.add('flex')
-configs[7].classList.add('flex')
+configs[2].classList.add('flex')
 
 const go = () => {
 	disposables.clear()
@@ -138,31 +140,31 @@ const go = () => {
 		offLabel: 'Hide',
 		value: true,
 	})
-	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(configs[2]), {
-		label: 'Scroll Speed',
+	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(sliders[0]), {
+		label: 'Speed',
 		max: Math.log(10000000),
 		min: Math.log(1),
 		value: Math.log(defaultOptions.timeRate),
 	})
-	const windowRangeSlider = new Slider(ctx, drawZoneForElement(configs[3]), {
+	const windowRangeSlider = new Slider(ctx, drawZoneForElement(sliders[1]), {
 		label: 'Time Range',
 		min: Math.log(8 * HOUR),
 		max: Math.log(2 * YEAR),
 		value: Math.log(defaultOptions.timeRange),
 	})
-	const highpassCutoff = new Slider(ctx, drawZoneForElement(configs[4]), {
+	const highpassCutoff = new Slider(ctx, drawZoneForElement(sliders[2]), {
 		label: 'Hi Pass',
 		min: -6,
 		max: 12,
 		value: defaultOptions.periodHiPass,
 	})
-	const lowpassCutoff = new Slider(ctx, drawZoneForElement(configs[5]), {
+	const lowpassCutoff = new Slider(ctx, drawZoneForElement(sliders[3]), {
 		label: 'Lo Pass',
 		min: -6,
 		max: 12,
 		value: defaultOptions.periodLoPass,
 	})
-	const tideRange = new Slider(ctx, drawZoneForElement(configs[6]), {
+	const tideRange = new Slider(ctx, drawZoneForElement(sliders[4]), {
 		label: 'Tide Range',
 		min: Math.log2(2),
 		max: Math.log2(32),
@@ -176,12 +178,6 @@ const go = () => {
 		minAngle: 220,
 		maxAngle: -40,
 	})
-
-	// const stationCode = active.timezone ?? 'STA'
-	// const localCode =
-	// 	new Intl.DateTimeFormat('en-us', { timeZoneName: 'short' })
-	// 		.formatToParts(new Date())
-	// 		.find((part) => part.type == 'timeZoneName')?.value ?? 'LOC'
 
 	const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {
 		label: 'Time Zone',
@@ -197,7 +193,7 @@ const go = () => {
 	const LocalOffset = new Date().getTimezoneOffset()
 	const StationOffset = -(active.timezoneOffset ?? 0) * 60
 
-	const timeGauge = new Clock(
+	const clock = new Clock(
 		ctx,
 		{
 			height: mainDrawZone.height / 4,
@@ -283,19 +279,19 @@ const go = () => {
 		'value',
 		MappedView(tideOScope.centralDataView, (v) => v.total),
 	)
-	timeGauge.viewInput(
+	clock.viewInput(
 		'time',
 		MappedView(tideOScope.centralDataView, (v) => v.time),
 	)
-	timeGauge.viewInput(
+	clock.viewInput(
 		'timeRate',
 		MappedView(scrollSpeedSlider.valueView, (v) => Math.E ** v),
 	)
-	timeGauge.viewInput('render60Count', numbers60Toggle.valueView)
-	timeGauge.viewInput('render12Count', numbers12Toggle.valueView)
-	timeGauge.viewInput('renderSecondHand', secondToggle.valueView)
+	clock.viewInput('render60Count', numbers60Toggle.valueView)
+	clock.viewInput('render12Count', numbers12Toggle.valueView)
+	clock.viewInput('renderSecondHand', secondToggle.valueView)
 
-	timeGauge.viewInput(
+	clock.viewInput(
 		'offset',
 		MappedView(
 			timezoneRotary.selectedIndexView,
@@ -310,7 +306,7 @@ const go = () => {
 		tideOScope.onDidRender(() => {
 			tideFlowGauge.render()
 			tideHeightGauge.render()
-			timeGauge.render()
+			clock.render()
 		}),
 	)
 
@@ -324,7 +320,7 @@ const go = () => {
 		constituentToggle,
 		tideOScope,
 		tideHeightGauge,
-		timeGauge,
+		clock,
 		numbers12Toggle,
 		numbers60Toggle,
 		secondToggle,

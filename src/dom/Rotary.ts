@@ -21,6 +21,7 @@ export class Rotary extends CanvasElement {
 	) {
 		super(context, drawZone)
 		this.scaleFactor = this.dimensions.minDim * 0.7
+		this.centerY = this.dimensions.centerY + this.scaleFactor * 0.25
 
 		const valueStore = new LocalStorageState(
 			options.id ?? options.label,
@@ -93,6 +94,10 @@ export class Rotary extends CanvasElement {
 
 		this.context.strokeStyle = '#fff'
 		this.context.fillStyle = '#fff'
+
+		this.context.font = this.scaleFactor * 0.2 + 'px system-ui'
+		this.fillText(0, -0.8, this.options.label.toLocaleUpperCase())
+
 		this.setLineWidth(0.03)
 		this.context.font = this.scaleFactor * 0.15 + 'px system-ui'
 		this.options.values.forEach((v, i) => {

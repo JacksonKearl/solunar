@@ -17,13 +17,13 @@
 			"label": "Serve",
 			"type": "shell",
 			"isBackground": true,
-			"command": "bunx run serve-dev"
+			"command": "bun run serve-dev"
 		},
 		{
 			"label": "Bundle",
 			"type": "shell",
 			"isBackground": true,
-			"command": "bunx run bundle"
+			"command": "bun run bundle-dev"
 		},
 		{
 			"label": "TypeCheck",

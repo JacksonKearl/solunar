@@ -62,6 +62,8 @@ export abstract class CanvasElement implements Disposable {
 	protected dimensions: CanvasDimensions
 	protected disposed = false
 
+	protected centerX: number
+	protected centerY: number
 	protected scaleFactor: number
 	protected active: boolean = false
 
@@ -83,8 +85,11 @@ export abstract class CanvasElement implements Disposable {
 			minDim: Math.min(drawZone.height, drawZone.width),
 		}
 
-		const touchTracker = new Map<number, Location>()
 		this.scaleFactor = this.dimensions.minDim / 2
+		this.centerX = this.dimensions.centerX
+		this.centerY = this.dimensions.centerY
+
+		const touchTracker = new Map<number, Location>()
 		this.disposables.add({
 			dispose: () =>
 				this.context.clearRect(
@@ -202,9 +207,7 @@ export abstract class CanvasElement implements Disposable {
 		if (!l) return false
 		const { x, y } = l
 		return (
-			Math.sqrt(
-				(x - this.dimensions.centerX) ** 2 + (y - this.dimensions.centerY) ** 2,
-			) <
+			Math.sqrt((x - this.centerX) ** 2 + (y - this.centerY) ** 2) <
 			this.scaleFactor * r
 		)
 	}
@@ -233,8 +236,8 @@ export abstract class CanvasElement implements Disposable {
 
 	protected xyToCanvasCoords(x: number, y: number) {
 		return {
-			canvasX: this.dimensions.centerX + this.scaleFactor * x,
-			canvasY: this.dimensions.centerY + this.scaleFactor * y,
+			canvasX: this.centerX + this.scaleFactor * x,
+			canvasY: this.centerY + this.scaleFactor * y,
 		}
 	}
 
@@ -244,8 +247,8 @@ export abstract class CanvasElement implements Disposable {
 		r: number
 		deg: number
 	} {
-		const x = (l.x - this.dimensions.centerX) / this.scaleFactor
-		const y = -(l.y - this.dimensions.centerY) / this.scaleFactor
+		const x = (l.x - this.centerX) / this.scaleFactor
+		const y = -(l.y - this.centerY) / this.scaleFactor
 		const r = Math.sqrt(x ** 2 + y ** 2)
 		const deg = atan2(x, y)
 		return { x, y, r, deg }
@@ -289,8 +292,8 @@ export abstract class CanvasElement implements Disposable {
 
 	protected moveTo(x: number, y: number) {
 		this.context.moveTo(
-			this.dimensions.centerX + this.scaleFactor * x,
-			this.dimensions.centerY + this.scaleFactor * y,
+			this.centerX + this.scaleFactor * x,
+			this.centerY + this.scaleFactor * y,
 		)
 	}
 
@@ -306,8 +309,8 @@ export abstract class CanvasElement implements Disposable {
 		const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2
 		this.context.fillText(
 			text,
-			this.dimensions.centerX + this.scaleFactor * x - xJustifyAdjust,
-			this.dimensions.centerY + this.scaleFactor * y + yJustifyAdjust,
+			this.centerX + this.scaleFactor * x - xJustifyAdjust,
+			this.centerY + this.scaleFactor * y + yJustifyAdjust,
 		)
 	}
 
