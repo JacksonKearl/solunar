@@ -63,7 +63,12 @@ configs[2].classList.add('flex')
 
 const go = () => {
 	const optionsVisible = JSON.parse(localStorage.getItem('Options') ?? 'true')
-
+	if (!optionsVisible) {
+		config.setAttribute('style', 'display: none !important')
+	}
+	if (optionsVisible) {
+		config.setAttribute('style', 'display: flex !important')
+	}
 	disposables.clear()
 
 	const newport = stations['9410580']
