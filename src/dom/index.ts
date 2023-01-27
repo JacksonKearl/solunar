@@ -136,13 +136,13 @@ const go = () => {
 		label: 'Seconds',
 		onLabel: 'Show',
 		offLabel: 'Hide',
-		value: false,
+		value: true,
 	})
 	const numbers60Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[2]), {
 		label: '60-Count',
 		onLabel: 'Show',
 		offLabel: 'Hide',
-		value: false,
+		value: true,
 	})
 	const numbers12Toggle = new Toggle(ctx, drawZoneForElement(clockToggles[1]), {
 		label: '12-Count',
@@ -303,8 +303,8 @@ const go = () => {
 			time: defaultOptions.center,
 			offset: StationOffset,
 			timeRate: defaultOptions.timeRate,
-			render60Count: false,
-			renderSecondHand: false,
+			render60Count: true,
+			renderSecondHand: true,
 			render12Count: true,
 			renderTimer: false,
 		},
