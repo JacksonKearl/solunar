@@ -63,7 +63,6 @@ configs[2].classList.add('flex')
 
 const go = () => {
 	const optionsVisible = JSON.parse(localStorage.getItem('Options') ?? 'true')
-	console.log({ optionsVisible })
 
 	disposables.clear()
 
@@ -79,13 +78,11 @@ const go = () => {
 	const mainDrawZone = optionsVisible
 		? drawZoneForElement(main)
 		: drawZoneForElement(document.body)
-	const isLandscape = mainDrawZone.height < mainDrawZone.width
 	const aspectRatio = Math.max(
 		mainDrawZone.height / mainDrawZone.width,
 		mainDrawZone.width / mainDrawZone.height,
 	)
 
-	console.log({ aspectRatio })
 	// Background
 	ctx.fillStyle = '#333'
 	ctx.fillRect(dim.left, dim.top, dim.width, dim.height)
@@ -277,8 +274,6 @@ const go = () => {
 		maxAngle: -30,
 	})
 
-	// disposables.add(datumRotary.valueView((v) => console.log('datum:', v)))
-
 	const UTCOffset = 0
 	const LocalOffset = new Date().getTimezoneOffset()
 	const StationOffset = -(active.timezoneOffset ?? 0) * 60
@@ -448,7 +443,6 @@ const go = () => {
 
 	disposables.add(
 		fullScreenToggle.valueView((v) => {
-			console.log({ v, optionsVisible })
 			requestAnimationFrame(() => {
 				if (v !== optionsVisible) {
 					go()

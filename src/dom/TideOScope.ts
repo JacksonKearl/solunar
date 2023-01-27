@@ -365,7 +365,6 @@ export class TideOScope extends CanvasElement {
 				const toTwoDigitHexString = (n: number) =>
 					Math.round(n).toString(16).padStart(2, '0')
 				const color = `#` + [...rgb, alpha].map(toTwoDigitHexString).join('')
-				// console.log(name, eq.V, rgb, color)
 				this.context.fillStyle = color
 				this.context.beginPath()
 				this.context.arc(x, y, radius, 0, 2 * Math.PI)
