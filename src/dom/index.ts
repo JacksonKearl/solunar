@@ -62,6 +62,9 @@ configs[1].classList.add('flex')
 configs[2].classList.add('flex')
 
 const go = () => {
+	const optionsVisible = JSON.parse(localStorage.getItem('Options') ?? 'true')
+	console.log({ optionsVisible })
+
 	disposables.clear()
 
 	const newport = stations['9410580']
@@ -73,8 +76,16 @@ const go = () => {
 
 	const { ctx, dim } = setupCanvas(canvas)
 
-	const mainDrawZone = drawZoneForElement(main)
+	const mainDrawZone = optionsVisible
+		? drawZoneForElement(main)
+		: drawZoneForElement(document.body)
+	const isLandscape = mainDrawZone.height < mainDrawZone.width
+	const aspectRatio = Math.max(
+		mainDrawZone.height / mainDrawZone.width,
+		mainDrawZone.width / mainDrawZone.height,
+	)
 
+	console.log({ aspectRatio })
 	// Background
 	ctx.fillStyle = '#333'
 	ctx.fillRect(dim.left, dim.top, dim.width, dim.height)
@@ -95,12 +106,7 @@ const go = () => {
 		yOffset: 0,
 	} as const
 
-	const tideOScope = new TideOScope(
-		ctx,
-		drawZoneForElement(main),
-		active,
-		defaultOptions,
-	)
+	const tideOScope = new TideOScope(ctx, mainDrawZone, active, defaultOptions)
 
 	const constituentToggle = new Toggle(
 		ctx,
@@ -142,8 +148,35 @@ const go = () => {
 		offLabel: 'Hide',
 		value: true,
 	})
+	const fullScreenToggle = new Toggle(
+		ctx,
+		optionsVisible
+			? {
+					height: mainDrawZone.height / 8,
+					width: mainDrawZone.width / 8,
+					left: mainDrawZone.left + mainDrawZone.width * 0.81,
+					top: mainDrawZone.top + mainDrawZone.height * (7 / 8),
+			  }
+			: {
+					height: Math.min((dim.minDim / 10) * aspectRatio, dim.height / 2),
+					width: Math.min((dim.minDim / 10) * aspectRatio, dim.width / 2),
+					left:
+						dim.width -
+						Math.min((dim.minDim / 10) * aspectRatio, dim.width / 2),
+					top:
+						dim.height -
+						Math.min((dim.minDim / 10) * aspectRatio, dim.height / 2),
+			  },
+		{
+			label: 'Options',
+			onLabel: 'Show',
+			offLabel: 'Hide',
+			value: true,
+		},
+	)
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(sliders[0]), {
 		label: 'Speed',
+		subtitle: 'Hz',
 		max: Math.log(30000000),
 		min: Math.log(1),
 		tics: [
@@ -252,12 +285,20 @@ const go = () => {
 
 	const clock = new Clock(
 		ctx,
-		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
-			left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
-			top: mainDrawZone.top,
-		},
+		optionsVisible
+			? {
+					height: mainDrawZone.height / 4,
+					width: mainDrawZone.width / 4,
+					left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
+					top: mainDrawZone.top,
+			  }
+			: {
+					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
+					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
+					left:
+						dim.width - Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
+					top: 0,
+			  },
 		{
 			time: defaultOptions.center,
 			offset: StationOffset,
@@ -270,12 +311,19 @@ const go = () => {
 	)
 	const tideHeightGauge = new Gauge(
 		ctx,
-		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
-			left: mainDrawZone.left,
-			top: mainDrawZone.top,
-		},
+		optionsVisible
+			? {
+					height: mainDrawZone.height / 4,
+					width: mainDrawZone.width / 4,
+					left: mainDrawZone.left,
+					top: mainDrawZone.top,
+			  }
+			: {
+					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
+					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
+					left: 0,
+					top: 0,
+			  },
 		{
 			title: 'Tide',
 			subtitle: 'Feet',
@@ -291,15 +339,24 @@ const go = () => {
 
 	const tideFlowGauge = new Gauge(
 		ctx,
-		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
-			left: mainDrawZone.left,
-			top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
-		},
+		optionsVisible
+			? {
+					height: mainDrawZone.height / 4,
+					width: mainDrawZone.width / 4,
+					left: mainDrawZone.left,
+					top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
+			  }
+			: {
+					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
+					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
+					left: 0,
+					top:
+						dim.height -
+						Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
+			  },
 		{
 			title: 'Flow',
-			subtitle: 'feet per hr',
+			subtitle: 'feet / hour',
 			range: defaultOptions.yRange,
 			center: 0,
 			value: 0,
@@ -389,26 +446,47 @@ const go = () => {
 		}),
 	)
 
-	const allComponents = [
-		windowRangeSlider,
-		scrollSpeedSlider,
-		highpassCutoff,
-		lowpassCutoff,
-		moonToggle,
-		sunToggle,
-		constituentToggle,
-		tideOScope,
-		tideHeightGauge,
-		clock,
-		numbers12Toggle,
-		numbers60Toggle,
-		secondToggle,
-		tideFlowGauge,
-		tideRange,
-		datumRotary,
-		timezoneRotary,
-		crosshairRotary,
-	]
+	disposables.add(
+		fullScreenToggle.valueView((v) => {
+			console.log({ v, optionsVisible })
+			requestAnimationFrame(() => {
+				if (v !== optionsVisible) {
+					go()
+				}
+			})
+		}),
+	)
+
+	const allComponents = optionsVisible
+		? [
+				windowRangeSlider,
+				scrollSpeedSlider,
+				highpassCutoff,
+				lowpassCutoff,
+				moonToggle,
+				sunToggle,
+				constituentToggle,
+				tideOScope,
+				tideHeightGauge,
+				clock,
+				numbers12Toggle,
+				numbers60Toggle,
+				secondToggle,
+				tideFlowGauge,
+				tideRange,
+				datumRotary,
+				timezoneRotary,
+				crosshairRotary,
+				fullScreenToggle,
+		  ]
+		: [
+				tideOScope,
+				tideFlowGauge,
+				tideHeightGauge,
+				fullScreenToggle,
+				tideHeightGauge,
+				clock,
+		  ]
 
 	disposables.add(...allComponents)
 	allComponents.map((c) => c.render())

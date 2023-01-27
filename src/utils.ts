@@ -125,23 +125,3 @@ export class DisposableStore implements Disposable {
 		this.isDisposed = true
 	}
 }
-
-export const ViewFromArray = <T>(
-	views: View<T>[],
-	disposables: DisposableStore,
-): View<T[]> => {
-	const values: T[] = Array.from({ length: views.length })
-	const watchers = new Set<(v: T[]) => void>()
-	views.forEach((view, index) =>
-		disposables.add(
-			view((v) => {
-				values[index] = v
-				watchers.forEach((w) => w(values))
-			}),
-		),
-	)
-	return (w) => {
-		watchers.add(w)
-		return { dispose: () => watchers.delete(w) }
-	}
-}

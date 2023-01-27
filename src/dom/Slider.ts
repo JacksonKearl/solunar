@@ -145,17 +145,21 @@ export class Slider extends CanvasElement {
 		this.context.save()
 
 		this.context.fillStyle = '#fff'
-		
+		const subtitleToRender =
+			this.options.subtitle && this.options.subtitle.length > 3
+				? this.options.subtitle.toLocaleUpperCase()
+				: this.options.subtitle
+
 		if (this.vertical) {
-			this.context.font = this.scaleFactor * 0.13 + 'px system-ui'
+			this.context.font = this.dimensions.width * 0.20 + 'px system-ui'
 			this.fillText(0, 1.2, this.options.label.toLocaleUpperCase())
-			this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
-			this.fillText(0, 1.3, this.options.subtitle?.toLocaleUpperCase() ?? '')
+			this.context.font = this.dimensions.width * 0.10 + 'px system-ui'
+			this.fillText(0, 1.3, subtitleToRender ?? '')
 		} else {
-			this.context.font = this.scaleFactor * 0.13 + 'px system-ui'
+			this.context.font = this.dimensions.height * 0.20 + 'px system-ui'
 			this.fillText(0, -0.3, this.options.label.toLocaleUpperCase())
-			this.context.font = this.scaleFactor * 0.06 + 'px system-ui'
-			this.fillText(0, -0.2, this.options.subtitle?.toLocaleUpperCase() ?? '')
+			this.context.font = this.dimensions.height * 0.10 + 'px system-ui'
+			this.fillText(0, -0.18, subtitleToRender ?? '')
 		}
 
 		this.context.strokeStyle = '#fff'

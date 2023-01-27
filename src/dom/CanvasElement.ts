@@ -317,16 +317,21 @@ export abstract class CanvasElement implements Disposable {
 		)
 	}
 
+	private textMeasureCache = new Map<string, TextMetrics>()
 	protected fillText(
 		x: number,
 		y: number,
 		text: string,
 		justifyAngle: number = 90,
 	) {
-		const textProps = this.context.measureText(text)
-		const xJustifyAdjust =
-			((-0.5 * cos(justifyAngle) + 1) * textProps.width) / 2
+		let textProps = this.textMeasureCache.get(text + ' - ' + this.context.font)
+		if (!textProps) {
+			textProps = this.context.measureText(text)
+			this.textMeasureCache.set(text + ' - ' + this.context.font, textProps)
+		}
+		const xJustifyAdjust = ((0.5 * cos(justifyAngle) + 1) * textProps.width) / 2
 		const yJustifyAdjust = textProps.actualBoundingBoxAscent / 2
+
 		this.context.fillText(
 			text,
 			this.centerX + this.scaleFactor * x - xJustifyAdjust,

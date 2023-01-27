@@ -69,7 +69,7 @@ export class TideOScope extends CanvasElement {
 				} else {
 					this.timeSpeedObservable.set(this.options.timeRate)
 				}
-				this.moveCenterWithTime()
+				this.resetFrame()
 			}),
 		)
 	}
@@ -88,12 +88,10 @@ export class TideOScope extends CanvasElement {
 				this.fetchAllData()
 			},
 			timeRange: () => {
-				this.resetAutoAdvanceTimer()
-				this.moveCenterWithTime()
+				this.resetFrame()
 			},
 			timeRate: () => {
-				this.resetAutoAdvanceTimer()
-				this.moveCenterWithTime()
+				this.resetFrame()
 				this.timeSpeedObservable.set(this.options.timeRate)
 			},
 			periodLoPass: () => {
@@ -175,11 +173,16 @@ export class TideOScope extends CanvasElement {
 		}
 	}
 
+	private resetFrame() {
+		this.resetAutoAdvanceTimer()
+		this.moveCenterWithTime()
+	}
+
 	// reads: timeRange, timeRate
 	private resetAutoAdvanceTimer() {
 		this.autoAdvanceDisposables.clear()
 
-		const timeout = bound2((60 / this.options.timeRate) * 1000, 0, 5000)
+		const timeout = bound2((10 / this.options.timeRate) * 1000, 0, 5000)
 
 		const doFrameUpdate = () => {
 			if (this.active) {
@@ -230,7 +233,6 @@ export class TideOScope extends CanvasElement {
 
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
 	override render() {
-		console.log(this.options)
 		this.context.save()
 		this.renderClippingPath()
 		this.renderBackground()

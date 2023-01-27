@@ -29,7 +29,6 @@ export class Rotary extends CanvasElement {
 			options.selectedIndex,
 		)
 		this.options.selectedIndex = valueStore.value
-		console.log(this.options)
 		this.selectedIndex.set(this.options.selectedIndex)
 		this.selected.set(this.options.values[this.options.selectedIndex])
 
