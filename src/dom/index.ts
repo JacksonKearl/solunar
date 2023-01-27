@@ -102,8 +102,8 @@ const go = () => {
 		renderMoon: true,
 		renderSun: true,
 		renderHarmonics: false,
-		periodLoPass: 12,
-		periodHiPass: -6,
+		periodLoPass: Math.log2(2 * 365),
+		periodHiPass: Math.log2(1 / 24),
 		crosshairRender: 'rad',
 		yOffset: 0,
 	} as const
