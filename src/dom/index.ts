@@ -222,7 +222,7 @@ const go = () => {
 		value: Math.log2(defaultOptions.yRange),
 	})
 	const highpassCutoff = new Slider(ctx, drawZoneForElement(sliders[3]), {
-		label: 'Hi Pass',
+		label: 'Lo Pass',
 		subtitle: 'time / cycle',
 		min: Math.log2(1 / 24),
 		max: Math.log2(365 * 2),
@@ -239,7 +239,7 @@ const go = () => {
 		value: defaultOptions.periodHiPass,
 	})
 	const lowpassCutoff = new Slider(ctx, drawZoneForElement(sliders[4]), {
-		label: 'Lo Pass',
+		label: 'Hi Pass',
 		subtitle: 'time / cycle',
 		min: Math.log2(1 / 24),
 		max: Math.log2(365 * 2),
