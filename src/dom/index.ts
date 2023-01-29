@@ -80,9 +80,8 @@ const go = () => {
 
 	const { ctx, dim } = setupCanvas(canvas)
 
-	const mainDrawZone = optionsVisible
-		? drawZoneForElement(main)
-		: drawZoneForElement(document.body)
+	const mainDrawZone = drawZoneForElement(main)
+
 	const aspectRatio = Math.max(
 		mainDrawZone.height / mainDrawZone.width,
 		mainDrawZone.width / mainDrawZone.height,
@@ -152,23 +151,12 @@ const go = () => {
 	})
 	const fullScreenToggle = new Toggle(
 		ctx,
-		optionsVisible
-			? {
-					height: mainDrawZone.height / 8,
-					width: mainDrawZone.width / 8,
-					left: mainDrawZone.left + mainDrawZone.width * 0.81,
-					top: mainDrawZone.top + mainDrawZone.height * (7 / 8),
-			  }
-			: {
-					height: Math.min((dim.minDim / 10) * aspectRatio, dim.height / 2),
-					width: Math.min((dim.minDim / 10) * aspectRatio, dim.width / 2),
-					left:
-						dim.width -
-						Math.min((dim.minDim / 10) * aspectRatio, dim.width / 2),
-					top:
-						dim.height -
-						Math.min((dim.minDim / 10) * aspectRatio, dim.height / 2),
-			  },
+		{
+			height: mainDrawZone.height / 8,
+			width: mainDrawZone.width / 8,
+			left: mainDrawZone.left + mainDrawZone.width * 0.81,
+			top: mainDrawZone.top + mainDrawZone.height * (7 / 8),
+		},
 		{
 			label: 'Options',
 			onLabel: 'Show',
@@ -285,20 +273,12 @@ const go = () => {
 
 	const clock = new Clock(
 		ctx,
-		optionsVisible
-			? {
-					height: mainDrawZone.height / 4,
-					width: mainDrawZone.width / 4,
-					left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
-					top: mainDrawZone.top,
-			  }
-			: {
-					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
-					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
-					left:
-						dim.width - Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
-					top: 0,
-			  },
+		{
+			height: mainDrawZone.height / 4,
+			width: mainDrawZone.width / 4,
+			left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
+			top: mainDrawZone.top,
+		},
 		{
 			time: defaultOptions.center,
 			offset: StationOffset,
@@ -311,19 +291,12 @@ const go = () => {
 	)
 	const tideHeightGauge = new Gauge(
 		ctx,
-		optionsVisible
-			? {
-					height: mainDrawZone.height / 4,
-					width: mainDrawZone.width / 4,
-					left: mainDrawZone.left,
-					top: mainDrawZone.top,
-			  }
-			: {
-					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
-					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
-					left: 0,
-					top: 0,
-			  },
+		{
+			height: mainDrawZone.height / 4,
+			width: mainDrawZone.width / 4,
+			left: mainDrawZone.left,
+			top: mainDrawZone.top,
+		},
 		{
 			title: 'Tide',
 			subtitle: 'Feet',
@@ -339,21 +312,12 @@ const go = () => {
 
 	const tideFlowGauge = new Gauge(
 		ctx,
-		optionsVisible
-			? {
-					height: mainDrawZone.height / 4,
-					width: mainDrawZone.width / 4,
-					left: mainDrawZone.left,
-					top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
-			  }
-			: {
-					height: Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
-					width: Math.min((dim.minDim / 4) * aspectRatio, dim.width / 2),
-					left: 0,
-					top:
-						dim.height -
-						Math.min((dim.minDim / 4) * aspectRatio, dim.height / 2),
-			  },
+		{
+			height: mainDrawZone.height / 4,
+			width: mainDrawZone.width / 4,
+			left: mainDrawZone.left,
+			top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
+		},
 		{
 			title: 'Flow',
 			subtitle: 'feet / hour',
@@ -456,36 +420,27 @@ const go = () => {
 		}),
 	)
 
-	const allComponents = optionsVisible
-		? [
-				windowRangeSlider,
-				scrollSpeedSlider,
-				highpassCutoff,
-				lowpassCutoff,
-				moonToggle,
-				sunToggle,
-				constituentToggle,
-				tideOScope,
-				tideHeightGauge,
-				clock,
-				numbers12Toggle,
-				numbers60Toggle,
-				secondToggle,
-				tideFlowGauge,
-				tideRange,
-				datumRotary,
-				timezoneRotary,
-				crosshairRotary,
-				fullScreenToggle,
-		  ]
-		: [
-				tideOScope,
-				tideFlowGauge,
-				tideHeightGauge,
-				fullScreenToggle,
-				tideHeightGauge,
-				clock,
-		  ]
+	const allComponents = [
+		windowRangeSlider,
+		scrollSpeedSlider,
+		highpassCutoff,
+		lowpassCutoff,
+		moonToggle,
+		sunToggle,
+		constituentToggle,
+		tideOScope,
+		tideHeightGauge,
+		clock,
+		numbers12Toggle,
+		numbers60Toggle,
+		secondToggle,
+		tideFlowGauge,
+		tideRange,
+		datumRotary,
+		timezoneRotary,
+		crosshairRotary,
+		fullScreenToggle,
+	]
 
 	disposables.add(...allComponents)
 	allComponents.map((c) => c.render())

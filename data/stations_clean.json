@@ -17188,7 +17188,7 @@
   },
   "8455083": {
     "id": "8455083",
-    "name": "Point Judith, Harbor Of Refuge",
+    "name": "Point Judith, Harbor of Refuge",
     "lat": 41.3633,
     "lng": -71.49,
     "state": "RI",
@@ -26653,7 +26653,7 @@
   },
   "8517276": {
     "id": "8517276",
-    "name": "College Pt, Ft. Of 110th St, Li",
+    "name": "College Pt, Ft. of 110th St, Li",
     "lat": 40.7833,
     "lng": -73.8567,
     "state": "NY",
@@ -29622,7 +29622,7 @@
   },
   "8519050": {
     "id": "8519050",
-    "name": "Uscg Station Ny",
+    "name": "USCG Station Ny",
     "lat": 40.612,
     "lng": -74.059861,
     "state": "NY",
@@ -42738,7 +42738,7 @@
   },
   "8630249": {
     "id": "8630249",
-    "name": "Chincoteague, Uscg Station",
+    "name": "Chincoteague, USCG Station",
     "lat": 37.9317,
     "lng": -75.3833,
     "state": "VA",
@@ -45713,7 +45713,7 @@
   },
   "8637689": {
     "id": "8637689",
-    "name": "Yorktown Uscg Training Center",
+    "name": "Yorktown USCG Training Center",
     "lat": 37.2265,
     "lng": -76.478806,
     "state": "VA",
@@ -49530,7 +49530,7 @@
   },
   "8652678": {
     "id": "8652678",
-    "name": "Uscg Lifeboat Station, Oregon Inlet",
+    "name": "USCG Lifeboat Station, Oregon Inlet",
     "lat": 35.7683,
     "lng": -75.5267,
     "state": "NC",
@@ -49992,7 +49992,7 @@
   },
   "8654467": {
     "id": "8654467",
-    "name": "Uscg Station Hatteras",
+    "name": "USCG Station Hatteras",
     "lat": 35.208611,
     "lng": -75.704194,
     "state": "NC",
@@ -60265,7 +60265,7 @@
   },
   "8674975": {
     "id": "8674975",
-    "name": "Daymark #156, Head Of Mud River",
+    "name": "Daymark #156, Head of Mud River",
     "lat": 31.4867,
     "lng": -81.32,
     "state": "GA",
@@ -66083,7 +66083,7 @@
   },
   "8720554": {
     "id": "8720554",
-    "name": "Vilano Beach Icww",
+    "name": "Vilano Beach ICWW",
     "lat": 29.9167,
     "lng": -81.3,
     "state": "FL",
@@ -69528,7 +69528,7 @@
   },
   "8722588": {
     "id": "8722588",
-    "name": "Port Of West Palm Beach",
+    "name": "Port of West Palm Beach",
     "lat": 26.77,
     "lng": -80.0517,
     "state": "FL",
@@ -74433,7 +74433,7 @@
   },
   "8725110": {
     "id": "8725110",
-    "name": "Naples, Gulf Of Mexico",
+    "name": "Naples, Gulf of Mexico",
     "lat": 26.131667,
     "lng": -81.807472,
     "state": "FL",
@@ -77137,7 +77137,7 @@
   },
   "8725858": {
     "id": "8725858",
-    "name": "Venice, Gulf Of Mexico",
+    "name": "Venice, Gulf of Mexico",
     "lat": 27.0717,
     "lng": -82.4533,
     "state": "FL",
@@ -84802,7 +84802,7 @@
   },
   "8728853": {
     "id": "8728853",
-    "name": "White City, Icww",
+    "name": "White City, ICWW",
     "lat": 29.880694,
     "lng": -85.2214,
     "state": "FL",
@@ -85933,7 +85933,7 @@
   },
   "8729142": {
     "id": "8729142",
-    "name": "Sulphur Point, Port Of Panama City",
+    "name": "Sulphur Point, Port of Panama City",
     "lat": 30.183,
     "lng": -85.732806,
     "state": "FL",
@@ -88979,7 +88979,7 @@
   },
   "8731439": {
     "id": "8731439",
-    "name": "Gulf Shores, Icww",
+    "name": "Gulf Shores, ICWW",
     "lat": 30.2799,
     "lng": -87.68428,
     "state": "AL",
@@ -90671,7 +90671,7 @@
   },
   "8739803": {
     "id": "8739803",
-    "name": "Bayou La Batre Bridge",
+    "name": "Bayou LA Batre Bridge",
     "lat": 30.40625,
     "lng": -88.247806,
     "state": "AL",
@@ -91212,7 +91212,7 @@
   },
   "8741041": {
     "id": "8741041",
-    "name": "Dock E, Port Of Pascagoula",
+    "name": "Dock E, Port of Pascagoula",
     "lat": 30.347778,
     "lng": -88.505833,
     "state": "MS",
@@ -92477,7 +92477,7 @@
   },
   "8743301": {
     "id": "8743301",
-    "name": "Bayou Talla, Back Bay Of Biloxi",
+    "name": "Bayou Talla, Back Bay of Biloxi",
     "lat": 30.43,
     "lng": -88.8,
     "state": "MS",
@@ -92748,7 +92748,7 @@
   },
   "8743639": {
     "id": "8743639",
-    "name": "Bayou Poito, Back Bay Of Biloxi",
+    "name": "Bayou Poito, Back Bay of Biloxi",
     "lat": 30.4383,
     "lng": -88.845,
     "state": "MS",
@@ -93298,7 +93298,7 @@
   },
   "8744284": {
     "id": "8744284",
-    "name": "Keesler Afb, Back Bay Of Biloxi",
+    "name": "Keesler Afb, Back Bay of Biloxi",
     "lat": 30.4183,
     "lng": -88.925,
     "state": "MS",
@@ -93487,7 +93487,7 @@
   },
   "8744671": {
     "id": "8744671",
-    "name": "Popps Ferry, Back Bay Of Biloxi",
+    "name": "Popps Ferry, Back Bay of Biloxi",
     "lat": 30.4133,
     "lng": -88.975,
     "state": "MS",
@@ -95745,7 +95745,7 @@
   },
   "8761385": {
     "id": "8761385",
-    "name": "Vicinity Of Uno Chef Menteur",
+    "name": "Vicinity of Uno Chef Menteur",
     "lat": 30.06875,
     "lng": -89.802083,
     "state": "LA",
@@ -100475,7 +100475,7 @@
   },
   "8768772": {
     "id": "8768772",
-    "name": "Gum Cove, Icww",
+    "name": "Gum Cove, ICWW",
     "lat": 30.0587,
     "lng": -93.522598,
     "state": "",
@@ -107354,7 +107354,7 @@
   },
   "8775132": {
     "id": "8775132",
-    "name": "La Quinta Channel North",
+    "name": "LA Quinta Channel North",
     "lat": 27.879167,
     "lng": -97.286111,
     "state": "TX",
@@ -110569,7 +110569,7 @@
   },
   "9410230": {
     "id": "9410230",
-    "name": "La Jolla",
+    "name": "LA Jolla",
     "lat": 32.866889,
     "lng": -117.257139,
     "state": "CA",
@@ -121939,7 +121939,7 @@
   },
   "9434098": {
     "id": "9434098",
-    "name": "Florence Uscg Pier, Siuslaw River",
+    "name": "Florence USCG Pier, Siuslaw River",
     "lat": 44.0021,
     "lng": -124.123,
     "state": "OR",
@@ -127566,7 +127566,7 @@
   },
   "9442396": {
     "id": "9442396",
-    "name": "La Push, Quillayute River",
+    "name": "LA Push, Quillayute River",
     "lat": 47.91284,
     "lng": -124.63574,
     "state": "WA",
@@ -129971,7 +129971,7 @@
   },
   "9446807": {
     "id": "9446807",
-    "name": "Budd Inlet, South Of Gull Harbor",
+    "name": "Budd Inlet, South of Gull Harbor",
     "lat": 47.0983,
     "lng": -122.895,
     "state": "WA",
@@ -134660,7 +134660,7 @@
   },
   "9450314": {
     "id": "9450314",
-    "name": "Metlakatla, Port Chester, Ak",
+    "name": "Metlakatla, Port Chester, AK",
     "lat": 55.1283,
     "lng": -131.567,
     "state": "AK",
@@ -141953,7 +141953,7 @@
   },
   "9452611": {
     "id": "9452611",
-    "name": "Pelican Harbor, Lisianski Inlet, Ak",
+    "name": "Pelican Harbor, Lisianski Inlet, AK",
     "lat": 57.958,
     "lng": -136.2268,
     "state": "AK",
@@ -144068,7 +144068,7 @@
   },
   "9454652": {
     "id": "9454652",
-    "name": "South Arm, Knight Island, Bay Of Isles",
+    "name": "South Arm, Knight Island, Bay of Isles",
     "lat": 60.3667,
     "lng": -147.7,
     "state": "AK",
@@ -150253,7 +150253,7 @@
   },
   "9457391": {
     "id": "9457391",
-    "name": "Port Lions, Ak",
+    "name": "Port Lions, AK",
     "lat": 57.873472,
     "lng": -152.8671,
     "state": "AK",
@@ -151451,7 +151451,7 @@
   },
   "9457724": {
     "id": "9457724",
-    "name": "Larsen Bay, Kodiak Island, Ak",
+    "name": "Larsen Bay, Kodiak Island, AK",
     "lat": 57.53,
     "lng": -153.99,
     "state": "AK",
@@ -156386,7 +156386,7 @@
   },
   "9462808": {
     "id": "9462808",
-    "name": "Scotch Cap, Unimak Island, Ak",
+    "name": "Scotch Cap, Unimak Island, AK",
     "lat": 54.393639,
     "lng": -164.74572,
     "state": "AK",
@@ -156519,7 +156519,7 @@
   },
   "9462941": {
     "id": "9462941",
-    "name": "Cape Chunak, Ak",
+    "name": "Cape Chunak, AK",
     "lat": 55.06428,
     "lng": -163.53417,
     "state": "AK",
@@ -161673,7 +161673,7 @@
   },
   "9466477": {
     "id": "9466477",
-    "name": "Bethel, Kuskokwim River, Ak",
+    "name": "Bethel, Kuskokwim River, AK",
     "lat": 60.8,
     "lng": -161.75,
     "state": "AK",
@@ -162629,7 +162629,7 @@
   },
   "9467861": {
     "id": "9467861",
-    "name": "Kotlik, Ak",
+    "name": "Kotlik, AK",
     "lat": 63.037899,
     "lng": -163.5265,
     "state": "",
@@ -163248,7 +163248,7 @@
   },
   "9468261": {
     "id": "9468261",
-    "name": "Kavalghak Bay, Ak",
+    "name": "Kavalghak Bay, AK",
     "lat": 63.682861,
     "lng": -171.750194,
     "state": "AK",
@@ -166266,7 +166266,7 @@
   },
   "9640507": {
     "id": "9640507",
-    "name": "La Union",
+    "name": "LA Union",
     "lat": 13.3333,
     "lng": -87.8217,
     "state": "El Salvador",
@@ -169976,7 +169976,7 @@
   },
   "9752426": {
     "id": "9752426",
-    "name": "Playa La Plata",
+    "name": "Playa LA Plata",
     "lat": 18.1166,
     "lng": -65.3729,
     "state": "",
@@ -171618,7 +171618,7 @@
   },
   "9755371": {
     "id": "9755371",
-    "name": "San Juan, La Puntilla, San Juan Bay",
+    "name": "San Juan, LA Puntilla, San Juan Bay",
     "lat": 18.458944,
     "lng": -66.116417,
     "state": "PR",

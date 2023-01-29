@@ -147,16 +147,22 @@ const ConstituentApiNameToSchuremanName = {
   "2SM2": "2SM",
 };
 
+const keep = ["USCG", "AK", "of", "LA", "ICWW"];
+
 const NormCase = (str) =>
   str
     .toLocaleLowerCase()
     .replace(/\s+/g, " ")
     .split(" ")
-    .map((word) =>
-      /\d/.test(word) && word === word.toLocaleUpperCase()
+    .map((word) => {
+      const keeper = keep.find(k => k.toLocaleUpperCase() === word.toLocaleUpperCase())
+      if (keeper) {
+        return keeper
+      }
+      return /\d/.test(word) && word === word.toLocaleUpperCase()
         ? word.toLocaleUpperCase()
-        : word[0].toLocaleUpperCase() + word.slice(1)
-    )
+        : word[0].toLocaleUpperCase() + word.slice(1);
+    })
     .join(" ");
 
 const stations = JSON.parse(fs.readFileSync("./stations.json", "utf-8"));
@@ -179,7 +185,7 @@ for (const station of stations) {
       const name = ConstituentApiNameToSchuremanName[x.name];
       if (!name) {
         station.missingData = true;
-        console.log("Error: missing translation for Constituent", x.name)
+        console.log("Error: missing translation for Constituent", x.name);
       }
       return {
         name: name ?? x.name,
@@ -232,17 +238,26 @@ console.log(
 ```
 
 ```js
-const stations = JSON.parse(fs.readFileSync('./stations.json','utf-8'))
+const stations = JSON.parse(fs.readFileSync("./stations_clean.json", "utf-8"));
 
-const record = {}
-for (const station of stations) {
-  record[station.id] = true
-  // for (const harcon of station.harcon) {
-  //   if (harcon.description) {
-  //     record[harcon.name] = harcon.description
-  //   }
-  // }
+const record = {};
+for (const [id, station] of Object.entries(stations)) {
+  const words = station.name.split(" ");
+  for (const word of words) {
+    if (word === 'Of') console.log(station.name)
+    record[word] ??= 0
+    record[word]++
+  }
 }
 
-console.log(Object.entries( record).length) 
+const words = Object.entries(record)
+words.sort(([,a],[,b]) => b -a)
+const inverted = {}
+for (const [word, count] of words) {
+  inverted[count] ??= []
+  inverted[count].push(word)
+}
+delete inverted[1]
+console.log(inverted)
+
 ```
