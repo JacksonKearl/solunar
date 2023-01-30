@@ -16,6 +16,6 @@ In short: Thanks NOAA!
 
 ### UI Styling
 
-The UI is based (with varying degrees of roughness) on the F-15 Eagle's cockpit. Reference photos are kept in the `mood` directory, and were consulted during development.
+The UI is based (with varying degrees of roughness) on the F-15 Eagle's cockpit. Reference photos are kept in the `mood` directory, and were consulted during development. Thanks McDonnell Douglas!
 
-Thanks McDonnell Douglas!
+Additional reference photos come from Will Wright’s "Antique Soviet Space Junk" collection, as discovered on [Don Hopkin's blog](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d) Thanks Will & Don!
