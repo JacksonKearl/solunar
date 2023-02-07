@@ -1,6 +1,16 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"cSpell.words": ["Crosshairs", "harcon", "MHHW", "MLLW", "perc", "sploot"],
+	"cSpell.words": [
+		"ARCGIS",
+		"Crosshairs",
+		"harcon",
+		"maplibre",
+		"maplibregl",
+		"MHHW",
+		"MLLW",
+		"perc",
+		"sploot"
+	],
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python"
 	}

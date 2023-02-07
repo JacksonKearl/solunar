@@ -1,14 +1,13 @@
 import { DatumName, Station } from '$/types'
-import { setupCanvas, drawZoneForElement } from './CanvasElement'
-import { Slider } from './Slider'
-import { Toggle } from './Toggle'
-import { TideOScope, TideOScopeOptions } from './TideOScope'
+import { setupCanvas, drawZoneForElement } from './components/CanvasElement'
+import { Slider } from './components/Slider'
+import { Toggle } from './components/Toggle'
+import { TideOScope, TideOScopeOptions } from './components/TideOScope'
 import { DisposableStore, MappedView } from '$/utils'
-import { Gauge } from './Gauge'
-import { Clock } from './Clock'
-import { Rotary } from './Rotary'
-
-declare const stations: Record<string, Station>
+import { Gauge } from './components/Gauge'
+import { Clock } from './components/Clock'
+import { Rotary } from './components/Rotary'
+import { SelectStationId } from './map'
 
 const disposables = new DisposableStore()
 
@@ -71,21 +70,16 @@ const go = () => {
 	}
 	disposables.clear()
 
-	const newport = stations['9410580']
 	const ref = document.location.hash.slice(1)
-	const active = stations[ref] ?? newport
+	const active = stations[ref]
 	if (!active) {
-		throw Error('not found')
+		document.location.hash = ''
+		fromTheTop()
 	}
 
 	const { ctx, dim } = setupCanvas(canvas)
 
 	const mainDrawZone = drawZoneForElement(main)
-
-	const aspectRatio = Math.max(
-		mainDrawZone.height / mainDrawZone.width,
-		mainDrawZone.width / mainDrawZone.height,
-	)
 
 	// Background
 	ctx.fillStyle = '#333'
@@ -446,9 +440,25 @@ const go = () => {
 	allComponents.map((c) => c.render())
 }
 
-window.addEventListener('resize', go)
-window.addEventListener('hashchange', go)
+const fromTheTop = async () => {
+	const ref = document.location.hash.slice(1)
+
+	const map = document.getElementById('map-container')!
+	if (!ref) {
+		map.style.display = 'block'
+		const id = await SelectStationId()
+		document.location.hash = id
+		go()
+	} else {
+		map.style.display = 'none'
+		window.addEventListener('resize', go)
+		go()
+	}
+}
+
+window.addEventListener('hashchange', fromTheTop)
 window.addEventListener('unload', () => {
 	disposables.dispose()
 })
-go()
+
+fromTheTop()

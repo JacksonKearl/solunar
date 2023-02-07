@@ -1,6 +1,6 @@
 import { bound2, DisposableStore, Observable } from '$/utils'
 import { Disposable } from '$/types'
-import { addElementListener, findDPR } from './utils'
+import { addElementListener, findDPR } from '../utils'
 import { atan2, cos, degToRad, sin } from '$/degreeMath'
 
 /** Always in page-pixel-space (`page-space * dpr`) */

@@ -72,14 +72,21 @@ export const MappedView =
 	}
 
 export class LocalStorageState<V> implements Disposable {
-	public value: V
+	private _value: V
+	public get value(): V {
+		return this._value
+	}
+	public set value(value: V) {
+		this._value = value
+		localStorage.setItem(this.id, this.serializer(this._value))
+	}
 	constructor(
 		private id: string,
 		defaultValue: V,
 		private serializer: (v: V) => string = JSON.stringify,
 		deserializer: (s: string) => V = JSON.parse,
 	) {
-		this.value = defaultValue
+		this._value = defaultValue
 		const prior = localStorage.getItem(id)
 		if (prior) {
 			try {
@@ -124,4 +131,16 @@ export class DisposableStore implements Disposable {
 		this.clear()
 		this.isDisposed = true
 	}
+}
+
+export const time = <T>(f: () => T): T => {
+	const start = Date.now()
+	const r = f()
+	if (r instanceof Promise) {
+		r.then(() => console.log(f, Date.now() - start))
+	} else {
+		console.log(f, Date.now() - start)
+	}
+
+	return r
 }

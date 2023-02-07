@@ -168,6 +168,17 @@ export const StationLevelAtTime = (
 	for (const harmonic of station.harcon) {
 		const cData = Constituents[harmonic.name]
 
+		if (!cData) {
+			// console.error(
+			// 	'Dam! Missing reference data for',
+			// 	harmonic.name,
+			// 	'in station',
+			// 	station.name + '.',
+			// 	'Continuing merrily along with head buried in sand!',
+			// )
+			continue
+		}
+
 		const Vu = dot(cData.V, vT.orbitVector) + dot(cData.u, vT.lunarVector)
 		const VuNext =
 			dot(cData.V, vTNext.orbitVector) + dot(cData.u, vTNext.lunarVector)

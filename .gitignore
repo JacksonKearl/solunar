@@ -4,3 +4,5 @@ public/index.js
 public/index.js.map
 
 *.cpuprofile
+
+.env

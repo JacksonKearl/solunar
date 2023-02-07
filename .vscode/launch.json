@@ -3,7 +3,7 @@
 		{
 			"name": "Launch Chrome",
 			"request": "launch",
-			"type": "chrome",
+			"type": "msedge",
 			"url": "http://localhost:8080/#9410580",
 			"webRoot": "${workspaceFolder}/public"
 		}
