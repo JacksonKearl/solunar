@@ -311,7 +311,6 @@ const MakeOverlay = (): Disposable & {
 					style: 'display: flex; justify-content: space-between',
 				},
 				$('span', '1x'),
-				$('span', '100 x'),
 				$('span', '100,000 x'),
 			),
 		),
