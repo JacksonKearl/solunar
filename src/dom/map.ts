@@ -45,7 +45,12 @@ export const SelectStationId = () =>
 		container.id = 'map'
 		const overlay = MakeOverlay()
 		mapContainer.appendChild(overlay.element)
-		mapContainer.appendChild($('img#jeff', { src: './jeff.jpg' }))
+		mapContainer.appendChild(
+			a(
+				$('img#jeff', { src: './jeff.jpg' }),
+				'https://www.instagram.com/jeffersonstatepublicworks/',
+			),
+		)
 
 		const mapState = new LocalStorageState('mapState', {
 			zoom: 5,

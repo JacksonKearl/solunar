@@ -27,3 +27,7 @@ Additional reference photos come from Will Wright’s "Antique Soviet Space Junk
 ## Contributing
 
 Do you have Harmonic Constituents? I'd love to hear about them! Please feel free to drop a line on [this issue](https://github.com/JacksonKearl/solunar/issues/1).
+
+For other development, [`bun`](https://bun.sh) is recommended, but `npm` will work fine. Just run `bun i`, then `bun run bundle-dev` and `bun run serve-dev` for development, or `bun run bundle` for building the static assets.
+
+In VSCode, just `F5` to build watch and run after dependencies have been installed.

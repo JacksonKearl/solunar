@@ -141,5 +141,5 @@ export const clearElement = (el: HTMLElement) => {
 	while (el.firstChild) el.removeChild(el.firstChild)
 }
 
-export const a = (text: string, href: string) =>
-	$('a', { href, target: '_blank' }, text)
+export const a = (content: string | Node, href: string) =>
+	$('a', { href, target: '_blank' }, content)
