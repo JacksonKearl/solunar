@@ -1,6 +1,9 @@
 # solunar
 
+Map View:
 ![overview screenshot of operations](map.png)
+
+Detail View:
 ![detail screenshot of operations](screenshot.png)
 
 ## Works Cited
@@ -24,4 +27,3 @@ Additional reference photos come from Will Wright’s "Antique Soviet Space Junk
 ## Contributing
 
 Do you have Harmonic Constituents? I'd love to hear about them! Please feel free to drop a line on [this issue](https://github.com/JacksonKearl/solunar/issues/1).
-
