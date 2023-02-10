@@ -45,6 +45,7 @@ export const SelectStationId = () =>
 		container.id = 'map'
 		const overlay = MakeOverlay()
 		mapContainer.appendChild(overlay.element)
+		mapContainer.appendChild($('img#jeff', { src: './jeff.jpg' }))
 
 		const mapState = new LocalStorageState('mapState', {
 			zoom: 5,
@@ -335,7 +336,7 @@ const MakeOverlay = (): Disposable & {
 			),
 		),
 		about: $(
-			'.map-overlay-inner.offset',
+			'.map-overlay-inner.about',
 			$('h2', 'SoLunar'),
 			$('p', 'Live tide data from across USA. Select a station for more info!'),
 			$(
@@ -349,7 +350,6 @@ const MakeOverlay = (): Disposable & {
 				a('source', 'https://github.com/JacksonKearl/solunar'),
 				'.',
 			),
-			$('p', 'Product of the State of Jefferson, Public Works.'),
 		),
 		none: $(
 			'.none',
