@@ -5,14 +5,12 @@
 		"target": "esnext",
 		"moduleResolution": "Node",
 		"strict": true,
-		"downlevelIteration": true,
 		"skipLibCheck": true,
 		"jsx": "preserve",
 		"outDir": "public",
 		"paths": {
 			"$/*": ["./src/*"]
 		},
-		"resolveJsonModule": true,
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"allowJs": true,

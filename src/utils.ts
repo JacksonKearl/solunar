@@ -110,7 +110,7 @@ export class LocalStorageState<V> implements Disposable {
 
 export class DisposableStore implements Disposable {
 	private store = new Set<Disposable>()
-	private isDisposed = false
+	public isDisposed = false
 	clear(): void {
 		this.store.forEach((d) => d.dispose())
 		this.store.clear()

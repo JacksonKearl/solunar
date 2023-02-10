@@ -1,6 +1,15 @@
 import { StationLevelAtTime } from '$/tideForTime'
-import { Station } from '$/types'
-import { bound2, LocalStorageState, time } from '$/utils'
+import { Disposable, Station } from '$/types'
+import { $, addElementListener, clearElement } from './utils'
+import {
+	DisposableStore,
+	LocalStorageState,
+	MappedView,
+	Observable,
+	scale,
+	time,
+	View,
+} from '$/utils'
 import type { GeoJSONSource, LngLatLike, MapMouseEvent } from 'maplibre-gl'
 import type { Point, Feature, Geometry, GeoJsonProperties } from 'geojson'
 
@@ -34,13 +43,13 @@ export const SelectStationId = () =>
 
 		const container = mapContainer.appendChild(document.createElement('div'))
 		container.id = 'map'
-		MakeOverlay(mapContainer)
+		const overlay = MakeOverlay()
+		mapContainer.appendChild(overlay.element)
 
 		const mapState = new LocalStorageState('mapState', {
 			zoom: 5,
 			center: [-120, 40],
 		})
-		console.log(mapState)
 
 		const basemapEnum = 'ArcGIS:Oceans'
 		const map = new maplibregl.Map({
@@ -51,6 +60,7 @@ export const SelectStationId = () =>
 		})
 
 		map.on('move', () => {
+			console.log(map.getZoom())
 			mapState.value = {
 				zoom: map.getZoom(),
 				center: map.getCenter().toArray(),
@@ -67,7 +77,7 @@ export const SelectStationId = () =>
 		map.on('load', () => {
 			map.removeLayer('Ocean point/Depth')
 
-			const data = time(() => GetStationsAsGeoJSON(Date.now()))
+			const data = GetStationsAsGeoJSON(Date.now())
 
 			map.addSource('stations', {
 				type: 'geojson',
@@ -136,7 +146,17 @@ export const SelectStationId = () =>
 				filter: ['!', ['has', 'point_count']],
 				paint: {
 					'circle-color': colorOrFallback('norm', null),
-					'circle-radius': 6,
+					'circle-radius': [
+						'interpolate',
+						['linear'],
+						['zoom'],
+						5,
+						8,
+						7,
+						6,
+						12,
+						40,
+					],
 				},
 			})
 
@@ -234,62 +254,173 @@ export const SelectStationId = () =>
 				if (!ins) map.getCanvas().style.cursor = ''
 			})
 
-			let cursor = 0
-
-			const resetInterval = () => {
-				clearInterval(interval)
-
-				const rateInput = document.getElementById(
-					'map-time-select',
-				) as HTMLInputElement
-
-				const rate = parseFloat(rateInput.value)
-				const timeout = bound2(100000 / rate, 50, 5000)
-
-				interval = setInterval(() => {
-					if (document.location.hash) clearInterval(interval)
-					cursor += (timeout / 1000) * rate
-					console.log('beeep', timeout, cursor)
-					const data = GetStationsAsGeoJSON(Date.now() + cursor * 1000)
-					stationSource.setData(data as any)
-				}, timeout)
-			}
-
-			resetInterval()
-
-			document
-				.getElementById('map-time-select')!
-				.addEventListener('input', () => resetInterval())
+			overlay.center((offset) => {
+				if (document.location.hash) overlay.dispose()
+				const data = time(() => GetStationsAsGeoJSON(offset + Date.now()))
+				stationSource.setData(data as any)
+			})
 		})
 	})
 
-const MakeOverlay = (container: HTMLElement) => {
-	const el = container.appendChild(document.createElement('div'))
-	el.classList.add('map-overlay')
-	el.innerHTML = `
-<div class="map-overlay-inner">
-<div id="legend" class="legend">
-<div class="bar"></div>
-<div style="display: flex; justify-content: space-between">
-<span>Lo</span>
-<span>MLLW</span>
-<span>MSL</span>
-<span>MHHW</span>
-<span>Hi</span>
-</div>
-</div>
-</div>
+const MakeOverlay = (): Disposable & {
+	element: HTMLElement
+	center: View<number>
+} => {
+	const disposables = new DisposableStore()
 
-<div class="map-overlay-inner">
-<div id="legend" class="legend">
-<input id="map-time-select" type="range" min="1" max="10000" value="1" step="60">
-<div style="display: flex; justify-content: space-between">
-<span>1 Hz</span>
-<span>100 Hz</span>
-<span>10 kHz</span>
-</div>
-</div>
-</div>
-`
-	return el
+	const speed = new Observable<number>()
+	const center = new Observable<number>()
+	center.set(0)
+	speed.set(1)
+
+	let lastUpdate: number
+	const autoGo = new Auto(
+		() => {
+			if (center.value !== undefined && speed.value !== undefined) {
+				const now = Date.now()
+				lastUpdate ??= now
+				const delta = now - lastUpdate
+				center.set(center.value + delta * speed.value)
+				lastUpdate = now
+			}
+		},
+		MappedView(speed.view, (v) => 5 / v),
+	)
+
+	disposables.add(autoGo)
+
+	const detailSelect = new Observable<'speed' | 'offset' | 'none'>()
+
+	const optionsContainer = $('.options')
+	const optionsObjs = {
+		speed: $(
+			'.map-overlay-inner.speed',
+			$('input', {
+				type: 'range',
+				min: '1',
+				max: '100000',
+				value: '1',
+				step: '100',
+				oninput() {
+					speed.set(parseFloat(this.value))
+				},
+			}),
+			$(
+				'.key',
+				{
+					style: 'display: flex; justify-content: space-between',
+				},
+				$('span', '1x'),
+				$('span', '100 x'),
+				$('span', '100,000 x'),
+			),
+		),
+		offset: $(
+			'.map-overlay-inner.offset',
+			$('input', {
+				type: 'range',
+				min: '-86400',
+				max: '86400',
+				value: '0',
+				step: '60',
+				oninput() {
+					center.set(parseFloat(this.value) * 1000)
+				},
+			}),
+			$(
+				'.key',
+				{ style: 'display: flex; justify-content: space-between' },
+				$('span', '-24Hr'),
+				$('span', '-12Hr'),
+				$('span', 'Now'),
+				$('span', '+12Hr'),
+				$('span', '+24Hr'),
+			),
+		),
+		none: $(
+			'.none',
+			$('button', { onclick: () => detailSelect.set('speed') }, 'Fast Forward'),
+			$('button', { onclick: () => detailSelect.set('offset') }, 'Select Time'),
+		),
+	}
+
+	disposables.add(
+		detailSelect.view((option) => {
+			clearElement(optionsContainer)
+			optionsContainer.appendChild(optionsObjs[option])
+			if (option !== 'none') {
+				optionsContainer.appendChild(
+					$(
+						'button',
+						{
+							onclick: () => {
+								center.set(0)
+								speed.set(1)
+								return detailSelect.set('none')
+							},
+						},
+						'Reset',
+					),
+				)
+			}
+		}),
+	)
+	detailSelect.set('none')
+
+	return {
+		center: center.view,
+		dispose: () => disposables.dispose(),
+		element: $(
+			'.map-overlay',
+			$(
+				'.map-overlay-inner.legend',
+				$('.bar'),
+				$(
+					'.key',
+					{ style: 'display: flex; justify-content: space-between' },
+					$('span', 'Lo'),
+					$('span', 'MLLW'),
+					$('span', 'MSL'),
+					$('span', 'MHHW'),
+					$('span', 'Hi'),
+				),
+			),
+			optionsContainer,
+		),
+	}
+}
+
+class Auto implements Disposable {
+	private disposables = new DisposableStore()
+
+	constructor(private task: () => void, timeout: View<number>) {
+		timeout((n) => this.scheduleAt(n))
+	}
+
+	scheduleAt(n: number) {
+		if (this.disposables.isDisposed) return
+
+		console.log('queue', this.task, n)
+		this.disposables.clear()
+		if (n <= 1 / 60) {
+			const handle = requestAnimationFrame(() => {
+				this.task()
+				this.scheduleAt(n)
+			})
+			this.disposables.add({ dispose: () => cancelAnimationFrame(handle) })
+		} else {
+			const handle = setTimeout(() => {
+				// don't refresh if we ain't lookin!
+				requestAnimationFrame(() => {
+					this.task()
+					this.scheduleAt(n)
+				})
+			}, n * 1000)
+			this.disposables.add({ dispose: () => clearTimeout(handle) })
+		}
+	}
+
+	dispose(): void {
+		this.disposables.dispose()
+	}
 }
