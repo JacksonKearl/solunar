@@ -1,6 +1,6 @@
 import { StationLevelAtTime } from '$/tideForTime'
 import { Disposable, Station } from '$/types'
-import { $, addElementListener, clearElement } from './utils'
+import { $, clearElement } from './utils'
 import {
 	DisposableStore,
 	LocalStorageState,
@@ -330,9 +330,7 @@ const MakeOverlay = (): Disposable & {
 				'.key',
 				{ style: 'display: flex; justify-content: space-between' },
 				$('span', '-24Hr'),
-				$('span', '-12Hr'),
 				$('span', 'Now'),
-				$('span', '+12Hr'),
 				$('span', '+24Hr'),
 			),
 		),

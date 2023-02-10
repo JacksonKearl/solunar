@@ -8,6 +8,7 @@ import { Gauge } from './components/Gauge'
 import { Clock } from './components/Clock'
 import { Rotary } from './components/Rotary'
 import { SelectStationId } from './map'
+import { $, clearElement } from './utils'
 
 const disposables = new DisposableStore()
 
@@ -71,11 +72,44 @@ const go = () => {
 	disposables.clear()
 
 	const ref = document.location.hash.slice(1)
-	const active = stations[ref]
+	const active = stations[ref] as Station
 	if (!active) {
 		document.location.hash = ''
 		fromTheTop()
 	}
+
+	const title = $(
+		'#title',
+		$(
+			'button',
+			{
+				type: 'button',
+				onclick: () => {
+					document.location.hash = ''
+					fromTheTop()
+				},
+			},
+			'Back',
+		),
+		$(
+			'.name',
+			{ style: 'text-align: center;' },
+			$('h2', active.name),
+			$('h3', active.state),
+		),
+		$(
+			'button',
+			{
+				type: 'button',
+				onclick: () => {
+					tideOScope.onReset()
+				},
+			},
+			'Reset',
+		),
+	)
+	clearElement(main)
+	main.appendChild(title)
 
 	const { ctx, dim } = setupCanvas(canvas)
 
@@ -146,8 +180,8 @@ const go = () => {
 	const fullScreenToggle = new Toggle(
 		ctx,
 		{
-			height: mainDrawZone.height / 8,
-			width: mainDrawZone.width / 8,
+			height: mainDrawZone.height / 6,
+			width: mainDrawZone.width / 6,
 			left: mainDrawZone.left + mainDrawZone.width * 0.81,
 			top: mainDrawZone.top + mainDrawZone.height * (7 / 8),
 		},

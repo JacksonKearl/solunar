@@ -113,6 +113,12 @@ export class TideOScope extends CanvasElement {
 		)
 	}
 
+	public onReset() {
+		this.options.center = Date.now()
+		this.fetchAllData()
+		this.render()
+	}
+
 	protected override locationInBounds(l: Location | undefined): boolean {
 		return this.locationInRadius(l, 1)
 	}
