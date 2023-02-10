@@ -60,7 +60,6 @@ export const SelectStationId = () =>
 		})
 
 		map.on('move', () => {
-			console.log(map.getZoom())
 			mapState.value = {
 				zoom: map.getZoom(),
 				center: map.getCenter().toArray(),
@@ -400,7 +399,6 @@ class Auto implements Disposable {
 	scheduleAt(n: number) {
 		if (this.disposables.isDisposed) return
 
-		console.log('queue', this.task, n)
 		this.disposables.clear()
 		if (n <= 1 / 60) {
 			const handle = requestAnimationFrame(() => {
