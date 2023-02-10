@@ -275,8 +275,8 @@ const go = () => {
 		label: 'Datum',
 		selectedIndex: 2,
 		values: ['MLLW', 'MLW', 'MSL', 'MHW', 'MHHW'],
-		minAngle: 40,
-		maxAngle: -220,
+		minAngle: -220,
+		maxAngle: 40,
 	})
 
 	const timezoneRotary = new Rotary(ctx, drawZoneForElement(rotaries[1]), {

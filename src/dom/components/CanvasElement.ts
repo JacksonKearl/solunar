@@ -69,7 +69,7 @@ export abstract class CanvasElement implements Disposable {
 	public abstract render(): void
 
 	protected onClick(l: Location): void {}
-	protected onDrag(l: Location & { dx: number; dy: number }): void {}
+	protected onDrag(l: { dx: number; dy: number }): void {}
 
 	private _active: boolean = false
 	protected get active(): boolean {
@@ -120,8 +120,8 @@ export abstract class CanvasElement implements Disposable {
 					this.onDrag({
 						dx: -e.deltaX,
 						dy: -e.deltaY,
-						x: e.pageX * dpr,
-						y: e.pageY * dpr,
+						// x: e.pageX * dpr,
+						// y: e.pageY * dpr,
 					})
 				}
 			}),
@@ -175,8 +175,8 @@ export abstract class CanvasElement implements Disposable {
 					this.onDrag({
 						dx: e.movementX * dpr,
 						dy: e.movementY * dpr,
-						x: e.pageX * dpr,
-						y: e.pageY * dpr,
+						// x: e.pageX * dpr,
+						// y: e.pageY * dpr,
 					})
 				}
 			}),
@@ -197,8 +197,8 @@ export abstract class CanvasElement implements Disposable {
 					this.onDrag({
 						dx: movementX,
 						dy: movementY,
-						x: touchLocation.x,
-						y: touchLocation.y,
+						// x: touchLocation.x,
+						// y: touchLocation.y,
 					})
 					touchTracker.set(touch.identifier, touchLocation)
 				}

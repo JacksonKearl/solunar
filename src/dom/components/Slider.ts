@@ -45,7 +45,7 @@ export class Slider extends CanvasElement {
 		}
 	}
 
-	protected override onDrag(l: Location & { dx: number; dy: number }) {
+	protected override onDrag(l: { dx: number; dy: number }) {
 		const { dx, dy } = l
 
 		let newVal

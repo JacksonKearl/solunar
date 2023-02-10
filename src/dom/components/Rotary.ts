@@ -38,8 +38,31 @@ export class Rotary extends CanvasElement {
 		)
 	}
 
-	protected override onDrag(l: Location & { dx: number; dy: number }) {
-		this.handleTouch(l)
+	private dragAccumulator = 0
+	protected override onDrag(l: { dx: number; dy: number }) {
+		this.dragAccumulator += l.dx - l.dy
+		if (this.dragAccumulator > 20) {
+			const valIndex = this.selectedIndex.value! + 1
+			if (valIndex < this.options.values.length) {
+				this.selectedIndex.set(valIndex)
+				this.selected.set(this.options.values[valIndex])
+				this.options.selectedIndex = valIndex
+				this.render()
+			}
+			this.dragAccumulator = 0
+		}
+		if (this.dragAccumulator < -20) {
+			const valIndex = this.selectedIndex.value! - 1
+			if (valIndex >= 0) {
+				this.selectedIndex.set(valIndex)
+				this.selected.set(this.options.values[valIndex])
+				this.options.selectedIndex = valIndex
+				this.render()
+			}
+			this.dragAccumulator = 0
+		}
+
+		console.log(this.dragAccumulator)
 	}
 
 	protected override onClick(l: Location) {

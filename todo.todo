@@ -12,10 +12,11 @@ Controls:
     ✔ Time Zone Selection @done(23-02-09 19:55)
   Button:
     ✔ Reset @done(23-02-09 19:55)
-  Slider (Legacy?):
+  Slider:
     ✔ Time Window Size @done(23-01-20 10:15)
     ✔ Auto Forward Rate @done(23-01-20 10:13)
     ✔ Low Pass Filter @done(23-01-20 10:13)
+    ✔ Scroll Control @done(23-02-10 15:46)
  
 Engineering:
   ☐ Offline Mode
