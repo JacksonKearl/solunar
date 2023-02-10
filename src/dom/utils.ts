@@ -140,3 +140,6 @@ const parseSelector = (s: string): ElementDescription => {
 export const clearElement = (el: HTMLElement) => {
 	while (el.firstChild) el.removeChild(el.firstChild)
 }
+
+export const a = (text: string, href: string) =>
+	$('a', { href, target: '_blank' }, text)

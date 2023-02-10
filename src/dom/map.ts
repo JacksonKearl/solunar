@@ -1,6 +1,6 @@
 import { StationLevelAtTime } from '$/tideForTime'
 import { Disposable, Station } from '$/types'
-import { $, clearElement } from './utils'
+import { $, a, clearElement } from './utils'
 import {
 	DisposableStore,
 	LocalStorageState,
@@ -288,7 +288,7 @@ const MakeOverlay = (): Disposable & {
 
 	disposables.add(autoGo)
 
-	const detailSelect = new Observable<'speed' | 'offset' | 'none'>()
+	const detailSelect = new Observable<'speed' | 'offset' | 'none' | 'about'>()
 
 	const optionsContainer = $('.options')
 	const optionsObjs = {
@@ -334,15 +334,34 @@ const MakeOverlay = (): Disposable & {
 				$('span', '+24Hr'),
 			),
 		),
+		about: $(
+			'.map-overlay-inner.offset',
+			$('h2', 'SoLunar'),
+			$('p', 'Live tide data from across USA. Select a station for more info!'),
+			$(
+				'p',
+				'Mapping by ',
+				a('Mapbox GL JS', 'https://github.com/MapLibre/maplibre-gl-js'),
+				' and ',
+				a('esri', 'https://www.esri.com/en-us/home'),
+				'.',
+				' View ',
+				a('source', 'https://github.com/JacksonKearl/solunar'),
+				'.',
+			),
+			$('p', 'Product of the State of Jefferson, Public Works.'),
+		),
 		none: $(
 			'.none',
 			$('button', { onclick: () => detailSelect.set('speed') }, 'Fast Forward'),
 			$('button', { onclick: () => detailSelect.set('offset') }, 'Select Time'),
+			$('button', { onclick: () => detailSelect.set('about') }, 'About'),
 		),
 	}
 
 	disposables.add(
 		detailSelect.view((option) => {
+			detailMode.value = option
 			clearElement(optionsContainer)
 			optionsContainer.appendChild(optionsObjs[option])
 			if (option !== 'none') {
@@ -356,13 +375,18 @@ const MakeOverlay = (): Disposable & {
 								return detailSelect.set('none')
 							},
 						},
-						'Reset',
+						'Options',
 					),
 				)
 			}
 		}),
 	)
-	detailSelect.set('none')
+
+	const detailMode = new LocalStorageState<
+		'speed' | 'offset' | 'none' | 'about'
+	>('map-options-page', 'about')
+
+	detailSelect.set(detailMode.value)
 
 	return {
 		center: center.view,
