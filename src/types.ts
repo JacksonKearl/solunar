@@ -45,7 +45,7 @@ export type Station = {
 	timezone: string | null
 	timezoneOffset: number | null
 	harcon: StationHarmonic[]
-	datums: Record<DatumName, number>
+	datums: Record<DatumName, number> | {}
 	missingData?: true
 }
 

@@ -362,7 +362,9 @@ const go = () => {
 	tideOScope.viewInput(
 		'yOffset',
 		MappedView(datumRotary.selectedView, (v) => {
-			return active.datums[v as DatumName] - active.datums.MSL
+			return 'MSL' in active.datums
+				? active.datums[v as DatumName] - active.datums.MSL
+				: 0
 		}),
 	)
 
@@ -406,7 +408,10 @@ const go = () => {
 	tideHeightGauge.viewInput(
 		'center',
 		MappedView(datumRotary.selectedView, (v) => {
-			const offset = active.datums[v as DatumName] - active.datums.MSL
+			const offset =
+				'MSL' in active.datums
+					? active.datums[v as DatumName] - active.datums.MSL
+					: 0
 			return -Math.round(offset)
 		}),
 	)

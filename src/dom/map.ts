@@ -26,9 +26,10 @@ const GetStationsAsGeoJSON = (time: number) => ({
 				id: s.id,
 				name: s.name,
 				tide: tide.total,
-				norm: s.datums.MHHW
-					? tide.total / (s.datums.MHHW - s.datums.MLLW)
-					: null,
+				norm:
+					'MHHW' in s.datums
+						? tide.total / (s.datums.MHHW - s.datums.MLLW)
+						: null,
 			},
 			geometry: { type: 'Point', coordinates: [s.lng, s.lat] },
 		}
