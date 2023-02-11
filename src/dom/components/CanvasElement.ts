@@ -212,11 +212,17 @@ export abstract class CanvasElement implements Disposable {
 
 	protected locationOfEvent(m: CursorEvent): Location | undefined {
 		let e: MouseEvent | Touch | undefined
-		if (m instanceof TouchEvent) {
-			if (m.changedTouches.length !== 1) return undefined
-			e = m.changedTouches[0]
-		} else {
-			e = m
+		try {
+			if (m instanceof TouchEvent) {
+				if (m.changedTouches.length !== 1) return undefined
+				e = m.changedTouches[0]
+			} else {
+				e = m
+			}
+		} catch (err) {
+			// console.log(err)
+			// TouchEvent not defined in desktop Safari/FireFox
+			e = m as any
 		}
 
 		const dpr = findDPR()
