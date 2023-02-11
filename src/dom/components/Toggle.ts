@@ -42,7 +42,9 @@ export class Toggle extends CanvasElement {
 		}
 	}
 
-	override render() {
+	override render(): void {
+		if (!this.shouldRender()) return
+
 		this.context.fillStyle = '#333'
 		this.context.fillRect(
 			this.dimensions.left,

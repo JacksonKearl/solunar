@@ -39,7 +39,9 @@ export class Gauge extends CanvasElement {
 		)
 	}
 
-	render(): void {
+	override render(): void {
+		if (!this.shouldRender()) return
+		
 		const renderCasing = () => {
 			this.context.strokeStyle = '#000'
 

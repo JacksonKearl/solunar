@@ -238,7 +238,9 @@ export class TideOScope extends CanvasElement {
 	}
 
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
-	override render() {
+	override render(): void {
+		if (!this.shouldRender()) return
+		
 		this.context.save()
 		this.renderClippingPath()
 		this.renderBackground()

@@ -210,8 +210,15 @@ export abstract class CanvasElement implements Disposable {
 		return this.locationInDrawZone(l)
 	}
 
+	protected shouldRender() {
+		return (
+			this.dimensions.top !== this.dimensions.bottom &&
+			this.dimensions.left !== this.dimensions.right
+		)
+	}
+
 	protected locationOfEvent(m: CursorEvent): Location | undefined {
-		let e: MouseEvent | Touch | undefined
+		let e: MouseEvent | Touch
 		try {
 			if (m instanceof TouchEvent) {
 				if (m.changedTouches.length !== 1) return undefined

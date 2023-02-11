@@ -107,7 +107,9 @@ export class Rotary extends CanvasElement {
 		this.render()
 	}
 
-	render(): void {
+	override render(): void {
+		if (!this.shouldRender()) return
+
 		this.context.save()
 
 		this.context.fillStyle = '#333'

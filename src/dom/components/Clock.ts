@@ -85,7 +85,9 @@ export class Clock extends CanvasElement {
 		}
 	}
 
-	render(): void {
+	override render(): void {
+		if (!this.shouldRender()) return
+		
 		const extrapolatedTime = this.extrapolateTime()
 		const timezoneOffset = this.options.offset * 60 * 1000
 		const timeToShow = extrapolatedTime - timezoneOffset
