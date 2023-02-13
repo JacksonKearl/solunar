@@ -71,7 +71,7 @@ const go = () => {
 	}
 	disposables.clear()
 
-	const ref = document.location.hash.slice(1)
+	const ref = document.location.hash.slice(1) || selectedStation.value
 	const active = stations[ref] as Station
 	if (!active) {
 		document.location.hash = ''
@@ -484,7 +484,7 @@ const go = () => {
 const selectedStation = new LocalStorageState('selected-station', '')
 
 const fromTheTop = async () => {
-	const ref = document.location.hash.slice(1) ?? selectedStation.value
+	const ref = document.location.hash.slice(1) || selectedStation.value
 
 	const map = document.getElementById('map-container')!
 	if (!ref) {
