@@ -3,7 +3,7 @@ import { setupCanvas, drawZoneForElement } from './components/CanvasElement'
 import { Slider } from './components/Slider'
 import { Toggle } from './components/Toggle'
 import { TideOScope, TideOScopeOptions } from './components/TideOScope'
-import { DisposableStore, MappedView } from '$/utils'
+import { DisposableStore, LocalStorageState, MappedView } from '$/utils'
 import { Gauge } from './components/Gauge'
 import { Clock } from './components/Clock'
 import { Rotary } from './components/Rotary'
@@ -75,6 +75,7 @@ const go = () => {
 	const active = stations[ref] as Station
 	if (!active) {
 		document.location.hash = ''
+		selectedStation.value = ''
 		fromTheTop()
 	}
 
@@ -86,6 +87,7 @@ const go = () => {
 				type: 'button',
 				onclick: () => {
 					document.location.hash = ''
+					selectedStation.value = ''
 					fromTheTop()
 				},
 			},
@@ -479,14 +481,17 @@ const go = () => {
 	allComponents.map((c) => c.render())
 }
 
+const selectedStation = new LocalStorageState('selected-station', '')
+
 const fromTheTop = async () => {
-	const ref = document.location.hash.slice(1)
+	const ref = document.location.hash.slice(1) ?? selectedStation.value
 
 	const map = document.getElementById('map-container')!
 	if (!ref) {
 		map.style.display = 'block'
 		const id = await SelectStationId()
 		document.location.hash = id
+		selectedStation.value = id
 		go()
 	} else {
 		map.style.display = 'none'

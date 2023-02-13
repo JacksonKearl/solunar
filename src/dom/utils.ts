@@ -29,7 +29,7 @@ type OnEvents<L> = {
 		: never
 }
 
-type Attrs<E> = OnEvents<E> | Record<string, string>
+type Attrs<E> = OnEvents<E> | Record<string, string | boolean | number>
 
 export const findDPR = () => window.devicePixelRatio || 1
 
@@ -62,8 +62,8 @@ export const $: $ = <S extends string>(
 ): SelectorToHTMLElement<S> => {
 	const { tag, id, classes } = parseSelector(selector)
 	const el = document.createElement(tag) as SelectorToHTMLElement<S>
-	el.id = id
-	el.classList.add(...classes)
+	if (id) el.id = id
+	if (classes.length) el.classList.add(...classes)
 
 	let children: (Node | string)[]
 	if (
@@ -79,7 +79,11 @@ export const $: $ = <S extends string>(
 				// hm
 				addElementListener(el, k.slice(2) as any, v)
 			} else {
-				return el.setAttribute(k, v)
+				if (v === false) {
+					el.removeAttribute(k)
+				} else {
+					el.setAttribute(k, v)
+				}
 			}
 		})
 		children = rest.slice(1) as (Node | string)[]

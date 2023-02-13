@@ -149,13 +149,23 @@
 				);
 			}
 
-			.map-overlay input {
+			.map-overlay input[type='range'] {
 				background-color: transparent;
 				display: inline-block;
 				width: 100%;
 				position: relative;
 				margin: 0;
 				cursor: ew-resize;
+			}
+
+			.map-overlay-inner.about label {
+				margin-top: 5px;
+			}
+
+			.map-overlay-inner.about span {
+				position: relative;
+				top: -2px;
+				left: 2px;
 			}
 
 			.options button {

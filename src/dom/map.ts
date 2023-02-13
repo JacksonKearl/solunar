@@ -6,14 +6,11 @@ import {
 	LocalStorageState,
 	MappedView,
 	Observable,
-	scale,
 	time,
 	View,
 } from '$/utils'
 import type { GeoJSONSource, LngLatLike, MapMouseEvent } from 'maplibre-gl'
 import type { Point, Feature, Geometry, GeoJsonProperties } from 'geojson'
-
-let interval: number | undefined
 
 const GetStationsAsGeoJSON = (time: number) => ({
 	type: 'FeatureCollection',
@@ -44,6 +41,7 @@ export const SelectStationId = () =>
 
 		const container = mapContainer.appendChild(document.createElement('div'))
 		container.id = 'map'
+
 		const overlay = MakeOverlay()
 		mapContainer.appendChild(overlay.element)
 		mapContainer.appendChild(
@@ -226,8 +224,8 @@ export const SelectStationId = () =>
 				button.textContent = 'Details'
 
 				button.onclick = () => {
+					overlay.dispose()
 					resolve(properties.id)
-					clearInterval(interval)
 				}
 
 				popup.setLngLat(coordinates).setDOMContent(popupElement).addTo(map)
@@ -298,6 +296,34 @@ const MakeOverlay = (): Disposable & {
 	const detailSelect = new Observable<'speed' | 'offset' | 'none' | 'about'>()
 
 	const optionsContainer = $('.options')
+
+	console.log('initial check', ServiceWorkerRegistrationState.value)
+	const serviceWorkerInput = $('input', {
+		type: 'checkbox',
+		checked: ServiceWorkerRegistrationState.value,
+	})
+	const serviceWorkerCheckbox = $(
+		'label',
+		{
+			onclick: async (e) => {
+				e.preventDefault()
+				if (ServiceWorkerRegistrationState.value) {
+					await unregisterServiceWorker()
+				} else {
+					await registerServiceWorker()
+				}
+				window.location.reload()
+			},
+		},
+		serviceWorkerInput,
+		$('span', 'Enable Offline Access'),
+	)
+
+	ServiceWorkerRegistrationO.view((v) => {
+		console.log('setting checked', v)
+		serviceWorkerInput.checked = v
+	})
+
 	const optionsObjs = {
 		speed: $(
 			'.map-overlay-inner.speed',
@@ -355,6 +381,7 @@ const MakeOverlay = (): Disposable & {
 				a('source', 'https://github.com/JacksonKearl/solunar'),
 				'.',
 			),
+			serviceWorkerCheckbox,
 		),
 		none: $(
 			'.none',
@@ -447,5 +474,44 @@ class Auto implements Disposable {
 
 	dispose(): void {
 		this.disposables.dispose()
+	}
+}
+
+const ServiceWorkerRegistrationState = new LocalStorageState(
+	'offline-mode',
+	false,
+)
+const ServiceWorkerRegistrationO = new Observable<boolean>()
+ServiceWorkerRegistrationO.view(
+	(v) => (ServiceWorkerRegistrationState.value = v),
+)
+
+const registerServiceWorker = async () => {
+	if ('serviceWorker' in navigator) {
+		try {
+			const registration = await navigator.serviceWorker.register('/sw.js', {
+				scope: '/',
+			})
+			if (registration.installing) {
+				console.log('Service worker installing')
+			} else if (registration.waiting) {
+				console.log('Service worker installed')
+			} else if (registration.active) {
+				console.log('Service worker active')
+			}
+			ServiceWorkerRegistrationO.set(true)
+		} catch (error) {
+			console.error(`Registration failed with ${error}`)
+			ServiceWorkerRegistrationO.set(false)
+		}
+	}
+}
+
+const unregisterServiceWorker = async () => {
+	if ('serviceWorker' in navigator) {
+		const rs = await navigator.serviceWorker.getRegistration('/sw.js')
+		rs?.unregister()
+		ServiceWorkerRegistrationO.set(false)
+		console.log('service worker disabled')
 	}
 }
