@@ -71,6 +71,42 @@ export const MappedView =
 		return { dispose: () => disposable.dispose() }
 	}
 
+type ViewType<V> = V extends View<infer T>
+	? T
+	: V extends Array<View<any>>
+	? { [K in keyof V]: ViewType<V[K]> }
+	: never
+
+export const ArrayView =
+	<Ts extends View<any>[]>(...views: Ts): View<ViewType<Ts>> =>
+	(watcher) => {
+		const store = new DisposableStore()
+		const numViews = views.length
+
+		const touched = Array.from({ length: numViews }, () => false)
+		const data: ViewType<Ts> = Array.from({
+			length: numViews,
+		}) as ViewType<Ts>
+
+		const triggerIfAllDefined = () => {
+			if (touched.every((v) => v)) {
+				watcher(data)
+			}
+		}
+
+		for (let i = 0; i < numViews; i++) {
+			store.add(
+				views[i]((v) => {
+					data[i] = v
+					touched[i] = true
+					triggerIfAllDefined()
+				}),
+			)
+		}
+
+		return store
+	}
+
 export class LocalStorageState<V> implements Disposable {
 	private _value: V
 	public get value(): V {
