@@ -144,3 +144,29 @@ export const time = <T>(f: () => T): T => {
 
 	return r
 }
+
+export const sigfig = (n: number, sig: number): string => {
+	const isNeg = n < 0
+	if (isNeg) n = -n
+
+	const magnitude = 10 ** Math.floor(Math.log10(n))
+	const reduced = n / magnitude
+	const shift = 10 ** (sig - 1)
+	const rounded = Math.round(reduced * shift) / shift
+
+	let string = String(rounded * magnitude)
+
+	const hasDecimal = string.includes('.')
+	if (hasDecimal) {
+		string = string.slice(0, sig + 1)
+	}
+	if (!hasDecimal && string.length < sig) {
+		string += '.'
+	}
+	string = string.padEnd(sig + 1, '0')
+
+	if (isNeg) string = '-' + string
+	else string = ' ' + string
+
+	return string
+}

@@ -3,7 +3,7 @@ import { setupCanvas, drawZoneForElement } from './components/CanvasElement'
 import { Slider } from './components/Slider'
 import { Toggle } from './components/Toggle'
 import { TideOScope, TideOScopeOptions } from './components/TideOScope'
-import { DisposableStore, LocalStorageState, MappedView } from '$/utils'
+import { DisposableStore, LocalStorageState, MappedView, sigfig } from '$/utils'
 import { Gauge } from './components/Gauge'
 import { Clock } from './components/Clock'
 import { Rotary } from './components/Rotary'
@@ -110,12 +110,17 @@ const go = () => {
 			'Reset',
 		),
 	)
+	const content = $('#content')
+	const foot = $('#foot', 'Hello')
 	clearElement(main)
+
 	main.appendChild(title)
+	main.appendChild(content)
+	main.appendChild(foot)
 
 	const { ctx, dim } = setupCanvas(canvas)
 
-	const mainDrawZone = drawZoneForElement(main)
+	const mainDrawZone = drawZoneForElement(content)
 
 	// Background
 	ctx.fillStyle = '#333'
@@ -393,6 +398,16 @@ const go = () => {
 	tideOScope.viewInput(
 		'yRange',
 		MappedView(tideRange.valueView, (v) => 2 ** v),
+	)
+
+	disposables.add(
+		tideOScope.centralDataView(({ time, total }) => {
+			const t = new Date(time)
+			t.setSeconds(0)
+			const roundedTide = sigfig(total, 3)
+			const noSecondsTime = t.toLocaleTimeString().replace(/:00/, '')
+			foot.innerText = `${roundedTide}' on ${t.toLocaleDateString()} @ ${noSecondsTime}`
+		}),
 	)
 
 	tideFlowGauge.viewInput(
