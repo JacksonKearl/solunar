@@ -371,19 +371,32 @@ const MakeOverlay = (): Disposable & {
 		serviceWorkerInput.checked = v
 	})
 
+	const speedInput = $('input', {
+		type: 'range',
+		min: '1',
+		max: '100000',
+		value: '1',
+		step: '100',
+		oninput() {
+			speed.set(parseFloat(this.value))
+		},
+	})
+
+	const centerInput = $('input', {
+		type: 'range',
+		min: '-86400',
+		max: '86400',
+		value: '0',
+		step: '60',
+		oninput() {
+			center.set(parseFloat(this.value) * 1000)
+		},
+	})
+
 	const optionsObjs = {
 		speed: $(
 			'.map-overlay-inner.speed',
-			$('input', {
-				type: 'range',
-				min: '1',
-				max: '100000',
-				value: '1',
-				step: '100',
-				oninput() {
-					speed.set(parseFloat(this.value))
-				},
-			}),
+			speedInput,
 			$(
 				'.key',
 				{
@@ -395,16 +408,7 @@ const MakeOverlay = (): Disposable & {
 		),
 		offset: $(
 			'.map-overlay-inner.offset',
-			$('input', {
-				type: 'range',
-				min: '-86400',
-				max: '86400',
-				value: '0',
-				step: '60',
-				oninput() {
-					center.set(parseFloat(this.value) * 1000)
-				},
-			}),
+			centerInput,
 			$(
 				'.key',
 				{ style: 'display: flex; justify-content: space-between' },
@@ -449,6 +453,8 @@ const MakeOverlay = (): Disposable & {
 						'button',
 						{
 							onclick: () => {
+								centerInput.value = '0'
+								speedInput.value = '1'
 								center.set(0)
 								speed.set(1)
 								return detailSelect.set('none')
