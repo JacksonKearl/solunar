@@ -157,6 +157,7 @@ export type TideOScopeDataPoint = {
 export const StationLevelAtTime = (
 	station: Station,
 	time: UnixTime,
+	includeConstituents: boolean,
 	constituentScale = (degPerSec: number) => 1,
 ): TideOScopeDataPoint => {
 	const vT = UniversalStateAtTime(time)
@@ -196,7 +197,9 @@ export const StationLevelAtTime = (
 			argument,
 			degreesPerSecond,
 		}
-		constituents[harmonic.name] = constituentContribution
+		if (includeConstituents) {
+			constituents[harmonic.name] = constituentContribution
+		}
 		totalOffset += offset
 
 		const offsetNext = f * amplitude * cos(VuNext - phaseLag)

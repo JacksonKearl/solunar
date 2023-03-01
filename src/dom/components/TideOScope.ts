@@ -393,7 +393,7 @@ export class TideOScope extends CanvasElement {
 
 	// reads: periodHiPass, periodLoPass
 	private stationLevelAtTime(time: number) {
-		return StationLevelAtTime(this.station, time, (degreesPerSecond) => {
+		return StationLevelAtTime(this.station, time, true, (degreesPerSecond) => {
 			const revolutionsPerDay = (degreesPerSecond * (24 * 60 * 60)) / 360
 			const daysPerRev = 1 / revolutionsPerDay
 			const logDaysPerRev = Math.log2(daysPerRev)

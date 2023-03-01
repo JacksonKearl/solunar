@@ -11,12 +11,14 @@ import {
 } from '$/utils'
 import type { GeoJSONSource, LngLatLike, MapMouseEvent } from 'maplibre-gl'
 import type { Point, Feature, Geometry, GeoJsonProperties } from 'geojson'
+import { TideOScope } from './components/TideOScope'
+import { setupCanvas } from './components/CanvasElement'
 
 const GetStationsAsGeoJSON = (time: number) => ({
 	type: 'FeatureCollection',
 	crs: { type: 'name', properties: { name: 'All Stations with Tide' } },
 	features: Object.values(stations).map((s: Station) => {
-		const tide = StationLevelAtTime(s, time)
+		const tide = StationLevelAtTime(s, time, false)
 		return {
 			type: 'Feature',
 			properties: {
@@ -35,6 +37,8 @@ const GetStationsAsGeoJSON = (time: number) => ({
 
 export const SelectStationId = () =>
 	new Promise<string>((resolve) => {
+		const disposables = new DisposableStore()
+
 		const mapContainer = document.getElementById('map-container')!
 		while (mapContainer.firstChild)
 			mapContainer.removeChild(mapContainer.firstChild)
@@ -43,6 +47,8 @@ export const SelectStationId = () =>
 		container.id = 'map'
 
 		const overlay = MakeOverlay()
+		disposables.add(overlay)
+
 		mapContainer.appendChild(overlay.element)
 		mapContainer.appendChild(
 			a(
@@ -101,6 +107,14 @@ export const SelectStationId = () =>
 				},
 			})
 			const stationSource = map.getSource('stations') as GeoJSONSource
+
+			disposables.add(
+				overlay.center((offset) => {
+					if (document.location.hash) overlay.dispose()
+					const data = time(() => GetStationsAsGeoJSON(offset + Date.now()))
+					stationSource.setData(data as any)
+				}),
+			)
 
 			const colorOrFallback = (src: string, def: any) =>
 				[
@@ -190,6 +204,12 @@ export const SelectStationId = () =>
 				closeOnClick: false,
 			})
 
+			let scope: TideOScope | undefined
+			disposables.add({ dispose: () => scope?.dispose() })
+			popup.on('close', () => {
+				scope?.dispose()
+			})
+
 			const showPopupForEvent = (
 				e: MapMouseEvent & {
 					features?: Feature<Geometry, GeoJsonProperties>[] | undefined
@@ -212,23 +232,57 @@ export const SelectStationId = () =>
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
 				}
 
-				const popupElement = document.createElement('div')
-				popupElement.style.textAlign = 'center'
-				const title = popupElement.appendChild(document.createElement('h3'))
-				const button = popupElement.appendChild(
-					document.createElement('button'),
+				let canvas: HTMLCanvasElement
+				const popupElement = $(
+					'',
+					{
+						style: 'text-align: center; display: flex; flex-direction: column',
+					},
+					$('h3', properties.name),
+					(canvas = $('canvas', {
+						style: 'width: 100%; height: 250px; position: unset;',
+					})),
+					$(
+						'button',
+						{
+							style: 'width: 100%',
+							onclick: () => {
+								disposables.dispose()
+								resolve(properties.id)
+							},
+						},
+						'Details',
+					),
 				)
-				button.style.width = '100%'
-
-				title.textContent = properties.name
-				button.textContent = 'Details'
-
-				button.onclick = () => {
-					overlay.dispose()
-					resolve(properties.id)
-				}
-
 				popup.setLngLat(coordinates).setDOMContent(popupElement).addTo(map)
+
+				const HOUR = 1000 * 60 * 60
+				const DAY = HOUR * 24
+				const s = stations[properties.id]
+				const { ctx, dim } = setupCanvas(canvas)
+
+				scope?.dispose()
+				scope = new TideOScope(ctx, dim, s, {
+					renderScale: 1,
+					labelConstituents: false,
+					yRange: 8,
+					center: Date.now(),
+					timeRange: 2 * DAY,
+					timeRate: 1,
+					renderMoon: false,
+					renderSun: false,
+					renderHarmonics: false,
+					periodLoPass: Math.log2(2 * 365),
+					periodHiPass: Math.log2(1 / 24),
+					crosshairRender: 'rad',
+					yOffset: 0,
+				})
+				scope.render()
+
+				scope.viewInput(
+					'center',
+					MappedView(overlay.center, (c) => c + Date.now()),
+				)
 			}
 
 			map.on('click', () => {
@@ -256,12 +310,6 @@ export const SelectStationId = () =>
 			map.on('mouseleave', 'unclustered-point', () => {
 				ins--
 				if (!ins) map.getCanvas().style.cursor = ''
-			})
-
-			overlay.center((offset) => {
-				if (document.location.hash) overlay.dispose()
-				const data = time(() => GetStationsAsGeoJSON(offset + Date.now()))
-				stationSource.setData(data as any)
 			})
 		})
 	})
@@ -297,7 +345,6 @@ const MakeOverlay = (): Disposable & {
 
 	const optionsContainer = $('.options')
 
-	console.log('initial check', ServiceWorkerRegistrationState.value)
 	const serviceWorkerInput = $('input', {
 		type: 'checkbox',
 		checked: ServiceWorkerRegistrationState.value,
@@ -445,9 +492,9 @@ const MakeOverlay = (): Disposable & {
 
 class Auto implements Disposable {
 	private disposables = new DisposableStore()
-
+	private timeoutHandle: Disposable
 	constructor(private task: () => void, timeout: View<number>) {
-		timeout((n) => this.scheduleAt(n))
+		this.timeoutHandle = timeout((n) => this.scheduleAt(n))
 	}
 
 	scheduleAt(n: number) {
@@ -474,6 +521,7 @@ class Auto implements Disposable {
 
 	dispose(): void {
 		this.disposables.dispose()
+		this.timeoutHandle.dispose()
 	}
 }
 

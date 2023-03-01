@@ -95,7 +95,6 @@ const go = () => {
 				onclick: () => {
 					document.location.hash = ''
 					selectedStation.value = ''
-					fromTheTop()
 				},
 			},
 			'Back',
