@@ -373,7 +373,7 @@ const MakeOverlay = (): Disposable & {
 			$(
 				'p',
 				'Mapping by ',
-				a('Mapbox GL JS', 'https://github.com/MapLibre/maplibre-gl-js'),
+				a('Maplibre GL JS', 'https://github.com/MapLibre/maplibre-gl-js'),
 				' and ',
 				a('esri', 'https://www.esri.com/en-us/home'),
 				'.',
