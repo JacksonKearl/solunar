@@ -181,6 +181,8 @@ export const time = <T>(f: () => T): T => {
 	return r
 }
 
+export const nbsp = '\xa0'
+
 export const sigfig = (n: number, sig: number): string => {
 	const isNeg = n < 0
 	if (isNeg) n = -n
@@ -202,7 +204,7 @@ export const sigfig = (n: number, sig: number): string => {
 	string = string.padEnd(sig + 1, '0')
 
 	if (isNeg) string = '-' + string
-	else string = ' ' + string
+	else string = nbsp + string
 
 	return string
 }

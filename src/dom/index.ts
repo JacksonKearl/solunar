@@ -8,6 +8,7 @@ import {
 	DisposableStore,
 	LocalStorageState,
 	MappedView,
+	nbsp,
 	sigfig,
 } from '$/utils'
 import { Gauge } from './components/Gauge'
@@ -422,7 +423,8 @@ const go = () => {
 
 			const roundedTide = sigfig(total, 3)
 			const noSecondsTime = t.toLocaleTimeString().replace(/:00/, '')
-			foot.innerText = `${roundedTide}' on ${t.toLocaleDateString()} @ ${noSecondsTime}`
+			const fixedLengthHoursTime = noSecondsTime.replace(/^(\d):/, nbsp + '$1:')
+			foot.innerText = `${roundedTide}' @ ${fixedLengthHoursTime}, ${t.toLocaleDateString()} `
 		}),
 	)
 
