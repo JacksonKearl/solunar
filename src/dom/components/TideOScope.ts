@@ -240,7 +240,7 @@ export class TideOScope extends CanvasElement {
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
 	override render(): void {
 		if (!this.shouldRender()) return
-		
+
 		this.context.save()
 		this.renderClippingPath()
 		this.renderBackground()
@@ -519,7 +519,7 @@ export class TideOScope extends CanvasElement {
 
 	private renderClippingPath() {
 		this.context.beginPath()
-		this.context.lineWidth = 20
+		this.setLineWidth(0.03)
 		this.context.strokeStyle = '#000000'
 		this.context.arc(
 			this.dimensions.centerX,

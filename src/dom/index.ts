@@ -151,6 +151,22 @@ const go = () => {
 
 	const tideOScope = new TideOScope(ctx, mainDrawZone, active, defaultOptions)
 
+	const bigR = Math.min(mainDrawZone.height, mainDrawZone.width) * 0.5
+	const h = mainDrawZone.height
+	const w = mainDrawZone.width
+
+	const negB = bigR + (h + w) / 2
+	const bSquaredMinus4AC = 2 * bigR * bigR + h * bigR + w * bigR + (h * w) / 2
+
+	const littleR = Math.min(
+		h / 4,
+		w / 4,
+		negB + Math.sqrt(bSquaredMinus4AC),
+		negB - Math.sqrt(bSquaredMinus4AC),
+	)
+
+	const gaugeSize = Math.max(littleR * 2, bigR / 2)
+
 	const constituentToggle = new Toggle(
 		ctx,
 		drawZoneForElement(tideOScopeToggles[2]),
@@ -191,13 +207,15 @@ const go = () => {
 		offLabel: 'Hide',
 		value: true,
 	})
+
+	const toggleSize = Math.min(bigR / 2, littleR * 2)
 	const fullScreenToggle = new Toggle(
 		ctx,
 		{
-			height: mainDrawZone.height / 6,
-			width: mainDrawZone.width / 6,
-			left: mainDrawZone.left + mainDrawZone.width * 0.81,
-			top: mainDrawZone.top + mainDrawZone.height * (7 / 8),
+			height: toggleSize,
+			width: toggleSize,
+			left: mainDrawZone.left + mainDrawZone.width - toggleSize,
+			top: mainDrawZone.top + mainDrawZone.height - toggleSize,
 		},
 		{
 			label: 'Options',
@@ -316,9 +334,9 @@ const go = () => {
 	const clock = new Clock(
 		ctx,
 		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
-			left: mainDrawZone.left + mainDrawZone.width * (3 / 4),
+			height: gaugeSize,
+			width: gaugeSize,
+			left: mainDrawZone.left + mainDrawZone.width - gaugeSize,
 			top: mainDrawZone.top,
 		},
 		{
@@ -334,8 +352,8 @@ const go = () => {
 	const tideHeightGauge = new Gauge(
 		ctx,
 		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
+			height: gaugeSize,
+			width: gaugeSize,
 			left: mainDrawZone.left,
 			top: mainDrawZone.top,
 		},
@@ -355,10 +373,10 @@ const go = () => {
 	const tideFlowGauge = new Gauge(
 		ctx,
 		{
-			height: mainDrawZone.height / 4,
-			width: mainDrawZone.width / 4,
+			height: gaugeSize,
+			width: gaugeSize,
 			left: mainDrawZone.left,
-			top: mainDrawZone.top + mainDrawZone.height * (3 / 4),
+			top: mainDrawZone.top + mainDrawZone.height - gaugeSize,
 		},
 		{
 			title: 'Flow',
