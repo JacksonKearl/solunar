@@ -83,8 +83,7 @@ const go = () => {
 	if (!active) {
 		selectedStation.value = ''
 		document.location.hash = ''
-		// handle via hashchange
-		return
+		return fromTheTop()
 	}
 
 	const title = $(
@@ -96,7 +95,7 @@ const go = () => {
 				onclick: () => {
 					selectedStation.value = ''
 					document.location.hash = ''
-					// handle via hashchange
+					fromTheTop()
 				},
 			},
 			'Back',
@@ -535,13 +534,17 @@ const go = () => {
 
 const selectedStation = new LocalStorageState('selected-station', '')
 
+let isSelecting = false
 const fromTheTop = async () => {
+	if (isSelecting) return // don't re-enter
 	const ref = document.location.hash.slice(1) || selectedStation.value
 
 	const map = document.getElementById('map-container')!
 	if (!ref) {
 		map.style.display = 'block'
+		isSelecting = true
 		const id = await SelectStationId()
+		isSelecting = false
 		document.location.hash = id
 		selectedStation.value = id
 		go()
