@@ -336,7 +336,7 @@ const MakeOverlay = (): Disposable & {
 				lastUpdate = now
 			}
 		},
-		MappedView(speed.view, (v) => Math.max(5 / v, 1 / 30)),
+		MappedView(speed.view, (v) => Math.max(5 / v)),
 	)
 
 	disposables.add(autoGo)
