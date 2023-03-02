@@ -81,9 +81,10 @@ const go = () => {
 	const ref = document.location.hash.slice(1) || selectedStation.value
 	const active = stations[ref] as Station
 	if (!active) {
-		document.location.hash = ''
 		selectedStation.value = ''
-		fromTheTop()
+		document.location.hash = ''
+		// handle via hashchange
+		return
 	}
 
 	const title = $(
@@ -95,6 +96,7 @@ const go = () => {
 				onclick: () => {
 					selectedStation.value = ''
 					document.location.hash = ''
+					// handle via hashchange
 				},
 			},
 			'Back',
