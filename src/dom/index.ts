@@ -93,8 +93,8 @@ const go = () => {
 			{
 				type: 'button',
 				onclick: () => {
-					document.location.hash = ''
 					selectedStation.value = ''
+					document.location.hash = ''
 				},
 			},
 			'Back',
