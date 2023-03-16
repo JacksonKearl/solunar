@@ -441,7 +441,7 @@ export class TideOScope extends CanvasElement {
 		this.context.fill()
 
 		// Crosshairs
-		this.context.lineWidth = 2
+		this.setLineWidth(0.004)
 		this.context.strokeStyle = '#00a322cc'
 
 		this.context.beginPath()
@@ -457,10 +457,10 @@ export class TideOScope extends CanvasElement {
 			for (const daysPerRev of [1 / 4, 1, 4, 16, 64, 256, 1024]) {
 				this.context.beginPath()
 				if (i % 2 === 0) {
-					this.context.lineWidth = 1
+					this.setLineWidth(0.002)
 					this.context.setLineDash([5, 10])
 				} else {
-					this.context.lineWidth = 2
+					this.setLineWidth(0.004)
 					this.context.setLineDash([10, 5])
 				}
 				i++
@@ -480,10 +480,10 @@ export class TideOScope extends CanvasElement {
 		if (this.options.crosshairRender === 'rect') {
 			for (const gridNum of [1, 2, 3, 4, 5, 6, 7]) {
 				if (i % 2 === 0) {
-					this.context.lineWidth = 1
+					this.setLineWidth(0.002)
 					this.context.setLineDash([5, 10])
 				} else {
-					this.context.lineWidth = 2
+					this.setLineWidth(0.004)
 					this.context.setLineDash([10, 5])
 				}
 				i++

@@ -57,7 +57,7 @@ export class Toggle extends CanvasElement {
 		this.context.beginPath()
 
 		this.traceCircle(0.7)
-		this.context.lineWidth = this.scaleFactor / 10
+		this.setLineWidth(0.1)
 		this.context.fillStyle = '#000'
 		this.context.fill()
 		this.context.strokeStyle = '#fff'
