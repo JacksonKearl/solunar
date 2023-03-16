@@ -69,7 +69,7 @@ configs[1].classList.add('flex')
 configs[2].classList.add('flex')
 
 const go = () => {
-	const optionsVisible = JSON.parse(localStorage.getItem('Options') ?? 'true')
+	const optionsVisible = JSON.parse(localStorage.getItem('Options') ?? 'false')
 	if (!optionsVisible) {
 		config.setAttribute('style', 'display: none !important')
 	}
@@ -221,7 +221,7 @@ const go = () => {
 			label: 'Options',
 			onLabel: 'Show',
 			offLabel: 'Hide',
-			value: true,
+			value: false,
 		},
 	)
 	const scrollSpeedSlider = new Slider(ctx, drawZoneForElement(sliders[0]), {
