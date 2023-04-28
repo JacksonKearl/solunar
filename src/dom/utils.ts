@@ -1,5 +1,4 @@
 import { Disposable } from '$/types'
-import { DisposableStore } from '$/utils'
 
 export const addWindowListener = <K extends keyof WindowEventMap>(
 	type: K,

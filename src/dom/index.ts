@@ -258,10 +258,11 @@ const go = () => {
 	const tideRange = new Slider(ctx, drawZoneForElement(sliders[2]), {
 		label: 'Y Range',
 		subtitle: 'Feet / grid',
-		min: Math.log2((1 / 2) * 8),
+		min: Math.log2((1 / 4) * 8),
 		max: Math.log2(8 * 8),
 		tics: [
-			[Math.log2(0.5 * 8), '0.5'],
+			[Math.log2(0.25 * 8), '1/4'],
+			[Math.log2(0.5 * 8), '1/2'],
 			[Math.log2(1 * 8), '1'],
 			[Math.log2(2 * 8), '2'],
 			[Math.log2(4 * 8), '4'],
