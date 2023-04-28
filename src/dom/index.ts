@@ -167,16 +167,30 @@ const go = () => {
 
 	const gaugeSize = Math.max(littleR * 2, bigR / 2)
 
-	const constituentToggle = new Toggle(
+	const constituentToggle = new Rotary(
 		ctx,
 		drawZoneForElement(tideOScopeToggles[2]),
 		{
 			label: 'Harmonics',
-			onLabel: 'Show',
-			offLabel: 'Hide',
-			value: defaultOptions.renderHarmonics,
+			values: ['Off', 'On', 'Label'],
+			minAngle: -150,
+			maxAngle: -30,
+			selectedIndex: 0,
+			// onLabel: 'Show',
+			// offLabel: 'Hide',
+			// value: defaultOptions.renderHarmonics,
 		},
 	)
+	// const constituentToggle = new Toggle(
+	// 	ctx,
+	// 	drawZoneForElement(tideOScopeToggles[2]),
+	// 	{
+	// 		label: 'Harmonics',
+	// 		onLabel: 'Show',
+	// 		offLabel: 'Hide',
+	// 		value: defaultOptions.renderHarmonics,
+	// 	},
+	// )
 	const moonToggle = new Toggle(ctx, drawZoneForElement(tideOScopeToggles[0]), {
 		label: 'Moon',
 		onLabel: 'Show',
@@ -408,7 +422,15 @@ const go = () => {
 			(i) => (['rad', 'rect', 'none'] as const)[i],
 		),
 	)
-	tideOScope.viewInput('renderHarmonics', constituentToggle.valueView)
+	// tideOScope.viewInput('renderHarmonics', constituentToggle.valueView)
+	tideOScope.viewInput(
+		'renderHarmonics',
+		MappedView(constituentToggle.selectedView, (s) => s !== 'Off'),
+	)
+	tideOScope.viewInput(
+		'labelConstituents',
+		MappedView(constituentToggle.selectedView, (s) => s === 'Label'),
+	)
 	tideOScope.viewInput('periodLoPass', lowpassCutoff.valueView)
 	tideOScope.viewInput('periodHiPass', highpassCutoff.valueView)
 	tideOScope.viewInput('renderMoon', moonToggle.valueView)

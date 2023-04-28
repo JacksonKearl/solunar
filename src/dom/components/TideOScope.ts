@@ -74,6 +74,18 @@ export class TideOScope extends CanvasElement {
 		)
 	}
 
+	private labeled: {
+		label: string
+		containsLocation: (l: Location) => boolean
+	}[] = []
+	protected override onClick(l: Location): void {
+		for (const { label, containsLocation } of this.labeled) {
+			if (containsLocation(l)) {
+				console.log(label)
+			}
+		}
+	}
+
 	public viewInput<N extends keyof TideOScopeOptions>(
 		inputName: N,
 		view: View<TideOScopeOptions[N]>,
@@ -240,6 +252,7 @@ export class TideOScope extends CanvasElement {
 	// reads: center, data, renderHarmonics, renderMoon, renderSun, render12Hour, render24Hour, timeRange, timeRate, periodHiPass, periodLoPass
 	override render(): void {
 		if (!this.shouldRender()) return
+		this.labeled = []
 
 		this.context.save()
 		this.renderClippingPath()
@@ -374,15 +387,30 @@ export class TideOScope extends CanvasElement {
 					Math.round(n).toString(16).padStart(2, '0')
 				const color = `#` + [...rgb, alpha].map(toTwoDigitHexString).join('')
 				this.context.fillStyle = color
+				const path = new Path2D()
+				path.arc(x, y, radius, 0, 2 * Math.PI)
 				this.context.beginPath()
-				this.context.arc(x, y, radius, 0, 2 * Math.PI)
-				this.context.fill()
+				this.context.fill(path)
+
+				this.labeled.push({
+					containsLocation: (l) => {
+						return this.context.isPointInPath(path, l.x, l.y)
+					},
+					label: [name, data, Constituents[name as ConstituentName]] as any,
+				})
 
 				if (this.options.labelConstituents) {
-					this.context.fillStyle = 'black'
+					this.context.fillStyle = 'white'
+					this.context.font = this.scaleFactor * 0.04 + 'px system-ui'
 					const textProps = this.context.measureText(name)
+					const clean = (s: string) =>
+						s
+							.replaceAll('Lambda', 'λ')
+							.replaceAll('Mu', 'μ')
+							.replaceAll('Nu', 'ν')
+							.replaceAll('Rho', 'ρ')
 					this.context.fillText(
-						name,
+						clean(name),
 						x - textProps.width / 2,
 						y + textProps.actualBoundingBoxAscent / 2,
 					)
